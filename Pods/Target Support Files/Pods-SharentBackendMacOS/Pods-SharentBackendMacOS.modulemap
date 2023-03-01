@@ -1,0 +1,6 @@
+framework module Pods_SharentBackendMacOS {
+  umbrella header "Pods-SharentBackendMacOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

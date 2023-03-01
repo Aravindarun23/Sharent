@@ -1,0 +1,6 @@
+framework module Pods_SharentUI {
+  umbrella header "Pods-SharentUI-umbrella.h"
+
+  export *
+  module * { export * }
+}

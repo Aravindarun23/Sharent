@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "7EF8ED37-BC64-4ED8-A154-1D316D425A77"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2D98103F-7E49-41A3-8F0A-261C0F386E04"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SharentBackendMacOS/SharentBackendMacOS/Data/DataBaseService/UserLoginDataBaseService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "success(callBack:response:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2D98103F-7E49-41A3-8F0A-261C0F386E04 - a702a0cbe7738d3c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SharentBackendMacOS.UserLoginDataBaseService.failure(callback: (Swift.Error) -&gt; (), error: Swift.Error) -&gt; ()"
+                  moduleName = "SharentBackendMacOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aravind-pt6209/Desktop/DemoProject/SharentBackendMacOS/SharentBackendMacOS/Data/DataBaseService/UserLoginDataBaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  uuid = "2D98103F-7E49-41A3-8F0A-261C0F386E04 - da3450b95a09f778"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SharentBackendMacOS.UserLoginDataBaseService.success(callBack: (SharentBackendMacOS.User) -&gt; (), response: SharentBackendMacOS.User) -&gt; ()"
+                  moduleName = "SharentBackendMacOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aravind-pt6209/Desktop/DemoProject/SharentBackendMacOS/SharentBackendMacOS/Data/DataBaseService/UserLoginDataBaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F75A5259-E592-4F57-9CED-178CF79C3BE1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SharentUI/SharentUI/Presentation/View/ProductView/AddProductView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "init?(coder:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

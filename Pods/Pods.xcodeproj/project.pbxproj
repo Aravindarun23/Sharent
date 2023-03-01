@@ -1,0 +1,951 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0117A41F3C84FE9DAA37379D122F713F /* TimeZoneExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF93BCFB07E8BFD92E27620B16963774 /* TimeZoneExtension.swift */; };
+		01B5E1A72DF436CC657585FE249981A0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2414E9ED6DD97F4EA89BE58C2760343C /* Cocoa.framework */; };
+		0A8B8993C362F279E580A8D900DD0338 /* ZNotificationBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCE39792CEEB78217EE8584B49DC89B /* ZNotificationBus.swift */; };
+		12BE8BCED49944FB2AB1169A2135BFF2 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B85188F8374B3C118E955475528A418 /* ArrayExtension.swift */; };
+		1C3A5C4867105FC4D3862A32BD95D963 /* ZMacAppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9648097C60854BF9AF11160AB5CD19D /* ZMacAppInfo.swift */; };
+		2218E69BBE26BBB78E654703ADAAE972 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 424992C51BBFFB9D4FC5134D4C735318 /* CoreGraphics.framework */; };
+		2B9466B3FB58533898C0389CC353B6CB /* ZUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAD23297F7AF68392101C7E1A869DE3 /* ZUserDefaults.swift */; };
+		31C6227FC83B74561C56708EE99E9C71 /* Pods-SharentBackendMacOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DBB1A2E5F06899091B788BD6E4A435F2 /* Pods-SharentBackendMacOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		36962281DACA3D10D8AD395CC39D9532 /* ZStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500A4EA7EF68C2F59373A8D7D905EEFD /* ZStack.swift */; };
+		47E97D6DAA7F53876ABD3161E7619C4B /* PasswordGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20539DBEA8DA72D7438A58412F2A0B4 /* PasswordGenerator.swift */; };
+		4818E9EC66A95B4A92BC4299BBF8BA51 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E330E08E0CC245EA54638184408A23C5 /* StringExtension.swift */; };
+		4C8EDABA61A3C94F4A2B485A79BC01FD /* ZDatabaseMigrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0103A340953D081C3FC0EA454377D7 /* ZDatabaseMigrator.swift */; };
+		586C58A88105435DA6B080A90DA5528E /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD46D18AA510DA7E09B33D72B8D371D /* DictionaryExtension.swift */; };
+		59C55C4F2E9F6551239EC898B7A18264 /* ZHTTPNetworkContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50D95540DC5E5830FF8E7B039EDA61C /* ZHTTPNetworkContract.swift */; };
+		59CBC20E36DBAFD6EC5DA7607429F790 /* VTComponents-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BC464E966B43A852D3C2A96CEC3583EC /* VTComponents-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		664F6BF4565E732E8A2FF13A4F956756 /* DoubleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70123DEF9EB5748B7E162EAD2E3D364D /* DoubleLinkedList.swift */; };
+		67B4DCF576C4C347C421BF53AFE40CC8 /* JSONExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E8600870B3E76EB5CE556A9C982367 /* JSONExtension.swift */; };
+		69F049F30A9F3C78EE1C5BBD661BC846 /* ZErrorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFB6003EFA8742795486174C05B3862 /* ZErrorConstants.swift */; };
+		6A54DFAF169564ED3F481C3C988625AF /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665AC4B1362048A7749C5423D0E1DAE8 /* Logger.swift */; };
+		6DBF58922CA67ED531C3A9D02BD210BC /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C4AEFE88EB672E455EDF7BEBE62B82 /* URLExtension.swift */; };
+		754FC7C78F2819B999C9FBA60AD4A809 /* Pods-SharentUI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DF478B51A3C99EA20EC6180CD495BA4 /* Pods-SharentUI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77E3C7F343134131CA90E4D7BC944478 /* ZJSONSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB90F824DDC2A52223282E0F324EF49 /* ZJSONSerializer.swift */; };
+		77F29346261EEC0CF7D15BCC0DBE6ECE /* ErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C55C21AAF014C832BFC8E4D55E3C778 /* ErrorExtension.swift */; };
+		7A42A856B0C71541A2914718C51C5F9C /* Weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECB0B2A647EAF6A74FC3A971E1891AB /* Weak.swift */; };
+		7D7339216B135AE574AE238A44ED917E /* ZAppInfoUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746052FB42889E9D9FAD232721E383D4 /* ZAppInfoUtil.swift */; };
+		7E293270EEEB5F381A0D63D1006E7D68 /* ZDataSyncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E946CAD11E0812FB203C0F9439DF50B /* ZDataSyncer.swift */; };
+		7E33B631FE2D64BBAA1D47A7BC33B78C /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96E09710853A085DDA7FDEA2A254DFC /* DateExtension.swift */; };
+		86A546EEA4347F3FACFAAB51369649DE /* DateComponentsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BEEAB31A6BCD7012117CCC40ECD2F6 /* DateComponentsExtension.swift */; };
+		8836DF66A0DE0D7C2D0EE247C0A25BEE /* VTComponents-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE79ADE183BC885C9352C4E27EA5795 /* VTComponents-dummy.m */; };
+		89DD50EAC942CDCDD2539B56CB12F62D /* WeakObjectSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F04B587C613EF0C210CB58613E6EB81 /* WeakObjectSet.swift */; };
+		938CF3757339DE98FAB0EB59C89DD63C /* Pods-SharentBackendMacOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DC6519D31CA1FC0507E41A597E26DA0 /* Pods-SharentBackendMacOS-dummy.m */; };
+		98EB3512F749B3A5F3CD02674C8F7A45 /* CGFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691E61AA55D3FAF03D0889AFA96AC462 /* CGFloatExtension.swift */; };
+		A0647289D85939C72E123E5B64A5BF8E /* CodableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AC375134D5DB38AE8803CD4116FB6C /* CodableExtension.swift */; };
+		A6EA74A9AB96518DF4B47F9FE42B350B /* ZUserAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844E9F8958358205AC8075EB9909E750 /* ZUserAgent.swift */; };
+		B0CB0BA640E75B5F07937C0B97B1B03B /* VTComponentsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C65A7CF2FD047A2C188B66102EAD10 /* VTComponentsConfig.swift */; };
+		B0D5C909C3BF8572F01E1CD951D7279F /* ZUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55AB10FC7FAFCA675A65E16BDA7BA12 /* ZUsecase.swift */; };
+		BE04F882EA20668AC41A43DCC0B50784 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21134C0F46DE432AEA1A94E6435CCD70 /* Foundation.framework */; };
+		BE4A037147435665889F4656B029ACFD /* ZAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D372E44D59AC39FD7D5D0514B6C71C /* ZAPIManager.swift */; };
+		BE6EEA6220023229FB63D3D6CA472F1B /* SafeReadWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130C291A6534A2C28B306170449DCDAD /* SafeReadWrite.swift */; };
+		BEB970C8DE51CFC334BC994345E57EE8 /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D7DFFD1703481EACFD41E90668A93C /* DataExtension.swift */; };
+		C138BF00BE5227BB65283DE8FF3221E5 /* ZTreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B13CB02B6457E17274F09C8F06BAB1 /* ZTreeNode.swift */; };
+		C2B1B728EE68DD7788637DEC224FED09 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4904C51A08A14EDC522210E5C0CDD2 /* Utils.swift */; };
+		C5EF08339A6CDCD54833FB24C376ECC1 /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10EC6D860EC3B9DF0A2B889EDFB50F8 /* KeychainPasswordItem.swift */; };
+		CA2F781463F3F750F025D04BD3E30730 /* ZAPICallController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79919CAD06CBA3D5C67FBF44B5DC8E2 /* ZAPICallController.swift */; };
+		CBD72DD86E417B7AE430D4A1B648990B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2414E9ED6DD97F4EA89BE58C2760343C /* Cocoa.framework */; };
+		CCEDF5F4C51A6C23C14441B31D9DD19F /* Synchronization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8772E7ABF698AE67A5D08DB14695BA9E /* Synchronization.swift */; };
+		D6CF5384AA2048BAE5CA108F67F92E29 /* LRUCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F5CA6816A068C4E26DD8639B79F062 /* LRUCache.swift */; };
+		D7C30EAFE58C10F971F189F2AB36CF7C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2414E9ED6DD97F4EA89BE58C2760343C /* Cocoa.framework */; };
+		E962CF4A6506649519D52AB6866A7AC9 /* Pods-SharentUI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2E75702FB5DE6492225D09D2743A0E /* Pods-SharentUI-dummy.m */; };
+		FF982E86266FC3C1A885D5AC29BE2FC1 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D028DCE42E34C8E70A3F2AFEB0A9586 /* Serializable.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1186D7C73271C76B1F361CC7A2AB6649 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75F5E10CF98295A123B98F6943696F40;
+			remoteInfo = VTComponents;
+		};
+		B8379E280ACBD32B9D93FBBD543A0DCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75F5E10CF98295A123B98F6943696F40;
+			remoteInfo = VTComponents;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02822C84D4B2AFAA975A4DD28232C87C /* Pods-SharentUI-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SharentUI-Info.plist"; sourceTree = "<group>"; };
+		0BE79ADE183BC885C9352C4E27EA5795 /* VTComponents-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VTComponents-dummy.m"; sourceTree = "<group>"; };
+		0DF478B51A3C99EA20EC6180CD495BA4 /* Pods-SharentUI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SharentUI-umbrella.h"; sourceTree = "<group>"; };
+		130C291A6534A2C28B306170449DCDAD /* SafeReadWrite.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SafeReadWrite.swift; path = native/VTComponents/VTComponents/Common/SafeReadWrite.swift; sourceTree = "<group>"; };
+		15D7DFFD1703481EACFD41E90668A93C /* DataExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataExtension.swift; path = native/VTComponents/VTComponents/Common/Extensions/DataExtension.swift; sourceTree = "<group>"; };
+		19481EBCE44A22FA9406CEA90556DCE7 /* VTComponents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VTComponents.release.xcconfig; sourceTree = "<group>"; };
+		21134C0F46DE432AEA1A94E6435CCD70 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		2414E9ED6DD97F4EA89BE58C2760343C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		27B13CB02B6457E17274F09C8F06BAB1 /* ZTreeNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZTreeNode.swift; path = native/VTComponents/VTComponents/Common/ZTreeNode.swift; sourceTree = "<group>"; };
+		2DE822CDD8E7B94C1A73A4C32E5EBD2A /* VTComponents-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "VTComponents-Info.plist"; sourceTree = "<group>"; };
+		2EA14D3FA802E9E7A363FB5A9110A758 /* VTComponents.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = VTComponents.modulemap; sourceTree = "<group>"; };
+		371ADBBAFE821CF301D8B4504353D431 /* Pods_SharentBackendMacOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharentBackendMacOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		424992C51BBFFB9D4FC5134D4C735318 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		47D372E44D59AC39FD7D5D0514B6C71C /* ZAPIManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZAPIManager.swift; path = native/VTComponents/VTComponents/Data/Network/ZAPIManager.swift; sourceTree = "<group>"; };
+		500A4EA7EF68C2F59373A8D7D905EEFD /* ZStack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZStack.swift; path = native/VTComponents/VTComponents/Common/ZStack.swift; sourceTree = "<group>"; };
+		58D01BB4C9E4B54AB82BAB449CEF0E19 /* Pods-SharentBackendMacOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SharentBackendMacOS-Info.plist"; sourceTree = "<group>"; };
+		5B85188F8374B3C118E955475528A418 /* ArrayExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArrayExtension.swift; path = native/VTComponents/VTComponents/Common/Extensions/ArrayExtension.swift; sourceTree = "<group>"; };
+		5D41C492B8F01B87ECB753D4D4C3727A /* Pods-SharentBackendMacOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SharentBackendMacOS.debug.xcconfig"; sourceTree = "<group>"; };
+		5E946CAD11E0812FB203C0F9439DF50B /* ZDataSyncer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZDataSyncer.swift; path = native/VTComponents/VTComponents/Common/ZDataSyncer.swift; sourceTree = "<group>"; };
+		5F04B587C613EF0C210CB58613E6EB81 /* WeakObjectSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WeakObjectSet.swift; path = native/VTComponents/VTComponents/Common/WeakObjectSet.swift; sourceTree = "<group>"; };
+		63E8600870B3E76EB5CE556A9C982367 /* JSONExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONExtension.swift; path = native/VTComponents/VTComponents/Common/Extensions/JSONExtension.swift; sourceTree = "<group>"; };
+		665AC4B1362048A7749C5423D0E1DAE8 /* Logger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = native/VTComponents/VTComponents/Common/Logger.swift; sourceTree = "<group>"; };
+		691E61AA55D3FAF03D0889AFA96AC462 /* CGFloatExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGFloatExtension.swift; path = native/VTComponents/VTComponents/Common/Extensions/CGFloatExtension.swift; sourceTree = "<group>"; };
+		69AC375134D5DB38AE8803CD4116FB6C /* CodableExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CodableExtension.swift; path = native/VTComponents/VTComponents/Common/Extensions/CodableExtension.swift; sourceTree = "<group>"; };
+		6C55C21AAF014C832BFC8E4D55E3C778 /* ErrorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ErrorExtension.swift; path = native/VTComponents/VTComponents/Common/Extensions/ErrorExtension.swift; sourceTree = "<group>"; };
+		70123DEF9EB5748B7E162EAD2E3D364D /* DoubleLinkedList.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DoubleLinkedList.swift; path = native/VTComponents/VTComponents/Common/DoubleLinkedList.swift; sourceTree = "<group>"; };
+		746052FB42889E9D9FAD232721E383D4 /* ZAppInfoUtil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZAppInfoUtil.swift; path = native/VTComponents/VTComponents/Common/ZAppInfoUtil.swift; sourceTree = "<group>"; };
+		75E27454FF9EBBCD77A0A34FA1E14A1D /* Pods-SharentUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SharentUI.debug.xcconfig"; sourceTree = "<group>"; };
+		75F5CA6816A068C4E26DD8639B79F062 /* LRUCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRUCache.swift; path = native/VTComponents/VTComponents/Common/LRUCache.swift; sourceTree = "<group>"; };
+		844E9F8958358205AC8075EB9909E750 /* ZUserAgent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZUserAgent.swift; path = native/VTComponents/VTComponents/Data/Utils/ZUserAgent.swift; sourceTree = "<group>"; };
+		8772E7ABF698AE67A5D08DB14695BA9E /* Synchronization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Synchronization.swift; path = native/VTComponents/VTComponents/Data/Utils/Synchronization.swift; sourceTree = "<group>"; };
+		87C4AEFE88EB672E455EDF7BEBE62B82 /* URLExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLExtension.swift; path = native/VTComponents/VTComponents/Common/Extensions/URLExtension.swift; sourceTree = "<group>"; };
+		89A716A0F0228376FE8EFD4B7397646D /* VTComponents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VTComponents.debug.xcconfig; sourceTree = "<group>"; };
+		8BCE39792CEEB78217EE8584B49DC89B /* ZNotificationBus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZNotificationBus.swift; path = native/VTComponents/VTComponents/Common/ZNotificationBus.swift; sourceTree = "<group>"; };
+		91C65A7CF2FD047A2C188B66102EAD10 /* VTComponentsConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VTComponentsConfig.swift; path = native/VTComponents/VTComponents/VTComponentsConfig.swift; sourceTree = "<group>"; };
+		9AB90F824DDC2A52223282E0F324EF49 /* ZJSONSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZJSONSerializer.swift; path = native/VTComponents/VTComponents/Data/Utils/ZJSONSerializer.swift; sourceTree = "<group>"; };
+		9B09A181F400F6DB3826499912350FC2 /* Pods-SharentUI-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SharentUI-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9D028DCE42E34C8E70A3F2AFEB0A9586 /* Serializable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Serializable.swift; path = native/VTComponents/VTComponents/Data/Utils/Serializable.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DC6519D31CA1FC0507E41A597E26DA0 /* Pods-SharentBackendMacOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SharentBackendMacOS-dummy.m"; sourceTree = "<group>"; };
+		9FAD23297F7AF68392101C7E1A869DE3 /* ZUserDefaults.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZUserDefaults.swift; path = native/VTComponents/VTComponents/Data/Utils/Preference/ZUserDefaults.swift; sourceTree = "<group>"; };
+		A9F4DA0C55571877B2A79F4A3E4AFD18 /* Pods-SharentUI-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SharentUI-acknowledgements.plist"; sourceTree = "<group>"; };
+		AE0103A340953D081C3FC0EA454377D7 /* ZDatabaseMigrator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZDatabaseMigrator.swift; path = native/VTComponents/VTComponents/Data/Utils/ZDatabaseMigrator.swift; sourceTree = "<group>"; };
+		AFAE4FADE1814846FF1E6C44D4D2F54E /* Pods-SharentUI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SharentUI.modulemap"; sourceTree = "<group>"; };
+		AFD46D18AA510DA7E09B33D72B8D371D /* DictionaryExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DictionaryExtension.swift; path = native/VTComponents/VTComponents/Common/Extensions/DictionaryExtension.swift; sourceTree = "<group>"; };
+		B3CA4572A638B371A42D747ACE122565 /* Pods-SharentUI-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SharentUI-frameworks.sh"; sourceTree = "<group>"; };
+		B55AB10FC7FAFCA675A65E16BDA7BA12 /* ZUsecase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZUsecase.swift; path = native/VTComponents/VTComponents/Domain/ZUsecase.swift; sourceTree = "<group>"; };
+		B5A735060EDF2CD60D31022274EC5DAD /* Pods_SharentUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharentUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6435D007C9103B382852048E3EDF7DE /* VTComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VTComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC464E966B43A852D3C2A96CEC3583EC /* VTComponents-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VTComponents-umbrella.h"; sourceTree = "<group>"; };
+		BF2E75702FB5DE6492225D09D2743A0E /* Pods-SharentUI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SharentUI-dummy.m"; sourceTree = "<group>"; };
+		BF93BCFB07E8BFD92E27620B16963774 /* TimeZoneExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimeZoneExtension.swift; path = native/VTComponents/VTComponents/Common/Extensions/TimeZoneExtension.swift; sourceTree = "<group>"; };
+		C9648097C60854BF9AF11160AB5CD19D /* ZMacAppInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZMacAppInfo.swift; path = native/VTComponents/VTComponents/Common/ZMacAppInfo.swift; sourceTree = "<group>"; };
+		CC0D5CE683698418B1DB8F78317CC22F /* Pods-SharentBackendMacOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SharentBackendMacOS.modulemap"; sourceTree = "<group>"; };
+		CD8A7129CB263600E87B0AB411098C08 /* VTComponents-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VTComponents-prefix.pch"; sourceTree = "<group>"; };
+		D10EC6D860EC3B9DF0A2B889EDFB50F8 /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainPasswordItem.swift; path = native/VTComponents/VTComponents/Data/Utils/Preference/KeychainPasswordItem.swift; sourceTree = "<group>"; };
+		D20539DBEA8DA72D7438A58412F2A0B4 /* PasswordGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PasswordGenerator.swift; path = native/VTComponents/VTComponents/Common/PasswordGenerator.swift; sourceTree = "<group>"; };
+		D5A806E81F5684C8A72B9A364F2CB1AB /* Pods-SharentUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SharentUI.release.xcconfig"; sourceTree = "<group>"; };
+		DBB1A2E5F06899091B788BD6E4A435F2 /* Pods-SharentBackendMacOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SharentBackendMacOS-umbrella.h"; sourceTree = "<group>"; };
+		DC4904C51A08A14EDC522210E5C0CDD2 /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = native/VTComponents/VTComponents/Common/Utils.swift; sourceTree = "<group>"; };
+		DD932F7602749C9F70DCF04BDC0F27F3 /* Pods-SharentBackendMacOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SharentBackendMacOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		DECB0B2A647EAF6A74FC3A971E1891AB /* Weak.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Weak.swift; path = native/VTComponents/VTComponents/Common/Weak.swift; sourceTree = "<group>"; };
+		E330E08E0CC245EA54638184408A23C5 /* StringExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = native/VTComponents/VTComponents/Common/Extensions/StringExtension.swift; sourceTree = "<group>"; };
+		E79919CAD06CBA3D5C67FBF44B5DC8E2 /* ZAPICallController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZAPICallController.swift; path = native/VTComponents/VTComponents/Data/Network/ZAPICallController.swift; sourceTree = "<group>"; };
+		E8BEEAB31A6BCD7012117CCC40ECD2F6 /* DateComponentsExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateComponentsExtension.swift; path = native/VTComponents/VTComponents/Common/Extensions/DateComponentsExtension.swift; sourceTree = "<group>"; };
+		E96E09710853A085DDA7FDEA2A254DFC /* DateExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateExtension.swift; path = native/VTComponents/VTComponents/Common/Extensions/DateExtension.swift; sourceTree = "<group>"; };
+		EEFB6003EFA8742795486174C05B3862 /* ZErrorConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZErrorConstants.swift; path = native/VTComponents/VTComponents/Domain/ZErrorConstants.swift; sourceTree = "<group>"; };
+		F50D95540DC5E5830FF8E7B039EDA61C /* ZHTTPNetworkContract.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZHTTPNetworkContract.swift; path = native/VTComponents/VTComponents/Data/Network/ZHTTPNetworkContract.swift; sourceTree = "<group>"; };
+		FA6EB8B798B067A4C74E27434065797E /* Pods-SharentBackendMacOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SharentBackendMacOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FD1F2147A8EBE673D3B7F6B9ACBE124D /* Pods-SharentBackendMacOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SharentBackendMacOS.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		08BAC1DAFC02798EFFCA59CE73580CD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBD72DD86E417B7AE430D4A1B648990B /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C8F43A39ADFE915338624CEF3406D0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01B5E1A72DF436CC657585FE249981A0 /* Cocoa.framework in Frameworks */,
+				2218E69BBE26BBB78E654703ADAAE972 /* CoreGraphics.framework in Frameworks */,
+				BE04F882EA20668AC41A43DCC0B50784 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D950E7FC93B014C1A5E929BFC9BF56AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7C30EAFE58C10F971F189F2AB36CF7C /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		239B7B5540009DF88985A1F8FAA8BA97 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				2414E9ED6DD97F4EA89BE58C2760343C /* Cocoa.framework */,
+				424992C51BBFFB9D4FC5134D4C735318 /* CoreGraphics.framework */,
+				21134C0F46DE432AEA1A94E6435CCD70 /* Foundation.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		5E5EAAF1BE3CE54765E2C007849B7420 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				371ADBBAFE821CF301D8B4504353D431 /* Pods_SharentBackendMacOS.framework */,
+				B5A735060EDF2CD60D31022274EC5DAD /* Pods_SharentUI.framework */,
+				B6435D007C9103B382852048E3EDF7DE /* VTComponents.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7B4935D041E220D80D54DB2EE08AD655 /* Pods-SharentBackendMacOS */ = {
+			isa = PBXGroup;
+			children = (
+				CC0D5CE683698418B1DB8F78317CC22F /* Pods-SharentBackendMacOS.modulemap */,
+				FA6EB8B798B067A4C74E27434065797E /* Pods-SharentBackendMacOS-acknowledgements.markdown */,
+				DD932F7602749C9F70DCF04BDC0F27F3 /* Pods-SharentBackendMacOS-acknowledgements.plist */,
+				9DC6519D31CA1FC0507E41A597E26DA0 /* Pods-SharentBackendMacOS-dummy.m */,
+				58D01BB4C9E4B54AB82BAB449CEF0E19 /* Pods-SharentBackendMacOS-Info.plist */,
+				DBB1A2E5F06899091B788BD6E4A435F2 /* Pods-SharentBackendMacOS-umbrella.h */,
+				5D41C492B8F01B87ECB753D4D4C3727A /* Pods-SharentBackendMacOS.debug.xcconfig */,
+				FD1F2147A8EBE673D3B7F6B9ACBE124D /* Pods-SharentBackendMacOS.release.xcconfig */,
+			);
+			name = "Pods-SharentBackendMacOS";
+			path = "Target Support Files/Pods-SharentBackendMacOS";
+			sourceTree = "<group>";
+		};
+		A3CDB250FFEFB42CA2C68F1FBD92997D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				239B7B5540009DF88985A1F8FAA8BA97 /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B198A9BB77E62F9346687F79536CA0F8 /* Pods-SharentUI */ = {
+			isa = PBXGroup;
+			children = (
+				AFAE4FADE1814846FF1E6C44D4D2F54E /* Pods-SharentUI.modulemap */,
+				9B09A181F400F6DB3826499912350FC2 /* Pods-SharentUI-acknowledgements.markdown */,
+				A9F4DA0C55571877B2A79F4A3E4AFD18 /* Pods-SharentUI-acknowledgements.plist */,
+				BF2E75702FB5DE6492225D09D2743A0E /* Pods-SharentUI-dummy.m */,
+				B3CA4572A638B371A42D747ACE122565 /* Pods-SharentUI-frameworks.sh */,
+				02822C84D4B2AFAA975A4DD28232C87C /* Pods-SharentUI-Info.plist */,
+				0DF478B51A3C99EA20EC6180CD495BA4 /* Pods-SharentUI-umbrella.h */,
+				75E27454FF9EBBCD77A0A34FA1E14A1D /* Pods-SharentUI.debug.xcconfig */,
+				D5A806E81F5684C8A72B9A364F2CB1AB /* Pods-SharentUI.release.xcconfig */,
+			);
+			name = "Pods-SharentUI";
+			path = "Target Support Files/Pods-SharentUI";
+			sourceTree = "<group>";
+		};
+		B3751D019EA7F3814C5AE4D13CC70992 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DFF04309CF8FDFB2D03834596F1B2710 /* VTComponents */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B5FD6BA4567FD855E2B927B57E39A24B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2EA14D3FA802E9E7A363FB5A9110A758 /* VTComponents.modulemap */,
+				0BE79ADE183BC885C9352C4E27EA5795 /* VTComponents-dummy.m */,
+				2DE822CDD8E7B94C1A73A4C32E5EBD2A /* VTComponents-Info.plist */,
+				CD8A7129CB263600E87B0AB411098C08 /* VTComponents-prefix.pch */,
+				BC464E966B43A852D3C2A96CEC3583EC /* VTComponents-umbrella.h */,
+				89A716A0F0228376FE8EFD4B7397646D /* VTComponents.debug.xcconfig */,
+				19481EBCE44A22FA9406CEA90556DCE7 /* VTComponents.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/VTComponents";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				A3CDB250FFEFB42CA2C68F1FBD92997D /* Frameworks */,
+				B3751D019EA7F3814C5AE4D13CC70992 /* Pods */,
+				5E5EAAF1BE3CE54765E2C007849B7420 /* Products */,
+				F213B79B3F9C9205C63AFB86BDD0A382 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		DFF04309CF8FDFB2D03834596F1B2710 /* VTComponents */ = {
+			isa = PBXGroup;
+			children = (
+				5B85188F8374B3C118E955475528A418 /* ArrayExtension.swift */,
+				691E61AA55D3FAF03D0889AFA96AC462 /* CGFloatExtension.swift */,
+				69AC375134D5DB38AE8803CD4116FB6C /* CodableExtension.swift */,
+				15D7DFFD1703481EACFD41E90668A93C /* DataExtension.swift */,
+				E8BEEAB31A6BCD7012117CCC40ECD2F6 /* DateComponentsExtension.swift */,
+				E96E09710853A085DDA7FDEA2A254DFC /* DateExtension.swift */,
+				AFD46D18AA510DA7E09B33D72B8D371D /* DictionaryExtension.swift */,
+				70123DEF9EB5748B7E162EAD2E3D364D /* DoubleLinkedList.swift */,
+				6C55C21AAF014C832BFC8E4D55E3C778 /* ErrorExtension.swift */,
+				63E8600870B3E76EB5CE556A9C982367 /* JSONExtension.swift */,
+				D10EC6D860EC3B9DF0A2B889EDFB50F8 /* KeychainPasswordItem.swift */,
+				665AC4B1362048A7749C5423D0E1DAE8 /* Logger.swift */,
+				75F5CA6816A068C4E26DD8639B79F062 /* LRUCache.swift */,
+				D20539DBEA8DA72D7438A58412F2A0B4 /* PasswordGenerator.swift */,
+				130C291A6534A2C28B306170449DCDAD /* SafeReadWrite.swift */,
+				9D028DCE42E34C8E70A3F2AFEB0A9586 /* Serializable.swift */,
+				E330E08E0CC245EA54638184408A23C5 /* StringExtension.swift */,
+				8772E7ABF698AE67A5D08DB14695BA9E /* Synchronization.swift */,
+				BF93BCFB07E8BFD92E27620B16963774 /* TimeZoneExtension.swift */,
+				87C4AEFE88EB672E455EDF7BEBE62B82 /* URLExtension.swift */,
+				DC4904C51A08A14EDC522210E5C0CDD2 /* Utils.swift */,
+				91C65A7CF2FD047A2C188B66102EAD10 /* VTComponentsConfig.swift */,
+				DECB0B2A647EAF6A74FC3A971E1891AB /* Weak.swift */,
+				5F04B587C613EF0C210CB58613E6EB81 /* WeakObjectSet.swift */,
+				E79919CAD06CBA3D5C67FBF44B5DC8E2 /* ZAPICallController.swift */,
+				47D372E44D59AC39FD7D5D0514B6C71C /* ZAPIManager.swift */,
+				746052FB42889E9D9FAD232721E383D4 /* ZAppInfoUtil.swift */,
+				AE0103A340953D081C3FC0EA454377D7 /* ZDatabaseMigrator.swift */,
+				5E946CAD11E0812FB203C0F9439DF50B /* ZDataSyncer.swift */,
+				EEFB6003EFA8742795486174C05B3862 /* ZErrorConstants.swift */,
+				F50D95540DC5E5830FF8E7B039EDA61C /* ZHTTPNetworkContract.swift */,
+				9AB90F824DDC2A52223282E0F324EF49 /* ZJSONSerializer.swift */,
+				C9648097C60854BF9AF11160AB5CD19D /* ZMacAppInfo.swift */,
+				8BCE39792CEEB78217EE8584B49DC89B /* ZNotificationBus.swift */,
+				500A4EA7EF68C2F59373A8D7D905EEFD /* ZStack.swift */,
+				27B13CB02B6457E17274F09C8F06BAB1 /* ZTreeNode.swift */,
+				B55AB10FC7FAFCA675A65E16BDA7BA12 /* ZUsecase.swift */,
+				844E9F8958358205AC8075EB9909E750 /* ZUserAgent.swift */,
+				9FAD23297F7AF68392101C7E1A869DE3 /* ZUserDefaults.swift */,
+				B5FD6BA4567FD855E2B927B57E39A24B /* Support Files */,
+			);
+			path = VTComponents;
+			sourceTree = "<group>";
+		};
+		F213B79B3F9C9205C63AFB86BDD0A382 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7B4935D041E220D80D54DB2EE08AD655 /* Pods-SharentBackendMacOS */,
+				B198A9BB77E62F9346687F79536CA0F8 /* Pods-SharentUI */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		7312469125528692A6305960C3CE0884 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				754FC7C78F2819B999C9FBA60AD4A809 /* Pods-SharentUI-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB61F192067B2878104F57E6157EAC5B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59CBC20E36DBAFD6EC5DA7607429F790 /* VTComponents-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F396EF1AC96B873B6805EEC36B8B7E0B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31C6227FC83B74561C56708EE99E9C71 /* Pods-SharentBackendMacOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3EF4F7DC1405623A0A46D8456B8F11B1 /* Pods-SharentBackendMacOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F390C121BCD9B251D2A41976C87E6BFB /* Build configuration list for PBXNativeTarget "Pods-SharentBackendMacOS" */;
+			buildPhases = (
+				F396EF1AC96B873B6805EEC36B8B7E0B /* Headers */,
+				485F11BB54D92B45D07968662D4B9743 /* Sources */,
+				D950E7FC93B014C1A5E929BFC9BF56AA /* Frameworks */,
+				D11225DDA99A40FE3C353A5F18FABF7F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3A23CD7D5595174F2ED8BB5228969FF /* PBXTargetDependency */,
+			);
+			name = "Pods-SharentBackendMacOS";
+			productName = Pods_SharentBackendMacOS;
+			productReference = 371ADBBAFE821CF301D8B4504353D431 /* Pods_SharentBackendMacOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		75F5E10CF98295A123B98F6943696F40 /* VTComponents */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C879509A7CD68DE940AC5A52FD934108 /* Build configuration list for PBXNativeTarget "VTComponents" */;
+			buildPhases = (
+				BB61F192067B2878104F57E6157EAC5B /* Headers */,
+				BEB67ADC77F687F13F8CA727940B9E06 /* Sources */,
+				8C8F43A39ADFE915338624CEF3406D0F /* Frameworks */,
+				AD737E69BA8292AD8397F0766D91FEE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VTComponents;
+			productName = VTComponents;
+			productReference = B6435D007C9103B382852048E3EDF7DE /* VTComponents.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8E0AB33A38F6AE816413C609DC807066 /* Pods-SharentUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D869D2A71AB7B4F61275DE6FD46C03F /* Build configuration list for PBXNativeTarget "Pods-SharentUI" */;
+			buildPhases = (
+				7312469125528692A6305960C3CE0884 /* Headers */,
+				2FDEEDFC90937BBF6AADA3F279725C09 /* Sources */,
+				08BAC1DAFC02798EFFCA59CE73580CD8 /* Frameworks */,
+				32B186C424C0E61F81023C739697C241 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				386FF5F630090B939E66C67714FFB263 /* PBXTargetDependency */,
+			);
+			name = "Pods-SharentUI";
+			productName = Pods_SharentUI;
+			productReference = B5A735060EDF2CD60D31022274EC5DAD /* Pods_SharentUI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					75F5E10CF98295A123B98F6943696F40 = {
+						LastSwiftMigration = "";
+					};
+				};
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 5E5EAAF1BE3CE54765E2C007849B7420 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3EF4F7DC1405623A0A46D8456B8F11B1 /* Pods-SharentBackendMacOS */,
+				8E0AB33A38F6AE816413C609DC807066 /* Pods-SharentUI */,
+				75F5E10CF98295A123B98F6943696F40 /* VTComponents */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		32B186C424C0E61F81023C739697C241 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD737E69BA8292AD8397F0766D91FEE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D11225DDA99A40FE3C353A5F18FABF7F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2FDEEDFC90937BBF6AADA3F279725C09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E962CF4A6506649519D52AB6866A7AC9 /* Pods-SharentUI-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		485F11BB54D92B45D07968662D4B9743 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				938CF3757339DE98FAB0EB59C89DD63C /* Pods-SharentBackendMacOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEB67ADC77F687F13F8CA727940B9E06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12BE8BCED49944FB2AB1169A2135BFF2 /* ArrayExtension.swift in Sources */,
+				98EB3512F749B3A5F3CD02674C8F7A45 /* CGFloatExtension.swift in Sources */,
+				A0647289D85939C72E123E5B64A5BF8E /* CodableExtension.swift in Sources */,
+				BEB970C8DE51CFC334BC994345E57EE8 /* DataExtension.swift in Sources */,
+				86A546EEA4347F3FACFAAB51369649DE /* DateComponentsExtension.swift in Sources */,
+				7E33B631FE2D64BBAA1D47A7BC33B78C /* DateExtension.swift in Sources */,
+				586C58A88105435DA6B080A90DA5528E /* DictionaryExtension.swift in Sources */,
+				664F6BF4565E732E8A2FF13A4F956756 /* DoubleLinkedList.swift in Sources */,
+				77F29346261EEC0CF7D15BCC0DBE6ECE /* ErrorExtension.swift in Sources */,
+				67B4DCF576C4C347C421BF53AFE40CC8 /* JSONExtension.swift in Sources */,
+				C5EF08339A6CDCD54833FB24C376ECC1 /* KeychainPasswordItem.swift in Sources */,
+				6A54DFAF169564ED3F481C3C988625AF /* Logger.swift in Sources */,
+				D6CF5384AA2048BAE5CA108F67F92E29 /* LRUCache.swift in Sources */,
+				47E97D6DAA7F53876ABD3161E7619C4B /* PasswordGenerator.swift in Sources */,
+				BE6EEA6220023229FB63D3D6CA472F1B /* SafeReadWrite.swift in Sources */,
+				FF982E86266FC3C1A885D5AC29BE2FC1 /* Serializable.swift in Sources */,
+				4818E9EC66A95B4A92BC4299BBF8BA51 /* StringExtension.swift in Sources */,
+				CCEDF5F4C51A6C23C14441B31D9DD19F /* Synchronization.swift in Sources */,
+				0117A41F3C84FE9DAA37379D122F713F /* TimeZoneExtension.swift in Sources */,
+				6DBF58922CA67ED531C3A9D02BD210BC /* URLExtension.swift in Sources */,
+				C2B1B728EE68DD7788637DEC224FED09 /* Utils.swift in Sources */,
+				8836DF66A0DE0D7C2D0EE247C0A25BEE /* VTComponents-dummy.m in Sources */,
+				B0CB0BA640E75B5F07937C0B97B1B03B /* VTComponentsConfig.swift in Sources */,
+				7A42A856B0C71541A2914718C51C5F9C /* Weak.swift in Sources */,
+				89DD50EAC942CDCDD2539B56CB12F62D /* WeakObjectSet.swift in Sources */,
+				CA2F781463F3F750F025D04BD3E30730 /* ZAPICallController.swift in Sources */,
+				BE4A037147435665889F4656B029ACFD /* ZAPIManager.swift in Sources */,
+				7D7339216B135AE574AE238A44ED917E /* ZAppInfoUtil.swift in Sources */,
+				4C8EDABA61A3C94F4A2B485A79BC01FD /* ZDatabaseMigrator.swift in Sources */,
+				7E293270EEEB5F381A0D63D1006E7D68 /* ZDataSyncer.swift in Sources */,
+				69F049F30A9F3C78EE1C5BBD661BC846 /* ZErrorConstants.swift in Sources */,
+				59C55C4F2E9F6551239EC898B7A18264 /* ZHTTPNetworkContract.swift in Sources */,
+				77E3C7F343134131CA90E4D7BC944478 /* ZJSONSerializer.swift in Sources */,
+				1C3A5C4867105FC4D3862A32BD95D963 /* ZMacAppInfo.swift in Sources */,
+				0A8B8993C362F279E580A8D900DD0338 /* ZNotificationBus.swift in Sources */,
+				36962281DACA3D10D8AD395CC39D9532 /* ZStack.swift in Sources */,
+				C138BF00BE5227BB65283DE8FF3221E5 /* ZTreeNode.swift in Sources */,
+				B0D5C909C3BF8572F01E1CD951D7279F /* ZUsecase.swift in Sources */,
+				A6EA74A9AB96518DF4B47F9FE42B350B /* ZUserAgent.swift in Sources */,
+				2B9466B3FB58533898C0389CC353B6CB /* ZUserDefaults.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		386FF5F630090B939E66C67714FFB263 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = VTComponents;
+			target = 75F5E10CF98295A123B98F6943696F40 /* VTComponents */;
+			targetProxy = B8379E280ACBD32B9D93FBBD543A0DCF /* PBXContainerItemProxy */;
+		};
+		D3A23CD7D5595174F2ED8BB5228969FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = VTComponents;
+			target = 75F5E10CF98295A123B98F6943696F40 /* VTComponents */;
+			targetProxy = 1186D7C73271C76B1F361CC7A2AB6649 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		31B89E22BA5544B03052C205A1CDDA0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75E27454FF9EBBCD77A0A34FA1E14A1D /* Pods-SharentUI.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SharentUI/Pods-SharentUI-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				MODULEMAP_FILE = "Target Support Files/Pods-SharentUI/Pods-SharentUI.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		46D273E45C91FC95FCA6EE25742150A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D41C492B8F01B87ECB753D4D4C3727A /* Pods-SharentBackendMacOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SharentBackendMacOS/Pods-SharentBackendMacOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				MODULEMAP_FILE = "Target Support Files/Pods-SharentBackendMacOS/Pods-SharentBackendMacOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		476E3CF0076DD56818993D93C91A1CFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89A716A0F0228376FE8EFD4B7397646D /* VTComponents.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/VTComponents/VTComponents-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VTComponents/VTComponents-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				MODULEMAP_FILE = "Target Support Files/VTComponents/VTComponents.modulemap";
+				PRODUCT_MODULE_NAME = VTComponents;
+				PRODUCT_NAME = VTComponents;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		491D26AA4EB17E4C78881A0D773ABF15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		672EF3701C7E0C1A2E940AFF6A188411 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		8141AC5F71E43F23201076168CC2B059 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19481EBCE44A22FA9406CEA90556DCE7 /* VTComponents.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/VTComponents/VTComponents-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VTComponents/VTComponents-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				MODULEMAP_FILE = "Target Support Files/VTComponents/VTComponents.modulemap";
+				PRODUCT_MODULE_NAME = VTComponents;
+				PRODUCT_NAME = VTComponents;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8736602DBCC961EB95AA82C2B9510AEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5A806E81F5684C8A72B9A364F2CB1AB /* Pods-SharentUI.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SharentUI/Pods-SharentUI-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				MODULEMAP_FILE = "Target Support Files/Pods-SharentUI/Pods-SharentUI.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D96D772F177236B8424DF6A0066405F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD1F2147A8EBE673D3B7F6B9ACBE124D /* Pods-SharentBackendMacOS.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SharentBackendMacOS/Pods-SharentBackendMacOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				MODULEMAP_FILE = "Target Support Files/Pods-SharentBackendMacOS/Pods-SharentBackendMacOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D869D2A71AB7B4F61275DE6FD46C03F /* Build configuration list for PBXNativeTarget "Pods-SharentUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31B89E22BA5544B03052C205A1CDDA0C /* Debug */,
+				8736602DBCC961EB95AA82C2B9510AEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				672EF3701C7E0C1A2E940AFF6A188411 /* Debug */,
+				491D26AA4EB17E4C78881A0D773ABF15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C879509A7CD68DE940AC5A52FD934108 /* Build configuration list for PBXNativeTarget "VTComponents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				476E3CF0076DD56818993D93C91A1CFB /* Debug */,
+				8141AC5F71E43F23201076168CC2B059 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F390C121BCD9B251D2A41976C87E6BFB /* Build configuration list for PBXNativeTarget "Pods-SharentBackendMacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46D273E45C91FC95FCA6EE25742150A7 /* Debug */,
+				D96D772F177236B8424DF6A0066405F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

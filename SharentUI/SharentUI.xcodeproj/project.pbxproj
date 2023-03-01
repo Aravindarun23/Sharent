@@ -1,0 +1,547 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		981DAB4029AF18D60036FBE1 /* AddNewProductPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981DAB3F29AF18D60036FBE1 /* AddNewProductPresenter.swift */; };
+		981E4E52299E14F70068A880 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981E4E51299E14F70068A880 /* AppDelegate.swift */; };
+		981E4E54299E14F80068A880 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 981E4E53299E14F80068A880 /* Assets.xcassets */; };
+		981E4E57299E14F80068A880 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 981E4E55299E14F80068A880 /* MainMenu.xib */; };
+		98643A4F299E1B3000701385 /* Pods_SharentUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCF23AE925007BFA339E39B /* Pods_SharentUI.framework */; };
+		98643A52299E1B3E00701385 /* SharentBackendMacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98643A49299E1B1500701385 /* SharentBackendMacOS.framework */; };
+		98643A53299E1B3E00701385 /* SharentBackendMacOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 98643A49299E1B1500701385 /* SharentBackendMacOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		986D392A29ACCEC90057F92C /* UserLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986D392929ACCEC90057F92C /* UserLoginView.swift */; };
+		986D392C29ACD1160057F92C /* UserLoginPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986D392B29ACD1160057F92C /* UserLoginPagePresenter.swift */; };
+		986D392F29ADCAAD0057F92C /* AddNewProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986D392E29ADCAAD0057F92C /* AddNewProductView.swift */; };
+		986D393129ADCBED0057F92C /* UserHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986D393029ADCBED0057F92C /* UserHomeView.swift */; };
+		986D393329ADD56A0057F92C /* CatogeryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986D393229ADD56A0057F92C /* CatogeryListView.swift */; };
+		986D393829ADD5AE0057F92C /* CatogeryListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986D393729ADD5AE0057F92C /* CatogeryListPresenter.swift */; };
+		986D394529ADEED60057F92C /* ProductContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986D394429ADEED60057F92C /* ProductContract.swift */; };
+		9872EE3F299E38CD009442BA /* UserSignUpPagePresnter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9872EE3E299E38CD009442BA /* UserSignUpPagePresnter.swift */; };
+		9872EE41299E38F8009442BA /* UserSignUpPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9872EE40299E38F8009442BA /* UserSignUpPageView.swift */; };
+		9872EE43299E392E009442BA /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9872EE42299E392E009442BA /* Router.swift */; };
+		9872EE45299E3945009442BA /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9872EE44299E3945009442BA /* Assembler.swift */; };
+		9872EE4A299F4F41009442BA /* UserContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9872EE49299F4F41009442BA /* UserContract.swift */; };
+		9872EE4C299F8C10009442BA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9872EE4B299F8C10009442BA /* LoginView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		98643A54299E1B3E00701385 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				98643A53299E1B3E00701385 /* SharentBackendMacOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3DCF23AE925007BFA339E39B /* Pods_SharentUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharentUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		981DAB3F29AF18D60036FBE1 /* AddNewProductPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewProductPresenter.swift; sourceTree = "<group>"; };
+		981E4E4E299E14F70068A880 /* SharentUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharentUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		981E4E51299E14F70068A880 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		981E4E53299E14F80068A880 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		981E4E56299E14F80068A880 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		981E4E58299E14F80068A880 /* SharentUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SharentUI.entitlements; sourceTree = "<group>"; };
+		98643A49299E1B1500701385 /* SharentBackendMacOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SharentBackendMacOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		986D392929ACCEC90057F92C /* UserLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginView.swift; sourceTree = "<group>"; };
+		986D392B29ACD1160057F92C /* UserLoginPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginPagePresenter.swift; sourceTree = "<group>"; };
+		986D392E29ADCAAD0057F92C /* AddNewProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewProductView.swift; sourceTree = "<group>"; };
+		986D393029ADCBED0057F92C /* UserHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHomeView.swift; sourceTree = "<group>"; };
+		986D393229ADD56A0057F92C /* CatogeryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatogeryListView.swift; sourceTree = "<group>"; };
+		986D393729ADD5AE0057F92C /* CatogeryListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatogeryListPresenter.swift; sourceTree = "<group>"; };
+		986D394429ADEED60057F92C /* ProductContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductContract.swift; sourceTree = "<group>"; };
+		9872EE3E299E38CD009442BA /* UserSignUpPagePresnter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSignUpPagePresnter.swift; sourceTree = "<group>"; };
+		9872EE40299E38F8009442BA /* UserSignUpPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSignUpPageView.swift; sourceTree = "<group>"; };
+		9872EE42299E392E009442BA /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		9872EE44299E3945009442BA /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
+		9872EE49299F4F41009442BA /* UserContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserContract.swift; sourceTree = "<group>"; };
+		9872EE4B299F8C10009442BA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		A6B41A1BDEF413EB325A4C94 /* Pods-SharentUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharentUI.release.xcconfig"; path = "Target Support Files/Pods-SharentUI/Pods-SharentUI.release.xcconfig"; sourceTree = "<group>"; };
+		F44DF708E67CD7C02C518822 /* Pods-SharentUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharentUI.debug.xcconfig"; path = "Target Support Files/Pods-SharentUI/Pods-SharentUI.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		981E4E4B299E14F70068A880 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98643A4F299E1B3000701385 /* Pods_SharentUI.framework in Frameworks */,
+				98643A52299E1B3E00701385 /* SharentBackendMacOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		424FFAC414A3635952E04DF9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F44DF708E67CD7C02C518822 /* Pods-SharentUI.debug.xcconfig */,
+				A6B41A1BDEF413EB325A4C94 /* Pods-SharentUI.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
+		981E4E45299E14F70068A880 = {
+			isa = PBXGroup;
+			children = (
+				981E4E50299E14F70068A880 /* SharentUI */,
+				981E4E4F299E14F70068A880 /* Products */,
+				424FFAC414A3635952E04DF9 /* Pods */,
+				E95FB1DAEAE5E667073C050C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		981E4E4F299E14F70068A880 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				981E4E4E299E14F70068A880 /* SharentUI.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		981E4E50299E14F70068A880 /* SharentUI */ = {
+			isa = PBXGroup;
+			children = (
+				9872EE3A299E382F009442BA /* Presentation */,
+				981E4E51299E14F70068A880 /* AppDelegate.swift */,
+				9872EE42299E392E009442BA /* Router.swift */,
+				9872EE44299E3945009442BA /* Assembler.swift */,
+				981E4E53299E14F80068A880 /* Assets.xcassets */,
+				981E4E55299E14F80068A880 /* MainMenu.xib */,
+				981E4E58299E14F80068A880 /* SharentUI.entitlements */,
+			);
+			path = SharentUI;
+			sourceTree = "<group>";
+		};
+		986CCC7529A255FE00378EB4 /* UserView */ = {
+			isa = PBXGroup;
+			children = (
+				9872EE4B299F8C10009442BA /* LoginView.swift */,
+				9872EE40299E38F8009442BA /* UserSignUpPageView.swift */,
+				986D392929ACCEC90057F92C /* UserLoginView.swift */,
+				986D393029ADCBED0057F92C /* UserHomeView.swift */,
+			);
+			path = UserView;
+			sourceTree = "<group>";
+		};
+		986D392D29ADCA920057F92C /* ProductView */ = {
+			isa = PBXGroup;
+			children = (
+				986D392E29ADCAAD0057F92C /* AddNewProductView.swift */,
+				986D393229ADD56A0057F92C /* CatogeryListView.swift */,
+			);
+			path = ProductView;
+			sourceTree = "<group>";
+		};
+		986D393629ADD58F0057F92C /* ProductPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				986D393729ADD5AE0057F92C /* CatogeryListPresenter.swift */,
+				981DAB3F29AF18D60036FBE1 /* AddNewProductPresenter.swift */,
+			);
+			path = ProductPresenter;
+			sourceTree = "<group>";
+		};
+		9872EE3A299E382F009442BA /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				9872EE3B299E387E009442BA /* View */,
+				9872EE3C299E388E009442BA /* Presenter */,
+				9872EE3D299E38B1009442BA /* Contract */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		9872EE3B299E387E009442BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				986D392D29ADCA920057F92C /* ProductView */,
+				986CCC7529A255FE00378EB4 /* UserView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9872EE3C299E388E009442BA /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				986D393629ADD58F0057F92C /* ProductPresenter */,
+				9872EE5129A0E7BE009442BA /* UserPresenter */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9872EE3D299E38B1009442BA /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				9872EE49299F4F41009442BA /* UserContract.swift */,
+				986D394429ADEED60057F92C /* ProductContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		9872EE5129A0E7BE009442BA /* UserPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				9872EE3E299E38CD009442BA /* UserSignUpPagePresnter.swift */,
+				986D392B29ACD1160057F92C /* UserLoginPagePresenter.swift */,
+			);
+			path = UserPresenter;
+			sourceTree = "<group>";
+		};
+		E95FB1DAEAE5E667073C050C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				98643A49299E1B1500701385 /* SharentBackendMacOS.framework */,
+				3DCF23AE925007BFA339E39B /* Pods_SharentUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		981E4E4D299E14F70068A880 /* SharentUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 981E4E5B299E14F80068A880 /* Build configuration list for PBXNativeTarget "SharentUI" */;
+			buildPhases = (
+				4EEBED2124A91A17364D51F3 /* [CP] Check Pods Manifest.lock */,
+				981E4E4A299E14F70068A880 /* Sources */,
+				981E4E4B299E14F70068A880 /* Frameworks */,
+				981E4E4C299E14F70068A880 /* Resources */,
+				2412AA43615BD7C4409D5536 /* [CP] Embed Pods Frameworks */,
+				98643A54299E1B3E00701385 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SharentUI;
+			productName = SharentUI;
+			productReference = 981E4E4E299E14F70068A880 /* SharentUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		981E4E46299E14F70068A880 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					981E4E4D299E14F70068A880 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 981E4E49299E14F70068A880 /* Build configuration list for PBXProject "SharentUI" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 981E4E45299E14F70068A880;
+			productRefGroup = 981E4E4F299E14F70068A880 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				981E4E4D299E14F70068A880 /* SharentUI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		981E4E4C299E14F70068A880 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				981E4E54299E14F80068A880 /* Assets.xcassets in Resources */,
+				981E4E57299E14F80068A880 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2412AA43615BD7C4409D5536 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SharentUI/Pods-SharentUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SharentUI/Pods-SharentUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SharentUI/Pods-SharentUI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4EEBED2124A91A17364D51F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SharentUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		981E4E4A299E14F70068A880 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9872EE4C299F8C10009442BA /* LoginView.swift in Sources */,
+				986D394529ADEED60057F92C /* ProductContract.swift in Sources */,
+				986D392A29ACCEC90057F92C /* UserLoginView.swift in Sources */,
+				9872EE43299E392E009442BA /* Router.swift in Sources */,
+				9872EE3F299E38CD009442BA /* UserSignUpPagePresnter.swift in Sources */,
+				986D392F29ADCAAD0057F92C /* AddNewProductView.swift in Sources */,
+				986D393829ADD5AE0057F92C /* CatogeryListPresenter.swift in Sources */,
+				9872EE45299E3945009442BA /* Assembler.swift in Sources */,
+				9872EE41299E38F8009442BA /* UserSignUpPageView.swift in Sources */,
+				986D393129ADCBED0057F92C /* UserHomeView.swift in Sources */,
+				981DAB4029AF18D60036FBE1 /* AddNewProductPresenter.swift in Sources */,
+				9872EE4A299F4F41009442BA /* UserContract.swift in Sources */,
+				986D392C29ACD1160057F92C /* UserLoginPagePresenter.swift in Sources */,
+				986D393329ADD56A0057F92C /* CatogeryListView.swift in Sources */,
+				981E4E52299E14F70068A880 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		981E4E55299E14F80068A880 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				981E4E56299E14F80068A880 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		981E4E59299E14F80068A880 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		981E4E5A299E14F80068A880 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		981E4E5C299E14F80068A880 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F44DF708E67CD7C02C518822 /* Pods-SharentUI.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SharentUI/SharentUI.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Demo.SharentUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		981E4E5D299E14F80068A880 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6B41A1BDEF413EB325A4C94 /* Pods-SharentUI.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SharentUI/SharentUI.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Demo.SharentUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		981E4E49299E14F70068A880 /* Build configuration list for PBXProject "SharentUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				981E4E59299E14F80068A880 /* Debug */,
+				981E4E5A299E14F80068A880 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		981E4E5B299E14F80068A880 /* Build configuration list for PBXNativeTarget "SharentUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				981E4E5C299E14F80068A880 /* Debug */,
+				981E4E5D299E14F80068A880 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 981E4E46299E14F70068A880 /* Project object */;
+}
