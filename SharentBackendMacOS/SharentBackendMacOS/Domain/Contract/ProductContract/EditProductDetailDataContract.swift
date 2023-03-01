@@ -9,5 +9,5 @@ import Foundation
 
 public protocol EditProductDetailDataContract {
     
-    func editProductDetail(productId: Product, success: @escaping (String) -> Void, failure: @escaping (Error) -> Void)
+    func editProductDetail(product: Product, success: @escaping (String) -> Void, failure: @escaping (Error) -> Void)
 }

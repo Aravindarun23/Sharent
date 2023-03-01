@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		98168ADB29AFC31700331A13 /* EditProductDetailDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168ADA29AFC31700331A13 /* EditProductDetailDataManager.swift */; };
 		981B782E29A73A3800C67B59 /* Admin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981B782D29A73A3800C67B59 /* Admin.swift */; };
 		981DAB3629AE15FB0036FBE1 /* AddNewProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981DAB3529AE15FB0036FBE1 /* AddNewProduct.swift */; };
 		981DAB3829AE17BF0036FBE1 /* AddNewProductDataBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981DAB3729AE17BF0036FBE1 /* AddNewProductDataBaseService.swift */; };
@@ -52,6 +53,7 @@
 /* Begin PBXFileReference section */
 		5C0351F3CC20C9492B4ADA1A /* Pods-SharentBackendMacOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharentBackendMacOS.release.xcconfig"; path = "Target Support Files/Pods-SharentBackendMacOS/Pods-SharentBackendMacOS.release.xcconfig"; sourceTree = "<group>"; };
 		688A7D030E9DD98D1814B7F2 /* Pods-SharentBackendMacOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharentBackendMacOS.debug.xcconfig"; path = "Target Support Files/Pods-SharentBackendMacOS/Pods-SharentBackendMacOS.debug.xcconfig"; sourceTree = "<group>"; };
+		98168ADA29AFC31700331A13 /* EditProductDetailDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProductDetailDataManager.swift; sourceTree = "<group>"; };
 		981B782D29A73A3800C67B59 /* Admin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Admin.swift; sourceTree = "<group>"; };
 		981DAB3529AE15FB0036FBE1 /* AddNewProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewProduct.swift; sourceTree = "<group>"; };
 		981DAB3729AE17BF0036FBE1 /* AddNewProductDataBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewProductDataBaseService.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				986D392729ACC8BD0057F92C /* UserLoginDataManger.swift */,
 				986D394229ADE1E20057F92C /* CatogeryLIstDataManager.swift */,
 				981DAB3D29AE23390036FBE1 /* AddNewProductDataManager.swift */,
+				98168ADA29AFC31700331A13 /* EditProductDetailDataManager.swift */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 				986CCC7E29A32E0600378EB4 /* Order.swift in Sources */,
 				9872EE29299E3052009442BA /* User.swift in Sources */,
 				981DAB3A29AE18080036FBE1 /* AddNewProductDataBaseContract.swift in Sources */,
+				98168ADB29AFC31700331A13 /* EditProductDetailDataManager.swift in Sources */,
 				986D392829ACC8BD0057F92C /* UserLoginDataManger.swift in Sources */,
 				983A5DF029A640AE00441D6F /* InsertQuerry.swift in Sources */,
 				981DAB4229AF2C070036FBE1 /* ViewProductList.swift in Sources */,

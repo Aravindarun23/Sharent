@@ -17,7 +17,7 @@ public struct Product {
         case inactive
     }
     
-    public var Id: Int
+    public var id: Int
     public var seller: User
     public var catogery: Category
     public var name: String
@@ -29,7 +29,7 @@ public struct Product {
     
     public init(Id: Int, seller: User, catogery: Category, name: String, price: Int, detail: String? = nil, uploadedDate: String, status: Status) {
         
-        self.Id = Id
+        self.id = Id
         self.seller = seller
         self.catogery = catogery
         self.name = name

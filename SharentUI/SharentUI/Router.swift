@@ -18,6 +18,7 @@ class Router {
     func launch() {
         self.window.contentView = Assembler.signupAssembler(router: self)
     }
+    
     func moveSignUpPage() {
         self.window.contentView = Assembler.userSignUpPageViewAssembler(router: self)
     }
@@ -35,6 +36,10 @@ class Router {
     }
     func addNewProductView() {
         self.window.contentView = Assembler.addNewProductAssembler(router: self)
+    }
+    
+    func EditProductDetailView() {
+        self.window.contentView = Assembler.editProductDetailAssembler(router: self)
     }
 
 }

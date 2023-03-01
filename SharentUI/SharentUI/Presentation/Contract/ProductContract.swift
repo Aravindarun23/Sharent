@@ -21,3 +21,11 @@ protocol AddNewProductPresenterContract: AnyObject {
 protocol AddNewProductViewContract: AnyObject {
     func load(message: AddNewProductResponse)
 }
+
+protocol EditProductDetailViewContract: AnyObject {
+    func load(message: EditProductDetailResponse)
+}
+
+protocol EditProductDetailPresenterContract: AnyObject {
+    func viewDidload(product: Product)
+}

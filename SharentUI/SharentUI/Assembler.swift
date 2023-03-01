@@ -117,3 +117,26 @@ extension Assembler {
         return addNewProductUseCase
     }
 }
+
+
+extension Assembler  {
+    
+    public static func editProductDetailAssembler(router: Router) -> EditProductDetailView {
+        
+        let editProductDetailUseCase = editProductDetailUseCase()
+        let editProductDetailPresenter = EditProductDetailPresenter(editProductDetail: editProductDetailUseCase)
+        editProductDetailPresenter.router = router
+        let editProductDetailView = EditProductDetailView(EditProductDetailPresenter: editProductDetailPresenter)
+        editProductDetailPresenter.EditProductDetailView = editProductDetailView
+        return editProductDetailView
+        
+    }
+    
+    private static func editProductDetailUseCase() -> EditProductDetail {
+        
+        let editProductDetailDataBaseService = EditProductDetailDataBaserService()
+        let editProductDetailDataManager = EditProductDetailDataManager(editProductDetailDataBase: editProductDetailDataBaseService)
+        let editProductDetailUseCase = EditProductDetail(editProductDetailDataManager: editProductDetailDataManager)
+        return editProductDetailUseCase
+    }
+}

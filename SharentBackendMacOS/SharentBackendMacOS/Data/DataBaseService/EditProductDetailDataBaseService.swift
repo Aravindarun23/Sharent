@@ -7,19 +7,32 @@
 
 import Foundation
 
+
 public class EditProductDetailDataBaserService: EditProductDetailDataBaseContract {
     
     public init() {
         
     }
     
-    public func editProductDetail(product: Product, success: @escaping (String) -> Void, failure: @escaping (Error) -> Void) {
+    public  func editProductDetail(product: Product, success: @escaping (String) -> Void, failure: @escaping (Error) -> Void) {
         
-        let UpdateQuerry = "productName = '\(product.name)', catogeryId = '\(product.catogery.id)', '\(product.seller.id)', '\(product.name)', '\(product.price)','\(detail)', '\(product.uploadedDate)', '\(currentStatus)'"
+        let updateQuerry = "catogeryId = \(product.catogery.id), sellerId = \(product.seller.id), productName = '\(product.name)', price = \(product.price), productDetail = '\(product.detail ?? "worked" )', uploadedDate = '\(product.uploadedDate)', status = '\("inactive")'"
+        let condition = "productId = \(product.id)"
         
-        UpdateQuerry.insertQuerry(tableName: "product", updateQuerry:, condition: <#T##String#>, response: <#T##(String) -> Void#>, error: <#T##(Error) -> Void#>)
-        
+        UpdateQuerry.updateQuerry(tableName: "product", updateQuerry: updateQuerry, condition: condition) { [weak self]
+            responseMsg in
+            self?.success(callback: success, message: "Updated Sucessfully")
+            
+        } error: { error in
+            
+        }
     }
+    
+    private func success(callback: @escaping (String) -> Void, message: String) {
+        
+        callback(message)
+    }
+    
     
     
 }

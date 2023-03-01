@@ -16,7 +16,7 @@ public class ViewProductListdataBaseService: ViewProductListDataBaseContract {
     
     public func viewProductList(userId: String, sucess: @escaping ([Product]) -> Void, failure: @escaping (Error) -> Void) {
         
-        let result = SelectQuerry.select(tableName: "product", whereClause: )
+//        let result = SelectQuerry.select(tableName: "product", whereClause: )
         
         
     }
