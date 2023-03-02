@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		98168ADD29AFC91400331A13 /* EditProductDetailPrersenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168ADC29AFC91400331A13 /* EditProductDetailPrersenter.swift */; };
 		98168ADF29AFC93600331A13 /* EditProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168ADE29AFC93600331A13 /* EditProductDetailView.swift */; };
+		98168AED29B07DFF00331A13 /* DeleteProductPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168AEC29B07DFF00331A13 /* DeleteProductPresenter.swift */; };
+		98168AEF29B0813400331A13 /* DeleteProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168AEE29B0813400331A13 /* DeleteProductView.swift */; };
 		981DAB4029AF18D60036FBE1 /* AddNewProductPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981DAB3F29AF18D60036FBE1 /* AddNewProductPresenter.swift */; };
 		981E4E52299E14F70068A880 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981E4E51299E14F70068A880 /* AppDelegate.swift */; };
 		981E4E54299E14F80068A880 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 981E4E53299E14F80068A880 /* Assets.xcassets */; };
@@ -49,6 +51,8 @@
 		3DCF23AE925007BFA339E39B /* Pods_SharentUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharentUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98168ADC29AFC91400331A13 /* EditProductDetailPrersenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProductDetailPrersenter.swift; sourceTree = "<group>"; };
 		98168ADE29AFC93600331A13 /* EditProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProductDetailView.swift; sourceTree = "<group>"; };
+		98168AEC29B07DFF00331A13 /* DeleteProductPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProductPresenter.swift; sourceTree = "<group>"; };
+		98168AEE29B0813400331A13 /* DeleteProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProductView.swift; sourceTree = "<group>"; };
 		981DAB3F29AF18D60036FBE1 /* AddNewProductPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewProductPresenter.swift; sourceTree = "<group>"; };
 		981E4E4E299E14F70068A880 /* SharentUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharentUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		981E4E51299E14F70068A880 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 				986D392E29ADCAAD0057F92C /* AddNewProductView.swift */,
 				986D393229ADD56A0057F92C /* CatogeryListView.swift */,
 				98168ADE29AFC93600331A13 /* EditProductDetailView.swift */,
+				98168AEE29B0813400331A13 /* DeleteProductView.swift */,
 			);
 			path = ProductView;
 			sourceTree = "<group>";
@@ -155,6 +160,7 @@
 				986D393729ADD5AE0057F92C /* CatogeryListPresenter.swift */,
 				981DAB3F29AF18D60036FBE1 /* AddNewProductPresenter.swift */,
 				98168ADC29AFC91400331A13 /* EditProductDetailPrersenter.swift */,
+				98168AEC29B07DFF00331A13 /* DeleteProductPresenter.swift */,
 			);
 			path = ProductPresenter;
 			sourceTree = "<group>";
@@ -334,6 +340,8 @@
 				986D394529ADEED60057F92C /* ProductContract.swift in Sources */,
 				986D392A29ACCEC90057F92C /* UserLoginView.swift in Sources */,
 				98168ADF29AFC93600331A13 /* EditProductDetailView.swift in Sources */,
+				98168AEF29B0813400331A13 /* DeleteProductView.swift in Sources */,
+				98168AED29B07DFF00331A13 /* DeleteProductPresenter.swift in Sources */,
 				9872EE43299E392E009442BA /* Router.swift in Sources */,
 				9872EE3F299E38CD009442BA /* UserSignUpPagePresnter.swift in Sources */,
 				986D392F29ADCAAD0057F92C /* AddNewProductView.swift in Sources */,

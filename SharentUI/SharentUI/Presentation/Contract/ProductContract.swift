@@ -29,3 +29,10 @@ protocol EditProductDetailViewContract: AnyObject {
 protocol EditProductDetailPresenterContract: AnyObject {
     func viewDidload(product: Product)
 }
+
+protocol DeleteProductPresenterContract: AnyObject {
+    func viewDidload(productId: Int)
+}
+protocol DeleteProductViewContract: AnyObject {
+    func load(message: DeleteProductResponse)
+}

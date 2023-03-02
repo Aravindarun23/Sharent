@@ -16,7 +16,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         router = Router(window: window)
-        router?.EditProductDetailView()
+        router?.deleteProductView()
+        //router?.EditProductDetailView()
         
         // Insert code here to initialize your application
     }

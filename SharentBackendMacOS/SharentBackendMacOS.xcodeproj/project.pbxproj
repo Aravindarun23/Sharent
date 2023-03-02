@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		98168ADB29AFC31700331A13 /* EditProductDetailDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168ADA29AFC31700331A13 /* EditProductDetailDataManager.swift */; };
 		98168AE129B05FF800331A13 /* DeleteProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168AE029B05FF800331A13 /* DeleteProduct.swift */; };
+		98168AE329B067D900331A13 /* DeleteProductDataBaseContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168AE229B067D900331A13 /* DeleteProductDataBaseContract.swift */; };
+		98168AE529B0692200331A13 /* DeleteProductDataContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168AE429B0692200331A13 /* DeleteProductDataContract.swift */; };
+		98168AE729B0698000331A13 /* DeleteProductDataBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168AE629B0698000331A13 /* DeleteProductDataBaseService.swift */; };
+		98168AE929B06B4000331A13 /* DeleteQuerry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168AE829B06B4000331A13 /* DeleteQuerry.swift */; };
+		98168AEB29B078DD00331A13 /* DeleteProductDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168AEA29B078DD00331A13 /* DeleteProductDataManager.swift */; };
+		98168AF129B08E8F00331A13 /* DeleteUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168AF029B08E8F00331A13 /* DeleteUser.swift */; };
 		981B782E29A73A3800C67B59 /* Admin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981B782D29A73A3800C67B59 /* Admin.swift */; };
 		981DAB3629AE15FB0036FBE1 /* AddNewProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981DAB3529AE15FB0036FBE1 /* AddNewProduct.swift */; };
 		981DAB3829AE17BF0036FBE1 /* AddNewProductDataBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981DAB3729AE17BF0036FBE1 /* AddNewProductDataBaseService.swift */; };
@@ -39,7 +45,7 @@
 		986D393A29ADD62A0057F92C /* CatogeryListDataBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986D393929ADD62A0057F92C /* CatogeryListDataBaseService.swift */; };
 		986D393C29ADD66E0057F92C /* GetCatogeryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986D393B29ADD66E0057F92C /* GetCatogeryList.swift */; };
 		986D393F29ADD7BA0057F92C /* CatogeryListDataContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986D393E29ADD7BA0057F92C /* CatogeryListDataContract.swift */; };
-		986D394129ADD8A10057F92C /* CatogeryListDatabaseContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986D394029ADD8A10057F92C /* CatogeryListDatabaseContract.swift */; };
+		986D394129ADD8A10057F92C /* CatogeryListDataBaseContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986D394029ADD8A10057F92C /* CatogeryListDataBaseContract.swift */; };
 		986D394329ADE1E20057F92C /* CatogeryLIstDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986D394229ADE1E20057F92C /* CatogeryLIstDataManager.swift */; };
 		9872EE26299E2E75009442BA /* AddNewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9872EE25299E2E75009442BA /* AddNewUser.swift */; };
 		9872EE29299E3052009442BA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9872EE28299E3052009442BA /* User.swift */; };
@@ -56,6 +62,12 @@
 		688A7D030E9DD98D1814B7F2 /* Pods-SharentBackendMacOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharentBackendMacOS.debug.xcconfig"; path = "Target Support Files/Pods-SharentBackendMacOS/Pods-SharentBackendMacOS.debug.xcconfig"; sourceTree = "<group>"; };
 		98168ADA29AFC31700331A13 /* EditProductDetailDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProductDetailDataManager.swift; sourceTree = "<group>"; };
 		98168AE029B05FF800331A13 /* DeleteProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProduct.swift; sourceTree = "<group>"; };
+		98168AE229B067D900331A13 /* DeleteProductDataBaseContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProductDataBaseContract.swift; sourceTree = "<group>"; };
+		98168AE429B0692200331A13 /* DeleteProductDataContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProductDataContract.swift; sourceTree = "<group>"; };
+		98168AE629B0698000331A13 /* DeleteProductDataBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProductDataBaseService.swift; sourceTree = "<group>"; };
+		98168AE829B06B4000331A13 /* DeleteQuerry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteQuerry.swift; sourceTree = "<group>"; };
+		98168AEA29B078DD00331A13 /* DeleteProductDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProductDataManager.swift; sourceTree = "<group>"; };
+		98168AF029B08E8F00331A13 /* DeleteUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteUser.swift; sourceTree = "<group>"; };
 		981B782D29A73A3800C67B59 /* Admin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Admin.swift; sourceTree = "<group>"; };
 		981DAB3529AE15FB0036FBE1 /* AddNewProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewProduct.swift; sourceTree = "<group>"; };
 		981DAB3729AE17BF0036FBE1 /* AddNewProductDataBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewProductDataBaseService.swift; sourceTree = "<group>"; };
@@ -87,7 +99,7 @@
 		986D393929ADD62A0057F92C /* CatogeryListDataBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatogeryListDataBaseService.swift; sourceTree = "<group>"; };
 		986D393B29ADD66E0057F92C /* GetCatogeryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCatogeryList.swift; sourceTree = "<group>"; };
 		986D393E29ADD7BA0057F92C /* CatogeryListDataContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatogeryListDataContract.swift; sourceTree = "<group>"; };
-		986D394029ADD8A10057F92C /* CatogeryListDatabaseContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatogeryListDatabaseContract.swift; sourceTree = "<group>"; };
+		986D394029ADD8A10057F92C /* CatogeryListDataBaseContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatogeryListDataBaseContract.swift; sourceTree = "<group>"; };
 		986D394229ADE1E20057F92C /* CatogeryLIstDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatogeryLIstDataManager.swift; sourceTree = "<group>"; };
 		9872EE25299E2E75009442BA /* AddNewUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewUser.swift; sourceTree = "<group>"; };
 		9872EE28299E3052009442BA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -179,6 +191,7 @@
 				981DAB3729AE17BF0036FBE1 /* AddNewProductDataBaseService.swift */,
 				981DAB4729AF2FBE0036FBE1 /* ViewProductListDataBaseService.swift */,
 				981DAB4D29AF38210036FBE1 /* EditProductDetailDataBaseService.swift */,
+				98168AE629B0698000331A13 /* DeleteProductDataBaseService.swift */,
 			);
 			path = DataBaseService;
 			sourceTree = "<group>";
@@ -190,6 +203,7 @@
 				981DAB3B29AE18240036FBE1 /* AddNewProductDataContract.swift */,
 				981DAB4529AF2F910036FBE1 /* ViewProductListDataContract.swift */,
 				981DAB4F29AF385D0036FBE1 /* EditProductDetailDataContract.swift */,
+				98168AE429B0692200331A13 /* DeleteProductDataContract.swift */,
 			);
 			path = ProductContract;
 			sourceTree = "<group>";
@@ -218,6 +232,7 @@
 			children = (
 				9872EE25299E2E75009442BA /* AddNewUser.swift */,
 				986D391D29AC85500057F92C /* UserLogin.swift */,
+				98168AF029B08E8F00331A13 /* DeleteUser.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -271,6 +286,7 @@
 				986D394229ADE1E20057F92C /* CatogeryLIstDataManager.swift */,
 				981DAB3D29AE23390036FBE1 /* AddNewProductDataManager.swift */,
 				98168ADA29AFC31700331A13 /* EditProductDetailDataManager.swift */,
+				98168AEA29B078DD00331A13 /* DeleteProductDataManager.swift */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -282,6 +298,7 @@
 				983A5DEF29A640AE00441D6F /* InsertQuerry.swift */,
 				986D392529AC8DE90057F92C /* SelectQuerry.swift */,
 				981DAB5129AF39EA0036FBE1 /* UpdateQuerry.swift */,
+				98168AE829B06B4000331A13 /* DeleteQuerry.swift */,
 			);
 			path = DataBase;
 			sourceTree = "<group>";
@@ -291,10 +308,11 @@
 			children = (
 				9872EE33299E3217009442BA /* AddNewUserDataBaseContract.swift */,
 				986D392129AC8B540057F92C /* UserLoginDataBaseContract.swift */,
-				986D394029ADD8A10057F92C /* CatogeryListDatabaseContract.swift */,
+				986D394029ADD8A10057F92C /* CatogeryListDataBaseContract.swift */,
 				981DAB3929AE18080036FBE1 /* AddNewProductDataBaseContract.swift */,
 				981DAB4329AF2E860036FBE1 /* ViewProductListDataBaseContract.swift */,
 				981DAB4B29AF35A40036FBE1 /* EditProductDetailDataBaseContract.swift */,
+				98168AE229B067D900331A13 /* DeleteProductDataBaseContract.swift */,
 			);
 			path = DataContract;
 			sourceTree = "<group>";
@@ -417,8 +435,10 @@
 				981DAB3829AE17BF0036FBE1 /* AddNewProductDataBaseService.swift in Sources */,
 				986D393C29ADD66E0057F92C /* GetCatogeryList.swift in Sources */,
 				983A5DED29A605AE00441D6F /* Member.swift in Sources */,
+				98168AE929B06B4000331A13 /* DeleteQuerry.swift in Sources */,
+				98168AEB29B078DD00331A13 /* DeleteProductDataManager.swift in Sources */,
 				986D394329ADE1E20057F92C /* CatogeryLIstDataManager.swift in Sources */,
-				986D394129ADD8A10057F92C /* CatogeryListDatabaseContract.swift in Sources */,
+				986D394129ADD8A10057F92C /* CatogeryListDataBaseContract.swift in Sources */,
 				9872EE26299E2E75009442BA /* AddNewUser.swift in Sources */,
 				981DAB4C29AF35A40036FBE1 /* EditProductDetailDataBaseContract.swift in Sources */,
 				981DAB4429AF2E860036FBE1 /* ViewProductListDataBaseContract.swift in Sources */,
@@ -429,6 +449,7 @@
 				981DAB3629AE15FB0036FBE1 /* AddNewProduct.swift in Sources */,
 				986D392029AC87F60057F92C /* UserLoginDataContract.swift in Sources */,
 				9872EE47299E4A8F009442BA /* DataBaseInit.swift in Sources */,
+				98168AE529B0692200331A13 /* DeleteProductDataContract.swift in Sources */,
 				981DAB3E29AE23390036FBE1 /* AddNewProductDataManager.swift in Sources */,
 				981DAB5029AF385D0036FBE1 /* EditProductDetailDataContract.swift in Sources */,
 				986CCC7E29A32E0600378EB4 /* Order.swift in Sources */,
@@ -437,6 +458,7 @@
 				98168ADB29AFC31700331A13 /* EditProductDetailDataManager.swift in Sources */,
 				986D392829ACC8BD0057F92C /* UserLoginDataManger.swift in Sources */,
 				983A5DF029A640AE00441D6F /* InsertQuerry.swift in Sources */,
+				98168AF129B08E8F00331A13 /* DeleteUser.swift in Sources */,
 				981DAB4229AF2C070036FBE1 /* ViewProductList.swift in Sources */,
 				986D393A29ADD62A0057F92C /* CatogeryListDataBaseService.swift in Sources */,
 				986D392629AC8DE90057F92C /* SelectQuerry.swift in Sources */,
@@ -445,6 +467,8 @@
 				981DAB4A29AF34770036FBE1 /* EditProductDeatail.swift in Sources */,
 				981DAB5229AF39EA0036FBE1 /* UpdateQuerry.swift in Sources */,
 				9872EE39299E339F009442BA /* AddNewUserDataBaseService.swift in Sources */,
+				98168AE729B0698000331A13 /* DeleteProductDataBaseService.swift in Sources */,
+				98168AE329B067D900331A13 /* DeleteProductDataBaseContract.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -140,3 +140,26 @@ extension Assembler  {
         return editProductDetailUseCase
     }
 }
+
+extension Assembler {
+    
+    public static func deleteProductAssembler(router: Router) -> DeleteProductView {
+        
+        let deleteProductUseCase = deleteProductAssembler()
+        let deleteProductPresenter =  DeleteProductPresenter(deleteProduct: deleteProductUseCase)
+        deleteProductPresenter.router = router
+        let deleteProductView = DeleteProductView(deleteProductPresenter: deleteProductPresenter)
+        deleteProductPresenter.deleteProductView = deleteProductView
+        return deleteProductView
+        
+    }
+    
+    private static func deleteProductAssembler() -> DeleteProduct {
+        
+        let deleteProductDataBaseService = DeleteProductDataBaseService()
+        let deleteProductDataManager = DeleteProductDataBaseManager(deleteProductDataBase: deleteProductDataBaseService)
+        let deleteProductUseCase = DeleteProduct(deleteProductDataManager: deleteProductDataManager)
+        
+        return deleteProductUseCase
+    }
+}

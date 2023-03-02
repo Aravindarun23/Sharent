@@ -38,8 +38,12 @@ class Router {
         self.window.contentView = Assembler.addNewProductAssembler(router: self)
     }
     
-    func EditProductDetailView() {
+    func editProductDetailView() {
         self.window.contentView = Assembler.editProductDetailAssembler(router: self)
+    }
+    
+    func deleteProductView() {
+        self.window.contentView = Assembler.deleteProductAssembler(router: self)
     }
 
 }
