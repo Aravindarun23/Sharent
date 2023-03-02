@@ -45,5 +45,13 @@ class Router {
     func deleteProductView() {
         self.window.contentView = Assembler.deleteProductAssembler(router: self)
     }
+    
+    func deleteUserView() {
+        self.window.contentView = Assembler.deleteUserAssembler(router: self)
+    }
+    
+    func addCatogeryView() {
+        self.window.contentView = Assembler.addCatogeryAssembler(router: self)
+    }
 
 }

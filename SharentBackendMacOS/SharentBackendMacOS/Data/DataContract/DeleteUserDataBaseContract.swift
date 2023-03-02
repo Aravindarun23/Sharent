@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+
+public protocol DeleteUserDataBaseContract {
+    
+    func deleteUser(userId: Int, success: @escaping (String) -> Void, failure: @escaping(Error) -> Void) 
+}

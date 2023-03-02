@@ -145,7 +145,7 @@ extension Assembler {
     
     public static func deleteProductAssembler(router: Router) -> DeleteProductView {
         
-        let deleteProductUseCase = deleteProductAssembler()
+        let deleteProductUseCase = deleteProductUseCase()
         let deleteProductPresenter =  DeleteProductPresenter(deleteProduct: deleteProductUseCase)
         deleteProductPresenter.router = router
         let deleteProductView = DeleteProductView(deleteProductPresenter: deleteProductPresenter)
@@ -154,12 +154,59 @@ extension Assembler {
         
     }
     
-    private static func deleteProductAssembler() -> DeleteProduct {
+    private static func deleteProductUseCase() -> DeleteProduct {
         
         let deleteProductDataBaseService = DeleteProductDataBaseService()
-        let deleteProductDataManager = DeleteProductDataBaseManager(deleteProductDataBase: deleteProductDataBaseService)
+        let deleteProductDataManager = DeleteProductDataManager(deleteProductDataBase: deleteProductDataBaseService)
         let deleteProductUseCase = DeleteProduct(deleteProductDataManager: deleteProductDataManager)
         
         return deleteProductUseCase
     }
+}
+
+extension Assembler {
+    
+    public static func deleteUserAssembler(router: Router) -> DeleteUserView {
+        
+        let deleteUserUseCase = deleteUserUserCase()
+        let deleteUserPresenter =  DeleteUserPresenter(deleteUser: deleteUserUseCase)
+        deleteUserPresenter.router = router
+        let deleteUserView = DeleteUserView(deleteUserPresenter: deleteUserPresenter)
+        deleteUserPresenter.deleteUserView = deleteUserView
+        return deleteUserView
+        
+    }
+    
+    private static func deleteUserUserCase() -> DeleteUser {
+        
+        let deleteUserDataBaseService = DeleteUserDataBaseService()
+        let deleteUserDataManager = DeleteUserDataManager(deleteUserDataBase: deleteUserDataBaseService)
+        let deleteUserUseCase = DeleteUser(deleteUserDataManager: deleteUserDataManager)
+        return deleteUserUseCase
+    }
+}
+
+
+extension Assembler {
+    
+    public static func addCatogeryAssembler(router: Router) -> AddCatogeryView {
+        
+        let addCatogeryUseCase = addCatogeryUseCase()
+        let addCatogeryPresenter = AddCatogeryPresenter(addCatogery: addCatogeryUseCase)
+        addCatogeryPresenter.router = router
+        let addCatogeryView = AddCatogeryView(addCatogeryPresenter: addCatogeryPresenter)
+        addCatogeryPresenter.addCatogeryView = addCatogeryView
+        return addCatogeryView
+        
+    }
+    
+    private static func addCatogeryUseCase() -> AddCatogery {
+        
+        let addCatogeryDataBaseService = AddCatogeryDataBaseService()
+        let addCatogeryDataManager = AddCatogeryDataManager(addCatogeryDataBase: addCatogeryDataBaseService)
+        let addCatogeryUseCase = AddCatogery(addCatogeryDataManager: addCatogeryDataManager)
+        return addCatogeryUseCase
+    }
+    
+    
 }

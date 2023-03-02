@@ -17,7 +17,7 @@ protocol UserSignUpPagePresenterContract: AnyObject {
     func viewLoad(user: User)
 }
 
-protocol UserLoginViewContract : AnyObject {
+protocol UserLoginViewContract: AnyObject {
     func load(name: String)
     func faiure(error: UserLoginError)
 }
@@ -25,3 +25,12 @@ protocol UserLoginPresenterContract: AnyObject {
     func viewDidLoad(email: String, password: String)
 }
 
+
+protocol DeleteUserViewContract: AnyObject {
+    func load(message: DeleteUserResponse)
+    func faiure(error: DeleteUserError)
+}
+
+protocol DeleteUserPresenterContract: AnyObject {
+    func viewDidLoad(userId: Int)
+}

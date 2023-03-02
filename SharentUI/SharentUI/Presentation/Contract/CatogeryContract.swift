@@ -6,3 +6,19 @@
 //
 
 import Foundation
+import SharentBackendMacOS
+
+protocol CatogeryListPresenterContract: AnyObject{
+    func viewDidload()
+}
+protocol CatogreyListViewContrat: AnyObject {
+    func load(catogeryList: CatogeryListResponse)
+}
+
+protocol AddCatogeryViewContract: AnyObject {
+    func load(response: AddCatogeryResponse)
+}
+
+protocol AddCatogeryPresenterContract: AnyObject {
+    func viewDidload(catogeryName: String)
+}

@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+public protocol AddCatogeryDataContract {
+    
+    func addCatogery(catogeryName: String, success: @escaping (String) -> Void, failure: @escaping (Error) -> Void)
+}

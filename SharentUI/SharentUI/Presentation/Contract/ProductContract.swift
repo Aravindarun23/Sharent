@@ -8,12 +8,7 @@
 import Foundation
 import SharentBackendMacOS
 
-protocol CatogeryListPresenterContract: AnyObject{
-    func viewDidload()
-}
-protocol CatogreyListViewContrat: AnyObject {
-    func load(catogeryList: CatogeryListResponse)
-}
+
 
 protocol AddNewProductPresenterContract: AnyObject {
     func viewDidload(product: Product)

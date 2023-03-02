@@ -10,11 +10,10 @@ import SQLite3
 import VTComponents
 
 class InsertQuerry {
-    
     static func insertQuerry(tableName: String, columnName: String, insertData: String, response: (String) -> Void, error: (Error) -> Void) {
         
         let querry = "INSERT INTO \(tableName) (\(columnName)) VALUES (\(insertData))"
-        print(querry)
+        
         let prepareStatement : OpaquePointer? = DataBase.shared.prepareStatement(query: querry)
         
         if sqlite3_step(prepareStatement) == SQLITE_DONE {

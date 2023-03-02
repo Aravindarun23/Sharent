@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class DeleteProductDataBaseManager: DeleteProductDataContract {
+public class DeleteProductDataManager: DeleteProductDataContract {
     
     let deleteProductDataBase: DeleteProductDataBaseContract
     
