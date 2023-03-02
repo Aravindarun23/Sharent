@@ -12,6 +12,7 @@ import SharentBackendMacOS
 
 class AddCatogeryView: NSView {
     
+    let a: String
     let addCatogeryPresenter: AddCatogeryPresenterContract
     
     init(addCatogeryPresenter: AddCatogeryPresenterContract) {
