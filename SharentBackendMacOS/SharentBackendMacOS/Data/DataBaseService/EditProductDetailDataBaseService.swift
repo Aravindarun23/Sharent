@@ -21,7 +21,7 @@ public class EditProductDetailDataBaserService: EditProductDetailDataBaseContrac
         
         UpdateQuerry.updateQuerry(tableName: "product", updateQuerry: updateQuerry, condition: condition) { [weak self]
             responseMsg in
-            self?.success(callback: success, message: "Updated Sucessfully")
+            self?.success(callback: success, message: "Updated Sucessfully ")
             
         } error: { error in
             

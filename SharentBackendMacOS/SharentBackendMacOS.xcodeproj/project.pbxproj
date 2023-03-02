@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		98168ADB29AFC31700331A13 /* EditProductDetailDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168ADA29AFC31700331A13 /* EditProductDetailDataManager.swift */; };
+		98168AE129B05FF800331A13 /* DeleteProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168AE029B05FF800331A13 /* DeleteProduct.swift */; };
 		981B782E29A73A3800C67B59 /* Admin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981B782D29A73A3800C67B59 /* Admin.swift */; };
 		981DAB3629AE15FB0036FBE1 /* AddNewProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981DAB3529AE15FB0036FBE1 /* AddNewProduct.swift */; };
 		981DAB3829AE17BF0036FBE1 /* AddNewProductDataBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981DAB3729AE17BF0036FBE1 /* AddNewProductDataBaseService.swift */; };
@@ -54,6 +55,7 @@
 		5C0351F3CC20C9492B4ADA1A /* Pods-SharentBackendMacOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharentBackendMacOS.release.xcconfig"; path = "Target Support Files/Pods-SharentBackendMacOS/Pods-SharentBackendMacOS.release.xcconfig"; sourceTree = "<group>"; };
 		688A7D030E9DD98D1814B7F2 /* Pods-SharentBackendMacOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharentBackendMacOS.debug.xcconfig"; path = "Target Support Files/Pods-SharentBackendMacOS/Pods-SharentBackendMacOS.debug.xcconfig"; sourceTree = "<group>"; };
 		98168ADA29AFC31700331A13 /* EditProductDetailDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProductDetailDataManager.swift; sourceTree = "<group>"; };
+		98168AE029B05FF800331A13 /* DeleteProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProduct.swift; sourceTree = "<group>"; };
 		981B782D29A73A3800C67B59 /* Admin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Admin.swift; sourceTree = "<group>"; };
 		981DAB3529AE15FB0036FBE1 /* AddNewProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewProduct.swift; sourceTree = "<group>"; };
 		981DAB3729AE17BF0036FBE1 /* AddNewProductDataBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewProductDataBaseService.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				981DAB3529AE15FB0036FBE1 /* AddNewProduct.swift */,
 				981DAB4129AF2C070036FBE1 /* ViewProductList.swift */,
 				981DAB4929AF34770036FBE1 /* EditProductDeatail.swift */,
+				98168AE029B05FF800331A13 /* DeleteProduct.swift */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 			files = (
 				983A5DEB29A6013300441D6F /* Catogery.swift in Sources */,
 				981DAB4829AF2FBE0036FBE1 /* ViewProductListDataBaseService.swift in Sources */,
+				98168AE129B05FF800331A13 /* DeleteProduct.swift in Sources */,
 				986D393F29ADD7BA0057F92C /* CatogeryListDataContract.swift in Sources */,
 				9872EE36299E329C009442BA /* AddNewUserDataManager.swift in Sources */,
 				986D392429AC8BA40057F92C /* UserLoginDataBaseService.swift in Sources */,
