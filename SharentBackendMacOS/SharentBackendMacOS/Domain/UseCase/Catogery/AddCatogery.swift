@@ -54,7 +54,7 @@ public final class AddCatogery: ZUsecase<AddCatogeryRequest, AddCatogeryResponse
     
     private func success(callback: @escaping (AddCatogeryResponse) -> Void, message: String) {
         let response = AddCatogeryResponse(message: message)
-        callback(response)
+        invokeSuccess(callback: callback, response: response)
     }
     
     private func failure(callback: @escaping (Error) -> Void, error: Error) {

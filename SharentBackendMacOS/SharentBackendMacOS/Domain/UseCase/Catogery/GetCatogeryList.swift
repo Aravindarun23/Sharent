@@ -45,7 +45,7 @@ public final class GetCatogeryList: ZUsecase<CatogeryListRequest, CatogeryListRe
     private func sucess(callBack: @escaping (CatogeryListResponse) -> Void, catogery: [Category]) {
         
         let response = CatogeryListResponse(catogeryList: catogery)
-        callBack(response)
+        invokeSuccess(callback: callBack, response: response)
     }
     
     

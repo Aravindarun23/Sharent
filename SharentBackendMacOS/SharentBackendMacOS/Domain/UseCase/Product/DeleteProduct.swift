@@ -54,7 +54,7 @@ public final class DeleteProduct: ZUsecase<DeleteProductRequest, DeleteProductRe
     
     private func success(callback: @escaping (DeleteProductResponse) -> Void, message: String) {
         let response = DeleteProductResponse(responseMessage: message)
-        callback(response)
+        invokeSuccess(callback: callback, response: response)
     }
     
     private func failure(callback: @escaping(DeleteProductError) -> Void, error: Error) {

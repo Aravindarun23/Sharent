@@ -12,7 +12,6 @@ import SharentBackendMacOS
 
 class AddCatogeryView: NSView {
     
-    let a: String
     let addCatogeryPresenter: AddCatogeryPresenterContract
     
     init(addCatogeryPresenter: AddCatogeryPresenterContract) {
@@ -22,7 +21,7 @@ class AddCatogeryView: NSView {
     
     override func viewDidMoveToSuperview() {
         if superview != nil {
-            addCatogeryPresenter.viewDidload(catogeryName: "Electronics")
+            addCatogeryPresenter.viewDidload(catogeryName: "Desktop")
         }
     }
     
@@ -39,3 +38,4 @@ extension AddCatogeryView: AddCatogeryViewContract {
         print(response.responseMsg)
     }
 }
+

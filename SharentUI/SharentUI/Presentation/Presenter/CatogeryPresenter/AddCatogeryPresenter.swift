@@ -11,7 +11,6 @@ import SharentBackendMacOS
 
 class AddCatogeryPresenter: AddCatogeryPresenterContract {
     
-    
     let addCatogery: AddCatogery
     weak var addCatogeryView: AddCatogeryViewContract?
     weak var router: Router?

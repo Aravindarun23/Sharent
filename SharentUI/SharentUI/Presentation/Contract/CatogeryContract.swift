@@ -22,3 +22,12 @@ protocol AddCatogeryViewContract: AnyObject {
 protocol AddCatogeryPresenterContract: AnyObject {
     func viewDidload(catogeryName: String)
 }
+
+
+protocol DeleteCategoryViewContract: AnyObject {
+    func load(response: DeleteCategoryResponse)
+}
+
+protocol DeleteCategoryPresenterContract: AnyObject {
+    func viewDidload(categoryId: Int)
+}

@@ -210,3 +210,23 @@ extension Assembler {
     
     
 }
+
+extension Assembler  {
+    
+    public static func deleteCategoryAssembler(router: Router) -> DeleteCategoryView {
+        let deleteCategoryUseCase = deleteCategoryUseCase()
+        let deleteCategoryPresenter = DeleteCategoryPresenter(deleteCategory: deleteCategoryUseCase)
+        deleteCategoryPresenter.router = router
+        let deleteCategoryView = DeleteCategoryView(deleteCategoryPresenter: deleteCategoryPresenter)
+        deleteCategoryPresenter.deleteCategoryView = deleteCategoryView
+        return deleteCategoryView
+    }
+    
+    private static func deleteCategoryUseCase() -> DeleteCategory {
+        
+        let deleteCategeryDataBaseService = DeleteCategoryDataBaseService()
+        let deleteCategoryDataManager = DeleteCategoryDataManager(deleteCategoryDataBase: deleteCategeryDataBaseService)
+        let deleteCategoryUseCase = DeleteCategory(deleteCategoryDataManager: deleteCategoryDataManager)
+        return deleteCategoryUseCase
+    }
+}

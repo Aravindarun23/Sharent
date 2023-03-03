@@ -53,7 +53,7 @@ public final class DeleteUser: ZUsecase<DeleteUserRequest, DeleteUserResponse, D
     private func succes(callback: @escaping (DeleteUserResponse) -> Void, message: String) {
         
         let response = DeleteUserResponse(responseMsg: message)
-        callback(response)
+        invokeSuccess(callback: callback, response: response)
         
     }
     

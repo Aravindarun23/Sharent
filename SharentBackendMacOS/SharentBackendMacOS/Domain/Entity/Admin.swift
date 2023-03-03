@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Admin: Member {
+public class Admin: Member {
     
     override init(id: Int, emailId: String, password: String) {
         super.init(id: id, emailId: emailId, password: password)

@@ -21,6 +21,7 @@ public class DataBase {
         createUserTable()
         catogeryTable()
         productTable()
+        adminTable()
     }
     
     private func createDatabase() {
@@ -120,6 +121,18 @@ public class DataBase {
         )
         """
         createTable(querry: productTableQuerry)
+    }
+    
+    private func adminTable() {
+        
+        let adminTableQuerry = """
+            CREATE TABLE IF NOT EXISTS "admin" (
+            "id"    INTEGER,
+            "emailId"    TEXT,
+            "password"    TEXT,
+            PRIMARY KEY("id" AUTOINCREMENT)
+        )
+        """
     }
     
 }

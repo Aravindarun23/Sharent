@@ -19,7 +19,7 @@ public class AddCatogeryDataBaseService: AddCatogeryDataBaseContract {
         let columnName = "catogeryName"
         InsertQuerry.insertQuerry(tableName: tableName, columnName: "\'\(columnName)\'", insertData: "\'\(catogeryName)\'") { [weak self]
             responseMsg in
-            self?.success(callback: success, message: responseMsg)
+            self?.success(callback: success, message: "Add Catogery Successfully")
         } error: { error in
             self.failure(callback: failure, error: error)
             
