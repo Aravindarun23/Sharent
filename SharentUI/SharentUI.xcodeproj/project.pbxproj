@@ -19,6 +19,8 @@
 		98168B2029B1BEE800331A13 /* DeleteCategoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168B1F29B1BEE800331A13 /* DeleteCategoryPresenter.swift */; };
 		98168B2229B1BFF800331A13 /* DeleteCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168B2129B1BFF800331A13 /* DeleteCategoryView.swift */; };
 		98168B3029B21B8400331A13 /* AdminContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168B2F29B21B8400331A13 /* AdminContract.swift */; };
+		98168B3329B4607B00331A13 /* AdminLoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168B3229B4607B00331A13 /* AdminLoginPresenter.swift */; };
+		98168B3629B4624400331A13 /* AdminLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168B3529B4624400331A13 /* AdminLoginView.swift */; };
 		981DAB4029AF18D60036FBE1 /* AddNewProductPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981DAB3F29AF18D60036FBE1 /* AddNewProductPresenter.swift */; };
 		981E4E52299E14F70068A880 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981E4E51299E14F70068A880 /* AppDelegate.swift */; };
 		981E4E54299E14F80068A880 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 981E4E53299E14F80068A880 /* Assets.xcassets */; };
@@ -69,6 +71,8 @@
 		98168B1F29B1BEE800331A13 /* DeleteCategoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteCategoryPresenter.swift; sourceTree = "<group>"; };
 		98168B2129B1BFF800331A13 /* DeleteCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteCategoryView.swift; sourceTree = "<group>"; };
 		98168B2F29B21B8400331A13 /* AdminContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminContract.swift; sourceTree = "<group>"; };
+		98168B3229B4607B00331A13 /* AdminLoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginPresenter.swift; sourceTree = "<group>"; };
+		98168B3529B4624400331A13 /* AdminLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginView.swift; sourceTree = "<group>"; };
 		981DAB3F29AF18D60036FBE1 /* AddNewProductPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewProductPresenter.swift; sourceTree = "<group>"; };
 		981E4E4E299E14F70068A880 /* SharentUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharentUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		981E4E51299E14F70068A880 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +138,22 @@
 				98168B1F29B1BEE800331A13 /* DeleteCategoryPresenter.swift */,
 			);
 			path = CatogeryPresenter;
+			sourceTree = "<group>";
+		};
+		98168B3129B4603200331A13 /* AdminPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				98168B3229B4607B00331A13 /* AdminLoginPresenter.swift */,
+			);
+			path = AdminPresenter;
+			sourceTree = "<group>";
+		};
+		98168B3429B4622000331A13 /* AdminView */ = {
+			isa = PBXGroup;
+			children = (
+				98168B3529B4624400331A13 /* AdminLoginView.swift */,
+			);
+			path = AdminView;
 			sourceTree = "<group>";
 		};
 		981E4E45299E14F70068A880 = {
@@ -213,6 +233,7 @@
 		9872EE3B299E387E009442BA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				98168B3429B4622000331A13 /* AdminView */,
 				98168B0E29B0E0B700331A13 /* CatogeryView */,
 				986D392D29ADCA920057F92C /* ProductView */,
 				986CCC7529A255FE00378EB4 /* UserView */,
@@ -223,6 +244,7 @@
 		9872EE3C299E388E009442BA /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				98168B3129B4603200331A13 /* AdminPresenter */,
 				98168B1129B0E1F900331A13 /* CatogeryPresenter */,
 				986D393629ADD58F0057F92C /* ProductPresenter */,
 				9872EE5129A0E7BE009442BA /* UserPresenter */,
@@ -390,6 +412,7 @@
 				98168AED29B07DFF00331A13 /* DeleteProductPresenter.swift in Sources */,
 				9872EE43299E392E009442BA /* Router.swift in Sources */,
 				98168B0D29B0DF8000331A13 /* CatogeryContract.swift in Sources */,
+				98168B3629B4624400331A13 /* AdminLoginView.swift in Sources */,
 				98168AFD29B0CCFD00331A13 /* DeleteUserView.swift in Sources */,
 				9872EE3F299E38CD009442BA /* UserSignUpPagePresnter.swift in Sources */,
 				986D392F29ADCAAD0057F92C /* AddNewProductView.swift in Sources */,
@@ -397,6 +420,7 @@
 				9872EE45299E3945009442BA /* Assembler.swift in Sources */,
 				9872EE41299E38F8009442BA /* UserSignUpPageView.swift in Sources */,
 				986D393129ADCBED0057F92C /* UserHomeView.swift in Sources */,
+				98168B3329B4607B00331A13 /* AdminLoginPresenter.swift in Sources */,
 				981DAB4029AF18D60036FBE1 /* AddNewProductPresenter.swift in Sources */,
 				9872EE4A299F4F41009442BA /* UserContract.swift in Sources */,
 				986D392C29ACD1160057F92C /* UserLoginPagePresenter.swift in Sources */,

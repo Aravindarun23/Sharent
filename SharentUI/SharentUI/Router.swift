@@ -57,5 +57,9 @@ class Router {
     func deleteCategoryView() {
         self.window.contentView = Assembler.deleteCategoryAssembler(router: self)
     }
+    
+    func adminLoginView() {
+        self.window.contentView = Assembler.adminLoginAssembler(router: self)
+    }
 
 }

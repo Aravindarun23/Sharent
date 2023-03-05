@@ -10,9 +10,9 @@ import Foundation
 
 public class Member {
     
-    var id: Int
-    var emailId: String
-    var password: String
+    public var id: Int
+    public var emailId: String
+    public var password: String
     
     public init(id: Int, emailId: String, password: String) {
         

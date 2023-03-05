@@ -9,7 +9,8 @@ import Foundation
 import SharentBackendMacOS
 
 protocol AdminLoginViewContract: AnyObject {
-    func load(admin: AdminLoginResponse)
+    func load(admin: Admin)
+    func failure(error: Error) 
 }
 
 protocol AdminLoginPresenterContract: AnyObject {

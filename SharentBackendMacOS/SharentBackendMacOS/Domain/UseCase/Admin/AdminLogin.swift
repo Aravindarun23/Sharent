@@ -25,7 +25,7 @@ public final class AdminLoginResponse: ZResponse {
     
     public var admin: Admin
     
-    init(admin: Admin) {
+    public init(admin: Admin) {
         self.admin = admin
     }
     
@@ -49,14 +49,14 @@ public final class AdminLoginError: ZError {
 
 public final class AdminLogin: ZUsecase<AdminLoginRequest, AdminLoginResponse, AdminLoginError> {
     
-    let adminLogin: AdminLoginDataContract
+    let adminLoginDataManager: AdminLoginDataContract
     
-    public init(adminLogin: AdminLoginDataContract) {
-        self.adminLogin = adminLogin
+    public init(adminLoginDataManager: AdminLoginDataContract) {
+        self.adminLoginDataManager = adminLoginDataManager
     }
     
     override public func run(request: AdminLoginRequest, success: @escaping (AdminLoginResponse) -> Void, failure: @escaping (AdminLoginError) -> Void) {
-        adminLogin.adminLogin(emailId: request.emailId, password: request.password) { [weak self]
+        adminLoginDataManager.adminLogin(emailId: request.emailId, password: request.password) { [weak self]
             admin in
             self?.success(callBack: success, admin: admin)
         } failure: { [weak self] error in
@@ -67,12 +67,12 @@ public final class AdminLogin: ZUsecase<AdminLoginRequest, AdminLoginResponse, A
     private func success(callBack: @escaping (AdminLoginResponse) -> Void, admin: Admin) {
         
         let response = AdminLoginResponse(admin: admin)
-        callBack(response)
+        invokeSuccess(callback: callBack, response: response)
     }
     
     private func failure(callback: @escaping (AdminLoginError) -> Void, error: Error) {
         let error = AdminLoginError(error: error)
-        callback(error)
+        invokeFailure(callback: callback, failure: error)
     }
 }
 

@@ -230,3 +230,25 @@ extension Assembler  {
         return deleteCategoryUseCase
     }
 }
+
+
+extension Assembler {
+    
+    public static func adminLoginAssembler(router: Router) -> AdminLoginView {
+        
+        let adminLoginUseCase = adminLoginUseCase()
+        let adminLoginPresenter = AdminLoginPresenter(adminLogin: adminLoginUseCase)
+        adminLoginPresenter.roter = router
+        let adminLoginView = AdminLoginView(adminLoginPresenter: adminLoginPresenter)
+        adminLoginPresenter.adminLoginView = adminLoginView
+        return adminLoginView
+    }
+    
+    private static func adminLoginUseCase() -> AdminLogin {
+        
+        let adminLoginDataBaseService = AdminLoginDataBaseService()
+        let adminLoginDataManager = AdminLoginDataManager(adminLoginDataBaseService: adminLoginDataBaseService)
+        let adminLoginUseCase = AdminLogin(adminLoginDataManager: adminLoginDataManager)
+        return adminLoginUseCase
+    }
+}

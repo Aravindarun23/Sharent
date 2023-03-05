@@ -16,13 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         router = Router(window: window)
-        AdminLoginDataBaseService.AdminLogin(emailId: "arvind123", password: "a123") {
-            response in
-            print(response)
-        } failure: { error in
-            print(error)
-        }
-//        router?.addCatogeryView()
+        router?.adminLoginView()
         
         // Insert code here to initialize your application
     }
