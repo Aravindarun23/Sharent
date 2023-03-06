@@ -16,7 +16,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         router = Router(window: window)
-        router?.adminLoginView()
+        SearchProductDataBaseService.SearchProduct(pincode: "123456", product: "lap", fromDate: "2023-01-22", toDate: "2023-01-23")
+        {
+            response in
+        } failure: { error in
+            
+        }
         
         // Insert code here to initialize your application
     }

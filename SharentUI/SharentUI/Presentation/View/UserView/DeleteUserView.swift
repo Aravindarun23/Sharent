@@ -19,7 +19,7 @@ class DeleteUserView: NSView {
     }
     
     override func viewDidMoveToSuperview() {
-        deleteUserPresenter.viewDidLoad(userId: 4)
+        deleteUserPresenter.viewDidLoad(userId: 3)
     }
     
     

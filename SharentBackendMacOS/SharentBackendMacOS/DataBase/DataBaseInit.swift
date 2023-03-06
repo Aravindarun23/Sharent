@@ -22,6 +22,7 @@ public class DataBase {
         catogeryTable()
         productTable()
         adminTable()
+        orderTable()
     }
     
     private func createDatabase() {
@@ -61,6 +62,7 @@ public class DataBase {
    
     
     public func prepareStatement(query: String) -> OpaquePointer? {
+    
 
         var statementPointer: OpaquePointer?
         if sqlite3_prepare(dbPointer, query, -1, &statementPointer, nil) == SQLITE_OK {
@@ -133,6 +135,29 @@ public class DataBase {
             PRIMARY KEY("id" AUTOINCREMENT)
         )
         """
+        createTable(querry: adminTableQuerry)
+    }
+    
+    private func orderTable() {
+        
+        let orderTableQuerry = """
+       
+        CREATE TABLE IF NOT EXISTS "orders" (
+            "id"    INTEGER NOT NULL,
+            "productId"    INTEGER,
+            "buyerId"    INTEGER,
+            "orderDate"    DATETIME NOT NULL,
+            "pickUpDate"   DATETIME NOT NULL,
+            "returnDate"   DATETIME NOT NULL,
+            "totalPrice"    INTEGER NOT NULL,
+            "status"    TEXT NOT NULL,
+            PRIMARY KEY("id" AUTOINCREMENT),
+            FOREIGN KEY("productId") REFERENCES "product"("productId"),
+            FOREIGN KEY("buyerId") REFERENCES "user"("userId")
+        )
+       """
+        
+        createTable(querry: orderTableQuerry)
     }
     
 }

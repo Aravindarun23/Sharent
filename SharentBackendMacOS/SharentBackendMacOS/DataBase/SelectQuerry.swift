@@ -10,11 +10,10 @@ import SQLite3
 
 class SelectQuerry {
     
-    static func select(tableName: String, whereClause: String? = nil, args: [Any]? = nil, select: String = "*") -> [[String: Any]]? {
+    static func select(tableName: String, whereClause: String? = nil, args: [Any]? = nil, selectColumn: String = "*", joinsQuerry: String = "") -> [[String: Any]]? {
         
         var results: [[String: Any]]?
-        let query = "SELECT \(select) FROM \(tableName) \(whereClause != nil ? "WHERE \(whereClause!)" : "")"
-
+        let query = "SELECT \(selectColumn) FROM \(tableName) \(joinsQuerry) \(whereClause != nil ? "WHERE \(whereClause!)" : "")"
         if let prepare = DataBase.shared.prepareStatement(query: query) {
             if let args = args {
                 // Bind the parameters to the statement
