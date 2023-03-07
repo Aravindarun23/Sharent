@@ -22,13 +22,13 @@ public class SearchProductDataBaseService: SearchProductDataBaseContract {
         
         let selectColumn = "product.productId,productName,price,productDetail,uploadedDate,sellerId,name,emailId,password,address,pincode,mobileNumber,catogery.catogeryId,catogeryName"
         
-        let whereQuerry = "user.pincode = \(pincode) AND product.productName like \'%\(product)%\' AND((orders.pickUpDate < '\(fromDate)' AND  orders.pickUpDate < \'\(toDate)\') OR (orders.returnDate >  \'\(fromDate)\' AND orders.returnDate > \'\(toDate)\')) AND product.status = \'active\' AND orders.status != \'cancelled\' AND orders.status != \'success\'"
+        let whereQuerry = "user.pincode = \'\(pincode)\' AND product.productName like \'%\(product)%\' AND((orders.pickUpDate < '\(fromDate)' AND  orders.pickUpDate < \'\(toDate)\') OR (orders.returnDate >  \'\(fromDate)\' AND orders.returnDate > \'\(toDate)\')) AND product.status = \'active\' AND orders.status != \'cancelled\' AND orders.status != \'success\'"
         
         let joinsQuerry = "INNER JOIN user on product.sellerId = user.userId INNER JOIN orders on product.productId = orders.productId INNER JOIN catogery on product.catogeryId = catogery.catogeryId"
         
         let result = SelectQuerry.select(tableName: "product", whereClause: whereQuerry, selectColumn: selectColumn, joinsQuerry: joinsQuerry)
         
-        if result!.isEmpty {
+        if result?.count != 0 {
             
             for product in result! {
                 
@@ -42,7 +42,7 @@ public class SearchProductDataBaseService: SearchProductDataBaseContract {
                       let emailId = product["emailId"] as? String,
                       let password = product["password"] as? String,
                       let address = product["address"] as? String,
-                      let mobileNumber = product["mobilerNumber"] as? String,
+                      let mobileNumber = product["mobileNumber"] as? String,
                       let pincode = product["pincode"] as? String,
                       let categoryId = product["catogeryId"] as? Int,
                       let categoryName = product["catogeryName"] as? String else { return }
@@ -58,8 +58,5 @@ public class SearchProductDataBaseService: SearchProductDataBaseContract {
         else {
             failure(ZErrorType.unknownError)
         }
-        
-        
-        
     }
 }

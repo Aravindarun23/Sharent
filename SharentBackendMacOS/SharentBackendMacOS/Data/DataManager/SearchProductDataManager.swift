@@ -12,7 +12,7 @@ public class SearchProductDataManager: SearchProductDataContract {
    
     let searchProductDataBase: SearchProductDataBaseContract
     
-    init(searchProductDataBase: SearchProductDataBaseContract) {
+    public init(searchProductDataBase: SearchProductDataBaseContract) {
         self.searchProductDataBase = searchProductDataBase
     }
     
@@ -27,10 +27,10 @@ public class SearchProductDataManager: SearchProductDataContract {
     }
     
     private func success(callback: @escaping ([Product]) -> Void, products: [Product]) {
-        
+        callback(products)
     }
     
     private func failure(callback: @escaping (Error) -> Void, error: Error) {
-        
+        callback(error)
     }
 }

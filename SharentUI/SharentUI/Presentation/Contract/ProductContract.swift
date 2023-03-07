@@ -31,3 +31,11 @@ protocol DeleteProductPresenterContract: AnyObject {
 protocol DeleteProductViewContract: AnyObject {
     func load(message: DeleteProductResponse)
 }
+
+protocol SearchProductPresenterContract: AnyObject {
+    func viewDidLoad(productName: String, pincode: String, fromDate: String, toDate: String)
+}
+protocol SearchProductViewContract: AnyObject {
+    func load(products: [Product])
+    func failure(error: Error)
+}

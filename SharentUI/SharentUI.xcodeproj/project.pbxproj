@@ -41,6 +41,8 @@
 		9872EE45299E3945009442BA /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9872EE44299E3945009442BA /* Assembler.swift */; };
 		9872EE4A299F4F41009442BA /* UserContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9872EE49299F4F41009442BA /* UserContract.swift */; };
 		9872EE4C299F8C10009442BA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9872EE4B299F8C10009442BA /* LoginView.swift */; };
+		98AB7C9729B6F55E00227BE0 /* SearchProductPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7C9629B6F55E00227BE0 /* SearchProductPresenter.swift */; };
+		98AB7C9929B6F6A700227BE0 /* SearchProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7C9829B6F6A700227BE0 /* SearchProductView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -93,6 +95,8 @@
 		9872EE44299E3945009442BA /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
 		9872EE49299F4F41009442BA /* UserContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserContract.swift; sourceTree = "<group>"; };
 		9872EE4B299F8C10009442BA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		98AB7C9629B6F55E00227BE0 /* SearchProductPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProductPresenter.swift; sourceTree = "<group>"; };
+		98AB7C9829B6F6A700227BE0 /* SearchProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProductView.swift; sourceTree = "<group>"; };
 		A6B41A1BDEF413EB325A4C94 /* Pods-SharentUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharentUI.release.xcconfig"; path = "Target Support Files/Pods-SharentUI/Pods-SharentUI.release.xcconfig"; sourceTree = "<group>"; };
 		F44DF708E67CD7C02C518822 /* Pods-SharentUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharentUI.debug.xcconfig"; path = "Target Support Files/Pods-SharentUI/Pods-SharentUI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -206,6 +210,7 @@
 				986D392E29ADCAAD0057F92C /* AddNewProductView.swift */,
 				98168ADE29AFC93600331A13 /* EditProductDetailView.swift */,
 				98168AEE29B0813400331A13 /* DeleteProductView.swift */,
+				98AB7C9829B6F6A700227BE0 /* SearchProductView.swift */,
 			);
 			path = ProductView;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 				981DAB3F29AF18D60036FBE1 /* AddNewProductPresenter.swift */,
 				98168ADC29AFC91400331A13 /* EditProductDetailPrersenter.swift */,
 				98168AEC29B07DFF00331A13 /* DeleteProductPresenter.swift */,
+				98AB7C9629B6F55E00227BE0 /* SearchProductPresenter.swift */,
 			);
 			path = ProductPresenter;
 			sourceTree = "<group>";
@@ -399,6 +405,7 @@
 			files = (
 				98168ADD29AFC91400331A13 /* EditProductDetailPrersenter.swift in Sources */,
 				98168B1029B0E0F000331A13 /* AddCatogeryView.swift in Sources */,
+				98AB7C9729B6F55E00227BE0 /* SearchProductPresenter.swift in Sources */,
 				9872EE4C299F8C10009442BA /* LoginView.swift in Sources */,
 				986D394529ADEED60057F92C /* ProductContract.swift in Sources */,
 				98168B1329B0E21900331A13 /* AddCatogeryPresenter.swift in Sources */,
@@ -423,6 +430,7 @@
 				98168B3329B4607B00331A13 /* AdminLoginPresenter.swift in Sources */,
 				981DAB4029AF18D60036FBE1 /* AddNewProductPresenter.swift in Sources */,
 				9872EE4A299F4F41009442BA /* UserContract.swift in Sources */,
+				98AB7C9929B6F6A700227BE0 /* SearchProductView.swift in Sources */,
 				986D392C29ACD1160057F92C /* UserLoginPagePresenter.swift in Sources */,
 				986D393329ADD56A0057F92C /* CatogeryListView.swift in Sources */,
 				981E4E52299E14F70068A880 /* AppDelegate.swift in Sources */,

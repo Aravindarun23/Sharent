@@ -232,6 +232,7 @@ extension Assembler  {
 }
 
 
+
 extension Assembler {
     
     public static func adminLoginAssembler(router: Router) -> AdminLoginView {
@@ -250,5 +251,27 @@ extension Assembler {
         let adminLoginDataManager = AdminLoginDataManager(adminLoginDataBaseService: adminLoginDataBaseService)
         let adminLoginUseCase = AdminLogin(adminLoginDataManager: adminLoginDataManager)
         return adminLoginUseCase
+    }
+}
+
+
+extension Assembler {
+    
+    public static func searchProductAssembler(router: Router) -> SearchProductView {
+        
+        let searchProductUseCase = searchProductUseCase()
+        let searchProductPresenter = SearchProductPresenter(searchProduct: searchProductUseCase)
+        searchProductPresenter.router = router
+        let searchProductView = SearchProductView(searchProductPresenter: searchProductPresenter)
+        searchProductPresenter.searchProductView = searchProductView
+        return searchProductView
+    }
+    
+    private static func searchProductUseCase() -> SearchProduct {
+        
+        let searchProductDataBaseService = SearchProductDataBaseService()
+        let searchProductDataManager = SearchProductDataManager(searchProductDataBase: searchProductDataBaseService)
+        let searchProductUseCase = SearchProduct(searchProductDataManger: searchProductDataManager)
+        return searchProductUseCase
     }
 }
