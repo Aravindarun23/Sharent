@@ -24,7 +24,7 @@ public class GetMyOrderListDataBaseService: GetMyOrderListDataBaseContract {
         let result = SelectQuerry.select(tableName: tableName,whereClause: whereQuerry,args: args)
         if result?.count != 0  {
             for order in result! {
-                orders.append(order)
+//                orders.append(order)
             }
             success(orders)
             print(orders)
