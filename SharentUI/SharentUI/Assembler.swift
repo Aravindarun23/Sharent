@@ -297,3 +297,25 @@ extension Assembler {
         return placeOrderUseCase
     }
 }
+
+
+extension Assembler {
+    
+    public static func getMyOrderListAssembler(router: Router) -> GetMyOrderListView {
+        let getMyOrderListUseCase = getMyOrderListUseCase()
+        let getMyOrderListPresenter = GetMyOrderListPresenter(getMyOrder: getMyOrderListUseCase)
+        getMyOrderListPresenter.router = router
+        let getMyOrderListView = GetMyOrderListView(getMyOrderListPresenter: getMyOrderListPresenter)
+        getMyOrderListPresenter.getMyOrderListView = getMyOrderListView
+        return getMyOrderListView
+        
+    }
+    
+    private static func getMyOrderListUseCase() -> GetMyOrder {
+        
+        let getMyOrderListDataBaseService = GetMyOrderListDataBaseService()
+        let getMyOrderListDataManager = GetMyOrderListDataManager(getMyOrderListDataBase: getMyOrderListDataBaseService)
+        let getMyOrderListUseCase = GetMyOrder(getMyOrderDataManager: getMyOrderListDataManager)
+        return getMyOrderListUseCase
+    }
+}

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import SharentBackendMacOS
 
 protocol PlaceOrderViewContract: AnyObject {
     func load(message: String)
@@ -14,4 +14,13 @@ protocol PlaceOrderViewContract: AnyObject {
 
 protocol PlaceOrderPresenterContract: AnyObject {
     func viewDidLoad(productId: Int, buyerId: Int, fromDate: String, toDate: String)
+}
+
+protocol GetMyOrderListViewContract: AnyObject {
+    func load(orders: [Order])
+    func failure(error: Error)
+}
+
+protocol GetMyOrderListPresenterContract: AnyObject {
+    func viewDidLoad(userId: Int)
 }

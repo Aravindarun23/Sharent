@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct order {
+public struct Order {
     
     var seller: User
     var buyer: User
