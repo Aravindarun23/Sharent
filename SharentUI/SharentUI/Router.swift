@@ -62,8 +62,12 @@ class Router {
         self.window.contentView = Assembler.adminLoginAssembler(router: self)
     }
     
-    func searchProducctView() {
+    func searchProductView() {
         self.window.contentView = Assembler.searchProductAssembler(router: self)
+    }
+    
+    func placeOrderView() {
+        self.window.contentView = Assembler.placeOrderAssembler(router: self)
     }
 
 }

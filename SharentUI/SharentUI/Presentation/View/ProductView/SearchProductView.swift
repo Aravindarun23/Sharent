@@ -40,6 +40,8 @@ extension SearchProductView: SearchProductViewContract {
             print("PUploadDate",product.uploadedDate)
             print("PPrice", product.price)
             print("PCatogery", product.catogery.name)
+            print("sellerName", product.seller.name)
+            print("sellerName", product.seller.address)
         }
     }
     

@@ -275,3 +275,25 @@ extension Assembler {
         return searchProductUseCase
     }
 }
+
+extension Assembler {
+    
+    public static func placeOrderAssembler(router: Router) -> PlaceOrderView {
+        
+        let placeOrderUseCase = placeOrderUseCase()
+        let placeOrderPresenter = PlaceOrderPresenter(placeOrder: placeOrderUseCase)
+        placeOrderPresenter.router = router
+        let placeOrderView = PlaceOrderView(placeOrderPresenter: placeOrderPresenter)
+        placeOrderPresenter.placeOrderView = placeOrderView
+        return placeOrderView
+        
+        
+    }
+    
+    private static func placeOrderUseCase() -> PlaceOrder {
+        let placeOrderDataBaseService = PlaceOrderDataBaseService()
+        let placeOrderDataManager = PlaceOrderDataManager(placeOrderDataBase: placeOrderDataBaseService)
+        let placeOrderUseCase = PlaceOrder(placeOrderDataManager: placeOrderDataManager)
+        return placeOrderUseCase
+    }
+}
