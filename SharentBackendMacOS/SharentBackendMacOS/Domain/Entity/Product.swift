@@ -13,7 +13,7 @@ public struct Product {
     
     public enum Status {
         
-        case active
+        case active 
         case inactive
     }
     

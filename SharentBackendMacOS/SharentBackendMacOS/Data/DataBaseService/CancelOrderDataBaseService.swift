@@ -7,22 +7,27 @@
 
 import Foundation
 
-public class CancelOrderDataBaseService {
+public class CancelOrderDataBaseService: CancelOrderDataBaseContract {
   
     public init() {
         
     }
     
-    public static func cancelOrder(orderId: Int, success: @escaping (String) -> Void, failure: @escaping (Error) -> Void) {
+    public func cancelOrder(orderId: Int, success: @escaping (String) -> Void, failure: @escaping (Error) -> Void) {
         
         let tableName = "orders"
         let condition = "id = \(orderId)"
-        DeleteQuerry.deleteQuerry(tableName: tableName, condition: condition) {
+        DeleteQuerry.deleteQuerry(tableName: tableName, condition: condition) { [weak self]
             responseMsg in
-            success(responseMsg)
+            self?.success(callback: success, message: "Order Cancelled Successfully")
             
-        } error: { erroe in
+        } error: { error in
             
         }
     }
+
+    private func success(callback: @escaping(String) -> Void, message: String) {
+        callback(message)
+    }
+
 }

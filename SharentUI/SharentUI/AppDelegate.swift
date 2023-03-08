@@ -16,12 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         router = Router(window: window)
-        CancelOrderDataBaseService.cancelOrder(orderId: 4) {
-            response in
-            print(response)
-        } failure: { error in
-            
-        }
+        router?.getOrderListView()
         // Insert code here to initialize your application
     }
 

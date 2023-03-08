@@ -70,8 +70,12 @@ class Router {
         self.window.contentView = Assembler.placeOrderAssembler(router: self)
     }
     
-    func getMyOrderListView() {
-        self.window.contentView = Assembler.getMyOrderListAssembler(router: self)
+    func getOrderListView() {
+        self.window.contentView = Assembler.getOrderListAssembler(router: self)
+    }
+    
+    func cancelOrderView() {
+        self.window.contentView = Assembler.cancelOrderAssembler(router: self)
     }
 
 }

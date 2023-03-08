@@ -83,20 +83,16 @@
 		98AB7CA029B70EA400227BE0 /* PlaceOrderDataBaseContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7C9F29B70EA400227BE0 /* PlaceOrderDataBaseContract.swift */; };
 		98AB7CA329B717B600227BE0 /* PlaceOrderDataContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CA229B717B600227BE0 /* PlaceOrderDataContract.swift */; };
 		98AB7CA529B7180300227BE0 /* PlaceOrderDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CA429B7180300227BE0 /* PlaceOrderDataManager.swift */; };
-		98AB7CB029B75F1400227BE0 /* GetMyOrderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CAF29B75F1400227BE0 /* GetMyOrderList.swift */; };
-		98AB7CB229B7600E00227BE0 /* GetMyOrderDataContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CB129B7600E00227BE0 /* GetMyOrderDataContract.swift */; };
-		98AB7CB429B7610600227BE0 /* GetMyOrderListDataBaseContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CB329B7610600227BE0 /* GetMyOrderListDataBaseContract.swift */; };
-		98AB7CB629B7614300227BE0 /* GetMyOrderListDataBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CB529B7614300227BE0 /* GetMyOrderListDataBaseService.swift */; };
-		98AB7CB829B7704B00227BE0 /* GetMyOrderListDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CB729B7704B00227BE0 /* GetMyOrderListDataManager.swift */; };
-		98AB7CBE29B7AF8700227BE0 /* GetProductBookingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CBD29B7AF8700227BE0 /* GetProductBookingList.swift */; };
-		98AB7CC029B7B10100227BE0 /* GetProductBookingListDataBaseContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CBF29B7B10100227BE0 /* GetProductBookingListDataBaseContract.swift */; };
-		98AB7CC229B7B46000227BE0 /* GetProductBookingListDataContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CC129B7B46000227BE0 /* GetProductBookingListDataContract.swift */; };
-		98AB7CC429B7B4B300227BE0 /* GetProductBookingListDataBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CC329B7B4B300227BE0 /* GetProductBookingListDataBaseService.swift */; };
-		98AB7CC629B7B57800227BE0 /* GetProductBookingListDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CC529B7B57800227BE0 /* GetProductBookingListDataManager.swift */; };
+		98AB7CB029B75F1400227BE0 /* GetOrderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CAF29B75F1400227BE0 /* GetOrderList.swift */; };
+		98AB7CB229B7600E00227BE0 /* GetOrderListDataContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CB129B7600E00227BE0 /* GetOrderListDataContract.swift */; };
+		98AB7CB429B7610600227BE0 /* GetOrderListDataBaseContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CB329B7610600227BE0 /* GetOrderListDataBaseContract.swift */; };
+		98AB7CB629B7614300227BE0 /* GetOrderListDataBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CB529B7614300227BE0 /* GetOrderListDataBaseService.swift */; };
+		98AB7CB829B7704B00227BE0 /* GetOrderListDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CB729B7704B00227BE0 /* GetOrderListDataManager.swift */; };
 		98AB7CC829B7BBF200227BE0 /* CancelOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CC729B7BBF200227BE0 /* CancelOrder.swift */; };
 		98AB7CCA29B7BCDB00227BE0 /* CancelOrderDataBaseContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CC929B7BCDB00227BE0 /* CancelOrderDataBaseContract.swift */; };
 		98AB7CCC29B7BD8900227BE0 /* CancelOrderDataContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CCB29B7BD8900227BE0 /* CancelOrderDataContract.swift */; };
 		98AB7CCE29B7BE0700227BE0 /* CancelOrderDataBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CCD29B7BE0700227BE0 /* CancelOrderDataBaseService.swift */; };
+		98AB7CD029B83F7200227BE0 /* CancelOrderDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CCF29B83F7200227BE0 /* CancelOrderDataManager.swift */; };
 		AADDE0DD4787C82413E4A626 /* Pods_SharentBackendMacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFA938B5F313B9A42903BBC2 /* Pods_SharentBackendMacOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -180,20 +176,16 @@
 		98AB7C9F29B70EA400227BE0 /* PlaceOrderDataBaseContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrderDataBaseContract.swift; sourceTree = "<group>"; };
 		98AB7CA229B717B600227BE0 /* PlaceOrderDataContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrderDataContract.swift; sourceTree = "<group>"; };
 		98AB7CA429B7180300227BE0 /* PlaceOrderDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrderDataManager.swift; sourceTree = "<group>"; };
-		98AB7CAF29B75F1400227BE0 /* GetMyOrderList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMyOrderList.swift; sourceTree = "<group>"; };
-		98AB7CB129B7600E00227BE0 /* GetMyOrderDataContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMyOrderDataContract.swift; sourceTree = "<group>"; };
-		98AB7CB329B7610600227BE0 /* GetMyOrderListDataBaseContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMyOrderListDataBaseContract.swift; sourceTree = "<group>"; };
-		98AB7CB529B7614300227BE0 /* GetMyOrderListDataBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMyOrderListDataBaseService.swift; sourceTree = "<group>"; };
-		98AB7CB729B7704B00227BE0 /* GetMyOrderListDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMyOrderListDataManager.swift; sourceTree = "<group>"; };
-		98AB7CBD29B7AF8700227BE0 /* GetProductBookingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductBookingList.swift; sourceTree = "<group>"; };
-		98AB7CBF29B7B10100227BE0 /* GetProductBookingListDataBaseContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductBookingListDataBaseContract.swift; sourceTree = "<group>"; };
-		98AB7CC129B7B46000227BE0 /* GetProductBookingListDataContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductBookingListDataContract.swift; sourceTree = "<group>"; };
-		98AB7CC329B7B4B300227BE0 /* GetProductBookingListDataBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductBookingListDataBaseService.swift; sourceTree = "<group>"; };
-		98AB7CC529B7B57800227BE0 /* GetProductBookingListDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductBookingListDataManager.swift; sourceTree = "<group>"; };
+		98AB7CAF29B75F1400227BE0 /* GetOrderList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOrderList.swift; sourceTree = "<group>"; };
+		98AB7CB129B7600E00227BE0 /* GetOrderListDataContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOrderListDataContract.swift; sourceTree = "<group>"; };
+		98AB7CB329B7610600227BE0 /* GetOrderListDataBaseContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOrderListDataBaseContract.swift; sourceTree = "<group>"; };
+		98AB7CB529B7614300227BE0 /* GetOrderListDataBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOrderListDataBaseService.swift; sourceTree = "<group>"; };
+		98AB7CB729B7704B00227BE0 /* GetOrderListDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOrderListDataManager.swift; sourceTree = "<group>"; };
 		98AB7CC729B7BBF200227BE0 /* CancelOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelOrder.swift; sourceTree = "<group>"; };
 		98AB7CC929B7BCDB00227BE0 /* CancelOrderDataBaseContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelOrderDataBaseContract.swift; sourceTree = "<group>"; };
 		98AB7CCB29B7BD8900227BE0 /* CancelOrderDataContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelOrderDataContract.swift; sourceTree = "<group>"; };
 		98AB7CCD29B7BE0700227BE0 /* CancelOrderDataBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelOrderDataBaseService.swift; sourceTree = "<group>"; };
+		98AB7CCF29B83F7200227BE0 /* CancelOrderDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelOrderDataManager.swift; sourceTree = "<group>"; };
 		CFA938B5F313B9A42903BBC2 /* Pods_SharentBackendMacOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharentBackendMacOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -320,8 +312,7 @@
 				98168B2B29B1D3BA00331A13 /* AdminLoginDataBaseService.swift */,
 				98168B3D29B5C5FD00331A13 /* SearchProductDataBaseService.swift */,
 				98AB7C9D29B70CA600227BE0 /* PlaceOrderDataBaseService.swift */,
-				98AB7CB529B7614300227BE0 /* GetMyOrderListDataBaseService.swift */,
-				98AB7CC329B7B4B300227BE0 /* GetProductBookingListDataBaseService.swift */,
+				98AB7CB529B7614300227BE0 /* GetOrderListDataBaseService.swift */,
 				98AB7CCD29B7BE0700227BE0 /* CancelOrderDataBaseService.swift */,
 			);
 			path = DataBaseService;
@@ -431,8 +422,8 @@
 				98168B2D29B2105500331A13 /* AdminLoginDataManager.swift */,
 				98AB7C9429B65DA100227BE0 /* SearchProductDataManager.swift */,
 				98AB7CA429B7180300227BE0 /* PlaceOrderDataManager.swift */,
-				98AB7CB729B7704B00227BE0 /* GetMyOrderListDataManager.swift */,
-				98AB7CC529B7B57800227BE0 /* GetProductBookingListDataManager.swift */,
+				98AB7CB729B7704B00227BE0 /* GetOrderListDataManager.swift */,
+				98AB7CCF29B83F7200227BE0 /* CancelOrderDataManager.swift */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -465,8 +456,7 @@
 				98168B2629B1CEEA00331A13 /* AdminLoginDataBaseContract.swift */,
 				98168B3B29B5C27200331A13 /* SearchProductDataBaseContract.swift */,
 				98AB7C9F29B70EA400227BE0 /* PlaceOrderDataBaseContract.swift */,
-				98AB7CB329B7610600227BE0 /* GetMyOrderListDataBaseContract.swift */,
-				98AB7CBF29B7B10100227BE0 /* GetProductBookingListDataBaseContract.swift */,
+				98AB7CB329B7610600227BE0 /* GetOrderListDataBaseContract.swift */,
 				98AB7CC929B7BCDB00227BE0 /* CancelOrderDataBaseContract.swift */,
 			);
 			path = DataContract;
@@ -476,8 +466,7 @@
 			isa = PBXGroup;
 			children = (
 				98AB7C9B29B7088B00227BE0 /* PlaceOrder.swift */,
-				98AB7CAF29B75F1400227BE0 /* GetMyOrderList.swift */,
-				98AB7CBD29B7AF8700227BE0 /* GetProductBookingList.swift */,
+				98AB7CAF29B75F1400227BE0 /* GetOrderList.swift */,
 				98AB7CC729B7BBF200227BE0 /* CancelOrder.swift */,
 			);
 			path = Order;
@@ -487,8 +476,7 @@
 			isa = PBXGroup;
 			children = (
 				98AB7CA229B717B600227BE0 /* PlaceOrderDataContract.swift */,
-				98AB7CB129B7600E00227BE0 /* GetMyOrderDataContract.swift */,
-				98AB7CC129B7B46000227BE0 /* GetProductBookingListDataContract.swift */,
+				98AB7CB129B7600E00227BE0 /* GetOrderListDataContract.swift */,
 				98AB7CCB29B7BD8900227BE0 /* CancelOrderDataContract.swift */,
 			);
 			path = OrderContract;
@@ -610,10 +598,9 @@
 				98168B0029B0D17700331A13 /* AddCatogery.swift in Sources */,
 				986D392429AC8BA40057F92C /* UserLoginDataBaseService.swift in Sources */,
 				981DAB4E29AF38210036FBE1 /* EditProductDetailDataBaseService.swift in Sources */,
-				98AB7CB629B7614300227BE0 /* GetMyOrderListDataBaseService.swift in Sources */,
+				98AB7CB629B7614300227BE0 /* GetOrderListDataBaseService.swift in Sources */,
 				981DAB4629AF2F910036FBE1 /* ViewProductListDataContract.swift in Sources */,
 				9872EE2D299E30D2009442BA /* AddNewUserDataContract.swift in Sources */,
-				98AB7CC629B7B57800227BE0 /* GetProductBookingListDataManager.swift in Sources */,
 				981DAB3829AE17BF0036FBE1 /* AddNewProductDataBaseService.swift in Sources */,
 				986D393C29ADD66E0057F92C /* GetCatogeryList.swift in Sources */,
 				983A5DED29A605AE00441D6F /* Member.swift in Sources */,
@@ -624,20 +611,17 @@
 				98168AEB29B078DD00331A13 /* DeleteProductDataManager.swift in Sources */,
 				986D394329ADE1E20057F92C /* CatogeryLIstDataManager.swift in Sources */,
 				98AB7CA329B717B600227BE0 /* PlaceOrderDataContract.swift in Sources */,
-				98AB7CC429B7B4B300227BE0 /* GetProductBookingListDataBaseService.swift in Sources */,
 				986D394129ADD8A10057F92C /* CatogeryListDataBaseContract.swift in Sources */,
-				98AB7CC229B7B46000227BE0 /* GetProductBookingListDataContract.swift in Sources */,
-				98AB7CB029B75F1400227BE0 /* GetMyOrderList.swift in Sources */,
+				98AB7CB029B75F1400227BE0 /* GetOrderList.swift in Sources */,
 				9872EE26299E2E75009442BA /* AddNewUser.swift in Sources */,
 				98168B3829B5B5D600331A13 /* SearchProduct.swift in Sources */,
-				98AB7CB229B7600E00227BE0 /* GetMyOrderDataContract.swift in Sources */,
+				98AB7CB229B7600E00227BE0 /* GetOrderListDataContract.swift in Sources */,
 				98168AF529B0B0C600331A13 /* DeleteUserDataContract.swift in Sources */,
-				98AB7CBE29B7AF8700227BE0 /* GetProductBookingList.swift in Sources */,
 				98168B1D29B1B6CE00331A13 /* DeleteCatogeryDataManager.swift in Sources */,
 				981DAB4C29AF35A40036FBE1 /* EditProductDetailDataBaseContract.swift in Sources */,
 				981DAB4429AF2E860036FBE1 /* ViewProductListDataBaseContract.swift in Sources */,
 				986D392229AC8B540057F92C /* UserLoginDataBaseContract.swift in Sources */,
-				98AB7CB429B7610600227BE0 /* GetMyOrderListDataBaseContract.swift in Sources */,
+				98AB7CB429B7610600227BE0 /* GetOrderListDataBaseContract.swift in Sources */,
 				98168B2A29B1D1F200331A13 /* AdminLoginDataContract.swift in Sources */,
 				9872EE34299E3217009442BA /* AddNewUserDataBaseContract.swift in Sources */,
 				98168B1529B1AEEE00331A13 /* DeleteCategory.swift in Sources */,
@@ -647,7 +631,6 @@
 				98AB7C9C29B7088B00227BE0 /* PlaceOrder.swift in Sources */,
 				98168B1B29B1B20400331A13 /* DeleteCategoryDataBaseService.swift in Sources */,
 				986CCC6D29A236DE00378EB4 /* Product.swift in Sources */,
-				98AB7CC029B7B10100227BE0 /* GetProductBookingListDataBaseContract.swift in Sources */,
 				981DAB3629AE15FB0036FBE1 /* AddNewProduct.swift in Sources */,
 				986D392029AC87F60057F92C /* UserLoginDataContract.swift in Sources */,
 				9872EE47299E4A8F009442BA /* DataBaseInit.swift in Sources */,
@@ -670,6 +653,7 @@
 				98168AF129B08E8F00331A13 /* DeleteUser.swift in Sources */,
 				981DAB4229AF2C070036FBE1 /* ViewProductList.swift in Sources */,
 				986D393A29ADD62A0057F92C /* CatogeryListDataBaseService.swift in Sources */,
+				98AB7CD029B83F7200227BE0 /* CancelOrderDataManager.swift in Sources */,
 				986D392629AC8DE90057F92C /* SelectQuerry.swift in Sources */,
 				981DAB3C29AE18240036FBE1 /* AddNewProductDataContract.swift in Sources */,
 				98AB7CA029B70EA400227BE0 /* PlaceOrderDataBaseContract.swift in Sources */,
@@ -686,7 +670,7 @@
 				98168AE729B0698000331A13 /* DeleteProductDataBaseService.swift in Sources */,
 				98168B2529B1CD1500331A13 /* AdminLogin.swift in Sources */,
 				98168AE329B067D900331A13 /* DeleteProductDataBaseContract.swift in Sources */,
-				98AB7CB829B7704B00227BE0 /* GetMyOrderListDataManager.swift in Sources */,
+				98AB7CB829B7704B00227BE0 /* GetOrderListDataManager.swift in Sources */,
 				98168B0B29B0DD1800331A13 /* AddCatogeryDataManager.swift in Sources */,
 				98168B0729B0D44700331A13 /* AddCatogeryDataContract.swift in Sources */,
 			);

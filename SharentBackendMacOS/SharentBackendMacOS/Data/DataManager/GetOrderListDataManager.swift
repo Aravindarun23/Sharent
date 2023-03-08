@@ -7,16 +7,16 @@
 
 import Foundation
 
-public class GetMyOrderListDataManager: GetMyOrderListDataContract {
+public class GetOrderListDataManager: GetOrderListDataContract {
     
-    let getMyOrderListDataBase: GetMyOrderListDataBaseContract
+    let getOrderListDataBase: GetOrderListDataBaseContract
     
-    public init(getMyOrderListDataBase: GetMyOrderListDataBaseContract) {
-        self.getMyOrderListDataBase = getMyOrderListDataBase
+    public init(getOrderListDataBase: GetOrderListDataBaseContract) {
+        self.getOrderListDataBase = getOrderListDataBase
     }
     
-    public func getMyOrder(userId: Int, success: @escaping ([Order]) -> Void, failure: @escaping (Error) -> Void) {
-        getMyOrderListDataBase.getMyOrderList(userId: userId) { [weak self]
+    public func getOrderList(buyerId: Int?, sellerId: Int?, success: @escaping ([Order]) -> Void, failure: @escaping (Error) -> Void) {
+        getOrderListDataBase.getOrderList(buyerId: buyerId, sellerId: sellerId) { [weak self]
             orders in
             self?.success(callback: success, orders: orders)
         } failure: { [weak self] error in

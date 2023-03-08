@@ -16,11 +16,19 @@ protocol PlaceOrderPresenterContract: AnyObject {
     func viewDidLoad(productId: Int, buyerId: Int, fromDate: String, toDate: String)
 }
 
-protocol GetMyOrderListViewContract: AnyObject {
+protocol GetOrderListViewContract: AnyObject {
     func load(orders: [Order])
     func failure(error: Error)
 }
 
-protocol GetMyOrderListPresenterContract: AnyObject {
+protocol GetOrderListPresenterContract: AnyObject {
     func viewDidLoad(userId: Int)
+}
+
+protocol CancelOrderViewContract: AnyObject {
+    func load(message: String)
+}
+
+protocol CancelOrderPresenterContract: AnyObject {
+    func ViewDidLoad(orderId: Int)
 }

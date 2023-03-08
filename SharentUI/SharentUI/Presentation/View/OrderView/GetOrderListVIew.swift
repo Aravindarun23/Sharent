@@ -9,18 +9,18 @@ import Foundation
 import AppKit
 import SharentBackendMacOS
 
-class GetMyOrderListView: NSView {
+class GetOrderListView: NSView {
     
-    let getMyOrderListPresenter: GetMyOrderListPresenterContract
+    let getOrderListPresenter: GetOrderListPresenterContract
     
-    init(getMyOrderListPresenter: GetMyOrderListPresenterContract) {
-        self.getMyOrderListPresenter = getMyOrderListPresenter
+    init(getOrderListPresenter: GetOrderListPresenterContract) {
+        self.getOrderListPresenter = getOrderListPresenter
         super.init(frame: NSRect())
     }
+    
     override func viewDidMoveToSuperview() {
-
         if superview != nil {
-            getMyOrderListPresenter.viewDidLoad(userId: 1)
+            getOrderListPresenter.viewDidLoad(userId: 1)
         }
     }
 
@@ -29,7 +29,7 @@ class GetMyOrderListView: NSView {
     }
 }
 
-extension GetMyOrderListView: GetMyOrderListViewContract {
+extension GetOrderListView: GetOrderListViewContract {
     func load(orders: [Order]) {
         for order in orders {
             print(order)
@@ -39,6 +39,4 @@ extension GetMyOrderListView: GetMyOrderListViewContract {
     func failure(error: Error) {
         print(error)
     }
-    
-    
 }

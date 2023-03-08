@@ -301,21 +301,42 @@ extension Assembler {
 
 extension Assembler {
     
-    public static func getMyOrderListAssembler(router: Router) -> GetMyOrderListView {
-        let getMyOrderListUseCase = getMyOrderListUseCase()
-        let getMyOrderListPresenter = GetMyOrderListPresenter(getMyOrder: getMyOrderListUseCase)
-        getMyOrderListPresenter.router = router
-        let getMyOrderListView = GetMyOrderListView(getMyOrderListPresenter: getMyOrderListPresenter)
-        getMyOrderListPresenter.getMyOrderListView = getMyOrderListView
-        return getMyOrderListView
+    public static func getOrderListAssembler(router: Router) -> GetOrderListView {
+        let getOrderListUseCase = getOrderListUseCase()
+        let getOrderListPresenter = GetOrderListPresenter(getOrderList: getOrderListUseCase)
+        getOrderListPresenter.router = router
+        let getOrderListView = GetOrderListView(getOrderListPresenter: getOrderListPresenter)
+        getOrderListPresenter.getOrderListView = getOrderListView
+        return getOrderListView
         
     }
     
-    private static func getMyOrderListUseCase() -> GetMyOrder {
+    private static func getOrderListUseCase() -> GetOrderList {
         
-        let getMyOrderListDataBaseService = GetMyOrderListDataBaseService()
-        let getMyOrderListDataManager = GetMyOrderListDataManager(getMyOrderListDataBase: getMyOrderListDataBaseService)
-        let getMyOrderListUseCase = GetMyOrder(getMyOrderDataManager: getMyOrderListDataManager)
-        return getMyOrderListUseCase
+        let getOrderListDataBaseService = GetOrderListDataBaseService()
+        let getOrderListDataManager = GetOrderListDataManager(getOrderListDataBase: getOrderListDataBaseService)
+        let getOrderListUseCase = GetOrderList(getOrderListDataManager: getOrderListDataManager)
+        return getOrderListUseCase
+    }
+}
+
+extension Assembler {
+    
+    public static func cancelOrderAssembler(router: Router) -> CancelOrderView{
+        
+        let cancelOrderUseCase = cancelOrderUseCase()
+        let cancelOrderPresenter = CancelOrderPresenter(cancelOrder: cancelOrderUseCase)
+        cancelOrderPresenter.router = router
+        let cancelOrderView = CancelOrderView(cancelOrderPresenter: cancelOrderPresenter)
+        cancelOrderPresenter.cancelOrderView = cancelOrderView
+        return cancelOrderView
+    }
+    
+    private static func cancelOrderUseCase() -> CancelOrder {
+        
+        let cancelOrderDataBaseService = CancelOrderDataBaseService()
+        let cancelOrderDataManager = CancelOrderDataManager(cancelOrderDataBase: cancelOrderDataBaseService)
+        let cancelOrderUseCase = CancelOrder(cancelOrderDataManager: cancelOrderDataManager)
+        return cancelOrderUseCase
     }
 }
