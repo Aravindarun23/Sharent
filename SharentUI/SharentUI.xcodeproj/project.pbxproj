@@ -52,6 +52,8 @@
 		98AB7CD429B84AF000227BE0 /* CancelOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CD329B84AF000227BE0 /* CancelOrderView.swift */; };
 		98AB7CD829B9CB2D00227BE0 /* GetProductListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CD729B9CB2D00227BE0 /* GetProductListPresenter.swift */; };
 		98AB7CDA29B9CD2F00227BE0 /* GetProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CD929B9CD2F00227BE0 /* GetProductListView.swift */; };
+		98AB7CE629BA006600227BE0 /* EditUserDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CE529BA006600227BE0 /* EditUserDetailPresenter.swift */; };
+		98AB7CE829BA045D00227BE0 /* EditUserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CE729BA045D00227BE0 /* EditUserDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -115,6 +117,8 @@
 		98AB7CD329B84AF000227BE0 /* CancelOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelOrderView.swift; sourceTree = "<group>"; };
 		98AB7CD729B9CB2D00227BE0 /* GetProductListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductListPresenter.swift; sourceTree = "<group>"; };
 		98AB7CD929B9CD2F00227BE0 /* GetProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductListView.swift; sourceTree = "<group>"; };
+		98AB7CE529BA006600227BE0 /* EditUserDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserDetailPresenter.swift; sourceTree = "<group>"; };
+		98AB7CE729BA045D00227BE0 /* EditUserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserDetailView.swift; sourceTree = "<group>"; };
 		A6B41A1BDEF413EB325A4C94 /* Pods-SharentUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharentUI.release.xcconfig"; path = "Target Support Files/Pods-SharentUI/Pods-SharentUI.release.xcconfig"; sourceTree = "<group>"; };
 		F44DF708E67CD7C02C518822 /* Pods-SharentUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharentUI.debug.xcconfig"; path = "Target Support Files/Pods-SharentUI/Pods-SharentUI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -218,6 +222,7 @@
 				986D392929ACCEC90057F92C /* UserLoginView.swift */,
 				986D393029ADCBED0057F92C /* UserHomeView.swift */,
 				98168AFC29B0CCFD00331A13 /* DeleteUserView.swift */,
+				98AB7CE729BA045D00227BE0 /* EditUserDetailView.swift */,
 			);
 			path = UserView;
 			sourceTree = "<group>";
@@ -298,6 +303,7 @@
 				9872EE3E299E38CD009442BA /* UserSignUpPagePresnter.swift */,
 				986D392B29ACD1160057F92C /* UserLoginPagePresenter.swift */,
 				98168AFA29B0C9E400331A13 /* DeleteUserPresenter.swift */,
+				98AB7CE529BA006600227BE0 /* EditUserDetailPresenter.swift */,
 			);
 			path = UserPresenter;
 			sourceTree = "<group>";
@@ -463,6 +469,7 @@
 				98168B2229B1BFF800331A13 /* DeleteCategoryView.swift in Sources */,
 				98168AFB29B0C9E400331A13 /* DeleteUserPresenter.swift in Sources */,
 				98168AED29B07DFF00331A13 /* DeleteProductPresenter.swift in Sources */,
+				98AB7CE629BA006600227BE0 /* EditUserDetailPresenter.swift in Sources */,
 				9872EE43299E392E009442BA /* Router.swift in Sources */,
 				98168B0D29B0DF8000331A13 /* CatogeryContract.swift in Sources */,
 				98168B3629B4624400331A13 /* AdminLoginView.swift in Sources */,
@@ -485,6 +492,7 @@
 				98AB7C9929B6F6A700227BE0 /* SearchProductView.swift in Sources */,
 				986D392C29ACD1160057F92C /* UserLoginPagePresenter.swift in Sources */,
 				986D393329ADD56A0057F92C /* CatogeryListView.swift in Sources */,
+				98AB7CE829BA045D00227BE0 /* EditUserDetailView.swift in Sources */,
 				981E4E52299E14F70068A880 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

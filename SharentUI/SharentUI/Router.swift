@@ -81,5 +81,9 @@ class Router {
     func getProductListView() {
         self.window.contentView = Assembler.getProductListView(router: self)
     }
+    
+    func editUserDetailView() {
+        self.window.contentView = Assembler.editUserDetailView(router: self)
+    }
 
 }
