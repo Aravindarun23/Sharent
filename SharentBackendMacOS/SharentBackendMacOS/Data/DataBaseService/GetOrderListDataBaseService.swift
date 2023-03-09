@@ -13,7 +13,6 @@ public class GetOrderListDataBaseService: GetOrderListDataBaseContract {
     public init() {
         
     }
-    
     public func getOrderList(buyerId: Int?, sellerId: Int?, success: @escaping ([Order]) -> Void, failure: @escaping (Error) -> Void) {
         
         let tableName = "orders"
@@ -75,6 +74,7 @@ public class GetOrderListDataBaseService: GetOrderListDataBaseContract {
                 }
         }
     }
+    // MARK: convert to order entity
     
     private func getOrder(order: [String: Any]) -> Order? {
 
@@ -104,16 +104,17 @@ public class GetOrderListDataBaseService: GetOrderListDataBaseContract {
               let pickUpDate = order["pickUpDate"] as? String,
               let returnDate = order["returnDate"] as? String,
               let orderStatus = order["orderStatus"] as? String
-            
         else {
         return nil }
+        
+        let orderState = Order.Status(rawValue: orderStatus)
+        let productState = Product.Status(rawValue: productStatus)
         
         let seller = User(id: sellerId, name: sellerName, emailId: sellerEmailId, password: sellerPassword, mobileNumber: sellerMobileNumber, address: sellerAddress, pincode: sellerPincode)
         let buyer =  User(id: buyerId, name: buyerName, emailId: buyerEmailId, password: buyerPassword, mobileNumber: buyerMobileNumber, address: buyerAddress, pincode: buyerPincode)
         let category = Category(id: categoryId, name: categoryName)
-        let product = Product(Id: productId, seller: seller, catogery: category, name: productName, price: price, detail: productDetail, uploadedDate: uploadedDate, status: .active)
-        let order = Order(id: orderId, buyer: buyer, product: product, fromDate: pickUpDate, returnDate: returnDate, status: .booked)
+        let product = Product(Id: productId, seller: seller, catogery: category, name: productName, price: price, detail: productDetail, uploadedDate: uploadedDate, status: productState!)
+        let order = Order(id: orderId, buyer: buyer, product: product, fromDate: pickUpDate, returnDate: returnDate, status: orderState!)
         return order
     }
-    
 }

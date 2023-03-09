@@ -340,3 +340,25 @@ extension Assembler {
         return cancelOrderUseCase
     }
 }
+
+
+extension Assembler {
+    
+    public static func getProductListView(router: Router) -> GetProductListView {
+        
+        let getProductListUseCase = getProductListUseCase()
+        let getProductListPresenter =  GetProductListPresenter(getProductList: getProductListUseCase)
+        getProductListPresenter.router = router
+        let getProductListView = GetProductListView(getProductListPresenter: getProductListPresenter)
+        getProductListPresenter.getProductListView = getProductListView
+        return getProductListView
+    }
+    
+    private static func getProductListUseCase() -> GetProductList {
+        
+        let getProductListDataBaseService = GetProductListDataBaseService()
+        let getProductListDataManager = GetProductListDataManager(getProductListDataBase: getProductListDataBaseService)
+        let getProductListUseCase = GetProductList(getProductListDataManager: getProductListDataManager)
+        return getProductListUseCase
+    }
+}

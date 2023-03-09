@@ -50,6 +50,8 @@
 		98AB7CBC29B77D4B00227BE0 /* GetOrderListVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CBB29B77D4B00227BE0 /* GetOrderListVIew.swift */; };
 		98AB7CD229B8478600227BE0 /* CancelOrderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CD129B8478600227BE0 /* CancelOrderPresenter.swift */; };
 		98AB7CD429B84AF000227BE0 /* CancelOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CD329B84AF000227BE0 /* CancelOrderView.swift */; };
+		98AB7CD829B9CB2D00227BE0 /* GetProductListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CD729B9CB2D00227BE0 /* GetProductListPresenter.swift */; };
+		98AB7CDA29B9CD2F00227BE0 /* GetProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CD929B9CD2F00227BE0 /* GetProductListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -111,6 +113,8 @@
 		98AB7CBB29B77D4B00227BE0 /* GetOrderListVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOrderListVIew.swift; sourceTree = "<group>"; };
 		98AB7CD129B8478600227BE0 /* CancelOrderPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelOrderPresenter.swift; sourceTree = "<group>"; };
 		98AB7CD329B84AF000227BE0 /* CancelOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelOrderView.swift; sourceTree = "<group>"; };
+		98AB7CD729B9CB2D00227BE0 /* GetProductListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductListPresenter.swift; sourceTree = "<group>"; };
+		98AB7CD929B9CD2F00227BE0 /* GetProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductListView.swift; sourceTree = "<group>"; };
 		A6B41A1BDEF413EB325A4C94 /* Pods-SharentUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharentUI.release.xcconfig"; path = "Target Support Files/Pods-SharentUI/Pods-SharentUI.release.xcconfig"; sourceTree = "<group>"; };
 		F44DF708E67CD7C02C518822 /* Pods-SharentUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharentUI.debug.xcconfig"; path = "Target Support Files/Pods-SharentUI/Pods-SharentUI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -225,6 +229,7 @@
 				98168ADE29AFC93600331A13 /* EditProductDetailView.swift */,
 				98168AEE29B0813400331A13 /* DeleteProductView.swift */,
 				98AB7C9829B6F6A700227BE0 /* SearchProductView.swift */,
+				98AB7CD929B9CD2F00227BE0 /* GetProductListView.swift */,
 			);
 			path = ProductView;
 			sourceTree = "<group>";
@@ -236,6 +241,7 @@
 				98168ADC29AFC91400331A13 /* EditProductDetailPrersenter.swift */,
 				98168AEC29B07DFF00331A13 /* DeleteProductPresenter.swift */,
 				98AB7C9629B6F55E00227BE0 /* SearchProductPresenter.swift */,
+				98AB7CD729B9CB2D00227BE0 /* GetProductListPresenter.swift */,
 			);
 			path = ProductPresenter;
 			sourceTree = "<group>";
@@ -467,9 +473,11 @@
 				98AB7CAE29B740FF00227BE0 /* PlaceOrderView.swift in Sources */,
 				986D392F29ADCAAD0057F92C /* AddNewProductView.swift in Sources */,
 				986D393829ADD5AE0057F92C /* CatogeryListPresenter.swift in Sources */,
+				98AB7CDA29B9CD2F00227BE0 /* GetProductListView.swift in Sources */,
 				9872EE45299E3945009442BA /* Assembler.swift in Sources */,
 				9872EE41299E38F8009442BA /* UserSignUpPageView.swift in Sources */,
 				98AB7CD429B84AF000227BE0 /* CancelOrderView.swift in Sources */,
+				98AB7CD829B9CB2D00227BE0 /* GetProductListPresenter.swift in Sources */,
 				986D393129ADCBED0057F92C /* UserHomeView.swift in Sources */,
 				98168B3329B4607B00331A13 /* AdminLoginPresenter.swift in Sources */,
 				981DAB4029AF18D60036FBE1 /* AddNewProductPresenter.swift in Sources */,

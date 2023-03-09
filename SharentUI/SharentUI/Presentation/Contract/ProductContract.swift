@@ -39,3 +39,12 @@ protocol SearchProductViewContract: AnyObject {
     func load(products: [Product])
     func failure(error: Error)
 }
+
+protocol GetProductListViewContract: AnyObject {
+    func load(product: [Product])
+    func failure(error: Error)
+}
+
+protocol GetProductListPresenterContract: AnyObject {
+    func viewDidLoad(userId: Int)
+}

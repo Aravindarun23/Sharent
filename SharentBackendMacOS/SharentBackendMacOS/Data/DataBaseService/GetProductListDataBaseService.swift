@@ -1,36 +1,32 @@
 //
-//  SearchProductDataBaseService.swift
+//  ViewProductListDataBaseService.swift
 //  SharentBackendMacOS
 //
-//  Created by aravind-pt6209 on 06/03/23.
+//  Created by aravind-pt6209 on 01/03/23.
 //
 
 import Foundation
-import VTComponents
 
-
-public class SearchProductDataBaseService: SearchProductDataBaseContract {
-    
+public class GetProductListDataBaseService: GetProductListDataBaseContract {
     
     public init() {
         
     }
     
-    public func  SearchProduct(pincode: String, product: String, fromDate: String, toDate: String, success: @escaping ([Product]) -> Void, failure: @escaping (Error) -> Void) {
-        
-        var products = [Product]()
-        
+    
+    public func getProductList(userId: Int, sucess: @escaping ([Product]) -> Void, failure: @escaping (Error) -> Void) {
+    
+        var productList = [Product]()
+        let tableName = "product"
         let selectColumn = "product.productId,productName,price,productDetail,uploadedDate,sellerId,name,emailId,password,address,pincode,mobileNumber,catogery.catogeryId,catogeryName"
         
-        let whereQuerry = "user.pincode = \'\(pincode)\' AND product.productName like \'%\(product)%\' AND((orders.pickUpDate >= '\(fromDate)' AND  orders.pickUpDate >= \'\(toDate)\') OR (orders.returnDate <=  \'\(fromDate)\' AND orders.returnDate <= \'\(toDate)\')) AND product.status = \'active\'"
-        
-        let joinsQuerry = "INNER JOIN user on product.sellerId = user.userId INNER JOIN orders on product.productId = orders.productId INNER JOIN catogery on product.catogeryId = catogery.catogeryId"
-        
-        let result = SelectQuerry.select(tableName: "product", whereClause: whereQuerry, selectColumn: selectColumn, joinsQuerry: joinsQuerry)
-        
-        if let result = result {
+        let joinQuerry = "INNER JOIN user on user.userId = product.sellerId INNER JOIN catogery on catogery.catogeryId = product.catogeryId"
+        let args = [userId]
+        let whereQuerry = "sellerId = ?"
+        let products = SelectQuerry.select(tableName: tableName,whereClause: whereQuerry,args: args, selectColumn: selectColumn,joinsQuerry: joinQuerry)
+        if let products = products {
             
-            for product in result {
+            for product in products {
                 
                 guard let productId = product["productId"] as? Int,
                       let productName = product["productName"] as? String,
@@ -50,13 +46,11 @@ public class SearchProductDataBaseService: SearchProductDataBaseContract {
                 let category = Category(id: categoryId, name: categoryName)
                 let seller = User(id: sellerId, name: sellerName, emailId: emailId, password: password, mobileNumber: mobileNumber, address: address, pincode: pincode)
                 let product = Product(Id: productId, seller: seller, catogery: category, name: productName, price: price, detail: productDetail, uploadedDate: uploadedDate, status: .active)
-                
-                products.append(product)
+                productList.append(product)
             }
-            success(products)
+            sucess(productList)
+            return
         }
-        else {
-            failure(SearchProductError.SearchProductError.noProductFound)
-        }
+        failure(GetProductListError.GetProductListError.noProductFound)
     }
 }

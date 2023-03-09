@@ -11,11 +11,13 @@ import Foundation
 
 public struct Product {
     
-    public enum Status {
+    public enum Status: String {
         
-        case active 
-        case inactive
+        case active = "active"
+        case inactive = "inActive"
     }
+    
+    // MARK: add rawValue
     
     public var id: Int
     public var seller: User

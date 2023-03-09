@@ -38,8 +38,7 @@ public final class SearchProductResponse: ZResponse {
 public final class SearchProductError: ZError {
     
     enum SearchProductError: Error {
-        case invalidEmailId
-        case invalidPassword
+        case noProductFound
     }
     
     public var status : Error
@@ -48,9 +47,6 @@ public final class SearchProductError: ZError {
         status = error
         super.init(status: .unknownError)
     }
-    
-    
-    
 }
 
 

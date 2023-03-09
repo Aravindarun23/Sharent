@@ -16,8 +16,9 @@ public class PlaceOrderDataBaseService: PlaceOrderDataBaseContract {
     public  func placeOrder(productId: Int, userId: Int, fromDate: String, toDate: String, success: @escaping (String) -> Void, failure: @escaping (Error) -> Void) {
         
         let tableName = "orders"
+        let status = Order.Status.booked.rawValue
         let columnName = "productId,buyerId,orderDate,pickUpDate,returnDate,totalPrice,status"
-        let insertValue = "\(productId),\(userId),'2023-01-23','\(fromDate)','\(toDate)',\(2000),'booked'"
+        let insertValue = "\(productId),\(userId),'2023-01-23','\(fromDate)','\(toDate)',\(2000),'\(status)'"
         
         InsertQuerry.insertQuerry(tableName: tableName, columnName: columnName, insertData: insertValue ) { [weak self]
             responseMsg in

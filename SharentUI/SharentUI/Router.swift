@@ -77,5 +77,9 @@ class Router {
     func cancelOrderView() {
         self.window.contentView = Assembler.cancelOrderAssembler(router: self)
     }
+    
+    func getProductListView() {
+        self.window.contentView = Assembler.getProductListView(router: self)
+    }
 
 }

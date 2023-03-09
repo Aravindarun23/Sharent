@@ -9,11 +9,11 @@ import Foundation
 
 public struct Order {
     
-    public enum Status {
+    public enum Status: String {
         
-        case booked
-        case cancelled
-        case completed
+        case booked = "booked"
+        case cancelled = "cancelled"
+        case completed = "completed"
     }
     
     var id: Int

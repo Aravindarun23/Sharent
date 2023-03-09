@@ -15,23 +15,15 @@ public class AddNewProductDataBaseService: AddNewProductDataBaseContract {
     
     public func addNewProduct(product: Product, success: @escaping (String) -> Void, failure: @escaping (Error) -> Void) {
         
-        var currentStatus: String = ""
         var detail: String = ""
         let columnName = "catogeryId,sellerId,productName,price,productDetail,uploadedDate,status"
-        let status = product.status
-        
-        if status == .active {
-            currentStatus = "active"
-        }
-        else {
-            currentStatus = "inActive"
-        }
+        let status = product.status.rawValue
         
         if let productDetail = product.detail  {
             detail = productDetail
         }
-        
-        let insertValue = "'\(product.catogery.id)', '\(product.seller.id)', '\(product.name)', '\(product.price)','\(detail)', '\(product.uploadedDate)', '\(currentStatus)'"
+
+        let insertValue = "'\(product.catogery.id)', '\(product.seller.id)', '\(product.name)', '\(product.price)','\(detail)', '\(product.uploadedDate)', '\(status)'"
         
         InsertQuerry.insertQuerry(tableName: "product", columnName: columnName, insertData: insertValue) {
             response in
