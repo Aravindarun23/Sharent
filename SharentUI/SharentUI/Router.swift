@@ -85,5 +85,9 @@ class Router {
     func editUserDetailView() {
         self.window.contentView = Assembler.editUserDetailView(router: self)
     }
+    
+    func approveOrderView() {
+        self.window.contentView = Assembler.approveOrderView(router: self)
+    }
 
 }

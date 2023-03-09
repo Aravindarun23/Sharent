@@ -54,6 +54,8 @@
 		98AB7CDA29B9CD2F00227BE0 /* GetProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CD929B9CD2F00227BE0 /* GetProductListView.swift */; };
 		98AB7CE629BA006600227BE0 /* EditUserDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CE529BA006600227BE0 /* EditUserDetailPresenter.swift */; };
 		98AB7CE829BA045D00227BE0 /* EditUserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CE729BA045D00227BE0 /* EditUserDetailView.swift */; };
+		98AB7CF429BA284800227BE0 /* ApproveOrderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CF329BA284800227BE0 /* ApproveOrderPresenter.swift */; };
+		98AB7CF629BA295800227BE0 /* ApproveOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CF529BA295800227BE0 /* ApproveOrderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -119,6 +121,8 @@
 		98AB7CD929B9CD2F00227BE0 /* GetProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductListView.swift; sourceTree = "<group>"; };
 		98AB7CE529BA006600227BE0 /* EditUserDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserDetailPresenter.swift; sourceTree = "<group>"; };
 		98AB7CE729BA045D00227BE0 /* EditUserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserDetailView.swift; sourceTree = "<group>"; };
+		98AB7CF329BA284800227BE0 /* ApproveOrderPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproveOrderPresenter.swift; sourceTree = "<group>"; };
+		98AB7CF529BA295800227BE0 /* ApproveOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproveOrderView.swift; sourceTree = "<group>"; };
 		A6B41A1BDEF413EB325A4C94 /* Pods-SharentUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharentUI.release.xcconfig"; path = "Target Support Files/Pods-SharentUI/Pods-SharentUI.release.xcconfig"; sourceTree = "<group>"; };
 		F44DF708E67CD7C02C518822 /* Pods-SharentUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharentUI.debug.xcconfig"; path = "Target Support Files/Pods-SharentUI/Pods-SharentUI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -314,6 +318,7 @@
 				98AB7CAA29B73F7100227BE0 /* PlaceOrderPresenter.swift */,
 				98AB7CB929B779B800227BE0 /* GetOrderListPresenter.swift */,
 				98AB7CD129B8478600227BE0 /* CancelOrderPresenter.swift */,
+				98AB7CF329BA284800227BE0 /* ApproveOrderPresenter.swift */,
 			);
 			path = OrderPresenter;
 			sourceTree = "<group>";
@@ -324,6 +329,7 @@
 				98AB7CAD29B740FF00227BE0 /* PlaceOrderView.swift */,
 				98AB7CBB29B77D4B00227BE0 /* GetOrderListVIew.swift */,
 				98AB7CD329B84AF000227BE0 /* CancelOrderView.swift */,
+				98AB7CF529BA295800227BE0 /* ApproveOrderView.swift */,
 			);
 			path = OrderView;
 			sourceTree = "<group>";
@@ -469,6 +475,7 @@
 				98168B2229B1BFF800331A13 /* DeleteCategoryView.swift in Sources */,
 				98168AFB29B0C9E400331A13 /* DeleteUserPresenter.swift in Sources */,
 				98168AED29B07DFF00331A13 /* DeleteProductPresenter.swift in Sources */,
+				98AB7CF629BA295800227BE0 /* ApproveOrderView.swift in Sources */,
 				98AB7CE629BA006600227BE0 /* EditUserDetailPresenter.swift in Sources */,
 				9872EE43299E392E009442BA /* Router.swift in Sources */,
 				98168B0D29B0DF8000331A13 /* CatogeryContract.swift in Sources */,
@@ -491,6 +498,7 @@
 				9872EE4A299F4F41009442BA /* UserContract.swift in Sources */,
 				98AB7C9929B6F6A700227BE0 /* SearchProductView.swift in Sources */,
 				986D392C29ACD1160057F92C /* UserLoginPagePresenter.swift in Sources */,
+				98AB7CF429BA284800227BE0 /* ApproveOrderPresenter.swift in Sources */,
 				986D393329ADD56A0057F92C /* CatogeryListView.swift in Sources */,
 				98AB7CE829BA045D00227BE0 /* EditUserDetailView.swift in Sources */,
 				981E4E52299E14F70068A880 /* AppDelegate.swift in Sources */,

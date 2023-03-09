@@ -30,5 +30,14 @@ protocol CancelOrderViewContract: AnyObject {
 }
 
 protocol CancelOrderPresenterContract: AnyObject {
-    func ViewDidLoad(orderId: Int)
+    func viewDidLoad(orderId: Int)
+}
+
+
+protocol ApproveOrderViewContract: AnyObject {
+    func load(message: String)
+}
+
+protocol ApproveOrderPresenterContract: AnyObject {
+    func viewDidLoad(orderId: Int)
 }

@@ -19,7 +19,7 @@ class CancelOrderView: NSView {
     
     override func viewDidMoveToSuperview() {
         if superview != nil {
-            cancelOrderPresenter.ViewDidLoad(orderId: 2)
+            cancelOrderPresenter.viewDidLoad(orderId: 2)
         }
     }
 

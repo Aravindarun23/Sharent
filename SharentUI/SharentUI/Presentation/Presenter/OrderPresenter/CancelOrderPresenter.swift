@@ -22,7 +22,7 @@ class CancelOrderPresenter {
 
 extension CancelOrderPresenter: CancelOrderPresenterContract {
     
-    func ViewDidLoad(orderId: Int) {
+    func viewDidLoad(orderId: Int) {
         let request = CancelOrderRequest(orderId: orderId )
         cancelOrder.execute(request: request) {
             response in

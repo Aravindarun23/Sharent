@@ -385,3 +385,25 @@ extension Assembler {
         return editUserDetailUseCase
     }
 }
+
+
+extension Assembler {
+    
+    public static func approveOrderView(router: Router) -> ApproveOrderView {
+        let approveOrderUseCase = approveOrderUseCase()
+        let approveOrderPresenter = ApproveOrderPresenter(approveOrder: approveOrderUseCase)
+        approveOrderPresenter.router = router
+        let approveOrdeView = ApproveOrderView(approveOrderPresenter: approveOrderPresenter)
+        approveOrderPresenter.approveOrderView = approveOrdeView
+        return approveOrdeView
+    }
+    
+    private static func approveOrderUseCase() -> ApproveOrder {
+        
+        let approveOrderDataBaseService = ApproveOrderDataBaseService()
+        let approveOrderDataManager = ApproveOrderDataManager(approveOrderDataBase: approveOrderDataBaseService)
+        let approveOrderUseCase = ApproveOrder(approveOrderDataManager: approveOrderDataManager)
+        return approveOrderUseCase
+        
+    }
+}
