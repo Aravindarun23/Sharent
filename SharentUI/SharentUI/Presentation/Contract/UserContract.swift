@@ -51,3 +51,12 @@ protocol EditUserDetailPresenterContract: AnyObject {
     func viewDidLoad(userId: Int, addresss: String, pincode: String, mobileNumber: String)
 }
 
+protocol UpdatePasswordViewContract: AnyObject {
+    
+    func load(message: String)
+}
+
+protocol UpdatePasswordPresenterContract: AnyObject {
+    func viewDidLoad(userId: Int, newPassword: String)
+}
+

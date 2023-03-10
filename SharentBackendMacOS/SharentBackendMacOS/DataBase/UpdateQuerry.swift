@@ -14,7 +14,7 @@ class UpdateQuerry {
     static func updateQuerry(tableName: String, updateQuerry: String, condition: String, response: (String) -> Void, error: (Error) -> Void) {
         
         let querry = "UPDATE \(tableName) SET \(updateQuerry) WHERE \(condition)"
-    
+        
         let prepareStatement : OpaquePointer? = DataBase.shared.prepareStatement(query: querry)
         
         if sqlite3_step(prepareStatement) == SQLITE_DONE {

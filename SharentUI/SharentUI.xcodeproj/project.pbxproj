@@ -58,6 +58,8 @@
 		98AB7CF629BA295800227BE0 /* ApproveOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CF529BA295800227BE0 /* ApproveOrderView.swift */; };
 		98AB7D0229BB520200227BE0 /* GetProductBookedDatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D0129BB520200227BE0 /* GetProductBookedDatePresenter.swift */; };
 		98AB7D0429BB544800227BE0 /* GetProductBookedDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D0329BB544800227BE0 /* GetProductBookedDateView.swift */; };
+		98AB7D1029BB775200227BE0 /* UpdatePasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D0F29BB775200227BE0 /* UpdatePasswordPresenter.swift */; };
+		98AB7D1229BB798100227BE0 /* UpdatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D1129BB798100227BE0 /* UpdatePasswordView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -127,6 +129,8 @@
 		98AB7CF529BA295800227BE0 /* ApproveOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproveOrderView.swift; sourceTree = "<group>"; };
 		98AB7D0129BB520200227BE0 /* GetProductBookedDatePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductBookedDatePresenter.swift; sourceTree = "<group>"; };
 		98AB7D0329BB544800227BE0 /* GetProductBookedDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductBookedDateView.swift; sourceTree = "<group>"; };
+		98AB7D0F29BB775200227BE0 /* UpdatePasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordPresenter.swift; sourceTree = "<group>"; };
+		98AB7D1129BB798100227BE0 /* UpdatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordView.swift; sourceTree = "<group>"; };
 		A6B41A1BDEF413EB325A4C94 /* Pods-SharentUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharentUI.release.xcconfig"; path = "Target Support Files/Pods-SharentUI/Pods-SharentUI.release.xcconfig"; sourceTree = "<group>"; };
 		F44DF708E67CD7C02C518822 /* Pods-SharentUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharentUI.debug.xcconfig"; path = "Target Support Files/Pods-SharentUI/Pods-SharentUI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -231,6 +235,7 @@
 				986D393029ADCBED0057F92C /* UserHomeView.swift */,
 				98168AFC29B0CCFD00331A13 /* DeleteUserView.swift */,
 				98AB7CE729BA045D00227BE0 /* EditUserDetailView.swift */,
+				98AB7D1129BB798100227BE0 /* UpdatePasswordView.swift */,
 			);
 			path = UserView;
 			sourceTree = "<group>";
@@ -314,6 +319,7 @@
 				986D392B29ACD1160057F92C /* UserLoginPagePresenter.swift */,
 				98168AFA29B0C9E400331A13 /* DeleteUserPresenter.swift */,
 				98AB7CE529BA006600227BE0 /* EditUserDetailPresenter.swift */,
+				98AB7D0F29BB775200227BE0 /* UpdatePasswordPresenter.swift */,
 			);
 			path = UserPresenter;
 			sourceTree = "<group>";
@@ -500,7 +506,9 @@
 				98AB7CD429B84AF000227BE0 /* CancelOrderView.swift in Sources */,
 				98AB7CD829B9CB2D00227BE0 /* GetProductListPresenter.swift in Sources */,
 				986D393129ADCBED0057F92C /* UserHomeView.swift in Sources */,
+				98AB7D1229BB798100227BE0 /* UpdatePasswordView.swift in Sources */,
 				98168B3329B4607B00331A13 /* AdminLoginPresenter.swift in Sources */,
+				98AB7D1029BB775200227BE0 /* UpdatePasswordPresenter.swift in Sources */,
 				981DAB4029AF18D60036FBE1 /* AddNewProductPresenter.swift in Sources */,
 				9872EE4A299F4F41009442BA /* UserContract.swift in Sources */,
 				98AB7C9929B6F6A700227BE0 /* SearchProductView.swift in Sources */,

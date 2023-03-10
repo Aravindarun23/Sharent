@@ -412,7 +412,7 @@ extension Assembler {
 extension Assembler {
     
     
-    public static func getProductBookedDate(router: Router) -> GetProductBookedDateView {
+    public static func getProductBookedDateView(router: Router) -> GetProductBookedDateView {
         
         let getProductBookedDate = getProductBookedDateUseCase()
         let getProductBookedDatePresenter = GetProductBookedDatePresenter(getProductBoookedDate: getProductBookedDate)
@@ -428,5 +428,28 @@ extension Assembler {
         let getProductBookedDateDataManager = GetProductBookedDateDataManager(getProductBookedDateDataBase: getProductBookedDateDataBaseService)
         let getProductBookedDate = GetProductBookedDate(getProductBookedDateDataManager: getProductBookedDateDataManager)
         return getProductBookedDate
+    }
+}
+
+extension Assembler {
+    
+    
+    public static func updatePasswordView(router: Router) -> UpdatePasswordView {
+        
+        let updatePassword = updatePasswordUseCase()
+        let updatePasswordPresenter = UpdatePasswordPresenter(updatePassword: updatePassword)
+        updatePasswordPresenter.router = router
+        let updatePasswordView = UpdatePasswordView(updatePasswordPresenter: updatePasswordPresenter)
+        updatePasswordPresenter.updatePasswordView = updatePasswordView
+        return updatePasswordView
+    }
+    
+    
+    private static func updatePasswordUseCase() -> UpdatePassword {
+        
+        let updatePasswordDataBaseService =  UpdatePasswordDataBaseService()
+        let updatePasswordDataManager = UpdatePasswordDataManager(updatePasswordDataBase: updatePasswordDataBaseService)
+        let updatePassword = UpdatePassword(updatePasswordDataManager: updatePasswordDataManager)
+        return updatePassword
     }
 }

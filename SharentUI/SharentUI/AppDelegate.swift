@@ -16,8 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         router = Router(window: window)
-        router?.getProductBookedDateView()
-        // Insert code here to initialize your application
+        router?.updatePasswordView()        // Insert code here to initialize your application
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

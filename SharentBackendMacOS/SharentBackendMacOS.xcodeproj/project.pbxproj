@@ -109,6 +109,11 @@
 		98AB7CFC29BB48B800227BE0 /* GetProductBookedDateDataBaseContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CFB29BB48B800227BE0 /* GetProductBookedDateDataBaseContract.swift */; };
 		98AB7CFE29BB491400227BE0 /* GetProductBookedDateDataBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CFD29BB491400227BE0 /* GetProductBookedDateDataBaseService.swift */; };
 		98AB7D0029BB4C6300227BE0 /* GetProductBookedDateDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CFF29BB4C6300227BE0 /* GetProductBookedDateDataManager.swift */; };
+		98AB7D0629BB5F2200227BE0 /* UpdatePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D0529BB5F2200227BE0 /* UpdatePassword.swift */; };
+		98AB7D0829BB62EE00227BE0 /* UpdatePasswordDataBaseContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D0729BB62EE00227BE0 /* UpdatePasswordDataBaseContract.swift */; };
+		98AB7D0A29BB6C8C00227BE0 /* UpdatePasswordDataContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D0929BB6C8C00227BE0 /* UpdatePasswordDataContract.swift */; };
+		98AB7D0C29BB6CDF00227BE0 /* UpdatePasswordDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D0B29BB6CDF00227BE0 /* UpdatePasswordDataManager.swift */; };
+		98AB7D0E29BB70B600227BE0 /* UpdatePasswordDataBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D0D29BB70B600227BE0 /* UpdatePasswordDataBaseService.swift */; };
 		AADDE0DD4787C82413E4A626 /* Pods_SharentBackendMacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFA938B5F313B9A42903BBC2 /* Pods_SharentBackendMacOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -218,6 +223,11 @@
 		98AB7CFB29BB48B800227BE0 /* GetProductBookedDateDataBaseContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductBookedDateDataBaseContract.swift; sourceTree = "<group>"; };
 		98AB7CFD29BB491400227BE0 /* GetProductBookedDateDataBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductBookedDateDataBaseService.swift; sourceTree = "<group>"; };
 		98AB7CFF29BB4C6300227BE0 /* GetProductBookedDateDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductBookedDateDataManager.swift; sourceTree = "<group>"; };
+		98AB7D0529BB5F2200227BE0 /* UpdatePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePassword.swift; sourceTree = "<group>"; };
+		98AB7D0729BB62EE00227BE0 /* UpdatePasswordDataBaseContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordDataBaseContract.swift; sourceTree = "<group>"; };
+		98AB7D0929BB6C8C00227BE0 /* UpdatePasswordDataContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordDataContract.swift; sourceTree = "<group>"; };
+		98AB7D0B29BB6CDF00227BE0 /* UpdatePasswordDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordDataManager.swift; sourceTree = "<group>"; };
+		98AB7D0D29BB70B600227BE0 /* UpdatePasswordDataBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordDataBaseService.swift; sourceTree = "<group>"; };
 		CFA938B5F313B9A42903BBC2 /* Pods_SharentBackendMacOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharentBackendMacOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -350,6 +360,7 @@
 				98AB7CCD29B7BE0700227BE0 /* CancelOrderDataBaseService.swift */,
 				98AB7CEF29BA203800227BE0 /* ApproveOrderDataBaseService.swift */,
 				98AB7CFD29BB491400227BE0 /* GetProductBookedDateDataBaseService.swift */,
+				98AB7D0D29BB70B600227BE0 /* UpdatePasswordDataBaseService.swift */,
 			);
 			path = DataBaseService;
 			sourceTree = "<group>";
@@ -396,6 +407,7 @@
 				986D391D29AC85500057F92C /* UserLogin.swift */,
 				98168AF029B08E8F00331A13 /* DeleteUser.swift */,
 				98AB7CDB29B9E24200227BE0 /* EditUserDetail.swift */,
+				98AB7D0529BB5F2200227BE0 /* UpdatePassword.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -432,6 +444,7 @@
 				986D391F29AC87F60057F92C /* UserLoginDataContract.swift */,
 				98168AF429B0B0C600331A13 /* DeleteUserDataContract.swift */,
 				98AB7CE329B9F61100227BE0 /* EditUserDetailDataContract.swift */,
+				98AB7D0929BB6C8C00227BE0 /* UpdatePasswordDataContract.swift */,
 			);
 			path = UserContract;
 			sourceTree = "<group>";
@@ -467,6 +480,7 @@
 				98AB7CCF29B83F7200227BE0 /* CancelOrderDataManager.swift */,
 				98AB7CF129BA22EE00227BE0 /* ApproveOrderDataManager.swift */,
 				98AB7CFF29BB4C6300227BE0 /* GetProductBookedDateDataManager.swift */,
+				98AB7D0B29BB6CDF00227BE0 /* UpdatePasswordDataManager.swift */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -504,6 +518,7 @@
 				98AB7CC929B7BCDB00227BE0 /* CancelOrderDataBaseContract.swift */,
 				98AB7CEB29BA1BFB00227BE0 /* ApproveOrderDataBaseContract.swift */,
 				98AB7CFB29BB48B800227BE0 /* GetProductBookedDateDataBaseContract.swift */,
+				98AB7D0729BB62EE00227BE0 /* UpdatePasswordDataBaseContract.swift */,
 			);
 			path = DataContract;
 			sourceTree = "<group>";
@@ -636,6 +651,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98AB7D0C29BB6CDF00227BE0 /* UpdatePasswordDataManager.swift in Sources */,
 				983A5DEB29A6013300441D6F /* Catogery.swift in Sources */,
 				98AB7C9E29B70CA600227BE0 /* PlaceOrderDataBaseService.swift in Sources */,
 				98AB7CDC29B9E24200227BE0 /* EditUserDetail.swift in Sources */,
@@ -646,6 +662,7 @@
 				9872EE36299E329C009442BA /* AddNewUserDataManager.swift in Sources */,
 				98168B0029B0D17700331A13 /* AddCatogery.swift in Sources */,
 				986D392429AC8BA40057F92C /* UserLoginDataBaseService.swift in Sources */,
+				98AB7D0A29BB6C8C00227BE0 /* UpdatePasswordDataContract.swift in Sources */,
 				981DAB4E29AF38210036FBE1 /* EditProductDetailDataBaseService.swift in Sources */,
 				98AB7CB629B7614300227BE0 /* GetOrderListDataBaseService.swift in Sources */,
 				981DAB4629AF2F910036FBE1 /* GetProductListDataContract.swift in Sources */,
@@ -679,10 +696,12 @@
 				9872EE34299E3217009442BA /* AddNewUserDataBaseContract.swift in Sources */,
 				98168B1529B1AEEE00331A13 /* DeleteCategory.swift in Sources */,
 				981B782E29A73A3800C67B59 /* Admin.swift in Sources */,
+				98AB7D0829BB62EE00227BE0 /* UpdatePasswordDataBaseContract.swift in Sources */,
 				98168B3A29B5C25500331A13 /* SearchProductDataContract.swift in Sources */,
 				98168B1929B1B1A700331A13 /* DeleteCategoryDataContract.swift in Sources */,
 				98AB7C9C29B7088B00227BE0 /* PlaceOrder.swift in Sources */,
 				98168B1B29B1B20400331A13 /* DeleteCategoryDataBaseService.swift in Sources */,
+				98AB7D0E29BB70B600227BE0 /* UpdatePasswordDataBaseService.swift in Sources */,
 				986CCC6D29A236DE00378EB4 /* Product.swift in Sources */,
 				981DAB3629AE15FB0036FBE1 /* AddNewProduct.swift in Sources */,
 				98AB7CEA29BA18C600227BE0 /* ApproveOrder.swift in Sources */,
@@ -707,6 +726,7 @@
 				98168B0229B0D33100331A13 /* AddCatogeryDataBaseContract.swift in Sources */,
 				98168AF929B0B86C00331A13 /* DeleteUserDataManager.swift in Sources */,
 				98AB7CCE29B7BE0700227BE0 /* CancelOrderDataBaseService.swift in Sources */,
+				98AB7D0629BB5F2200227BE0 /* UpdatePassword.swift in Sources */,
 				98168AF129B08E8F00331A13 /* DeleteUser.swift in Sources */,
 				981DAB4229AF2C070036FBE1 /* GetProductList.swift in Sources */,
 				98AB7CF229BA22EE00227BE0 /* ApproveOrderDataManager.swift in Sources */,

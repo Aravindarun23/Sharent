@@ -11,7 +11,8 @@ public struct Order {
     
     public enum Status: String {
         
-        case booked = "booked"
+        case requested = "requested"
+        case confirmed = "confirmed"
         case cancelled = "cancelled"
         case completed = "completed"
     }

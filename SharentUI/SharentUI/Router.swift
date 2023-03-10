@@ -91,6 +91,10 @@ class Router {
     }
     
     func getProductBookedDateView() {
-        self.window.contentView = Assembler.getProductBookedDate(router: self)
+        self.window.contentView = Assembler.getProductBookedDateView(router: self)
+    }
+    
+    func updatePasswordView() {
+        self.window.contentView = Assembler.updatePasswordView(router: self)
     }
 }

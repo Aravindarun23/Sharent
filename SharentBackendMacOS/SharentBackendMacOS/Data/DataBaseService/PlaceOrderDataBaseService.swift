@@ -15,8 +15,10 @@ public class PlaceOrderDataBaseService: PlaceOrderDataBaseContract {
  
     public  func placeOrder(productId: Int, userId: Int, fromDate: String, toDate: String, success: @escaping (String) -> Void, failure: @escaping (Error) -> Void) {
         
+        // MARK: change orders price
+        
         let tableName = "orders"
-        let status = Order.Status.booked.rawValue
+        let status = Order.Status.requested.rawValue
         let columnName = "productId,buyerId,orderDate,pickUpDate,returnDate,totalPrice,status"
         let insertValue = "\(productId),\(userId),'2023-01-23','\(fromDate)','\(toDate)',\(2000),'\(status)'"
         
