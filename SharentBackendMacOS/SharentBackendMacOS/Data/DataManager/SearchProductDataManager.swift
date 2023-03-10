@@ -16,9 +16,9 @@ public class SearchProductDataManager: SearchProductDataContract {
         self.searchProductDataBase = searchProductDataBase
     }
     
-    public func SearchProduct(pincode: String, product: String, fromDate: String, toDate: String, success: @escaping ([Product]) -> Void, failure: @escaping (Error) -> Void) {
-        
-        searchProductDataBase.SearchProduct(pincode: pincode, product: product, fromDate: fromDate, toDate: toDate) { [weak self]
+    public func SearchProduct(pincode: String, product: String, fromDate: String, toDate: String, filter: SearchProductRequest.Filter?, success: @escaping ([Product]) -> Void, failure: @escaping (Error) -> Void) {
+
+        searchProductDataBase.SearchProduct(pincode: pincode, product: product, fromDate: fromDate, toDate: toDate,filter: filter) { [weak self]
             products in
             self?.success(callback: success, products: products)
         } failure: {  [weak self] error in

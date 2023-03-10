@@ -22,7 +22,7 @@ public class GetProductListDataBaseService: GetProductListDataBaseContract {
         
         let joinQuerry = "INNER JOIN user on user.userId = product.sellerId INNER JOIN catogery on catogery.catogeryId = product.catogeryId"
         let args = [userId]
-        let whereQuerry = "sellerId = ?"
+        let whereQuerry = "sellerId = ? ORDER BY product.uploadedDate DESC"
         let products = SelectQuerry.select(tableName: tableName,whereClause: whereQuerry,args: args, selectColumn: selectColumn,joinsQuerry: joinQuerry)
         if let products = products {
             

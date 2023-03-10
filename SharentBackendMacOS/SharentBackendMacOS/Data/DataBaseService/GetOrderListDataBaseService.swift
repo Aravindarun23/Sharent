@@ -24,7 +24,7 @@ public class GetOrderListDataBaseService: GetOrderListDataBaseContract {
         
         if let buyerId = buyerId {
             
-            let whereQuerry = "buyerId = ?"
+            let whereQuerry = "buyerId = ? ORDER BY orders.orderDate DESC"
             let args = [buyerId]
             
             let result = SelectQuerry.select(tableName: tableName,whereClause: whereQuerry,args: args,selectColumn: selectQuerry, joinsQuerry: joins)
@@ -82,6 +82,7 @@ public class GetOrderListDataBaseService: GetOrderListDataBaseContract {
               let productName = order["productName"] as? String,
               let productDetail = order["productDetail"] as? String,
               let productStatus = order["productStatus"] as? String,
+              let orderedDate = order["orderDate"] as? String,
               let price = order["price"] as? Int,
               let uploadedDate = order["uploadedDate"] as? String,
               let sellerId = order["sellerId"] as? Int,
@@ -114,7 +115,7 @@ public class GetOrderListDataBaseService: GetOrderListDataBaseContract {
         let buyer =  User(id: buyerId, name: buyerName, emailId: buyerEmailId, password: buyerPassword, mobileNumber: buyerMobileNumber, address: buyerAddress, pincode: buyerPincode)
         let category = Category(id: categoryId, name: categoryName)
         let product = Product(Id: productId, seller: seller, catogery: category, name: productName, price: price, detail: productDetail, uploadedDate: uploadedDate, status: productState!)
-        let order = Order(id: orderId, buyer: buyer, product: product, fromDate: pickUpDate, returnDate: returnDate, status: orderState!)
+        let order = Order(id: orderId, buyer: buyer, product: product, orderedDate: orderedDate, fromDate: pickUpDate, returnDate: returnDate, status: orderState!)
         return order
     }
 }

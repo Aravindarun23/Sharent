@@ -11,20 +11,24 @@ import VTComponents
 
 public class SearchProductDataBaseService: SearchProductDataBaseContract {
     
-    
     public init() {
         
     }
     
-    public func  SearchProduct(pincode: String, product: String, fromDate: String, toDate: String, success: @escaping ([Product]) -> Void, failure: @escaping (Error) -> Void) {
+    public func SearchProduct(pincode: String, product: String, fromDate: String, toDate: String, filter: SearchProductRequest.Filter?, success: @escaping ([Product]) -> Void, failure: @escaping (Error) -> Void) {
         
         var products = [Product]()
+        var orderBy = ""
+        
+        if let filter = filter {
+            orderBy = filter.rawValue
+        }
         
         let selectColumn = "product.productId,productName,price,productDetail,uploadedDate,sellerId,name,emailId,password,address,pincode,mobileNumber,catogery.catogeryId,catogeryName"
         
-        let whereQuerry = "user.pincode = \'\(pincode)\' AND product.productName like \'%\(product)%\' AND((orders.pickUpDate >= '\(fromDate)' AND  orders.pickUpDate >= \'\(toDate)\') OR (orders.returnDate <=  \'\(fromDate)\' AND orders.returnDate <= \'\(toDate)\')) AND product.status = \'active\'"
+        let whereQuerry = "user.pincode = \'\(pincode)\' AND product.productName like \'%\(product)%\' AND product.status = \'active\' ORDER BY \(orderBy)"
         
-        let joinsQuerry = "INNER JOIN user on product.sellerId = user.userId INNER JOIN orders on product.productId = orders.productId INNER JOIN catogery on product.catogeryId = catogery.catogeryId"
+        let joinsQuerry = "INNER JOIN user on product.sellerId = user.userId INNER JOIN catogery on product.catogeryId = catogery.catogeryId"
         
         let result = SelectQuerry.select(tableName: "product", whereClause: whereQuerry, selectColumn: selectColumn, joinsQuerry: joinsQuerry)
         
@@ -59,4 +63,9 @@ public class SearchProductDataBaseService: SearchProductDataBaseContract {
             failure(SearchProductError.SearchProductError.noProductFound)
         }
     }
+
 }
+
+    
+    
+  

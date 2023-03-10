@@ -18,7 +18,7 @@ class GetProductListView: NSView {
     }
     
     override func viewDidMoveToSuperview() {
-        getProductListPresenter.viewDidLoad(userId: 7)
+        getProductListPresenter.viewDidLoad(userId: 1)
     }
     
     required init?(coder decoder: NSCoder) {

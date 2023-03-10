@@ -14,12 +14,23 @@ public final class SearchProductRequest: ZRequest {
     var pincode : String
     var fromDate: String
     var toDate: String
+    var filter: Filter?
     
-    public init(productName: String, pincode: String, fromDate: String, toDate: String) {
+    public enum Filter: String {
+        
+        case dateByAsc = "uploadedDate ASC"
+        case dateByDesc = "uploadedDate DESC"
+        case priceByAsc = "price ASC"
+        case priceByDesc = "price DESC"
+                
+    }
+    
+    public init(productName: String, pincode: String, fromDate: String, toDate: String, filter: Filter? = nil) {
         self.productName = productName
         self.pincode = pincode
         self.fromDate = fromDate
         self.toDate = toDate
+        self.filter = filter
         super.init(zuid: "")
     }
     
@@ -59,7 +70,7 @@ public final class SearchProduct: ZUsecase<SearchProductRequest, SearchProductRe
     }
     
     override public func run(request: SearchProductRequest, success: @escaping (SearchProductResponse) -> Void, failure: @escaping (SearchProductError) -> Void) {
-        searchProductDataManger.SearchProduct(pincode: request.pincode, product: request.productName, fromDate: request.fromDate, toDate: request.toDate) { [weak self]
+        searchProductDataManger.SearchProduct(pincode: request.pincode, product: request.productName, fromDate: request.fromDate, toDate: request.toDate, filter: request.filter) { [weak self]
             products in
             self?.success(callback: success, products: products)
             

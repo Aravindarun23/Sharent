@@ -9,5 +9,5 @@ import Foundation
 
 public protocol SearchProductDataContract {
     
-    func SearchProduct(pincode: String, product: String, fromDate: String, toDate: String, success: @escaping ([Product]) -> Void, failure: @escaping (Error) -> Void)
+    func SearchProduct(pincode: String, product: String, fromDate: String, toDate: String, filter: SearchProductRequest.Filter?, success: @escaping ([Product]) -> Void, failure: @escaping (Error) -> Void)
 }

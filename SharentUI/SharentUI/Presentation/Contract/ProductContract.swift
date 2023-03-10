@@ -33,7 +33,7 @@ protocol DeleteProductViewContract: AnyObject {
 }
 
 protocol SearchProductPresenterContract: AnyObject {
-    func viewDidLoad(productName: String, pincode: String, fromDate: String, toDate: String)
+    func viewDidLoad(productName: String, pincode: String, fromDate: String, toDate: String, filter: SearchProductRequest.Filter?)
 }
 protocol SearchProductViewContract: AnyObject {
     func load(products: [Product])

@@ -23,9 +23,9 @@ class SearchProductPresenter {
 
 extension SearchProductPresenter: SearchProductPresenterContract {
     
-    func viewDidLoad(productName: String, pincode: String, fromDate: String, toDate: String) {
+    func viewDidLoad(productName: String, pincode: String, fromDate: String, toDate: String, filter: SearchProductRequest.Filter?) {
         
-        let searchRequest = SearchProductRequest(productName: productName, pincode: pincode, fromDate: fromDate, toDate: toDate)
+        let searchRequest = SearchProductRequest(productName: productName, pincode: pincode, fromDate: fromDate, toDate: toDate, filter: filter)
         searchProduct.execute(request: searchRequest) {
             response in
             self.searchProductView?.load(products: response.products)
@@ -33,4 +33,5 @@ extension SearchProductPresenter: SearchProductPresenterContract {
             self.searchProductView?.failure(error: error.status)
         }
     }
+    
 }

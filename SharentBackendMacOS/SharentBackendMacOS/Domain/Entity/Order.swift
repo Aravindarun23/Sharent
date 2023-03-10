@@ -19,14 +19,16 @@ public struct Order {
     var id: Int
     var buyer: User
     var product: Product
+    var orderedDate: String
     var fromDate: String
     var returnDate: String
     var status: Status
     
-    public init(id: Int, buyer: User, product: Product, fromDate: String, returnDate: String, status: Status) {
+   public init(id: Int, buyer: User, product: Product, orderedDate: String, fromDate: String, returnDate: String, status: Status) {
         self.id = id
         self.buyer = buyer
         self.product = product
+        self.orderedDate = orderedDate
         self.fromDate = fromDate
         self.returnDate = returnDate
         self.status = status

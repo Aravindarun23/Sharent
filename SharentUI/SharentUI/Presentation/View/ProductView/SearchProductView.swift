@@ -20,21 +20,20 @@ class SearchProductView: NSView {
     }
     
     override func viewDidMoveToSuperview() {
-        searchProductPresenter.viewDidLoad(productName: "lap", pincode: "123456", fromDate: "2023-01-22", toDate: "2023-01-24")
+        searchProductPresenter.viewDidLoad(productName: "lap", pincode: "621431", fromDate: "2021-01-02", toDate: "2021-01-03",filter: .priceByDesc)
        
     }
-    
-    
+
     required init?(coder decoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }
 
 extension SearchProductView: SearchProductViewContract {
     
     func load(products: [Product]) {
         for product in products {
+            print(product.id)
             print("PName",product.name)
             print("PDetails", product.detail ?? "")
             print("PUploadDate",product.uploadedDate)
@@ -48,6 +47,4 @@ extension SearchProductView: SearchProductViewContract {
     func failure(error: Error) {
         print(error)
     }
-    
-    
 }
