@@ -407,3 +407,26 @@ extension Assembler {
         
     }
 }
+
+
+extension Assembler {
+    
+    
+    public static func getProductBookedDate(router: Router) -> GetProductBookedDateView {
+        
+        let getProductBookedDate = getProductBookedDateUseCase()
+        let getProductBookedDatePresenter = GetProductBookedDatePresenter(getProductBoookedDate: getProductBookedDate)
+        getProductBookedDatePresenter.router = router
+        let getProductBookedDateView = GetProductBookedDateView(getProductBookedDatePresenter: getProductBookedDatePresenter)
+        getProductBookedDatePresenter.getProductBookedDateView = getProductBookedDateView
+        return getProductBookedDateView
+    }
+    
+    private static func getProductBookedDateUseCase() -> GetProductBookedDate {
+        
+        let getProductBookedDateDataBaseService = GetProductBookedDataBaseService()
+        let getProductBookedDateDataManager = GetProductBookedDateDataManager(getProductBookedDateDataBase: getProductBookedDateDataBaseService)
+        let getProductBookedDate = GetProductBookedDate(getProductBookedDateDataManager: getProductBookedDateDataManager)
+        return getProductBookedDate
+    }
+}

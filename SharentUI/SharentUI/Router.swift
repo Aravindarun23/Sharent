@@ -89,5 +89,8 @@ class Router {
     func approveOrderView() {
         self.window.contentView = Assembler.approveOrderView(router: self)
     }
-
+    
+    func getProductBookedDateView() {
+        self.window.contentView = Assembler.getProductBookedDate(router: self)
+    }
 }

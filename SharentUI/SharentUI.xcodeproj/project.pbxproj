@@ -56,6 +56,8 @@
 		98AB7CE829BA045D00227BE0 /* EditUserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CE729BA045D00227BE0 /* EditUserDetailView.swift */; };
 		98AB7CF429BA284800227BE0 /* ApproveOrderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CF329BA284800227BE0 /* ApproveOrderPresenter.swift */; };
 		98AB7CF629BA295800227BE0 /* ApproveOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CF529BA295800227BE0 /* ApproveOrderView.swift */; };
+		98AB7D0229BB520200227BE0 /* GetProductBookedDatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D0129BB520200227BE0 /* GetProductBookedDatePresenter.swift */; };
+		98AB7D0429BB544800227BE0 /* GetProductBookedDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D0329BB544800227BE0 /* GetProductBookedDateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -123,6 +125,8 @@
 		98AB7CE729BA045D00227BE0 /* EditUserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserDetailView.swift; sourceTree = "<group>"; };
 		98AB7CF329BA284800227BE0 /* ApproveOrderPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproveOrderPresenter.swift; sourceTree = "<group>"; };
 		98AB7CF529BA295800227BE0 /* ApproveOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproveOrderView.swift; sourceTree = "<group>"; };
+		98AB7D0129BB520200227BE0 /* GetProductBookedDatePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductBookedDatePresenter.swift; sourceTree = "<group>"; };
+		98AB7D0329BB544800227BE0 /* GetProductBookedDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductBookedDateView.swift; sourceTree = "<group>"; };
 		A6B41A1BDEF413EB325A4C94 /* Pods-SharentUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharentUI.release.xcconfig"; path = "Target Support Files/Pods-SharentUI/Pods-SharentUI.release.xcconfig"; sourceTree = "<group>"; };
 		F44DF708E67CD7C02C518822 /* Pods-SharentUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharentUI.debug.xcconfig"; path = "Target Support Files/Pods-SharentUI/Pods-SharentUI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -239,6 +243,7 @@
 				98168AEE29B0813400331A13 /* DeleteProductView.swift */,
 				98AB7C9829B6F6A700227BE0 /* SearchProductView.swift */,
 				98AB7CD929B9CD2F00227BE0 /* GetProductListView.swift */,
+				98AB7D0329BB544800227BE0 /* GetProductBookedDateView.swift */,
 			);
 			path = ProductView;
 			sourceTree = "<group>";
@@ -251,6 +256,7 @@
 				98168AEC29B07DFF00331A13 /* DeleteProductPresenter.swift */,
 				98AB7C9629B6F55E00227BE0 /* SearchProductPresenter.swift */,
 				98AB7CD729B9CB2D00227BE0 /* GetProductListPresenter.swift */,
+				98AB7D0129BB520200227BE0 /* GetProductBookedDatePresenter.swift */,
 			);
 			path = ProductPresenter;
 			sourceTree = "<group>";
@@ -485,6 +491,7 @@
 				9872EE3F299E38CD009442BA /* UserSignUpPagePresnter.swift in Sources */,
 				98AB7CD229B8478600227BE0 /* CancelOrderPresenter.swift in Sources */,
 				98AB7CAE29B740FF00227BE0 /* PlaceOrderView.swift in Sources */,
+				98AB7D0429BB544800227BE0 /* GetProductBookedDateView.swift in Sources */,
 				986D392F29ADCAAD0057F92C /* AddNewProductView.swift in Sources */,
 				986D393829ADD5AE0057F92C /* CatogeryListPresenter.swift in Sources */,
 				98AB7CDA29B9CD2F00227BE0 /* GetProductListView.swift in Sources */,
@@ -499,6 +506,7 @@
 				98AB7C9929B6F6A700227BE0 /* SearchProductView.swift in Sources */,
 				986D392C29ACD1160057F92C /* UserLoginPagePresenter.swift in Sources */,
 				98AB7CF429BA284800227BE0 /* ApproveOrderPresenter.swift in Sources */,
+				98AB7D0229BB520200227BE0 /* GetProductBookedDatePresenter.swift in Sources */,
 				986D393329ADD56A0057F92C /* CatogeryListView.swift in Sources */,
 				98AB7CE829BA045D00227BE0 /* EditUserDetailView.swift in Sources */,
 				981E4E52299E14F70068A880 /* AppDelegate.swift in Sources */,

@@ -48,3 +48,11 @@ protocol GetProductListViewContract: AnyObject {
 protocol GetProductListPresenterContract: AnyObject {
     func viewDidLoad(userId: Int)
 }
+
+protocol GetProductBookedDateViewContract: AnyObject {
+    func load(dateList: [[String:Any]])
+}
+
+protocol GetProductBookedDatePresenterContract: AnyObject {
+    func viewDidLoad(productId: Int)
+}
