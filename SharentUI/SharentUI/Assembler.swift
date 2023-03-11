@@ -270,7 +270,8 @@ extension Assembler {
     private static func searchProductUseCase() -> SearchProduct {
         
         let searchProductDataBaseService = SearchProductDataBaseService()
-        let searchProductDataManager = SearchProductDataManager(searchProductDataBase: searchProductDataBaseService)
+        let getPincodeNetworkService = GetPincodeNetworkService()
+        let searchProductDataManager = SearchProductDataManager(searchProductDataBase: searchProductDataBaseService, getPincodeListNetwork: getPincodeNetworkService)
         let searchProductUseCase = SearchProduct(searchProductDataManger: searchProductDataManager)
         return searchProductUseCase
     }

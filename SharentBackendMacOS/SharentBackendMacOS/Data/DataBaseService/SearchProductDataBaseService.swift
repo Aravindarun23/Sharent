@@ -15,7 +15,7 @@ public class SearchProductDataBaseService: SearchProductDataBaseContract {
         
     }
     
-    public func SearchProduct(pincode: String, product: String, fromDate: String, toDate: String, filter: SearchProductRequest.Filter?, success: @escaping ([Product]) -> Void, failure: @escaping (Error) -> Void) {
+    public func SearchProduct(pincode: [String], product: String, filter: SearchProductRequest.Filter?, success: @escaping ([Product]) -> Void, failure: @escaping (Error) -> Void) {
         
         var products = [Product]()
         var orderBy = ""
@@ -23,10 +23,11 @@ public class SearchProductDataBaseService: SearchProductDataBaseContract {
         if let filter = filter {
             orderBy = filter.rawValue
         }
-        
+        let pincodeList = pincode.map { String($0) }.joined(separator: ", ")
+
         let selectColumn = "product.productId,productName,price,productDetail,uploadedDate,sellerId,name,emailId,password,address,pincode,mobileNumber,catogery.catogeryId,catogeryName"
         
-        let whereQuerry = "user.pincode = \'\(pincode)\' AND product.productName like \'%\(product)%\' AND product.status = \'active\' ORDER BY \(orderBy)"
+        let whereQuerry = "user.pincode in (\(pincodeList)) AND product.productName like \'%\(product)%\' AND product.status = \'active\' ORDER BY \(orderBy)"
         
         let joinsQuerry = "INNER JOIN user on product.sellerId = user.userId INNER JOIN catogery on product.catogeryId = catogery.catogeryId"
         

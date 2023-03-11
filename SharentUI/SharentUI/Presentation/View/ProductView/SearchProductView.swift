@@ -20,7 +20,7 @@ class SearchProductView: NSView {
     }
     
     override func viewDidMoveToSuperview() {
-        searchProductPresenter.viewDidLoad(productName: "lap", pincode: "621431", fromDate: "2021-01-02", toDate: "2021-01-03",filter: .priceByDesc)
+        searchProductPresenter.viewDidLoad(productName: "lap", pincode: "614625",filter: .priceByDesc, range: 25)
        
     }
 

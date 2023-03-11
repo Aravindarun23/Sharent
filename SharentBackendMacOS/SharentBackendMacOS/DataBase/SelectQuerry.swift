@@ -14,7 +14,6 @@ class SelectQuerry {
         
         var results: [[String: Any]]?
         let query = "SELECT \(selectColumn) FROM \(tableName) \(joinsQuerry) \(whereClause != nil ? "WHERE \(whereClause!)" : "")"
-        
         if let prepare = DataBase.shared.prepareStatement(query: query) {
             if let args = args {
                 // Bind the parameters to the statement
@@ -68,6 +67,9 @@ class SelectQuerry {
                     row[name] = value
                 }
                 rows.append(row)
+            }
+            if rows.isEmpty {
+                return nil
             }
             results = rows
         }

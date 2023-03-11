@@ -16,7 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         router = Router(window: window)
-        router?.verifyPincodeView()
+        router?.searchProductView()
         // Insert code here to initialize your application
     }
 

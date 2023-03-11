@@ -12,9 +12,8 @@ public final class SearchProductRequest: ZRequest {
     
     var productName: String
     var pincode : String
-    var fromDate: String
-    var toDate: String
     var filter: Filter?
+    var range: Int?
     
     public enum Filter: String {
         
@@ -25,12 +24,11 @@ public final class SearchProductRequest: ZRequest {
                 
     }
     
-    public init(productName: String, pincode: String, fromDate: String, toDate: String, filter: Filter? = nil) {
+    public init(productName: String, pincode: String, filter: Filter? = nil, range: Int? = nil) {
         self.productName = productName
         self.pincode = pincode
-        self.fromDate = fromDate
-        self.toDate = toDate
         self.filter = filter
+        self.range = range
         super.init(zuid: "")
     }
     
@@ -70,7 +68,7 @@ public final class SearchProduct: ZUsecase<SearchProductRequest, SearchProductRe
     }
     
     override public func run(request: SearchProductRequest, success: @escaping (SearchProductResponse) -> Void, failure: @escaping (SearchProductError) -> Void) {
-        searchProductDataManger.SearchProduct(pincode: request.pincode, product: request.productName, fromDate: request.fromDate, toDate: request.toDate, filter: request.filter) { [weak self]
+        searchProductDataManger.SearchProduct(pincode: request.pincode, product: request.productName, filter: request.filter, range: request.range) { [weak self]
             products in
             self?.success(callback: success, products: products)
             

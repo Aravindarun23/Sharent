@@ -120,6 +120,8 @@
 		98AB7D1E29BCA71100227BE0 /* VerifyPincodeNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D1D29BCA71100227BE0 /* VerifyPincodeNetworkService.swift */; };
 		98AB7D2029BCAAB900227BE0 /* VerifyPincodeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D1F29BCAAB900227BE0 /* VerifyPincodeDataManager.swift */; };
 		98AB7D2229BCAE5F00227BE0 /* VerifyPincode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D2129BCAE5F00227BE0 /* VerifyPincode.swift */; };
+		98AB7D2829BCDFC200227BE0 /* GetPincodeListNetworkContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D2729BCDFC200227BE0 /* GetPincodeListNetworkContract.swift */; };
+		98AB7D2A29BCE27200227BE0 /* GetPincodeListNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D2929BCE27200227BE0 /* GetPincodeListNetworkService.swift */; };
 		AADDE0DD4787C82413E4A626 /* Pods_SharentBackendMacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFA938B5F313B9A42903BBC2 /* Pods_SharentBackendMacOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -240,6 +242,8 @@
 		98AB7D1D29BCA71100227BE0 /* VerifyPincodeNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPincodeNetworkService.swift; sourceTree = "<group>"; };
 		98AB7D1F29BCAAB900227BE0 /* VerifyPincodeDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPincodeDataManager.swift; sourceTree = "<group>"; };
 		98AB7D2129BCAE5F00227BE0 /* VerifyPincode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPincode.swift; sourceTree = "<group>"; };
+		98AB7D2729BCDFC200227BE0 /* GetPincodeListNetworkContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPincodeListNetworkContract.swift; sourceTree = "<group>"; };
+		98AB7D2929BCE27200227BE0 /* GetPincodeListNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPincodeListNetworkService.swift; sourceTree = "<group>"; };
 		CFA938B5F313B9A42903BBC2 /* Pods_SharentBackendMacOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharentBackendMacOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -537,6 +541,7 @@
 				98AB7CFB29BB48B800227BE0 /* GetProductBookedDateDataBaseContract.swift */,
 				98AB7D0729BB62EE00227BE0 /* UpdatePasswordDataBaseContract.swift */,
 				98AB7D1A29BCA64200227BE0 /* VerifyPincodeNetworkContract.swift */,
+				98AB7D2729BCDFC200227BE0 /* GetPincodeListNetworkContract.swift */,
 			);
 			path = DataContract;
 			sourceTree = "<group>";
@@ -575,6 +580,7 @@
 			isa = PBXGroup;
 			children = (
 				98AB7D1D29BCA71100227BE0 /* VerifyPincodeNetworkService.swift */,
+				98AB7D2929BCE27200227BE0 /* GetPincodeListNetworkService.swift */,
 			);
 			path = NetworkService;
 			sourceTree = "<group>";
@@ -685,6 +691,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98AB7D2A29BCE27200227BE0 /* GetPincodeListNetworkService.swift in Sources */,
 				98AB7D0C29BB6CDF00227BE0 /* UpdatePasswordDataManager.swift in Sources */,
 				983A5DEB29A6013300441D6F /* Catogery.swift in Sources */,
 				98AB7C9E29B70CA600227BE0 /* PlaceOrderDataBaseService.swift in Sources */,
@@ -791,6 +798,7 @@
 				98AB7D1729BC456700227BE0 /* Network.swift in Sources */,
 				98AB7D1B29BCA64200227BE0 /* VerifyPincodeNetworkContract.swift in Sources */,
 				98168AE729B0698000331A13 /* DeleteProductDataBaseService.swift in Sources */,
+				98AB7D2829BCDFC200227BE0 /* GetPincodeListNetworkContract.swift in Sources */,
 				98168B2529B1CD1500331A13 /* AdminLogin.swift in Sources */,
 				98168AE329B067D900331A13 /* DeleteProductDataBaseContract.swift in Sources */,
 				98AB7CB829B7704B00227BE0 /* GetOrderListDataManager.swift in Sources */,
