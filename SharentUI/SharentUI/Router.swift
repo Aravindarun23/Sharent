@@ -97,4 +97,8 @@ class Router {
     func updatePasswordView() {
         self.window.contentView = Assembler.updatePasswordView(router: self)
     }
+    
+    func verifyPincodeView() {
+        self.window.contentView = Assembler.verifyPincodeView(router: self)
+    }
 }

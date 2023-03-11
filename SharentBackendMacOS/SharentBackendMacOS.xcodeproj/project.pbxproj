@@ -114,6 +114,12 @@
 		98AB7D0A29BB6C8C00227BE0 /* UpdatePasswordDataContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D0929BB6C8C00227BE0 /* UpdatePasswordDataContract.swift */; };
 		98AB7D0C29BB6CDF00227BE0 /* UpdatePasswordDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D0B29BB6CDF00227BE0 /* UpdatePasswordDataManager.swift */; };
 		98AB7D0E29BB70B600227BE0 /* UpdatePasswordDataBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D0D29BB70B600227BE0 /* UpdatePasswordDataBaseService.swift */; };
+		98AB7D1729BC456700227BE0 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D1629BC456700227BE0 /* Network.swift */; };
+		98AB7D1929BCA52900227BE0 /* VerifyPincodeDataContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D1829BCA52900227BE0 /* VerifyPincodeDataContract.swift */; };
+		98AB7D1B29BCA64200227BE0 /* VerifyPincodeNetworkContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D1A29BCA64200227BE0 /* VerifyPincodeNetworkContract.swift */; };
+		98AB7D1E29BCA71100227BE0 /* VerifyPincodeNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D1D29BCA71100227BE0 /* VerifyPincodeNetworkService.swift */; };
+		98AB7D2029BCAAB900227BE0 /* VerifyPincodeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D1F29BCAAB900227BE0 /* VerifyPincodeDataManager.swift */; };
+		98AB7D2229BCAE5F00227BE0 /* VerifyPincode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D2129BCAE5F00227BE0 /* VerifyPincode.swift */; };
 		AADDE0DD4787C82413E4A626 /* Pods_SharentBackendMacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFA938B5F313B9A42903BBC2 /* Pods_SharentBackendMacOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -228,6 +234,12 @@
 		98AB7D0929BB6C8C00227BE0 /* UpdatePasswordDataContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordDataContract.swift; sourceTree = "<group>"; };
 		98AB7D0B29BB6CDF00227BE0 /* UpdatePasswordDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordDataManager.swift; sourceTree = "<group>"; };
 		98AB7D0D29BB70B600227BE0 /* UpdatePasswordDataBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordDataBaseService.swift; sourceTree = "<group>"; };
+		98AB7D1629BC456700227BE0 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		98AB7D1829BCA52900227BE0 /* VerifyPincodeDataContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPincodeDataContract.swift; sourceTree = "<group>"; };
+		98AB7D1A29BCA64200227BE0 /* VerifyPincodeNetworkContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPincodeNetworkContract.swift; sourceTree = "<group>"; };
+		98AB7D1D29BCA71100227BE0 /* VerifyPincodeNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPincodeNetworkService.swift; sourceTree = "<group>"; };
+		98AB7D1F29BCAAB900227BE0 /* VerifyPincodeDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPincodeDataManager.swift; sourceTree = "<group>"; };
+		98AB7D2129BCAE5F00227BE0 /* VerifyPincode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPincode.swift; sourceTree = "<group>"; };
 		CFA938B5F313B9A42903BBC2 /* Pods_SharentBackendMacOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharentBackendMacOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -331,6 +343,7 @@
 		981E4E6A299E157C0068A880 /* SharentBackendMacOS */ = {
 			isa = PBXGroup;
 			children = (
+				98AB7D1529BC436D00227BE0 /* Network */,
 				9872EE21299E2DEF009442BA /* Domain */,
 				9872EE2E299E313D009442BA /* Data */,
 				9872EE30299E3172009442BA /* DataBase */,
@@ -408,6 +421,7 @@
 				98168AF029B08E8F00331A13 /* DeleteUser.swift */,
 				98AB7CDB29B9E24200227BE0 /* EditUserDetail.swift */,
 				98AB7D0529BB5F2200227BE0 /* UpdatePassword.swift */,
+				98AB7D2129BCAE5F00227BE0 /* VerifyPincode.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -445,6 +459,7 @@
 				98168AF429B0B0C600331A13 /* DeleteUserDataContract.swift */,
 				98AB7CE329B9F61100227BE0 /* EditUserDetailDataContract.swift */,
 				98AB7D0929BB6C8C00227BE0 /* UpdatePasswordDataContract.swift */,
+				98AB7D1829BCA52900227BE0 /* VerifyPincodeDataContract.swift */,
 			);
 			path = UserContract;
 			sourceTree = "<group>";
@@ -452,6 +467,7 @@
 		9872EE2E299E313D009442BA /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				98AB7D1C29BCA6E100227BE0 /* NetworkService */,
 				9872EE32299E31AE009442BA /* DataContract */,
 				9872EE2F299E3151009442BA /* DataManager */,
 				983A5DEE29A6401F00441D6F /* DataBaseService */,
@@ -481,6 +497,7 @@
 				98AB7CF129BA22EE00227BE0 /* ApproveOrderDataManager.swift */,
 				98AB7CFF29BB4C6300227BE0 /* GetProductBookedDateDataManager.swift */,
 				98AB7D0B29BB6CDF00227BE0 /* UpdatePasswordDataManager.swift */,
+				98AB7D1F29BCAAB900227BE0 /* VerifyPincodeDataManager.swift */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -519,6 +536,7 @@
 				98AB7CEB29BA1BFB00227BE0 /* ApproveOrderDataBaseContract.swift */,
 				98AB7CFB29BB48B800227BE0 /* GetProductBookedDateDataBaseContract.swift */,
 				98AB7D0729BB62EE00227BE0 /* UpdatePasswordDataBaseContract.swift */,
+				98AB7D1A29BCA64200227BE0 /* VerifyPincodeNetworkContract.swift */,
 			);
 			path = DataContract;
 			sourceTree = "<group>";
@@ -543,6 +561,22 @@
 				98AB7CED29BA1F9F00227BE0 /* ApproveOrderDataContract.swift */,
 			);
 			path = OrderContract;
+			sourceTree = "<group>";
+		};
+		98AB7D1529BC436D00227BE0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				98AB7D1629BC456700227BE0 /* Network.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		98AB7D1C29BCA6E100227BE0 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				98AB7D1D29BCA71100227BE0 /* VerifyPincodeNetworkService.swift */,
+			);
+			path = NetworkService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -674,6 +708,7 @@
 				98168AE929B06B4000331A13 /* DeleteQuerry.swift in Sources */,
 				98AB7CCC29B7BD8900227BE0 /* CancelOrderDataContract.swift in Sources */,
 				98AB7CC829B7BBF200227BE0 /* CancelOrder.swift in Sources */,
+				98AB7D2029BCAAB900227BE0 /* VerifyPincodeDataManager.swift in Sources */,
 				98AB7CA529B7180300227BE0 /* PlaceOrderDataManager.swift in Sources */,
 				98168AEB29B078DD00331A13 /* DeleteProductDataManager.swift in Sources */,
 				986D394329ADE1E20057F92C /* CatogeryLIstDataManager.swift in Sources */,
@@ -681,6 +716,7 @@
 				98AB7D0029BB4C6300227BE0 /* GetProductBookedDateDataManager.swift in Sources */,
 				986D394129ADD8A10057F92C /* CatogeryListDataBaseContract.swift in Sources */,
 				98AB7CB029B75F1400227BE0 /* GetOrderList.swift in Sources */,
+				98AB7D1E29BCA71100227BE0 /* VerifyPincodeNetworkService.swift in Sources */,
 				9872EE26299E2E75009442BA /* AddNewUser.swift in Sources */,
 				98168B3829B5B5D600331A13 /* SearchProduct.swift in Sources */,
 				98AB7CB229B7600E00227BE0 /* GetOrderListDataContract.swift in Sources */,
@@ -716,6 +752,7 @@
 				986CCC7E29A32E0600378EB4 /* Order.swift in Sources */,
 				98AB7CE429B9F61100227BE0 /* EditUserDetailDataContract.swift in Sources */,
 				98168B1729B1B0B100331A13 /* DeleteCategoryDataBaseContract.swift in Sources */,
+				98AB7D1929BCA52900227BE0 /* VerifyPincodeDataContract.swift in Sources */,
 				9872EE29299E3052009442BA /* User.swift in Sources */,
 				981DAB3A29AE18080036FBE1 /* AddNewProductDataBaseContract.swift in Sources */,
 				98168ADB29AFC31700331A13 /* EditProductDetailDataManager.swift in Sources */,
@@ -733,6 +770,7 @@
 				98AB7CFE29BB491400227BE0 /* GetProductBookedDateDataBaseService.swift in Sources */,
 				986D393A29ADD62A0057F92C /* CatogeryListDataBaseService.swift in Sources */,
 				98AB7CFC29BB48B800227BE0 /* GetProductBookedDateDataBaseContract.swift in Sources */,
+				98AB7D2229BCAE5F00227BE0 /* VerifyPincode.swift in Sources */,
 				98AB7CD029B83F7200227BE0 /* CancelOrderDataManager.swift in Sources */,
 				98AB7CE029B9EBC200227BE0 /* EditUserDetailDataBaseService.swift in Sources */,
 				986D392629AC8DE90057F92C /* SelectQuerry.swift in Sources */,
@@ -750,6 +788,8 @@
 				98168AF729B0B0EF00331A13 /* DeleteUserDataBaseService.swift in Sources */,
 				98AB7C9529B65DA100227BE0 /* SearchProductDataManager.swift in Sources */,
 				98168B2729B1CEEA00331A13 /* AdminLoginDataBaseContract.swift in Sources */,
+				98AB7D1729BC456700227BE0 /* Network.swift in Sources */,
+				98AB7D1B29BCA64200227BE0 /* VerifyPincodeNetworkContract.swift in Sources */,
 				98168AE729B0698000331A13 /* DeleteProductDataBaseService.swift in Sources */,
 				98168B2529B1CD1500331A13 /* AdminLogin.swift in Sources */,
 				98168AE329B067D900331A13 /* DeleteProductDataBaseContract.swift in Sources */,

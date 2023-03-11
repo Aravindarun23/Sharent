@@ -16,7 +16,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         router = Router(window: window)
-        router?.updatePasswordView()        // Insert code here to initialize your application
+        router?.verifyPincodeView()
+        // Insert code here to initialize your application
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

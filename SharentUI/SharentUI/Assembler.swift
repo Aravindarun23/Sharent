@@ -453,3 +453,26 @@ extension Assembler {
         return updatePassword
     }
 }
+
+
+extension Assembler {
+    
+    public static func verifyPincodeView(router: Router) -> VerifyPincodeView {
+        
+        let verifyPincodeUseCase = VerifyPincodeUseCase()
+        let verifyPincodePresenter = VerifyPincodePresenter(verifyPincode: verifyPincodeUseCase)
+        verifyPincodePresenter.router = router
+        let verifyPincodeView = VerifyPincodeView(verifyPincodePresenter: verifyPincodePresenter)
+        verifyPincodePresenter.verifyPincodeView = verifyPincodeView
+        return verifyPincodeView
+        
+    }
+    
+    private static func VerifyPincodeUseCase() -> VerifyPincode {
+        
+        let verifyPincodeNetworkService = VerifyPincodeNetworkService()
+        let verifyPincodeDataManager = VerifyPincodeDataManager(verifyPincodeNetworkService: verifyPincodeNetworkService)
+        let verifyPincodeUseCase = VerifyPincode(verifyPincodeDataManager: verifyPincodeDataManager)
+        return verifyPincodeUseCase
+    }
+}

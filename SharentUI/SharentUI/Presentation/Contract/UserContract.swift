@@ -60,3 +60,11 @@ protocol UpdatePasswordPresenterContract: AnyObject {
     func viewDidLoad(userId: Int, newPassword: String)
 }
 
+protocol VerifyPincodeViewContract: AnyObject {
+    func load(pincodeList: [[String: Any]])
+    func failure(error: Error)
+}
+
+protocol VerifyPincodePresenterContract: AnyObject {
+    func viewDidLoad(pincode: String)
+}
