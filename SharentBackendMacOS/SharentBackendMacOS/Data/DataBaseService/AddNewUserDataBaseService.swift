@@ -27,7 +27,6 @@ public class AddNewUserDataBaseService: AddNewUserDataBaseContract {
             self?.failure(callback: failure, error: error)
         }
     }
-    
     private func success(callback: @escaping (String) -> Void, responseMessage: String) {
         callback(responseMessage)
     }

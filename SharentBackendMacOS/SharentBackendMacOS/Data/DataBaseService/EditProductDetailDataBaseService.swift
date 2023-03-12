@@ -16,8 +16,8 @@ public class EditProductDetailDataBaserService: EditProductDetailDataBaseContrac
     
     public  func editProductDetail(product: Product, success: @escaping (String) -> Void, failure: @escaping (Error) -> Void) {
         
-        let updateQuerry = "catogeryId = \(product.category.id), sellerId = \(product.seller.id), productName = '\(product.name)', price = \(product.price), productDetail = '\(product.detail ?? "worked" )', uploadedDate = '\(product.uploadedDate)', status = '\("inactive")'"
-        let condition = "productId = \(product.id)"
+        let updateQuerry = "categoryId = \(product.category.id),name = '\(product.name)', price = \(product.price), detail = '\(product.detail ?? "worked" )', uploadedDate = '\(product.uploadedDate)', status = \'\(product.status.rawValue)\'"
+        let condition = "id = \(product.id)"
         
         UpdateQuerry.updateQuerry(tableName: "product", updateQuerry: updateQuerry, condition: condition) { [weak self]
             responseMsg in

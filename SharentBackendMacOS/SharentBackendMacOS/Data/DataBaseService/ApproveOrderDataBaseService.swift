@@ -17,10 +17,8 @@ public class ApproveOrderDataBaseService: ApproveOrderDataBaseContract {
     public func approveOrder(orderId: Int, success: @escaping (String) -> Void, failure: @escaping (Error) -> Void) {
         
         let tableName = "orders"
-        let status = Order.Status(rawValue: "booked")
         
-        guard let status = status else {return}
-        let updateQuerry = "status = \'\(status.rawValue)\'"
+        let updateQuerry = "status = \'\(Order.Status.confirmed.rawValue)\'"
         let whereCondition = "id = \(orderId)"
         
         UpdateQuerry.updateQuerry(tableName: tableName, updateQuerry: updateQuerry, condition: whereCondition) {

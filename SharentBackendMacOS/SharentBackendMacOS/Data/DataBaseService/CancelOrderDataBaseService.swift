@@ -5,6 +5,7 @@
 //  Created by aravind-pt6209 on 08/03/23.
 //
 
+
 import Foundation
 
 public class CancelOrderDataBaseService: CancelOrderDataBaseContract {
@@ -29,5 +30,4 @@ public class CancelOrderDataBaseService: CancelOrderDataBaseContract {
     private func success(callback: @escaping(String) -> Void, message: String) {
         callback(message)
     }
-
 }

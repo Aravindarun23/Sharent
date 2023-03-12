@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 public class AdminLoginDataBaseService: AdminLoginDataBaseContract {
     
     public init() {

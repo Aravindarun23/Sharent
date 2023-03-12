@@ -16,12 +16,13 @@ public class AddNewProductDataBaseService: AddNewProductDataBaseContract {
     public func addNewProduct(product: Product, success: @escaping (String) -> Void, failure: @escaping (Error) -> Void) {
         
         var detail: String = ""
-        let columnName = "catogeryId,sellerId,productName,price,productDetail,uploadedDate,status"
+        let columnName = "categoryId,sellerId,name,price,detail,uploadedDate,status"
         let status = product.status.rawValue
         
         if let productDetail = product.detail  {
             detail = productDetail
         }
+        print(product.category.id)
 
         let insertValue = "'\(product.category.id)', '\(product.seller.id)', '\(product.name)', '\(product.price)','\(detail)', '\(product.uploadedDate)', '\(status)'"
         

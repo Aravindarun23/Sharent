@@ -16,7 +16,7 @@ public class DeleteProductDataBaseService: DeleteProductDataBaseContract {
     
     public func deleteProduct(productId: Int, success: @escaping (String) -> Void, failure: @escaping (Error) -> Void)
     {
-        DeleteQuerry.deleteQuerry(tableName: "product", condition: "productId = \(productId)") { [weak self]
+        DeleteQuerry.deleteQuerry(tableName: "product", condition: "id = \(productId)") { [weak self]
             response in
             self?.success(callback: success, message: response)
         } error: { [weak self] error in

@@ -29,9 +29,9 @@ public struct Product {
     public var status: Status
     
     
-    public init(Id: Int, seller: User, category: Category, name: String, price: Int, detail: String? = nil, uploadedDate: String, status: Status) {
+    public init(id: Int, seller: User, category: Category, name: String, price: Int, detail: String? = nil, uploadedDate: String, status: Status) {
         
-        self.id = Id
+        self.id = id
         self.seller = seller
         self.category = category
         self.name = name

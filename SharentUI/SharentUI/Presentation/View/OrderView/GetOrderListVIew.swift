@@ -20,7 +20,7 @@ class GetOrderListView: NSView {
     
     override func viewDidMoveToSuperview() {
         if superview != nil {
-            getOrderListPresenter.viewDidLoad(userId: 1)
+            getOrderListPresenter.viewDidLoad(userId: 2)
         }
     }
 

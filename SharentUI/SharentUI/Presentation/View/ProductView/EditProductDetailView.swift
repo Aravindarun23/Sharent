@@ -23,9 +23,9 @@ class EditProductDetailView: NSView {
     override func viewDidMoveToSuperview() {
         if superview != nil {
             
-            let user = User(id: 2, name: "arun", emailId: "arvind123", password: "a123", mobileNumber: "123456", address: "pkt", pincode: "614602")
+            let user = User(id: 1, name: "arun", emailId: "arvind123", password: "a123", mobileNumber: "123456", address: "pkt", pincode: "614602")
             let category = Category(id: 1, name: "bike")
-            let product = Product(Id: 1, seller: user, category: category, name: "helicopter", price: 2345, uploadedDate: "23/01/2023", status: .active)
+            let product = Product(id: 1, seller: user, category: category, name: "helicopter", price: 2345, uploadedDate: "2023/01/20", status: .active)
             EditProductDetailPresenter.viewDidload(product: product)
         }
     }

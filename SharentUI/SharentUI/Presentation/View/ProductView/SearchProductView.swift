@@ -20,7 +20,7 @@ class SearchProductView: NSView {
     }
     
     override func viewDidMoveToSuperview() {
-        searchProductPresenter.viewDidLoad(productName: "lap", pincode: "614625",filter: .priceByDesc, range: 25)
+        searchProductPresenter.viewDidLoad(productName: "heli", pincode: "614602",filter: .priceByDesc, range: nil)
        
     }
 
@@ -40,7 +40,7 @@ extension SearchProductView: SearchProductViewContract {
             print("PPrice", product.price)
             print("PCatogery", product.category.name)
             print("sellerName", product.seller.name)
-            print("sellerName", product.seller.address)
+            print("sellerAddress", product.seller.address)
         }
     }
     

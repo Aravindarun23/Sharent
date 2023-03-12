@@ -17,7 +17,7 @@ class EditUserDetailView: NSView {
     }
     
     override func viewDidMoveToSuperview() {
-        editUserDetailPresenter.viewDidLoad(userId: 1, addresss: "coimbatore", pincode: "621431", mobileNumber: "909090900")
+        editUserDetailPresenter.viewDidLoad(userId: 1, addresss: "140/d, NorthStreet", pincode: "614602", mobileNumber: "909090900")
     }
     
     

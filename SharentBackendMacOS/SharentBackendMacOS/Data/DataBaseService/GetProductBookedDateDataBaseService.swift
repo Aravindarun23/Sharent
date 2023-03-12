@@ -17,7 +17,7 @@ public class GetProductBookedDataBaseService: GetProductBookedDateDataBaseContra
     
     public func getProductBookedDate(productId: Int, success: @escaping ([[String : Any]]) -> Void, failure: @escaping (Error) -> Void) {
         
-        let status = Order.Status.confirmed
+        let status = Order.Status.confirmed.rawValue
         let selectQuerry = "pickUpDate,returnDate"
         let tableName = "orders"
         let whereQuerry = "productId = ? AND status = \'\(status)\'"

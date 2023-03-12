@@ -16,11 +16,11 @@ class Router {
     }
 
     
-    func moveSignUpPage() {
+    func addNewUserView() {
         self.window.contentView = Assembler.userSignUpPageViewAssembler(router: self)
     }
     
-    func movetoLoginPage() {
+    func userLoginView() {
         self.window.contentView = Assembler.userLoginPageViewAssembler(router: self)
     }
     

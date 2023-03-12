@@ -18,7 +18,7 @@ public class EditUserDetailDataBaseService: EditUserDetailDataBaseContract {
     public func editUserDetail(userId: Int, address: String, pincode: String, mobileNumber: String, success: @escaping (String) -> Void, failure: @escaping (Error) -> Void) {
         
         let updateQuerry = "address = \'\(address)\',pincode = \'\(pincode)\',mobileNumber = \'\(mobileNumber)\'"
-        let condition = "userId = \(userId)"
+        let condition = "id = \(userId)"
 
         UpdateQuerry.updateQuerry(tableName: tableName, updateQuerry: updateQuerry,condition: condition) {
             responseMsg in

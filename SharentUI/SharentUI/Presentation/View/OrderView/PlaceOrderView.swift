@@ -19,7 +19,7 @@ class PlaceOrderView: NSView {
     override func viewDidMoveToSuperview() {
 
         if superview != nil {
-            placeOrderPresenter.viewDidLoad(productId: 1 , buyerId: 1, fromDate: "2023-01-20", toDate: "2023-01-22")
+            placeOrderPresenter.viewDidLoad(productId: 1 , buyerId: 2, fromDate: "2023-01-15", toDate: "2023-01-18")
         }
     }
 

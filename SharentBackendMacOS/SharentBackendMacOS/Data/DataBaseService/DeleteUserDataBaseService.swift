@@ -17,7 +17,7 @@ public class DeleteUserDataBaseService: DeleteUserDataBaseContract {
     
     public func deleteUser(userId: Int, success: @escaping (String) -> Void, failure: @escaping (Error) -> Void) {
         
-        let condition = "userId = \(userId)"
+        let condition = "id = \(userId)"
         
         DeleteQuerry.deleteQuerry(tableName: "user", condition: condition) { [weak self]
             response in

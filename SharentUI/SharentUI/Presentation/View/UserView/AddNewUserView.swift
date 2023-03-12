@@ -33,7 +33,7 @@ class AddNewUserView: NSView {
 extension AddNewUserView {
     
     func userSignUp() {
-        user = User(id: 0, name: "arun", emailId: "arvind123", password: "a123", mobileNumber: "1234567890", address: "coimbatore", pincode: "123456")
+        user = User(id: 0, name: "arun", emailId: "arvind123", password: "a123", mobileNumber: "8888888888", address: "140/d, North Street", pincode: "614602")
         presenter.viewLoad(user: user!)
     }
 }

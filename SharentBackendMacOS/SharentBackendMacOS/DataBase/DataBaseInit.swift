@@ -79,47 +79,46 @@ public class DataBase {
         
         let userTableQuerry = """
         CREATE TABLE IF NOT EXISTS "user" (
-            "userId"    INTEGER,
+            "id"    INTEGER,
             "name"    TEXT,
             "emailId"    TEXT,
             "password"    TEXT,
             "mobileNumber"    TEXT,
             "address"    TEXT,
             "pincode"    TEXT,
-            PRIMARY KEY("userId" AUTOINCREMENT)
+            PRIMARY KEY("id" AUTOINCREMENT)
         )
         """
         createTable(querry: userTableQuerry)
     }
     
     private func catogeryTable() {
-        
         let catogeryTableQuerry = """
-        CREATE TABLE IF NOT EXISTS "catogery" (
-            "catogeryId"    INTEGER,
-            "catogeryName"    TEXT,
-            PRIMARY KEY("catogeryId" AUTOINCREMENT)
+        CREATE TABLE IF NOT EXISTS "category" (
+            "id"    INTEGER,
+            "name"    TEXT,
+            PRIMARY KEY("id" AUTOINCREMENT)
         )
         """
         createTable(querry: catogeryTableQuerry)
-        
     }
+    
     
     private func productTable() {
         
         let productTableQuerry = """
             CREATE TABLE  IF NOT EXISTS "product" (
-            "productId"    INTEGER,
-            "catogeryId"    INTEGER,
+            "id"    INTEGER,
+            "categoryId"    INTEGER,
             "sellerId"    INTEGER,
-            "productName"    TEXT,
+            "name"    TEXT,
             "price"    INTEGER,
-            "productDetail"    TEXT,
-            "uploadedDate"    TEXT,
+            "detail"    TEXT,
+            "uploadedDate"  DATETIME NOT NULL,
             "status"    TEXT,
-            PRIMARY KEY("productId" AUTOINCREMENT),
-            FOREIGN KEY("catogeryId") REFERENCES "catogery"("catogeryId"),
-            FOREIGN KEY("sellerId") REFERENCES "user"("userId")
+            PRIMARY KEY("id" AUTOINCREMENT),
+            FOREIGN KEY("categoryId") REFERENCES "category"("id"),
+            FOREIGN KEY("sellerId") REFERENCES "user"("id")
         )
         """
         createTable(querry: productTableQuerry)
@@ -152,8 +151,8 @@ public class DataBase {
             "totalPrice"    INTEGER NOT NULL,
             "status"    TEXT NOT NULL,
             PRIMARY KEY("id" AUTOINCREMENT),
-            FOREIGN KEY("productId") REFERENCES "product"("productId"),
-            FOREIGN KEY("buyerId") REFERENCES "user"("userId")
+            FOREIGN KEY("productId") REFERENCES "product"("id"),
+            FOREIGN KEY("buyerId") REFERENCES "user"("id")
         )
        """
         

@@ -20,7 +20,7 @@ class AdminLoginView: NSView {
     
     override func viewDidMoveToSuperview() {
         if superview != nil {
-            adminLoginPresenter.viewDidLoad(emailId: "arvind123", password: "a12")
+            adminLoginPresenter.viewDidLoad(emailId: "admin123", password: "a123")
         }
     }
     

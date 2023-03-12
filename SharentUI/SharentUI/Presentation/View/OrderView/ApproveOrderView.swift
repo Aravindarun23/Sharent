@@ -18,7 +18,7 @@ class ApproveOrderView: NSView {
     
     override func viewDidMoveToSuperview() {
         if superview != nil {
-            approveOrderPresenter.viewDidLoad(orderId: 6)
+            approveOrderPresenter.viewDidLoad(orderId: 1)
         }
     }
 

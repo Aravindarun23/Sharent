@@ -19,7 +19,7 @@ public class UpdatePasswordDataBaseService: UpdatePasswordDataBaseContract {
     public func updatePassword(userId: Int, newPassword: String, success: @escaping (String) -> Void, failure: @escaping (Error) -> Void) {
         
         let updateQuerry = "password = \'\(newPassword)\'"
-        let whereCondition = "userId = \(userId)"
+        let whereCondition = "id = \(userId)"
         
         UpdateQuerry.updateQuerry(tableName: tableName, updateQuerry: updateQuerry , condition: whereCondition) {
             response in

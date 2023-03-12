@@ -17,9 +17,9 @@ public class GetOrderListDataBaseService: GetOrderListDataBaseContract {
         let tableName = "orders"
         var orders = [Order]()
         
-        let selectQuerry = "seller.name AS sellerName,seller.userId AS sellerId,seller.emailId AS sellerEmail,seller.password AS sellerPassword,seller.address AS sellerAddress,seller.pincode AS sellerPincode,seller.mobileNumber AS sellerMobileNumber,buyer.name AS buyerName,buyer.userId AS buyerId,buyer.emailId AS buyerEmail,buyer.password AS buyerPassword,buyer.address AS buyerAddress,buyer.pincode AS buyerPincode,buyer.mobileNumber AS buyerMobileNumber,catogeryName,catogery.catogeryid,id,orderDate,pickUpDate,returnDate,uploadedDate,productName,productDetail,price,orders.productId, products.status AS productStatus,orders.status AS orderStatus"
+        let selectQuerry = "seller.name AS sellerName,seller.id AS sellerId,seller.emailId AS sellerEmail,seller.password AS sellerPassword,seller.address AS sellerAddress,seller.pincode AS sellerPincode,seller.mobileNumber AS sellerMobileNumber,buyer.name AS buyerName,buyer.id AS buyerId,buyer.emailId AS buyerEmail,buyer.password AS buyerPassword,buyer.address AS buyerAddress,buyer.pincode AS buyerPincode,buyer.mobileNumber AS buyerMobileNumber,category.name AS categoryName,category.id AS categoryId,orders.id,orderDate,pickUpDate,returnDate,uploadedDate,products.name AS productName,detail,price,orders.productId, products.status AS productStatus,orders.status AS orderStatus"
         
-        let joins = "INNER JOIN user AS buyer ON orders.buyerId = buyer.userId INNER JOIN product AS products ON orders.productId = products.productId INNER JOIN catogery ON products.catogeryId = catogery.catogeryId INNER JOIN user AS seller ON products.sellerId = seller.userId"
+        let joins = "INNER JOIN user AS buyer ON orders.buyerId = buyer.id INNER JOIN product AS products ON orders.productId = products.id INNER JOIN category ON products.categoryId = category.id INNER JOIN user AS seller ON products.sellerId = seller.id"
         
         if let buyerId = buyerId {
             
@@ -79,7 +79,7 @@ public class GetOrderListDataBaseService: GetOrderListDataBaseContract {
 
         guard let productId = order["productId"] as? Int,
               let productName = order["productName"] as? String,
-              let productDetail = order["productDetail"] as? String,
+              let productDetail = order["detail"] as? String,
               let productStatus = order["productStatus"] as? String,
               let orderedDate = order["orderDate"] as? String,
               let price = order["price"] as? Int,
@@ -98,22 +98,22 @@ public class GetOrderListDataBaseService: GetOrderListDataBaseContract {
               let buyerAddress = order["buyerAddress"] as? String,
               let buyerMobileNumber = order["buyerMobileNumber"] as? String,
               let buyerPincode = order["buyerPincode"] as? String,
-              let categoryId = order["catogeryId"] as? Int,
-              let categoryName = order["catogeryName"] as? String,
+              let categoryId = order["categoryId"] as? Int,
+              let categoryName = order["categoryName"] as? String,
               let orderId = order["id"] as? Int,
               let pickUpDate = order["pickUpDate"] as? String,
               let returnDate = order["returnDate"] as? String,
               let orderStatus = order["orderStatus"] as? String
         else {
         return nil }
-        
+
         let orderState = Order.Status(rawValue: orderStatus)
         let productState = Product.Status(rawValue: productStatus)
-        
+
         let seller = User(id: sellerId, name: sellerName, emailId: sellerEmailId, password: sellerPassword, mobileNumber: sellerMobileNumber, address: sellerAddress, pincode: sellerPincode)
         let buyer =  User(id: buyerId, name: buyerName, emailId: buyerEmailId, password: buyerPassword, mobileNumber: buyerMobileNumber, address: buyerAddress, pincode: buyerPincode)
         let category = Category(id: categoryId, name: categoryName)
-        let product = Product(Id: productId, seller: seller, category: category, name: productName, price: price, detail: productDetail, uploadedDate: uploadedDate, status: productState!)
+        let product = Product(id: productId, seller: seller, category: category, name: productName, price: price, detail: productDetail, uploadedDate: uploadedDate, status: productState!)
         let order = Order(id: orderId, buyer: buyer, product: product, orderedDate: orderedDate, fromDate: pickUpDate, returnDate: returnDate, status: orderState!)
         return order
     }

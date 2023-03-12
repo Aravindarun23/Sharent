@@ -19,10 +19,10 @@ public class CategoryListDataBaseService: CategoryListDataBaseContract {
         
         var categoryList = [Category]()
         
-        let result = SelectQuerry.select(tableName: "catogery")
+        let result = SelectQuerry.select(tableName: "category")
         
         result?.forEach({ data in
-            categoryList.append(Category(id: data["catogeryId"] as! Int, name: data["catogeryName"] as! String))
+            categoryList.append(Category(id: data["id"] as! Int, name: data["name"] as! String))
         })
         self.sucess(callBack: response, category: categoryList)
         

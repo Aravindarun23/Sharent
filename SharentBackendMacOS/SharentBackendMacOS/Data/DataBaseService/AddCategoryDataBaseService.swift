@@ -15,8 +15,8 @@ public class AddCategoryDataBaseService: AddCategoryDataBaseContract {
     
     public func addCategory(categoryName: String, success: @escaping (String) -> Void, failure: @escaping (Error) -> Void) {
         
-        let tableName = "catogery"
-        let columnName = "catogeryName"
+        let tableName = "category"
+        let columnName = "name"
         InsertQuerry.insertQuerry(tableName: tableName, columnName: "\'\(columnName)\'", insertData: "\'\(categoryName)\'") { [weak self]
             responseMsg in
             self?.success(callback: success, message: "Add Catogery Successfully")

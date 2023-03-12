@@ -24,7 +24,7 @@ public class UserLoginDataBaseService: UserLoginDataBaseContract {
             if let resultPassword = result![0]["password"] as? String {
                 if resultPassword == password {
                     guard let name = result![0]["name"] as? String,
-                          let userId = result![0]["userId"] as? Int,
+                          let userId = result![0]["id"] as? Int,
                           let mobileNumber = result![0]["mobileNumber"] as? String,
                           let address = result![0]["address"] as? String,
                           let pincode = result![0]["pincode"] as? String else { return }

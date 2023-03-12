@@ -18,9 +18,9 @@ public class GetProductListDataBaseService: GetProductListDataBaseContract {
     
         var productList = [Product]()
         let tableName = "product"
-        let selectColumn = "product.productId,productName,price,productDetail,uploadedDate,sellerId,name,emailId,password,address,pincode,mobileNumber,catogery.catogeryId,catogeryName"
+        let selectColumn = "product.id AS productId,product.name AS productName,price,detail,uploadedDate,sellerId,user.name AS sellerName,emailId,password,address,pincode,mobileNumber,category.id AS categoryId,category.name as categoryName"
         
-        let joinQuerry = "INNER JOIN user on user.userId = product.sellerId INNER JOIN catogery on catogery.catogeryId = product.catogeryId"
+        let joinQuerry = "INNER JOIN user on user.id = product.sellerId INNER JOIN category on category.id = product.categoryId"
         let args = [userId]
         let whereQuerry = "sellerId = ? ORDER BY product.uploadedDate DESC"
         let products = SelectQuerry.select(tableName: tableName,whereClause: whereQuerry,args: args, selectColumn: selectColumn,joinsQuerry: joinQuerry)
@@ -30,22 +30,22 @@ public class GetProductListDataBaseService: GetProductListDataBaseContract {
                 
                 guard let productId = product["productId"] as? Int,
                       let productName = product["productName"] as? String,
-                      let productDetail = product["productDetail"] as? String,
+                      let productDetail = product["detail"] as? String,
                       let price = product["price"] as? Int,
                       let uploadedDate = product["uploadedDate"] as? String,
                       let sellerId = product["sellerId"] as? Int,
-                      let sellerName = product["name"] as? String,
+                      let sellerName = product["sellerName"] as? String,
                       let emailId = product["emailId"] as? String,
                       let password = product["password"] as? String,
                       let address = product["address"] as? String,
                       let mobileNumber = product["mobileNumber"] as? String,
                       let pincode = product["pincode"] as? String,
-                      let categoryId = product["catogeryId"] as? Int,
-                      let categoryName = product["catogeryName"] as? String else { return }
+                      let categoryId = product["categoryId"] as? Int,
+                      let categoryName = product["categoryName"] as? String else { return }
                 
                 let category = Category(id: categoryId, name: categoryName)
                 let seller = User(id: sellerId, name: sellerName, emailId: emailId, password: password, mobileNumber: mobileNumber, address: address, pincode: pincode)
-                let product = Product(Id: productId, seller: seller, category: category, name: productName, price: price, detail: productDetail, uploadedDate: uploadedDate, status: .active)
+                let product = Product(id: productId, seller: seller, category: category, name: productName, price: price, detail: productDetail, uploadedDate: uploadedDate, status: .active)
                 productList.append(product)
             }
             sucess(productList)
