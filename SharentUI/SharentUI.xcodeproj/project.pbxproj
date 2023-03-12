@@ -230,9 +230,9 @@
 			isa = PBXGroup;
 			children = (
 				986D392929ACCEC90057F92C /* UserLoginView.swift */,
-				9872EE40299E38F8009442BA /* AddNewUserView.swift */,
 				98168AFC29B0CCFD00331A13 /* DeleteUserView.swift */,
 				98AB7CE729BA045D00227BE0 /* EditUserDetailView.swift */,
+				9872EE40299E38F8009442BA /* AddNewUserView.swift */,
 				98AB7D1129BB798100227BE0 /* UpdatePasswordView.swift */,
 				98AB7D2529BCB3E800227BE0 /* VerifyPincodeView.swift */,
 			);
@@ -242,11 +242,11 @@
 		986D392D29ADCA920057F92C /* ProductView */ = {
 			isa = PBXGroup;
 			children = (
-				986D392E29ADCAAD0057F92C /* AddNewProductView.swift */,
+				98AB7CD929B9CD2F00227BE0 /* GetProductListView.swift */,
 				98168ADE29AFC93600331A13 /* EditProductDetailView.swift */,
 				98168AEE29B0813400331A13 /* DeleteProductView.swift */,
 				98AB7C9829B6F6A700227BE0 /* SearchProductView.swift */,
-				98AB7CD929B9CD2F00227BE0 /* GetProductListView.swift */,
+				986D392E29ADCAAD0057F92C /* AddNewProductView.swift */,
 				98AB7D0329BB544800227BE0 /* GetProductBookedDateView.swift */,
 			);
 			path = ProductView;
@@ -255,11 +255,11 @@
 		986D393629ADD58F0057F92C /* ProductPresenter */ = {
 			isa = PBXGroup;
 			children = (
+				98AB7C9629B6F55E00227BE0 /* SearchProductPresenter.swift */,
+				98AB7CD729B9CB2D00227BE0 /* GetProductListPresenter.swift */,
 				981DAB3F29AF18D60036FBE1 /* AddNewProductPresenter.swift */,
 				98168ADC29AFC91400331A13 /* EditProductDetailPrersenter.swift */,
 				98168AEC29B07DFF00331A13 /* DeleteProductPresenter.swift */,
-				98AB7C9629B6F55E00227BE0 /* SearchProductPresenter.swift */,
-				98AB7CD729B9CB2D00227BE0 /* GetProductListPresenter.swift */,
 				98AB7D0129BB520200227BE0 /* GetProductBookedDatePresenter.swift */,
 			);
 			path = ProductPresenter;
@@ -327,8 +327,8 @@
 		98AB7CA929B73F5300227BE0 /* OrderPresenter */ = {
 			isa = PBXGroup;
 			children = (
-				98AB7CAA29B73F7100227BE0 /* PlaceOrderPresenter.swift */,
 				98AB7CB929B779B800227BE0 /* GetOrderListPresenter.swift */,
+				98AB7CAA29B73F7100227BE0 /* PlaceOrderPresenter.swift */,
 				98AB7CD129B8478600227BE0 /* CancelOrderPresenter.swift */,
 				98AB7CF329BA284800227BE0 /* ApproveOrderPresenter.swift */,
 			);

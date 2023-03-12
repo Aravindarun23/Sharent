@@ -20,7 +20,6 @@ class Assembler {
         
     }
     
-    
     private static func userSignUpUseCase() -> AddNewUser {
         
         let userSignUpDatabase  = AddNewUserDataBaseService()

@@ -10,16 +10,15 @@ import AppKit
 import SharentBackendMacOS
 
 class Router {
+    
     var window: NSWindow
     init(window: NSWindow) {
         self.window = window
     }
 
-    
     func addNewUserView() {
         self.window.contentView = Assembler.userSignUpPageViewAssembler(router: self)
     }
-    
     func userLoginView() {
         self.window.contentView = Assembler.userLoginPageViewAssembler(router: self)
     }
