@@ -22,10 +22,10 @@ class DeleteCategoryPresenter {
 extension DeleteCategoryPresenter: DeleteCategoryPresenterContract {
     
     func viewDidload(categoryId: Int) {
-        let request = DeleteCategoryRequest(catogeryId: categoryId)
+        let request = DeleteCategoryRequest(categoryId: categoryId)
         deleteCategory.execute(request: request) {
             response in
-            self.deleteCategoryView?.load(response: response)
+            self.deleteCategoryView?.load(response: response.responseMsg)
         } onFailure: { error in
             
         }

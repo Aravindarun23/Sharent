@@ -11,9 +11,9 @@ import VTComponents
 
 public final class DeleteCategoryRequest: ZRequest {
     
-    var catogeryId: Int
-    public init(catogeryId: Int) {
-        self.catogeryId = catogeryId
+    var categoryId: Int
+    public init(categoryId: Int) {
+        self.categoryId = categoryId
         super.init(zuid: "")
     }
 }
@@ -41,7 +41,7 @@ public final class DeleteCategory: ZUsecase<DeleteCategoryRequest, DeleteCategor
     }
     
     override public func run(request: DeleteCategoryRequest, success: @escaping (DeleteCategoryResponse) -> Void, failure: @escaping (DeleteCategoryError) -> Void) {
-        deleteCategoryDataManager.deleteCatogery(catogeryId: request.catogeryId) {
+        deleteCategoryDataManager.deleteCategory(categoryId: request.categoryId) {
             responseMsg in
             self.success(callback: success, message: responseMsg)
         } failure: { error in

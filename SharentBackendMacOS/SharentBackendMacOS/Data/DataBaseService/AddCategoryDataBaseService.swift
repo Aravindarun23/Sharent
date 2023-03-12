@@ -7,17 +7,17 @@
 
 import Foundation
 
-public class AddCatogeryDataBaseService: AddCatogeryDataBaseContract {
+public class AddCategoryDataBaseService: AddCategoryDataBaseContract {
     
     public init() {
         
     }
     
-    public func addCatogery(catogeryName: String, success: @escaping (String) -> Void, failure: @escaping (Error) -> Void) {
+    public func addCategory(categoryName: String, success: @escaping (String) -> Void, failure: @escaping (Error) -> Void) {
         
         let tableName = "catogery"
         let columnName = "catogeryName"
-        InsertQuerry.insertQuerry(tableName: tableName, columnName: "\'\(columnName)\'", insertData: "\'\(catogeryName)\'") { [weak self]
+        InsertQuerry.insertQuerry(tableName: tableName, columnName: "\'\(columnName)\'", insertData: "\'\(categoryName)\'") { [weak self]
             responseMsg in
             self?.success(callback: success, message: "Add Catogery Successfully")
         } error: { error in

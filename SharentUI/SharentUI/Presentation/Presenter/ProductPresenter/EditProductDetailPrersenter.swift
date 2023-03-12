@@ -18,11 +18,11 @@ class EditProductDetailPresenter: EditProductDetailPresenterContract {
         self.editProductDetail = editProductDetail
     }
     
-    func viewDidload(product: SharentBackendMacOS.Product) {
+    func viewDidload(product: Product) {
         let request = EditProductDetailRequest(product: product)
         editProductDetail.execute(request: request) { [weak self]
             response in
-            self?.EditProductDetailView?.load(message: response)
+            self?.EditProductDetailView?.load(message: response.responseMessage)
         } onFailure: { error in
             
         }

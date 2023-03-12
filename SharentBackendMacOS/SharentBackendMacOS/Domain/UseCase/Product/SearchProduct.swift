@@ -79,12 +79,13 @@ public final class SearchProduct: ZUsecase<SearchProductRequest, SearchProductRe
     
     private func success(callback: @escaping (SearchProductResponse) -> Void, products: [Product]) {
         let response = SearchProductResponse(products: products)
-        callback(response)
+        invokeSuccess(callback: callback, response: response)
+        
     }
     
     private func failure(callback: @escaping (SearchProductError) -> Void, error: Error) {
         let error = SearchProductError(error: error)
-        callback(error)
+        invokeFailure(callback: callback, failure: error)
     }
 
             

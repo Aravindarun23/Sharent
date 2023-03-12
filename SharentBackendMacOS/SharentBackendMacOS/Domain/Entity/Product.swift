@@ -21,7 +21,7 @@ public struct Product {
     
     public var id: Int
     public var seller: User
-    public var catogery: Category
+    public var category: Category
     public var name: String
     public var price: Int
     public var detail: String?
@@ -29,11 +29,11 @@ public struct Product {
     public var status: Status
     
     
-    public init(Id: Int, seller: User, catogery: Category, name: String, price: Int, detail: String? = nil, uploadedDate: String, status: Status) {
+    public init(Id: Int, seller: User, category: Category, name: String, price: Int, detail: String? = nil, uploadedDate: String, status: Status) {
         
         self.id = Id
         self.seller = seller
-        self.catogery = catogery
+        self.category = category
         self.name = name
         self.price = price
         self.detail = detail

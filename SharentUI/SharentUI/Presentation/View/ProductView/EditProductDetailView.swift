@@ -24,8 +24,8 @@ class EditProductDetailView: NSView {
         if superview != nil {
             
             let user = User(id: 2, name: "arun", emailId: "arvind123", password: "a123", mobileNumber: "123456", address: "pkt", pincode: "614602")
-            let catogery = Category(id: 1, name: "bike")
-            let product = Product(Id: 1, seller: user, catogery: catogery, name: "helicopter", price: 2345, uploadedDate: "23/01/2023", status: .active)
+            let category = Category(id: 1, name: "bike")
+            let product = Product(Id: 1, seller: user, category: category, name: "helicopter", price: 2345, uploadedDate: "23/01/2023", status: .active)
             EditProductDetailPresenter.viewDidload(product: product)
         }
     }
@@ -36,8 +36,8 @@ class EditProductDetailView: NSView {
 }
 
 extension EditProductDetailView: EditProductDetailViewContract {
-    func load(message: SharentBackendMacOS.EditProductDetailResponse) {
-        print(message.responseMessage)
+    func load(message: String) {
+        print(message)
     }
     
     

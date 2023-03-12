@@ -23,7 +23,7 @@ class DeleteProductPresenter: DeleteProductPresenterContract {
         let request = DeleteProductRequest(productId: productId)
         deleteProduct.execute(request: request) {
             response in
-            self.deleteProductView?.load(message: response)
+            self.deleteProductView?.load(message: response.responseMessage)
         } onFailure: { error in
             
         }

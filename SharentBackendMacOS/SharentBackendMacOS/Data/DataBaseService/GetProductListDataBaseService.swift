@@ -45,7 +45,7 @@ public class GetProductListDataBaseService: GetProductListDataBaseContract {
                 
                 let category = Category(id: categoryId, name: categoryName)
                 let seller = User(id: sellerId, name: sellerName, emailId: emailId, password: password, mobileNumber: mobileNumber, address: address, pincode: pincode)
-                let product = Product(Id: productId, seller: seller, catogery: category, name: productName, price: price, detail: productDetail, uploadedDate: uploadedDate, status: .active)
+                let product = Product(Id: productId, seller: seller, category: category, name: productName, price: price, detail: productDetail, uploadedDate: uploadedDate, status: .active)
                 productList.append(product)
             }
             sucess(productList)

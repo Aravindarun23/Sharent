@@ -10,6 +10,7 @@ import VTComponents
 
 
 public final class PlaceOrderRequest: ZRequest {
+    
     var productId: Int
     var buyerId: Int
     var fromDate: String

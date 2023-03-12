@@ -51,10 +51,8 @@ public final class EditProductDetail: ZUsecase<EditProductDetailRequest, EditPro
         }
     }
         
-        private func success(callback: @escaping (EditProductDetailResponse) -> Void, message: String) {
-            let response = EditProductDetailResponse(responseMessage: message)
-            invokeSuccess(callback: callback, response: response)
-        }
-        
-    
+    private func success(callback: @escaping (EditProductDetailResponse) -> Void, message: String) {
+        let response = EditProductDetailResponse(responseMessage: message)
+        invokeSuccess(callback: callback, response: response)
+    }
 }

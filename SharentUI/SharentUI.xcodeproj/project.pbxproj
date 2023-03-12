@@ -14,8 +14,8 @@
 		98168AFB29B0C9E400331A13 /* DeleteUserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168AFA29B0C9E400331A13 /* DeleteUserPresenter.swift */; };
 		98168AFD29B0CCFD00331A13 /* DeleteUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168AFC29B0CCFD00331A13 /* DeleteUserView.swift */; };
 		98168B0D29B0DF8000331A13 /* CatogeryContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168B0C29B0DF8000331A13 /* CatogeryContract.swift */; };
-		98168B1029B0E0F000331A13 /* AddCatogeryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168B0F29B0E0F000331A13 /* AddCatogeryView.swift */; };
-		98168B1329B0E21900331A13 /* AddCatogeryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168B1229B0E21900331A13 /* AddCatogeryPresenter.swift */; };
+		98168B1029B0E0F000331A13 /* AddCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168B0F29B0E0F000331A13 /* AddCategoryView.swift */; };
+		98168B1329B0E21900331A13 /* AddCategoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168B1229B0E21900331A13 /* AddCategoryPresenter.swift */; };
 		98168B2029B1BEE800331A13 /* DeleteCategoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168B1F29B1BEE800331A13 /* DeleteCategoryPresenter.swift */; };
 		98168B2229B1BFF800331A13 /* DeleteCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168B2129B1BFF800331A13 /* DeleteCategoryView.swift */; };
 		98168B3029B21B8400331A13 /* AdminContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168B2F29B21B8400331A13 /* AdminContract.swift */; };
@@ -31,16 +31,14 @@
 		986D392A29ACCEC90057F92C /* UserLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986D392929ACCEC90057F92C /* UserLoginView.swift */; };
 		986D392C29ACD1160057F92C /* UserLoginPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986D392B29ACD1160057F92C /* UserLoginPagePresenter.swift */; };
 		986D392F29ADCAAD0057F92C /* AddNewProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986D392E29ADCAAD0057F92C /* AddNewProductView.swift */; };
-		986D393129ADCBED0057F92C /* UserHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986D393029ADCBED0057F92C /* UserHomeView.swift */; };
-		986D393329ADD56A0057F92C /* CatogeryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986D393229ADD56A0057F92C /* CatogeryListView.swift */; };
-		986D393829ADD5AE0057F92C /* CatogeryListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986D393729ADD5AE0057F92C /* CatogeryListPresenter.swift */; };
+		986D393329ADD56A0057F92C /* CategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986D393229ADD56A0057F92C /* CategoryListView.swift */; };
+		986D393829ADD5AE0057F92C /* CategoryListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986D393729ADD5AE0057F92C /* CategoryListPresenter.swift */; };
 		986D394529ADEED60057F92C /* ProductContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986D394429ADEED60057F92C /* ProductContract.swift */; };
-		9872EE3F299E38CD009442BA /* UserSignUpPagePresnter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9872EE3E299E38CD009442BA /* UserSignUpPagePresnter.swift */; };
-		9872EE41299E38F8009442BA /* UserSignUpPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9872EE40299E38F8009442BA /* UserSignUpPageView.swift */; };
+		9872EE3F299E38CD009442BA /* AddNewUserPresnter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9872EE3E299E38CD009442BA /* AddNewUserPresnter.swift */; };
+		9872EE41299E38F8009442BA /* AddNewUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9872EE40299E38F8009442BA /* AddNewUserView.swift */; };
 		9872EE43299E392E009442BA /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9872EE42299E392E009442BA /* Router.swift */; };
 		9872EE45299E3945009442BA /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9872EE44299E3945009442BA /* Assembler.swift */; };
 		9872EE4A299F4F41009442BA /* UserContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9872EE49299F4F41009442BA /* UserContract.swift */; };
-		9872EE4C299F8C10009442BA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9872EE4B299F8C10009442BA /* LoginView.swift */; };
 		98AB7C9729B6F55E00227BE0 /* SearchProductPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7C9629B6F55E00227BE0 /* SearchProductPresenter.swift */; };
 		98AB7C9929B6F6A700227BE0 /* SearchProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7C9829B6F6A700227BE0 /* SearchProductView.swift */; };
 		98AB7CA829B73BF400227BE0 /* OrderContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CA729B73BF400227BE0 /* OrderContract.swift */; };
@@ -87,8 +85,8 @@
 		98168AFA29B0C9E400331A13 /* DeleteUserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteUserPresenter.swift; sourceTree = "<group>"; };
 		98168AFC29B0CCFD00331A13 /* DeleteUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteUserView.swift; sourceTree = "<group>"; };
 		98168B0C29B0DF8000331A13 /* CatogeryContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatogeryContract.swift; sourceTree = "<group>"; };
-		98168B0F29B0E0F000331A13 /* AddCatogeryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCatogeryView.swift; sourceTree = "<group>"; };
-		98168B1229B0E21900331A13 /* AddCatogeryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCatogeryPresenter.swift; sourceTree = "<group>"; };
+		98168B0F29B0E0F000331A13 /* AddCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryView.swift; sourceTree = "<group>"; };
+		98168B1229B0E21900331A13 /* AddCategoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryPresenter.swift; sourceTree = "<group>"; };
 		98168B1F29B1BEE800331A13 /* DeleteCategoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteCategoryPresenter.swift; sourceTree = "<group>"; };
 		98168B2129B1BFF800331A13 /* DeleteCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteCategoryView.swift; sourceTree = "<group>"; };
 		98168B2F29B21B8400331A13 /* AdminContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminContract.swift; sourceTree = "<group>"; };
@@ -104,16 +102,14 @@
 		986D392929ACCEC90057F92C /* UserLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginView.swift; sourceTree = "<group>"; };
 		986D392B29ACD1160057F92C /* UserLoginPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginPagePresenter.swift; sourceTree = "<group>"; };
 		986D392E29ADCAAD0057F92C /* AddNewProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewProductView.swift; sourceTree = "<group>"; };
-		986D393029ADCBED0057F92C /* UserHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHomeView.swift; sourceTree = "<group>"; };
-		986D393229ADD56A0057F92C /* CatogeryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatogeryListView.swift; sourceTree = "<group>"; };
-		986D393729ADD5AE0057F92C /* CatogeryListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatogeryListPresenter.swift; sourceTree = "<group>"; };
+		986D393229ADD56A0057F92C /* CategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListView.swift; sourceTree = "<group>"; };
+		986D393729ADD5AE0057F92C /* CategoryListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListPresenter.swift; sourceTree = "<group>"; };
 		986D394429ADEED60057F92C /* ProductContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductContract.swift; sourceTree = "<group>"; };
-		9872EE3E299E38CD009442BA /* UserSignUpPagePresnter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSignUpPagePresnter.swift; sourceTree = "<group>"; };
-		9872EE40299E38F8009442BA /* UserSignUpPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSignUpPageView.swift; sourceTree = "<group>"; };
+		9872EE3E299E38CD009442BA /* AddNewUserPresnter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewUserPresnter.swift; sourceTree = "<group>"; };
+		9872EE40299E38F8009442BA /* AddNewUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewUserView.swift; sourceTree = "<group>"; };
 		9872EE42299E392E009442BA /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		9872EE44299E3945009442BA /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
 		9872EE49299F4F41009442BA /* UserContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserContract.swift; sourceTree = "<group>"; };
-		9872EE4B299F8C10009442BA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		98AB7C9629B6F55E00227BE0 /* SearchProductPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProductPresenter.swift; sourceTree = "<group>"; };
 		98AB7C9829B6F6A700227BE0 /* SearchProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProductView.swift; sourceTree = "<group>"; };
 		98AB7CA729B73BF400227BE0 /* OrderContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderContract.swift; sourceTree = "<group>"; };
@@ -162,24 +158,24 @@
 			path = ../Pods;
 			sourceTree = "<group>";
 		};
-		98168B0E29B0E0B700331A13 /* CatogeryView */ = {
+		98168B0E29B0E0B700331A13 /* CategoryView */ = {
 			isa = PBXGroup;
 			children = (
-				986D393229ADD56A0057F92C /* CatogeryListView.swift */,
-				98168B0F29B0E0F000331A13 /* AddCatogeryView.swift */,
+				986D393229ADD56A0057F92C /* CategoryListView.swift */,
+				98168B0F29B0E0F000331A13 /* AddCategoryView.swift */,
 				98168B2129B1BFF800331A13 /* DeleteCategoryView.swift */,
 			);
-			path = CatogeryView;
+			path = CategoryView;
 			sourceTree = "<group>";
 		};
-		98168B1129B0E1F900331A13 /* CatogeryPresenter */ = {
+		98168B1129B0E1F900331A13 /* CategoryPresenter */ = {
 			isa = PBXGroup;
 			children = (
-				986D393729ADD5AE0057F92C /* CatogeryListPresenter.swift */,
-				98168B1229B0E21900331A13 /* AddCatogeryPresenter.swift */,
+				986D393729ADD5AE0057F92C /* CategoryListPresenter.swift */,
+				98168B1229B0E21900331A13 /* AddCategoryPresenter.swift */,
 				98168B1F29B1BEE800331A13 /* DeleteCategoryPresenter.swift */,
 			);
-			path = CatogeryPresenter;
+			path = CategoryPresenter;
 			sourceTree = "<group>";
 		};
 		98168B3129B4603200331A13 /* AdminPresenter */ = {
@@ -233,10 +229,8 @@
 		986CCC7529A255FE00378EB4 /* UserView */ = {
 			isa = PBXGroup;
 			children = (
-				9872EE4B299F8C10009442BA /* LoginView.swift */,
-				9872EE40299E38F8009442BA /* UserSignUpPageView.swift */,
 				986D392929ACCEC90057F92C /* UserLoginView.swift */,
-				986D393029ADCBED0057F92C /* UserHomeView.swift */,
+				9872EE40299E38F8009442BA /* AddNewUserView.swift */,
 				98168AFC29B0CCFD00331A13 /* DeleteUserView.swift */,
 				98AB7CE729BA045D00227BE0 /* EditUserDetailView.swift */,
 				98AB7D1129BB798100227BE0 /* UpdatePasswordView.swift */,
@@ -286,7 +280,7 @@
 			children = (
 				98AB7CAC29B740E600227BE0 /* OrderView */,
 				98168B3429B4622000331A13 /* AdminView */,
-				98168B0E29B0E0B700331A13 /* CatogeryView */,
+				98168B0E29B0E0B700331A13 /* CategoryView */,
 				986D392D29ADCA920057F92C /* ProductView */,
 				986CCC7529A255FE00378EB4 /* UserView */,
 			);
@@ -298,7 +292,7 @@
 			children = (
 				98AB7CA929B73F5300227BE0 /* OrderPresenter */,
 				98168B3129B4603200331A13 /* AdminPresenter */,
-				98168B1129B0E1F900331A13 /* CatogeryPresenter */,
+				98168B1129B0E1F900331A13 /* CategoryPresenter */,
 				986D393629ADD58F0057F92C /* ProductPresenter */,
 				9872EE5129A0E7BE009442BA /* UserPresenter */,
 			);
@@ -320,7 +314,7 @@
 		9872EE5129A0E7BE009442BA /* UserPresenter */ = {
 			isa = PBXGroup;
 			children = (
-				9872EE3E299E38CD009442BA /* UserSignUpPagePresnter.swift */,
+				9872EE3E299E38CD009442BA /* AddNewUserPresnter.swift */,
 				986D392B29ACD1160057F92C /* UserLoginPagePresenter.swift */,
 				98168AFA29B0C9E400331A13 /* DeleteUserPresenter.swift */,
 				98AB7CE529BA006600227BE0 /* EditUserDetailPresenter.swift */,
@@ -477,12 +471,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				98168ADD29AFC91400331A13 /* EditProductDetailPrersenter.swift in Sources */,
-				98168B1029B0E0F000331A13 /* AddCatogeryView.swift in Sources */,
+				98168B1029B0E0F000331A13 /* AddCategoryView.swift in Sources */,
 				98AB7C9729B6F55E00227BE0 /* SearchProductPresenter.swift in Sources */,
 				98AB7CBA29B779B800227BE0 /* GetOrderListPresenter.swift in Sources */,
-				9872EE4C299F8C10009442BA /* LoginView.swift in Sources */,
 				986D394529ADEED60057F92C /* ProductContract.swift in Sources */,
-				98168B1329B0E21900331A13 /* AddCatogeryPresenter.swift in Sources */,
+				98168B1329B0E21900331A13 /* AddCategoryPresenter.swift in Sources */,
 				986D392A29ACCEC90057F92C /* UserLoginView.swift in Sources */,
 				98AB7CBC29B77D4B00227BE0 /* GetOrderListVIew.swift in Sources */,
 				98168ADF29AFC93600331A13 /* EditProductDetailView.swift in Sources */,
@@ -500,19 +493,18 @@
 				98168B3629B4624400331A13 /* AdminLoginView.swift in Sources */,
 				98AB7CAB29B73F7100227BE0 /* PlaceOrderPresenter.swift in Sources */,
 				98168AFD29B0CCFD00331A13 /* DeleteUserView.swift in Sources */,
-				9872EE3F299E38CD009442BA /* UserSignUpPagePresnter.swift in Sources */,
+				9872EE3F299E38CD009442BA /* AddNewUserPresnter.swift in Sources */,
 				98AB7CD229B8478600227BE0 /* CancelOrderPresenter.swift in Sources */,
 				98AB7CAE29B740FF00227BE0 /* PlaceOrderView.swift in Sources */,
 				98AB7D0429BB544800227BE0 /* GetProductBookedDateView.swift in Sources */,
 				986D392F29ADCAAD0057F92C /* AddNewProductView.swift in Sources */,
-				986D393829ADD5AE0057F92C /* CatogeryListPresenter.swift in Sources */,
+				986D393829ADD5AE0057F92C /* CategoryListPresenter.swift in Sources */,
 				98AB7CDA29B9CD2F00227BE0 /* GetProductListView.swift in Sources */,
 				9872EE45299E3945009442BA /* Assembler.swift in Sources */,
 				98AB7D2629BCB3E800227BE0 /* VerifyPincodeView.swift in Sources */,
-				9872EE41299E38F8009442BA /* UserSignUpPageView.swift in Sources */,
+				9872EE41299E38F8009442BA /* AddNewUserView.swift in Sources */,
 				98AB7CD429B84AF000227BE0 /* CancelOrderView.swift in Sources */,
 				98AB7CD829B9CB2D00227BE0 /* GetProductListPresenter.swift in Sources */,
-				986D393129ADCBED0057F92C /* UserHomeView.swift in Sources */,
 				98AB7D1229BB798100227BE0 /* UpdatePasswordView.swift in Sources */,
 				98168B3329B4607B00331A13 /* AdminLoginPresenter.swift in Sources */,
 				98AB7D1029BB775200227BE0 /* UpdatePasswordPresenter.swift in Sources */,
@@ -522,7 +514,7 @@
 				986D392C29ACD1160057F92C /* UserLoginPagePresenter.swift in Sources */,
 				98AB7CF429BA284800227BE0 /* ApproveOrderPresenter.swift in Sources */,
 				98AB7D0229BB520200227BE0 /* GetProductBookedDatePresenter.swift in Sources */,
-				986D393329ADD56A0057F92C /* CatogeryListView.swift in Sources */,
+				986D393329ADD56A0057F92C /* CategoryListView.swift in Sources */,
 				98AB7D2429BCB27600227BE0 /* VerifyPincodePresenter.swift in Sources */,
 				98AB7CE829BA045D00227BE0 /* EditUserDetailView.swift in Sources */,
 				981E4E52299E14F70068A880 /* AppDelegate.swift in Sources */,

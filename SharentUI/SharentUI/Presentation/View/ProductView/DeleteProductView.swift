@@ -30,7 +30,7 @@ class DeleteProductView: NSView {
 
 extension DeleteProductView: DeleteProductViewContract  {
     
-    func load(message: DeleteProductResponse) {
-        print(message.responseMessage)
+    func load(message: String) {
+        print(message)
     }
 }

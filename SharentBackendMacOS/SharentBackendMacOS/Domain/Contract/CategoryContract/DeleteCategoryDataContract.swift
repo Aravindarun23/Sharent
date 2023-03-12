@@ -8,5 +8,5 @@
 import Foundation
 
 public protocol DeleteCategoryDataContract {
-    func deleteCatogery(catogeryId: Int, success: @escaping (String) -> Void, failure: @escaping (Error) -> Void)
+    func deleteCategory(categoryId: Int, success: @escaping (String) -> Void, failure: @escaping (Error) -> Void)
 }

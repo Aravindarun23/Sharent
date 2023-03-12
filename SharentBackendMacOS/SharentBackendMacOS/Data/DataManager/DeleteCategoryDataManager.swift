@@ -8,7 +8,6 @@
 import Foundation
 
 public class DeleteCategoryDataManager: DeleteCategoryDataContract {
-   
     
     let deleteCategoryDataBase: DeleteCategoryDataBaseContract
     
@@ -16,8 +15,8 @@ public class DeleteCategoryDataManager: DeleteCategoryDataContract {
         self.deleteCategoryDataBase = deleteCategoryDataBase
     }
     
-    public func deleteCatogery(catogeryId: Int, success: @escaping (String) -> Void, failure: @escaping (Error) -> Void) {
-        deleteCategoryDataBase.deleteCatogery(catogeryId: catogeryId) {
+    public func deleteCategory(categoryId: Int, success: @escaping (String) -> Void, failure: @escaping (Error) -> Void) {
+        deleteCategoryDataBase.deleteCategory(categoryId: categoryId) {
             responseMsg in
             self.success(callback: success, message: responseMsg)
             

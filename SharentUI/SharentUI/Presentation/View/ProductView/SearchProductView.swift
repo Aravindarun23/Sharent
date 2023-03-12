@@ -38,7 +38,7 @@ extension SearchProductView: SearchProductViewContract {
             print("PDetails", product.detail ?? "")
             print("PUploadDate",product.uploadedDate)
             print("PPrice", product.price)
-            print("PCatogery", product.catogery.name)
+            print("PCatogery", product.category.name)
             print("sellerName", product.seller.name)
             print("sellerName", product.seller.address)
         }

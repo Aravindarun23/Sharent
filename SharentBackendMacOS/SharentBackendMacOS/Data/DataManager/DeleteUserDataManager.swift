@@ -20,11 +20,9 @@ public class DeleteUserDataManager: DeleteUserDataContract {
             responsemsg in
             
             self?.succes(callback: success, message: responsemsg)
-            
         } failure: { [weak self] error in
             
             self?.failure(callback: failure, error: error)
-            
         }
     }
     
@@ -35,6 +33,4 @@ public class DeleteUserDataManager: DeleteUserDataContract {
     private func failure(callback: @escaping (Error) -> Void, error: Error) {
         callback(error)
     }
- 
-    
 }

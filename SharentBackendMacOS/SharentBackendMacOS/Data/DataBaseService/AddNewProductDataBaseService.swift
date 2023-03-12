@@ -23,7 +23,7 @@ public class AddNewProductDataBaseService: AddNewProductDataBaseContract {
             detail = productDetail
         }
 
-        let insertValue = "'\(product.catogery.id)', '\(product.seller.id)', '\(product.name)', '\(product.price)','\(detail)', '\(product.uploadedDate)', '\(status)'"
+        let insertValue = "'\(product.category.id)', '\(product.seller.id)', '\(product.name)', '\(product.price)','\(detail)', '\(product.uploadedDate)', '\(status)'"
         
         InsertQuerry.insertQuerry(tableName: "product", columnName: columnName, insertData: insertValue) {
             response in

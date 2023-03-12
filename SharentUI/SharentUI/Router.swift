@@ -15,9 +15,6 @@ class Router {
         self.window = window
     }
 
-    func launch() {
-        self.window.contentView = Assembler.signupAssembler(router: self)
-    }
     
     func moveSignUpPage() {
         self.window.contentView = Assembler.userSignUpPageViewAssembler(router: self)
@@ -26,13 +23,9 @@ class Router {
     func movetoLoginPage() {
         self.window.contentView = Assembler.userLoginPageViewAssembler(router: self)
     }
-
-    func movetoUserHomeView() {
-        self.window.contentView = Assembler.userHomeViewAssembler(router: self)
-    }
     
     func getCatogeryView() {
-        self.window.contentView = Assembler.catogeryListviewAssembler(router: self)
+        self.window.contentView = Assembler.categoryListviewAssembler(router: self)
     }
     func addNewProductView() {
         self.window.contentView = Assembler.addNewProductAssembler(router: self)
@@ -51,7 +44,7 @@ class Router {
     }
     
     func addCatogeryView() {
-        self.window.contentView = Assembler.addCatogeryAssembler(router: self)
+        self.window.contentView = Assembler.addCategoryAssembler(router: self)
     }
     
     func deleteCategoryView() {

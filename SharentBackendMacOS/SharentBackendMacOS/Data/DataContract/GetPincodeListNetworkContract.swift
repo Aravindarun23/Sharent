@@ -12,3 +12,4 @@ public protocol GetPincodeListNetworkContract {
     
     func getPincodeList(pincode: String, range: Int, success: @escaping([String]) -> Void, failure: @escaping (Error) -> Void)
 }
+

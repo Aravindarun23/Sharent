@@ -65,12 +65,12 @@ public class GetProductList: ZUsecase<GetProductListRequest, GetProductListRespo
     
     private func success(callback: @escaping(GetProductListResponse) -> Void, productList: [Product]) {
         let response = GetProductListResponse(products: productList)
-        callback(response)
+        invokeSuccess(callback: callback, response: response)
     }
     
     private func failure(callback: @escaping(GetProductListError) -> Void, error: Error) {
         let error = GetProductListError(error: error)
-        callback(error)
+        invokeFailure(callback: callback, failure: error)
     }
             
 }

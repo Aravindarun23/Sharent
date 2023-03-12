@@ -35,5 +35,4 @@ public class EditProductDetailDataManager: EditProductDetailDataContract  {
         
         callback(error)
     }
-    
 }

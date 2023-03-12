@@ -17,6 +17,7 @@ public class AdminLoginDataManager: AdminLoginDataContract {
     }
     
     public func adminLogin(emailId: String, password: String, response: @escaping (Admin) -> Void, failure: @escaping (Error) -> Void) {
+        
         adminLoginDataBaseService.adminLogin(emailId: emailId, password: password) { [weak self]
             admin in
             self?.success(callBack: response, response: admin)

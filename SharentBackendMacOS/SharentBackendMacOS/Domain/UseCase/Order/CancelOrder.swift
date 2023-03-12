@@ -51,7 +51,7 @@ public final class CancelOrder: ZUsecase<CancelOrderRequest, CancelOrderResponse
     
     private func success(callback: @escaping(CancelOrderResponse) -> Void, message: String) {
         let response = CancelOrderResponse(responseMessage: message)
-        callback(response)
+        invokeSuccess(callback: callback, response: response)
     }
     
     private func failure(callback: @escaping (CancelOrderError) -> Void, error: Error) {

@@ -9,12 +9,12 @@ import Foundation
 import SharentBackendMacOS
 
 
-protocol UserSignUpPageViewContract: AnyObject {
+protocol AddNewUserViewContract: AnyObject {
     
     func load(sucess: AddNewUserResponse)
     func failure(error: AddNewUserError)
 }
-protocol UserSignUpPagePresenterContract: AnyObject {
+protocol AddNewUserPresenterContract: AnyObject {
     
     func viewLoad(user: User)
 }
@@ -32,8 +32,8 @@ protocol UserLoginPresenterContract: AnyObject {
 
 protocol DeleteUserViewContract: AnyObject {
     
-    func load(message: DeleteUserResponse)
-    func faiure(error: DeleteUserError)
+    func load(message: String)
+    func faiure(error: Error)
 }
 
 protocol DeleteUserPresenterContract: AnyObject {

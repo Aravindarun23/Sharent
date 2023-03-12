@@ -10,12 +10,12 @@ import SharentBackendMacOS
 
 class Assembler {
     
-    public static func userSignUpPageViewAssembler(router: Router) -> UserSignUpPageView {
+    public static func userSignUpPageViewAssembler(router: Router) -> AddNewUserView {
         let userSignUpUseCase = userSignUpUseCase()
-        let userSignUpPagePresenter = UserSignUpPagePresenter(addNewUser: userSignUpUseCase)
+        let userSignUpPagePresenter = AddNewUserPresenter(addNewUser: userSignUpUseCase)
         userSignUpPagePresenter.router = router
-        let userSignUpPageView = UserSignUpPageView(presenter: userSignUpPagePresenter)
-        userSignUpPagePresenter.userSignUpPageview = userSignUpPageView
+        let userSignUpPageView = AddNewUserView(presenter: userSignUpPagePresenter)
+        userSignUpPagePresenter.addNewUserView = userSignUpPageView
         return userSignUpPageView
         
     }
@@ -28,13 +28,6 @@ class Assembler {
         let userSignUpUseCase = AddNewUser(addNewUserDataManager: userSignUpDataManager)
         return userSignUpUseCase
     
-    }
-}
-
-extension Assembler {
-    static func signupAssembler(router: Router) -> loginView {
-        return loginView(router: router)
-        
     }
 }
 
@@ -65,35 +58,27 @@ extension Assembler {
     
     
     
-    public static func catogeryListviewAssembler(router: Router) -> CatogeryListView {
+    public static func categoryListviewAssembler(router: Router) -> CategoryListView {
         
-        let catogeryListUseCase = catogeryListUseCase()
-        let catogeryListPresenter = CatogeryListPresenter(getCatogeryList: catogeryListUseCase)
-        catogeryListPresenter.router = router
-        let catogeryListView = CatogeryListView(catogeryListPresenter: catogeryListPresenter)
-        catogeryListPresenter.catogeryListView = catogeryListView
-        return catogeryListView
+        let categoryListUseCase = categoryListUseCase()
+        let categoryListPresenter = CategoryListPresenter(getCategoryList: categoryListUseCase)
+        categoryListPresenter.router = router
+        let categoryListView = CategoryListView(categoryListPresenter: categoryListPresenter)
+        categoryListPresenter.categoryListView = categoryListView
+        return categoryListView
     }
     
-    private static func catogeryListUseCase() -> GetCatogeryList {
+    private static func categoryListUseCase() -> GetCategoryList {
         
-        let catogeryListDataBase = CatogeryListDataBaseService()
-        let catogeryListDataManager = CatogeryListDataManager(catogerylistDataBaseService: catogeryListDataBase)
-        let catogeryListUseCase =  GetCatogeryList(catogeryListDataManager: catogeryListDataManager)
-        return catogeryListUseCase
+        let categoryListDataBase = CategoryListDataBaseService()
+        let categoryListDataManager = CategoryListDataManager(categorylistDataBaseService: categoryListDataBase)
+        let categoryListUseCase =  GetCategoryList(categoryListDataManager: categoryListDataManager)
+        return categoryListUseCase
         
     }
     
 }
 
-
-extension Assembler {
-    
-    public static func userHomeViewAssembler(router: Router) -> UserHomeView {
-        return UserHomeView(router: router)
-    }
-    
-}
 
 
 extension Assembler {
@@ -189,23 +174,23 @@ extension Assembler {
 
 extension Assembler {
     
-    public static func addCatogeryAssembler(router: Router) -> AddCatogeryView {
+    public static func addCategoryAssembler(router: Router) -> AddCategoryView {
         
-        let addCatogeryUseCase = addCatogeryUseCase()
-        let addCatogeryPresenter = AddCatogeryPresenter(addCatogery: addCatogeryUseCase)
-        addCatogeryPresenter.router = router
-        let addCatogeryView = AddCatogeryView(addCatogeryPresenter: addCatogeryPresenter)
-        addCatogeryPresenter.addCatogeryView = addCatogeryView
-        return addCatogeryView
+        let addCategoryUseCase = addCatogeryUseCase()
+        let addCategoryPresenter = AddCategoryPresenter(addCategory: addCategoryUseCase)
+        addCategoryPresenter.router = router
+        let addCategoryView = AddCategoryView(addCategoryPresenter: addCategoryPresenter)
+        addCategoryPresenter.addCategoryView = addCategoryView
+        return addCategoryView
         
     }
     
-    private static func addCatogeryUseCase() -> AddCatogery {
+    private static func addCatogeryUseCase() -> AddCategory {
         
-        let addCatogeryDataBaseService = AddCatogeryDataBaseService()
-        let addCatogeryDataManager = AddCatogeryDataManager(addCatogeryDataBase: addCatogeryDataBaseService)
-        let addCatogeryUseCase = AddCatogery(addCatogeryDataManager: addCatogeryDataManager)
-        return addCatogeryUseCase
+        let addCategoryDataBaseService = AddCategoryDataBaseService()
+        let addCategoryDataManager = AddCategoryDataManager(addCategoryDataBase: addCategoryDataBaseService)
+        let addCategoryUseCase = AddCategory(addCategoryDataManager: addCategoryDataManager)
+        return addCategoryUseCase
     }
     
     
@@ -460,7 +445,7 @@ extension Assembler {
     
     public static func verifyPincodeView(router: Router) -> VerifyPincodeView {
         
-        let verifyPincodeUseCase = VerifyPincodeUseCase()
+        let verifyPincodeUseCase = verifyPincodeUseCase()
         let verifyPincodePresenter = VerifyPincodePresenter(verifyPincode: verifyPincodeUseCase)
         verifyPincodePresenter.router = router
         let verifyPincodeView = VerifyPincodeView(verifyPincodePresenter: verifyPincodePresenter)
@@ -469,7 +454,7 @@ extension Assembler {
         
     }
     
-    private static func VerifyPincodeUseCase() -> VerifyPincode {
+    private static func verifyPincodeUseCase() -> VerifyPincode {
         
         let verifyPincodeNetworkService = VerifyPincodeNetworkService()
         let verifyPincodeDataManager = VerifyPincodeDataManager(verifyPincodeNetworkService: verifyPincodeNetworkService)

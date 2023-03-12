@@ -14,11 +14,11 @@ protocol AddNewProductPresenterContract: AnyObject {
     func viewDidload(product: Product)
 }
 protocol AddNewProductViewContract: AnyObject {
-    func load(message: AddNewProductResponse)
+    func load(message: String)
 }
 
 protocol EditProductDetailViewContract: AnyObject {
-    func load(message: EditProductDetailResponse)
+    func load(message: String)
 }
 
 protocol EditProductDetailPresenterContract: AnyObject {
@@ -29,7 +29,7 @@ protocol DeleteProductPresenterContract: AnyObject {
     func viewDidload(productId: Int)
 }
 protocol DeleteProductViewContract: AnyObject {
-    func load(message: DeleteProductResponse)
+    func load(message: String)
 }
 
 protocol SearchProductPresenterContract: AnyObject {

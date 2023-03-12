@@ -32,8 +32,8 @@ class DeleteCategoryView: NSView {
 }
 
 extension DeleteCategoryView: DeleteCategoryViewContract {
-    func load(response: DeleteCategoryResponse) {
-        print(response.responseMsg)
+    func load(response: String) {
+        print(response)
     }
     
         

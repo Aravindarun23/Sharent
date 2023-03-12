@@ -10,32 +10,30 @@ import AppKit
 import SharentBackendMacOS
 
 
-class AddCatogeryView: NSView {
+class AddCategoryView: NSView {
     
-    let addCatogeryPresenter: AddCatogeryPresenterContract
+    let addCategoryPresenter: AddCategoryPresenterContract
     
-    init(addCatogeryPresenter: AddCatogeryPresenterContract) {
-        self.addCatogeryPresenter = addCatogeryPresenter
+    init(addCategoryPresenter: AddCategoryPresenterContract) {
+        self.addCategoryPresenter = addCategoryPresenter
         super.init(frame: NSRect())
     }
     
     override func viewDidMoveToSuperview() {
         if superview != nil {
-            addCatogeryPresenter.viewDidload(catogeryName: "Desktop")
+            addCategoryPresenter.viewDidload(categoryName: "Desktop")
         }
     }
     
     required init?(coder decoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
 }
 
-extension AddCatogeryView: AddCatogeryViewContract {
+extension AddCategoryView: AddCategoryViewContract {
     
-    func load(response: AddCatogeryResponse) {
-        print(response.responseMsg)
+    func load(response: String) {
+        print(response)
     }
 }
 

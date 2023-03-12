@@ -22,11 +22,11 @@ class AddNewProductPresenter: AddNewProductPresenterContract {
     }
     
     
-    func viewDidload(product: SharentBackendMacOS.Product) {
+    func viewDidload(product: Product) {
         let request = AddNewProductRequest(product: product)
         addNewProduct.execute(request: request) {
-            responseMsg in
-            self.addNewProductView?.load(message: responseMsg)
+            response in
+            self.addNewProductView?.load(message: response.responseMsg)
             
         } onFailure: { error in
 

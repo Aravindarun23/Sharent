@@ -26,9 +26,9 @@ class AddNewProductView: NSView {
     }
     
     func addProduct() {
-        let catogery = Category(id: 1, name: "bikes")
+        let category = Category(id: 1, name: "bikes")
         let user = User(id: 1, name: "aravind", emailId: "arvind123", password: "a123", mobileNumber: "1212323", address: "coimbatore", pincode: "614601")
-        let product = Product(Id: 0, seller: user, catogery: catogery, name: "laptop", price: 1223, uploadedDate: "12/01/23", status: .inactive)
+        let product = Product(Id: 0, seller: user, category: category, name: "laptop", price: 1223, uploadedDate: "12/01/23", status: .inactive)
         addNewProductPresenter.viewDidload(product: product)
         
     }
@@ -37,7 +37,7 @@ class AddNewProductView: NSView {
 
 extension AddNewProductView: AddNewProductViewContract {
     
-    func load(message: AddNewProductResponse) {
-        print(message.responseMsg)
+    func load(message: String) {
+        print(message)
     }
 }

@@ -8,24 +8,24 @@
 import Foundation
 import SharentBackendMacOS
 
-protocol CatogeryListPresenterContract: AnyObject{
+protocol CategoryListPresenterContract: AnyObject{
     func viewDidload()
 }
-protocol CatogreyListViewContrat: AnyObject {
-    func load(catogeryList: CatogeryListResponse)
+protocol CategoreyListViewContrat: AnyObject {
+    func load(categoryList: CategoryListResponse)
 }
 
-protocol AddCatogeryViewContract: AnyObject {
-    func load(response: AddCatogeryResponse)
+protocol AddCategoryViewContract: AnyObject {
+    func load(response: String)
 }
 
-protocol AddCatogeryPresenterContract: AnyObject {
-    func viewDidload(catogeryName: String)
+protocol AddCategoryPresenterContract: AnyObject {
+    func viewDidload(categoryName: String)
 }
 
 
 protocol DeleteCategoryViewContract: AnyObject {
-    func load(response: DeleteCategoryResponse)
+    func load(response: String)
 }
 
 protocol DeleteCategoryPresenterContract: AnyObject {

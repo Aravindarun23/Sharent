@@ -30,10 +30,10 @@ class DeleteUserView: NSView {
 
 extension DeleteUserView: DeleteUserViewContract {
     
-    func load(message: DeleteUserResponse) {
-        print(message.responseMsg)
+    func load(message: String) {
+        print(message)
     }
     
-    func faiure(error: DeleteUserError) {
+    func faiure(error: Error) {
     }
 }

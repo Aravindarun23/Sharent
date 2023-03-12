@@ -8,18 +8,18 @@
 import Foundation
 
 
-public class AddCatogeryDataManager: AddCatogeryDataContract {
+public class AddCategoryDataManager: AddCategoryDataContract {
     
     
-    let addCatogeryDataBase: AddCatogeryDataBaseContract
+    let addCategoryDataBase: AddCategoryDataBaseContract
     
-    public init(addCatogeryDataBase: AddCatogeryDataBaseContract) {
-        self.addCatogeryDataBase = addCatogeryDataBase
+    public init(addCategoryDataBase: AddCategoryDataBaseContract) {
+        self.addCategoryDataBase = addCategoryDataBase
     }
     
     
-    public func addCatogery(catogeryName: String, success: @escaping (String) -> Void, failure: @escaping (Error) -> Void) {
-        addCatogeryDataBase.addCatogery(catogeryName: catogeryName) { [weak self]
+    public func addCategory(categoryName: String, success: @escaping (String) -> Void, failure: @escaping (Error) -> Void) {
+        addCategoryDataBase.addCategory(categoryName: categoryName) { [weak self]
         responseMsg in
             self?.success(callback: success, message: responseMsg)
             

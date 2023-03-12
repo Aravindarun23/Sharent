@@ -113,7 +113,7 @@ public class GetOrderListDataBaseService: GetOrderListDataBaseContract {
         let seller = User(id: sellerId, name: sellerName, emailId: sellerEmailId, password: sellerPassword, mobileNumber: sellerMobileNumber, address: sellerAddress, pincode: sellerPincode)
         let buyer =  User(id: buyerId, name: buyerName, emailId: buyerEmailId, password: buyerPassword, mobileNumber: buyerMobileNumber, address: buyerAddress, pincode: buyerPincode)
         let category = Category(id: categoryId, name: categoryName)
-        let product = Product(Id: productId, seller: seller, catogery: category, name: productName, price: price, detail: productDetail, uploadedDate: uploadedDate, status: productState!)
+        let product = Product(Id: productId, seller: seller, category: category, name: productName, price: price, detail: productDetail, uploadedDate: uploadedDate, status: productState!)
         let order = Order(id: orderId, buyer: buyer, product: product, orderedDate: orderedDate, fromDate: pickUpDate, returnDate: returnDate, status: orderState!)
         return order
     }

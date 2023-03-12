@@ -35,7 +35,4 @@ public class AddNewProductDataManager: AddNewProductDataContract {
         callback(error)
         
     }
-    
-    
-    
 }

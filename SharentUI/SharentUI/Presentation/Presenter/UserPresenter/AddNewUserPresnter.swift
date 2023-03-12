@@ -8,9 +8,9 @@
 import Foundation
 import SharentBackendMacOS
 
-class UserSignUpPagePresenter {
+class AddNewUserPresenter {
     
-        weak var userSignUpPageview: UserSignUpPageViewContract?
+        weak var addNewUserView: AddNewUserViewContract?
         weak var router: Router?
         var addNewUser: AddNewUser
         
@@ -20,17 +20,16 @@ class UserSignUpPagePresenter {
         
 }
 
-extension UserSignUpPagePresenter: UserSignUpPagePresenterContract {
+extension AddNewUserPresenter: AddNewUserPresenterContract {
     
     func viewLoad(user: User) {
         let request = AddNewUserRequest(user: user)
         addNewUser.execute(request: request) { [weak self]
             response in
-            self?.userSignUpPageview?.load(sucess: response)
-            self?.router?.launch()
+            self?.addNewUserView?.load(sucess: response)
             
         } onFailure: { [weak self] error in
-            self?.userSignUpPageview?.failure(error: error)
+            self?.addNewUserView?.failure(error: error)
         }
     }
 }

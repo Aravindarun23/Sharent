@@ -13,10 +13,10 @@ public class DeleteCategoryDataBaseService: DeleteCategoryDataBaseContract {
         
     }
     
-    public func deleteCatogery(catogeryId: Int, success: @escaping (String) -> Void, failure: @escaping (Error) -> Void) {
+    public func deleteCategory(categoryId: Int, success: @escaping (String) -> Void, failure: @escaping (Error) -> Void) {
         
         let tableName = "catogery"
-        let condition = "catogeryId = \(catogeryId)"
+        let condition = "catogeryId = \(categoryId)"
         
         
         DeleteQuerry.deleteQuerry(tableName: tableName, condition: condition) {

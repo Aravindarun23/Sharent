@@ -27,7 +27,7 @@ extension DeleteUserPresenter: DeleteUserPresenterContract {
         let request = DeleteUserRequest(userId: userId)
         deleteUser.execute(request: request) {
             response in
-            self.deleteUserView?.load(message: response)
+            self.deleteUserView?.load(message: response.responseMsg)
         } onFailure: { error in
             
         }

@@ -49,7 +49,7 @@ public final class GetProductBookedDate: ZUsecase<GetProductBookedDateRequest, G
     
     private func success(callback: @escaping(GetProductBookedDateResponse) -> Void, dateList: [[String: Any]]) {
         let response = GetProductBookedDateResponse(dateList: dateList)
-        callback(response)
+        invokeSuccess(callback: callback, response: response)
     }
     
     private func failure(callback: @escaping(Error) -> Void, error: Error) {

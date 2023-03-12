@@ -36,10 +36,4 @@ public class DeleteProductDataManager: DeleteProductDataContract {
         callback(error)
         
     }
-    
-    
-   
-    
-    
-
 }

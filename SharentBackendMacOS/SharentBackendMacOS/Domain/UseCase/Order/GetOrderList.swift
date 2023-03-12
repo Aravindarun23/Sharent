@@ -58,14 +58,14 @@ public final class GetOrderList: ZUsecase<GetOrderListRequest, GetOrderListRespo
         }
     }
     
-    private func success(callback: (GetOrderListResponse) -> Void, orders: [Order]) {
+    private func success(callback: @escaping (GetOrderListResponse) -> Void, orders: [Order]) {
         let response = GetOrderListResponse(orders: orders)
-        callback(response)
+        invokeSuccess(callback: callback, response: response)
     }
     
-    private func failure(callback: (GetOrderListError) -> Void, error: Error) {
+    private func failure(callback: @escaping (GetOrderListError) -> Void, error: Error) {
         let error = GetOrderListError(status: error)
-        callback(error)
+        invokeFailure(callback: callback, failure: error)
     }
             
 }

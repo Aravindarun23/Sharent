@@ -15,7 +15,6 @@ class UserLoginPagePresenter {
         weak var userLoginPageView: UserLoginViewContract?
         weak var router: Router?
         var userLogin: UserLogin
-        var user: User?
     
     init(userLoginPageView: UserLoginViewContract? = nil, router: Router? = nil, userLogin: UserLogin) {
         self.userLoginPageView = userLoginPageView
@@ -28,9 +27,7 @@ extension UserLoginPagePresenter: UserLoginPresenterContract {
     func viewDidLoad(email: String, password: String) {
         userLogin.execute(request: UserLoginRequest(emailId: email, password: password)) {
             response in
-            self.user = response.user
-            self.userLoginPageView?.load(name: self.user!.name)
-            self.router?.movetoUserHomeView()
+            self.userLoginPageView?.load(name: response.user.name)
         } onFailure: { error in
             self.userLoginPageView?.faiure(error: error)
         }
