@@ -24,7 +24,6 @@
 		981DAB4029AF18D60036FBE1 /* AddNewProductPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981DAB3F29AF18D60036FBE1 /* AddNewProductPresenter.swift */; };
 		981E4E52299E14F70068A880 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981E4E51299E14F70068A880 /* AppDelegate.swift */; };
 		981E4E54299E14F80068A880 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 981E4E53299E14F80068A880 /* Assets.xcassets */; };
-		981E4E57299E14F80068A880 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 981E4E55299E14F80068A880 /* MainMenu.xib */; };
 		98643A4F299E1B3000701385 /* Pods_SharentUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCF23AE925007BFA339E39B /* Pods_SharentUI.framework */; };
 		98643A52299E1B3E00701385 /* SharentBackendMacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98643A49299E1B1500701385 /* SharentBackendMacOS.framework */; };
 		98643A53299E1B3E00701385 /* SharentBackendMacOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 98643A49299E1B1500701385 /* SharentBackendMacOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -60,6 +59,8 @@
 		98AB7D1229BB798100227BE0 /* UpdatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D1129BB798100227BE0 /* UpdatePasswordView.swift */; };
 		98AB7D2429BCB27600227BE0 /* VerifyPincodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D2329BCB27600227BE0 /* VerifyPincodePresenter.swift */; };
 		98AB7D2629BCB3E800227BE0 /* VerifyPincodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D2529BCB3E800227BE0 /* VerifyPincodeView.swift */; };
+		98D4847729FF8DE000080A25 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D4847629FF8DE000080A25 /* LoginViewController.swift */; };
+		98D4847929FF9E3100080A25 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D4847829FF9E3100080A25 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -131,6 +132,8 @@
 		98AB7D1129BB798100227BE0 /* UpdatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordView.swift; sourceTree = "<group>"; };
 		98AB7D2329BCB27600227BE0 /* VerifyPincodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPincodePresenter.swift; sourceTree = "<group>"; };
 		98AB7D2529BCB3E800227BE0 /* VerifyPincodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPincodeView.swift; sourceTree = "<group>"; };
+		98D4847629FF8DE000080A25 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		98D4847829FF9E3100080A25 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		A6B41A1BDEF413EB325A4C94 /* Pods-SharentUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharentUI.release.xcconfig"; path = "Target Support Files/Pods-SharentUI/Pods-SharentUI.release.xcconfig"; sourceTree = "<group>"; };
 		F44DF708E67CD7C02C518822 /* Pods-SharentUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharentUI.debug.xcconfig"; path = "Target Support Files/Pods-SharentUI/Pods-SharentUI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -222,6 +225,7 @@
 				981E4E53299E14F80068A880 /* Assets.xcassets */,
 				981E4E55299E14F80068A880 /* MainMenu.xib */,
 				981E4E58299E14F80068A880 /* SharentUI.entitlements */,
+				98D4847829FF9E3100080A25 /* main.swift */,
 			);
 			path = SharentUI;
 			sourceTree = "<group>";
@@ -268,6 +272,7 @@
 		9872EE3A299E382F009442BA /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				98D4847529FF8DBC00080A25 /* ViewController */,
 				9872EE3B299E387E009442BA /* View */,
 				9872EE3C299E388E009442BA /* Presenter */,
 				9872EE3D299E38B1009442BA /* Contract */,
@@ -346,6 +351,14 @@
 			path = OrderView;
 			sourceTree = "<group>";
 		};
+		98D4847529FF8DBC00080A25 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				98D4847629FF8DE000080A25 /* LoginViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		E95FB1DAEAE5E667073C050C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -417,7 +430,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				981E4E54299E14F80068A880 /* Assets.xcassets in Resources */,
-				981E4E57299E14F80068A880 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,7 +496,9 @@
 				98168B3029B21B8400331A13 /* AdminContract.swift in Sources */,
 				98168B2029B1BEE800331A13 /* DeleteCategoryPresenter.swift in Sources */,
 				98168B2229B1BFF800331A13 /* DeleteCategoryView.swift in Sources */,
+				98D4847729FF8DE000080A25 /* LoginViewController.swift in Sources */,
 				98168AFB29B0C9E400331A13 /* DeleteUserPresenter.swift in Sources */,
+				98D4847929FF9E3100080A25 /* main.swift in Sources */,
 				98168AED29B07DFF00331A13 /* DeleteProductPresenter.swift in Sources */,
 				98AB7CF629BA295800227BE0 /* ApproveOrderView.swift in Sources */,
 				98AB7CE629BA006600227BE0 /* EditUserDetailPresenter.swift in Sources */,
@@ -660,7 +674,6 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainNibFile = MainMenu;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -686,7 +699,6 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainNibFile = MainMenu;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

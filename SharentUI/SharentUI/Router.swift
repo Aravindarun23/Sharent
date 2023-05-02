@@ -16,6 +16,10 @@ class Router {
         self.window = window
     }
 
+    func launchLoginPage() {
+        self.window.contentViewController = Authentication(router: self)
+    }
+    
     func addNewUserView() {
         self.window.contentView = Assembler.userSignUpPageViewAssembler(router: self)
     }
