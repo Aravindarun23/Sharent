@@ -61,6 +61,11 @@
 		98AB7D2629BCB3E800227BE0 /* VerifyPincodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D2529BCB3E800227BE0 /* VerifyPincodeView.swift */; };
 		98D4847729FF8DE000080A25 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D4847629FF8DE000080A25 /* LoginViewController.swift */; };
 		98D4847929FF9E3100080A25 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D4847829FF9E3100080A25 /* main.swift */; };
+		98D4847B2A00E2D300080A25 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D4847A2A00E2D300080A25 /* HomeViewController.swift */; };
+		98D4847E2A00E42C00080A25 /* ToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D4847D2A00E42C00080A25 /* ToolBar.swift */; };
+		98D484802A00E44500080A25 /* LeftMenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D4847F2A00E44500080A25 /* LeftMenuBar.swift */; };
+		98D484822A00E5B800080A25 /* RightFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D484812A00E5B800080A25 /* RightFilterView.swift */; };
+		98D484842A00E5F300080A25 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D484832A00E5F300080A25 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -134,6 +139,11 @@
 		98AB7D2529BCB3E800227BE0 /* VerifyPincodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPincodeView.swift; sourceTree = "<group>"; };
 		98D4847629FF8DE000080A25 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		98D4847829FF9E3100080A25 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		98D4847A2A00E2D300080A25 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		98D4847D2A00E42C00080A25 /* ToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBar.swift; sourceTree = "<group>"; };
+		98D4847F2A00E44500080A25 /* LeftMenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuBar.swift; sourceTree = "<group>"; };
+		98D484812A00E5B800080A25 /* RightFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightFilterView.swift; sourceTree = "<group>"; };
+		98D484832A00E5F300080A25 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		A6B41A1BDEF413EB325A4C94 /* Pods-SharentUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharentUI.release.xcconfig"; path = "Target Support Files/Pods-SharentUI/Pods-SharentUI.release.xcconfig"; sourceTree = "<group>"; };
 		F44DF708E67CD7C02C518822 /* Pods-SharentUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharentUI.debug.xcconfig"; path = "Target Support Files/Pods-SharentUI/Pods-SharentUI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -226,6 +236,7 @@
 				981E4E55299E14F80068A880 /* MainMenu.xib */,
 				981E4E58299E14F80068A880 /* SharentUI.entitlements */,
 				98D4847829FF9E3100080A25 /* main.swift */,
+				98D484832A00E5F300080A25 /* Utilities.swift */,
 			);
 			path = SharentUI;
 			sourceTree = "<group>";
@@ -272,6 +283,7 @@
 		9872EE3A299E382F009442BA /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				98D4847C2A00E3F800080A25 /* HomeView */,
 				98D4847529FF8DBC00080A25 /* ViewController */,
 				9872EE3B299E387E009442BA /* View */,
 				9872EE3C299E388E009442BA /* Presenter */,
@@ -355,8 +367,19 @@
 			isa = PBXGroup;
 			children = (
 				98D4847629FF8DE000080A25 /* LoginViewController.swift */,
+				98D4847A2A00E2D300080A25 /* HomeViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		98D4847C2A00E3F800080A25 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				98D4847D2A00E42C00080A25 /* ToolBar.swift */,
+				98D4847F2A00E44500080A25 /* LeftMenuBar.swift */,
+				98D484812A00E5B800080A25 /* RightFilterView.swift */,
+			);
+			path = HomeView;
 			sourceTree = "<group>";
 		};
 		E95FB1DAEAE5E667073C050C /* Frameworks */ = {
@@ -495,6 +518,7 @@
 				98168AEF29B0813400331A13 /* DeleteProductView.swift in Sources */,
 				98168B3029B21B8400331A13 /* AdminContract.swift in Sources */,
 				98168B2029B1BEE800331A13 /* DeleteCategoryPresenter.swift in Sources */,
+				98D484842A00E5F300080A25 /* Utilities.swift in Sources */,
 				98168B2229B1BFF800331A13 /* DeleteCategoryView.swift in Sources */,
 				98D4847729FF8DE000080A25 /* LoginViewController.swift in Sources */,
 				98168AFB29B0C9E400331A13 /* DeleteUserPresenter.swift in Sources */,
@@ -502,8 +526,10 @@
 				98168AED29B07DFF00331A13 /* DeleteProductPresenter.swift in Sources */,
 				98AB7CF629BA295800227BE0 /* ApproveOrderView.swift in Sources */,
 				98AB7CE629BA006600227BE0 /* EditUserDetailPresenter.swift in Sources */,
+				98D4847B2A00E2D300080A25 /* HomeViewController.swift in Sources */,
 				9872EE43299E392E009442BA /* Router.swift in Sources */,
 				98168B0D29B0DF8000331A13 /* CatogeryContract.swift in Sources */,
+				98D4847E2A00E42C00080A25 /* ToolBar.swift in Sources */,
 				98168B3629B4624400331A13 /* AdminLoginView.swift in Sources */,
 				98AB7CAB29B73F7100227BE0 /* PlaceOrderPresenter.swift in Sources */,
 				98168AFD29B0CCFD00331A13 /* DeleteUserView.swift in Sources */,
@@ -516,6 +542,7 @@
 				98AB7CDA29B9CD2F00227BE0 /* GetProductListView.swift in Sources */,
 				9872EE45299E3945009442BA /* Assembler.swift in Sources */,
 				98AB7D2629BCB3E800227BE0 /* VerifyPincodeView.swift in Sources */,
+				98D484802A00E44500080A25 /* LeftMenuBar.swift in Sources */,
 				9872EE41299E38F8009442BA /* AddNewUserView.swift in Sources */,
 				98AB7CD429B84AF000227BE0 /* CancelOrderView.swift in Sources */,
 				98AB7CD829B9CB2D00227BE0 /* GetProductListPresenter.swift in Sources */,
@@ -530,6 +557,7 @@
 				98AB7D0229BB520200227BE0 /* GetProductBookedDatePresenter.swift in Sources */,
 				986D393329ADD56A0057F92C /* CategoryListView.swift in Sources */,
 				98AB7D2429BCB27600227BE0 /* VerifyPincodePresenter.swift in Sources */,
+				98D484822A00E5B800080A25 /* RightFilterView.swift in Sources */,
 				98AB7CE829BA045D00227BE0 /* EditUserDetailView.swift in Sources */,
 				981E4E52299E14F70068A880 /* AppDelegate.swift in Sources */,
 			);

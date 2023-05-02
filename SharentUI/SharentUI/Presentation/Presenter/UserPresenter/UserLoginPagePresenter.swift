@@ -28,6 +28,7 @@ extension UserLoginPagePresenter: UserLoginPresenterContract {
         userLogin.execute(request: UserLoginRequest(emailId: email, password: password)) {
             response in
             self.userLoginPageView?.load(name: response.user.name)
+            self.router?.navigateHomePage()
         } onFailure: { error in
             self.userLoginPageView?.faiure(error: error)
         }

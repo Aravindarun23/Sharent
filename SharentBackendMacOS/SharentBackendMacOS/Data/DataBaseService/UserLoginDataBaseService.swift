@@ -19,7 +19,7 @@ public class UserLoginDataBaseService: UserLoginDataBaseContract {
         
         let result = SelectQuerry.select(tableName: "user", whereClause: "emailId = ?", args: [emailId])
         
-        if result?.count != 0 {
+        if result != nil {
             
             if let resultPassword = result![0]["password"] as? String {
                 if resultPassword == password {

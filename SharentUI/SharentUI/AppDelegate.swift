@@ -41,10 +41,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 extension AppDelegate: NSWindowDelegate {
     
     func windowWillEnterFullScreen(_ notification: Notification) {
-//        isFullScreen = true
+        isFullScreen = true
     }
     
     func windowWillExitFullScreen(_ notification: Notification) {
-//        isFullScreen = false
+        isFullScreen = false
     }
 }
