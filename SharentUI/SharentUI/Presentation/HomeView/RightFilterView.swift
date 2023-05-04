@@ -16,6 +16,13 @@ class FilterVIew: NSView {
         super.init(frame: frameRect)
         configureFilterView()
     }
+    override var acceptsFirstResponder: Bool {
+        return true
+    }
+    
+    override func becomeFirstResponder() -> Bool {
+        return true
+    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

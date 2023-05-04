@@ -19,10 +19,17 @@ class ToolBar: NSView {
     var rightSidebar: NSButton!
     var profilePopOver: NSPopover!
     
+    override var acceptsFirstResponder: Bool {
+        return true
+    }
     
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
         updateToolbar()
+    }
+    
+    override func becomeFirstResponder() -> Bool {
+        return true
     }
     
     required init?(coder: NSCoder) {
@@ -94,7 +101,6 @@ class ToolBar: NSView {
     
     func configureSearchField() -> NSSearchField {
         let searchField = NSSearchField()
-        searchField.refusesFirstResponder = true
         searchField.cell?.controlSize = .large
         searchField.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -204,3 +210,4 @@ class PopoverContentViewController: NSViewController {
         ])
     }
 }
+

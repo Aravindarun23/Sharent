@@ -17,11 +17,11 @@ class Router {
     }
 
     func launchLoginPage() {
-        self.window.contentViewController = HomeViewController()
+        self.window.contentViewController = Authentication(router: self)
     }
     
-    func navigateHomePage() {
-        self.window.contentViewController = HomeViewController()
+    func navigateHomePage(user: User, router: Router) {
+        self.window.contentViewController = HomeViewController(user: user, router: router)
     }
     
     func addNewUserView() {

@@ -66,6 +66,8 @@
 		98D484802A00E44500080A25 /* LeftMenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D4847F2A00E44500080A25 /* LeftMenuBar.swift */; };
 		98D484822A00E5B800080A25 /* RightFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D484812A00E5B800080A25 /* RightFilterView.swift */; };
 		98D484842A00E5F300080A25 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D484832A00E5F300080A25 /* Utilities.swift */; };
+		98D484882A02497D00080A25 /* ProductCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D484872A02497D00080A25 /* ProductCellView.swift */; };
+		98D4848A2A026CF100080A25 /* ProductCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D484892A026CF100080A25 /* ProductCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -144,6 +146,8 @@
 		98D4847F2A00E44500080A25 /* LeftMenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuBar.swift; sourceTree = "<group>"; };
 		98D484812A00E5B800080A25 /* RightFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightFilterView.swift; sourceTree = "<group>"; };
 		98D484832A00E5F300080A25 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		98D484872A02497D00080A25 /* ProductCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellView.swift; sourceTree = "<group>"; };
+		98D484892A026CF100080A25 /* ProductCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionView.swift; sourceTree = "<group>"; };
 		A6B41A1BDEF413EB325A4C94 /* Pods-SharentUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharentUI.release.xcconfig"; path = "Target Support Files/Pods-SharentUI/Pods-SharentUI.release.xcconfig"; sourceTree = "<group>"; };
 		F44DF708E67CD7C02C518822 /* Pods-SharentUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharentUI.debug.xcconfig"; path = "Target Support Files/Pods-SharentUI/Pods-SharentUI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -263,6 +267,8 @@
 				98AB7C9829B6F6A700227BE0 /* SearchProductView.swift */,
 				986D392E29ADCAAD0057F92C /* AddNewProductView.swift */,
 				98AB7D0329BB544800227BE0 /* GetProductBookedDateView.swift */,
+				98D484872A02497D00080A25 /* ProductCellView.swift */,
+				98D484892A026CF100080A25 /* ProductCollectionView.swift */,
 			);
 			path = ProductView;
 			sourceTree = "<group>";
@@ -533,6 +539,7 @@
 				98168B3629B4624400331A13 /* AdminLoginView.swift in Sources */,
 				98AB7CAB29B73F7100227BE0 /* PlaceOrderPresenter.swift in Sources */,
 				98168AFD29B0CCFD00331A13 /* DeleteUserView.swift in Sources */,
+				98D484882A02497D00080A25 /* ProductCellView.swift in Sources */,
 				9872EE3F299E38CD009442BA /* AddNewUserPresnter.swift in Sources */,
 				98AB7CD229B8478600227BE0 /* CancelOrderPresenter.swift in Sources */,
 				98AB7CAE29B740FF00227BE0 /* PlaceOrderView.swift in Sources */,
@@ -544,6 +551,7 @@
 				98AB7D2629BCB3E800227BE0 /* VerifyPincodeView.swift in Sources */,
 				98D484802A00E44500080A25 /* LeftMenuBar.swift in Sources */,
 				9872EE41299E38F8009442BA /* AddNewUserView.swift in Sources */,
+				98D4848A2A026CF100080A25 /* ProductCollectionView.swift in Sources */,
 				98AB7CD429B84AF000227BE0 /* CancelOrderView.swift in Sources */,
 				98AB7CD829B9CB2D00227BE0 /* GetProductListPresenter.swift in Sources */,
 				98AB7D1229BB798100227BE0 /* UpdatePasswordView.swift in Sources */,

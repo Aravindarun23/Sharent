@@ -236,8 +236,8 @@ class UserLoginView: NSView {
 
 
 extension UserLoginView: UserLoginViewContract {
-    func load(name: String) {
-        print(name)
+    func load(user: User) {
+        
     }
     
     func faiure(error: SharentBackendMacOS.UserLoginError) {

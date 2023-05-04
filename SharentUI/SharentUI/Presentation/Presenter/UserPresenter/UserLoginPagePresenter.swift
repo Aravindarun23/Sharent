@@ -25,10 +25,10 @@ class UserLoginPagePresenter {
 
 extension UserLoginPagePresenter: UserLoginPresenterContract {
     func viewDidLoad(email: String, password: String) {
-        userLogin.execute(request: UserLoginRequest(emailId: email, password: password)) {
+        userLogin.execute(request: UserLoginRequest(emailId: email, password: password)) { [weak self]
             response in
-            self.userLoginPageView?.load(name: response.user.name)
-            self.router?.navigateHomePage()
+            self?.userLoginPageView?.load(user: response.user)
+            self?.router?.navigateHomePage(user: response.user, router: (self?.router!)!)
         } onFailure: { error in
             self.userLoginPageView?.faiure(error: error)
         }

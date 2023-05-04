@@ -21,7 +21,7 @@ protocol AddNewUserPresenterContract: AnyObject {
 
 protocol UserLoginViewContract: AnyObject {
     
-    func load(name: String)
+    func load(user: User)
     func faiure(error: UserLoginError)
 }
 protocol UserLoginPresenterContract: AnyObject {

@@ -20,7 +20,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.titlebarSeparatorStyle = .none
         window.titlebarAppearsTransparent = true
         window.delegate = self
-        router.launchLoginPage()
+        router.navigateHomePage(user: User(id: 1, name: "sdn", emailId: "dn", password: "djbj", mobileNumber: "jdb", address: "djgh", pincode: "bwjdj"), router: router)
+//        router.launchLoginPage()
         window.makeKeyAndOrderFront(nil)
     }
 

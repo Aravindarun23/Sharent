@@ -7,15 +7,29 @@
 
 import Foundation
 import AppKit
+import SharentBackendMacOS
 
 class HomeViewController: NSViewController {
     
     let toolBar = ToolBar()
+    var router: Router
+    var user: User
     let menuBar = LeftMenuBar()
     let bottomBorder = CALayer()
-    var contentView: NSView!
+    var contentView: SearchProductView!
     var filterView =  FilterVIew()
     var rightSideBarWidth: NSLayoutConstraint!
+    
+    init(user: User, router: Router) {
+        self.user = user
+        self.router = router
+        super.init(nibName: nil, bundle: nil)
+        toolBar.searchField.delegate = self
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func loadView() {
         view = NSView(frame: NSRect(x: 0, y: 0, width: (NSScreen.main?.frame.width)!, height: (NSScreen.main?.frame.height)!-110))
@@ -43,6 +57,7 @@ class HomeViewController: NSViewController {
         configureMenuBar()
         configureFilterView()
         configureContentView()
+        
     }
     
     func congigureToolBar() {
@@ -81,7 +96,7 @@ class HomeViewController: NSViewController {
     
     func configureContentView() {
         
-        contentView = NSView()
+        contentView = Assembler.searchProductAssembler(router: router)
         contentView.wantsLayer = true
         view.addSubview(contentView)
         contentView.translatesAutoresizingMaskIntoConstraints = false
@@ -121,4 +136,11 @@ class HomeViewController: NSViewController {
             self.view.layoutSubtreeIfNeeded()
         }, completionHandler: nil)
     }
+}
+
+extension HomeViewController: NSSearchFieldDelegate {
+    
+   func controlTextDidEndEditing(_ obj: Notification) {
+       contentView.searchProductPresenter.viewDidLoad(productName: toolBar.searchField.stringValue, pincode: "614602", filter: nil, range: nil)
+   }
 }

@@ -22,7 +22,6 @@ class LeftMenuBar: NSView {
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
         updateMenuBar()
-        
     }
     
     required init?(coder: NSCoder) {
