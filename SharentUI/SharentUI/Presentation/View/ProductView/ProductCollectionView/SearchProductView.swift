@@ -77,7 +77,6 @@ class SearchProductView: NSView {
         productCollectionView.register(CellView.self, forItemWithIdentifier: NSUserInterfaceItemIdentifier(CellView.identifier))
         productNotFound.image = NSImage(named: "productNotFoundError")
         productNotFound.image?.size = NSSize(width: 300, height: 150)
-        productCollectionView.backgroundView = productNotFound
     }
 }
 

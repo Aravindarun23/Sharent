@@ -1,41 +1,49 @@
 {
   "images" : [
     {
+      "filename" : "282535-P68SYF-74.jpg",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "16x16"
     },
     {
+      "filename" : "282535-P68SYF-74 4.jpg",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "16x16"
     },
     {
+      "filename" : "282535-P68SYF-74 5.jpg",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "32x32"
     },
     {
+      "filename" : "282535-P68SYF-74 6.jpg",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "32x32"
     },
     {
+      "filename" : "282535-P68SYF-74 7.jpg",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "128x128"
     },
     {
+      "filename" : "282535-P68SYF-74 8.jpg",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "128x128"
     },
     {
+      "filename" : "282535-P68SYF-74 3.jpg",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "256x256"
     },
     {
+      "filename" : "282535-P68SYF-74 1.jpg",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "256x256"
@@ -46,6 +54,7 @@
       "size" : "512x512"
     },
     {
+      "filename" : "282535-P68SYF-74 2.jpg",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "512x512"

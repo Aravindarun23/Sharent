@@ -32,7 +32,9 @@ public class DataBase {
         do {
             var path = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
             path.append(path: "RentalApp.sqlite")
+            
             filePath  = path.absoluteString
+            print(filePath)
         } catch {
             print("Error creating directory!")
         }

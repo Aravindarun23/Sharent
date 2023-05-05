@@ -40,11 +40,16 @@ class CellView: NSCollectionViewItem {
         price.font = .systemFont(ofSize: 21)
         productName.font = .systemFont(ofSize: 15)
         location.font = .systemFont(ofSize: 10)
+        location.lineBreakMode = .byTruncatingTail
+        productName.lineBreakMode = .byTruncatingTail
         var likeImage = NSImage(named: "emptyHeart")
         likeImage?.size = NSSize(width: 15, height: 15)
         likeImage = likeImage?.tint(color: .white)
         let menuImage = NSImage(named: "dotMenu")
         menuImage?.size = NSSize(width: 25, height: 25)
+        let locationLogo = NSImageView()
+        locationLogo.image = NSImage(named: "location")?.tint(color: .white)
+        locationLogo.image?.size = NSSize(width: 13, height: 13)
         menuButton.isBordered = false
         menuButton.image = menuImage
         likeButton.isBordered = false
@@ -66,12 +71,15 @@ class CellView: NSCollectionViewItem {
         view.addSubview(location)
         view.addSubview(menuButton)
         view.addSubview(likeButton)
+        view.addSubview(locationLogo)
+        
         
         price.translatesAutoresizingMaskIntoConstraints = false
         productName.translatesAutoresizingMaskIntoConstraints = false
         location.translatesAutoresizingMaskIntoConstraints = false
         productImage.translatesAutoresizingMaskIntoConstraints = false
         likeButton.translatesAutoresizingMaskIntoConstraints = false
+        locationLogo.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate(
             [
@@ -85,13 +93,15 @@ class CellView: NSCollectionViewItem {
                 productName.widthAnchor.constraint(equalToConstant: 200),
                 productName.topAnchor.constraint(equalTo: price.bottomAnchor, constant: 5),
                 productName.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 40),
-                location.topAnchor.constraint(equalTo: productName.bottomAnchor, constant: 5),
+                location.topAnchor.constraint(equalTo: productName.bottomAnchor, constant: 7),
                 location.widthAnchor.constraint(equalToConstant: 200),
-                location.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 40),
+                location.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 57),
                 likeButton.centerXAnchor.constraint(equalTo: view.centerXAnchor,constant: 106),
                 likeButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -13),
                 menuButton.centerXAnchor.constraint(equalTo: view.centerXAnchor,constant: 106),
-                menuButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -270)
+                menuButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -270),
+                locationLogo.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 40),
+                locationLogo.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -28)
             ])
     }
 
