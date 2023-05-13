@@ -59,7 +59,7 @@ public class SearchProductDataBaseService: SearchProductDataBaseContract {
                 
                 let category = Category(id: categoryId, name: categoryName)
                 let seller = User(id: sellerId, name: sellerName, emailId: emailId, password: password, mobileNumber: mobileNumber, address: address, pincode: pincode)
-                let product = Product(id: productId, seller: seller, category: category, name: productName, price: price, detail: productDetail, uploadedDate: uploadedDate, status: .active)
+                var product = Product(id: productId, seller: seller, category: category, name: productName, price: price, detail: productDetail, uploadedDate: uploadedDate, status: .active)
                 
                 products.append(product)
             }

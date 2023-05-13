@@ -21,7 +21,6 @@ public final class SearchProductRequest: ZRequest {
         case dateByDesc = "uploadedDate DESC"
         case priceByAsc = "price ASC"
         case priceByDesc = "price DESC"
-                
     }
     
     public init(productName: String, pincode: String, filter: Filter? = nil, range: Int? = nil) {

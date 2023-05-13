@@ -27,11 +27,7 @@ class CellView: NSCollectionViewItem {
         configureCellView()
     }
     
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        
-
-    }
+  
     
     func configureCellView() {
         

@@ -8,7 +8,7 @@
 import Foundation
 import AppKit
 
-class FilterVIew: NSView {
+class FilterView: NSView {
     
     var filterView: NSView!
     

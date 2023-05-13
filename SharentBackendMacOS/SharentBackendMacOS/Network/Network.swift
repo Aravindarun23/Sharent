@@ -10,6 +10,7 @@ import VTComponents
 
 
 public class Network {
+    
     public init() {
         
     }

@@ -16,15 +16,21 @@ class HomeViewController: NSViewController {
     var user: User
     let menuBar = LeftMenuBar()
     let bottomBorder = CALayer()
-    var contentView: SearchProductView!
-    var filterView =  FilterVIew()
+    var contentView: NSView
+    var filterView = FilterView()
+    var productView: SearchProductView
+    var orderView: OrderListView
     var rightSideBarWidth: NSLayoutConstraint!
     
     init(user: User, router: Router) {
         self.user = user
         self.router = router
+        contentView = NSView()
+        productView = Assembler.searchProductAssembler(router: router)
+        orderView = Assembler.getOrderListAssembler(router: router)
         super.init(nibName: nil, bundle: nil)
         toolBar.searchField.delegate = self
+        menuBar.moduleChangeDelegate = self
     }
     
     required init?(coder: NSCoder) {
@@ -32,17 +38,20 @@ class HomeViewController: NSViewController {
     }
     
     override func loadView() {
+        
         view = NSView(frame: NSRect(x: 0, y: 0, width: (NSScreen.main?.frame.width)!, height: (NSScreen.main?.frame.height)!-110))
         view.wantsLayer = true
     }
     
     override func viewWillLayout() {
+        
         view.window!.standardWindowButton(.closeButton)?.frame.origin.x = 8.0
         view.window!.standardWindowButton(.closeButton)?.frame.origin.y = -2.0
         view.window!.standardWindowButton(.miniaturizeButton)?.frame.origin.x = 30.0
         view.window!.standardWindowButton(.miniaturizeButton)?.frame.origin.y = -2.0
         view.window!.standardWindowButton(.zoomButton)?.frame.origin.x = 52.0
         view.window!.standardWindowButton(.zoomButton)?.frame.origin.y = -2.0
+        
         if isFullScreen {
             toolBar.leftAnchorConstraint.constant = 15
         }
@@ -55,8 +64,8 @@ class HomeViewController: NSViewController {
     override func viewDidLoad() {
         congigureToolBar()
         configureMenuBar()
-        configureFilterView()
         configureContentView()
+        getproductsView()
         
     }
     
@@ -95,30 +104,51 @@ class HomeViewController: NSViewController {
     }
     
     func configureContentView() {
-        
-        contentView = Assembler.searchProductAssembler(router: router)
-        contentView.wantsLayer = true
         view.addSubview(contentView)
         contentView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             contentView.topAnchor.constraint(equalTo: toolBar.bottomAnchor),
             contentView.leftAnchor.constraint(equalTo: menuBar.rightAnchor),
-            contentView.rightAnchor.constraint(equalTo: filterView.leftAnchor),
+            contentView.rightAnchor.constraint(equalTo: view.rightAnchor),
             contentView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
     
-    func configureFilterView() {
-        
-        view.addSubview(filterView)
+    func getproductsView() {
+        orderView.removeFromSuperview()
+        contentView.addSubview(filterView)
         filterView.translatesAutoresizingMaskIntoConstraints = false
         rightSideBarWidth =  filterView.widthAnchor.constraint(equalToConstant: 240)
         NSLayoutConstraint.activate([
             rightSideBarWidth,
-            filterView.topAnchor.constraint(equalTo: toolBar.bottomAnchor),
-            filterView.rightAnchor.constraint(equalTo: view.rightAnchor),
-            filterView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            filterView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            filterView.rightAnchor.constraint(equalTo: contentView.rightAnchor),
+            filterView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
         ])
+        
+        productView.wantsLayer = true
+        contentView.addSubview(productView)
+        productView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            productView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            productView.leftAnchor.constraint(equalTo: contentView.leftAnchor),
+            productView.rightAnchor.constraint(equalTo: filterView.leftAnchor),
+            productView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+        ])
+    }
+    
+    func getOrdersView() {
+        productView.removeFromSuperview()
+        filterView.removeFromSuperview()
+        contentView.addSubview(orderView)
+        orderView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            orderView.topAnchor.constraint(equalTo: menuBar.topAnchor),
+            orderView.leadingAnchor.constraint(equalTo: menuBar.trailingAnchor, constant: 20),
+            orderView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            orderView.bottomAnchor.constraint(equalTo: menuBar.bottomAnchor),
+        ])
+        
     }
     
     @objc func toggleSideBar(_ sender: NSButton) {
@@ -141,6 +171,6 @@ class HomeViewController: NSViewController {
 extension HomeViewController: NSSearchFieldDelegate {
     
    func controlTextDidEndEditing(_ obj: Notification) {
-       contentView.searchProductPresenter.viewDidLoad(productName: toolBar.searchField.stringValue, pincode: "614602", filter: nil, range: nil)
+       productView.searchProductPresenter.viewDidLoad(productName: toolBar.searchField.stringValue, pincode: "614602", filter: nil, range: nil)
    }
 }

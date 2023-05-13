@@ -28,12 +28,16 @@ class SearchProductView: NSView {
         layout = NSCollectionViewFlowLayout()
         productNotFound = NSImageView()
         super.init(frame: NSRect())
+        configureCollectionView()
     }
     
     
     override func viewDidMoveToSuperview() {
-        configureCollectionView()
-        searchProductPresenter.viewDidLoad(productName: "", pincode: "614602", filter: nil, range: nil)
+        
+        if superview != nil {
+            searchProductPresenter.viewDidLoad(productName: "", pincode: "614602", filter: nil, range: nil)
+        }
+       
     }
 
     required init?(coder decoder: NSCoder) {
@@ -45,6 +49,7 @@ class SearchProductView: NSView {
         collectionView = NSView()
         collectionView.wantsLayer = true
         collectionView.layer?.cornerRadius = 10
+        productCollectionView.isSelectable = true
         productCollectionView.dataSource = self
         productCollectionView.delegate = self
         collectionView.layer?.backgroundColor = .init(red: 0.219607383, green: 0.2196081877, blue: 0.2367719412, alpha: 0.15)
@@ -91,7 +96,12 @@ extension SearchProductView: NSCollectionViewDataSource {
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
         
         let cell = collectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier(CellView.identifier), for: indexPath) as! CellView
-        cell.productImage.image = NSImage(named: products[indexPath.item].name)
+        if let image = products[indexPath.item].image {
+            cell.productImage.image = NSImage(contentsOf: URL(filePath: image[0]))
+        } else {
+            cell.productImage.image = NSImage(named: "")
+        }
+        
         let number = products[indexPath.item].price
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
@@ -104,17 +114,19 @@ extension SearchProductView: NSCollectionViewDataSource {
     }
 }
 
-extension  SearchProductView: NSCollectionViewDelegateFlowLayout {
+extension  SearchProductView: NSCollectionViewDelegateFlowLayout, NSCollectionViewDelegate {
     
     func collectionView(_ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> NSSize {
             return NSSize(width: 250, height: 300)
     }
+    
 }
 
 
 extension SearchProductView: SearchProductViewContract {
     
     func load(products: [Product]) {
+        print("load")
         productCollectionView.backgroundView = nil
         self.products = products
         productCollectionView.reloadData()

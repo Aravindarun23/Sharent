@@ -22,7 +22,6 @@ public final class EditUserDetailRequest: ZRequest {
         self.mobileNumber = mobileNumber
         super.init(zuid: "")
     }
-    
 }
 
 public final class EditUserDetailResponse: ZResponse {

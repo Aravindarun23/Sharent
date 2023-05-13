@@ -16,7 +16,6 @@ public class VerifyPincodeDataManager: VerifyPincodeDataContract {
     }
     
     public func verifyPincode(pincode: String, success: @escaping ([[String : Any]]) -> Void, failure: @escaping (Error) -> Void) {
-        
         verifyPincodeNetworkService.verifyPincode(pincode: pincode) { [weak self]
             pincodeList in
             self?.success(callback: success, pincodeList: pincodeList)

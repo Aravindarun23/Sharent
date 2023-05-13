@@ -255,7 +255,8 @@ extension Assembler {
         
         let searchProductDataBaseService = SearchProductDataBaseService()
         let getPincodeNetworkService = GetPincodeNetworkService()
-        let searchProductDataManager = SearchProductDataManager(searchProductDataBase: searchProductDataBaseService, getPincodeListNetwork: getPincodeNetworkService)
+        let getProductImageFileService = GetProductImageFileService()
+        let searchProductDataManager = SearchProductDataManager(searchProductDataBase: searchProductDataBaseService, getPincodeListNetwork: getPincodeNetworkService, getProductImageFile: getProductImageFileService)
         let searchProductUseCase = SearchProduct(searchProductDataManger: searchProductDataManager)
         return searchProductUseCase
     }
@@ -286,11 +287,11 @@ extension Assembler {
 
 extension Assembler {
     
-    public static func getOrderListAssembler(router: Router) -> GetOrderListView {
+    public static func getOrderListAssembler(router: Router) -> OrderListView {
         let getOrderListUseCase = getOrderListUseCase()
         let getOrderListPresenter = GetOrderListPresenter(getOrderList: getOrderListUseCase)
         getOrderListPresenter.router = router
-        let getOrderListView = GetOrderListView(getOrderListPresenter: getOrderListPresenter)
+        let getOrderListView = OrderListView(getOrderListPresenter: getOrderListPresenter)
         getOrderListPresenter.getOrderListView = getOrderListView
         return getOrderListView
         

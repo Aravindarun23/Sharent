@@ -12,12 +12,14 @@ public class SearchProductDataManager: SearchProductDataContract {
    
     let searchProductDataBase: SearchProductDataBaseContract
     let getPincodeListNetwork: GetPincodeListNetworkContract
+    let getProductImageFile: GetProductImageFileContract
     
-    public init(searchProductDataBase: SearchProductDataBaseContract, getPincodeListNetwork: GetPincodeListNetworkContract) {
+    public  init(searchProductDataBase: SearchProductDataBaseContract, getPincodeListNetwork: GetPincodeListNetworkContract, getProductImageFile: GetProductImageFileContract) {
         self.searchProductDataBase = searchProductDataBase
         self.getPincodeListNetwork = getPincodeListNetwork
+        self.getProductImageFile = getProductImageFile
     }
-   
+    
     public func SearchProduct(pincode: String, product: String, filter: SearchProductRequest.Filter?, range: Int?, success: @escaping ([Product]) -> Void, failure: @escaping (Error) -> Void) {
         
         if let range = range {
@@ -39,10 +41,15 @@ public class SearchProductDataManager: SearchProductDataContract {
         
         searchProductDataBase.SearchProduct(pincode: pincode, product: product, filter: filter) { [weak self]
             productList in
-            
-            self?.success(callback: success, products: productList)
+            self?.getImageFileList(products: productList, callBack: success)
         } failure: { error  in
             self.failure(callback: failure, error: error)
+        }
+    }
+    
+    private func getImageFileList(products: [Product], callBack: @escaping([Product]) -> Void) {
+        getProductImageFile.getProductImageFile(products: products) { [weak self]  productList in
+            self?.success(callback: callBack, products: productList)
         }
     }
     

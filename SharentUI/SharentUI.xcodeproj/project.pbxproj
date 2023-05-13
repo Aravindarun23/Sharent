@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		980B72552A0E4B70005F755A /* OrderCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B72542A0E4B70005F755A /* OrderCellView.swift */; };
+		980B72572A0E4F43005F755A /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B72562A0E4F43005F755A /* OrderDetailView.swift */; };
 		98168ADD29AFC91400331A13 /* EditProductDetailPrersenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168ADC29AFC91400331A13 /* EditProductDetailPrersenter.swift */; };
 		98168ADF29AFC93600331A13 /* EditProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168ADE29AFC93600331A13 /* EditProductDetailView.swift */; };
 		98168AED29B07DFF00331A13 /* DeleteProductPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168AEC29B07DFF00331A13 /* DeleteProductPresenter.swift */; };
@@ -44,7 +46,7 @@
 		98AB7CAB29B73F7100227BE0 /* PlaceOrderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CAA29B73F7100227BE0 /* PlaceOrderPresenter.swift */; };
 		98AB7CAE29B740FF00227BE0 /* PlaceOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CAD29B740FF00227BE0 /* PlaceOrderView.swift */; };
 		98AB7CBA29B779B800227BE0 /* GetOrderListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CB929B779B800227BE0 /* GetOrderListPresenter.swift */; };
-		98AB7CBC29B77D4B00227BE0 /* GetOrderListVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CBB29B77D4B00227BE0 /* GetOrderListVIew.swift */; };
+		98AB7CBC29B77D4B00227BE0 /* GetOrderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CBB29B77D4B00227BE0 /* GetOrderListView.swift */; };
 		98AB7CD229B8478600227BE0 /* CancelOrderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CD129B8478600227BE0 /* CancelOrderPresenter.swift */; };
 		98AB7CD429B84AF000227BE0 /* CancelOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CD329B84AF000227BE0 /* CancelOrderView.swift */; };
 		98AB7CD829B9CB2D00227BE0 /* GetProductListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CD729B9CB2D00227BE0 /* GetProductListPresenter.swift */; };
@@ -85,6 +87,8 @@
 
 /* Begin PBXFileReference section */
 		3DCF23AE925007BFA339E39B /* Pods_SharentUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharentUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		980B72542A0E4B70005F755A /* OrderCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCellView.swift; sourceTree = "<group>"; };
+		980B72562A0E4F43005F755A /* OrderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailView.swift; sourceTree = "<group>"; };
 		98168ADC29AFC91400331A13 /* EditProductDetailPrersenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProductDetailPrersenter.swift; sourceTree = "<group>"; };
 		98168ADE29AFC93600331A13 /* EditProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProductDetailView.swift; sourceTree = "<group>"; };
 		98168AEC29B07DFF00331A13 /* DeleteProductPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProductPresenter.swift; sourceTree = "<group>"; };
@@ -123,7 +127,7 @@
 		98AB7CAA29B73F7100227BE0 /* PlaceOrderPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrderPresenter.swift; sourceTree = "<group>"; };
 		98AB7CAD29B740FF00227BE0 /* PlaceOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrderView.swift; sourceTree = "<group>"; };
 		98AB7CB929B779B800227BE0 /* GetOrderListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOrderListPresenter.swift; sourceTree = "<group>"; };
-		98AB7CBB29B77D4B00227BE0 /* GetOrderListVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOrderListVIew.swift; sourceTree = "<group>"; };
+		98AB7CBB29B77D4B00227BE0 /* GetOrderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOrderListView.swift; sourceTree = "<group>"; };
 		98AB7CD129B8478600227BE0 /* CancelOrderPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelOrderPresenter.swift; sourceTree = "<group>"; };
 		98AB7CD329B84AF000227BE0 /* CancelOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelOrderView.swift; sourceTree = "<group>"; };
 		98AB7CD729B9CB2D00227BE0 /* GetProductListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductListPresenter.swift; sourceTree = "<group>"; };
@@ -358,9 +362,11 @@
 			isa = PBXGroup;
 			children = (
 				98AB7CAD29B740FF00227BE0 /* PlaceOrderView.swift */,
-				98AB7CBB29B77D4B00227BE0 /* GetOrderListVIew.swift */,
+				98AB7CBB29B77D4B00227BE0 /* GetOrderListView.swift */,
 				98AB7CD329B84AF000227BE0 /* CancelOrderView.swift */,
 				98AB7CF529BA295800227BE0 /* ApproveOrderView.swift */,
+				980B72542A0E4B70005F755A /* OrderCellView.swift */,
+				980B72562A0E4F43005F755A /* OrderDetailView.swift */,
 			);
 			path = OrderView;
 			sourceTree = "<group>";
@@ -523,7 +529,7 @@
 				986D394529ADEED60057F92C /* ProductContract.swift in Sources */,
 				98168B1329B0E21900331A13 /* AddCategoryPresenter.swift in Sources */,
 				986D392A29ACCEC90057F92C /* UserLoginView.swift in Sources */,
-				98AB7CBC29B77D4B00227BE0 /* GetOrderListVIew.swift in Sources */,
+				98AB7CBC29B77D4B00227BE0 /* GetOrderListView.swift in Sources */,
 				98168ADF29AFC93600331A13 /* EditProductDetailView.swift in Sources */,
 				98AB7CA829B73BF400227BE0 /* OrderContract.swift in Sources */,
 				98168AEF29B0813400331A13 /* DeleteProductView.swift in Sources */,
@@ -533,6 +539,7 @@
 				98168B2229B1BFF800331A13 /* DeleteCategoryView.swift in Sources */,
 				98D4847729FF8DE000080A25 /* LoginViewController.swift in Sources */,
 				98168AFB29B0C9E400331A13 /* DeleteUserPresenter.swift in Sources */,
+				980B72552A0E4B70005F755A /* OrderCellView.swift in Sources */,
 				98D4847929FF9E3100080A25 /* main.swift in Sources */,
 				98168AED29B07DFF00331A13 /* DeleteProductPresenter.swift in Sources */,
 				98AB7CF629BA295800227BE0 /* ApproveOrderView.swift in Sources */,
@@ -565,6 +572,7 @@
 				9872EE4A299F4F41009442BA /* UserContract.swift in Sources */,
 				98AB7C9929B6F6A700227BE0 /* SearchProductView.swift in Sources */,
 				986D392C29ACD1160057F92C /* UserLoginPagePresenter.swift in Sources */,
+				980B72572A0E4F43005F755A /* OrderDetailView.swift in Sources */,
 				98AB7CF429BA284800227BE0 /* ApproveOrderPresenter.swift in Sources */,
 				98AB7D0229BB520200227BE0 /* GetProductBookedDatePresenter.swift in Sources */,
 				986D393329ADD56A0057F92C /* CategoryListView.swift in Sources */,
