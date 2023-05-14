@@ -23,6 +23,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //        router.getProductBookedDateView()
         router.navigateHomePage(user: User(id: 1, name: "sdn", emailId: "dn", password: "djbj", mobileNumber: "jdb", address: "djgh", pincode: "bwjdj"), router: router)
 //        router.launchLoginPage()
+//        router.getProductBookedDateView()
         window.makeKeyAndOrderFront(nil)
     }
 

@@ -8,6 +8,7 @@
 import Foundation
 
 public class GetProductImageFileService: GetProductImageFileContract {
+  
     
     public init() {
         
@@ -19,6 +20,12 @@ public class GetProductImageFileService: GetProductImageFileContract {
         let products = fileManager.getProductImageFile(products: products)
         success(products: products, callBack: callback)
     }
+    
+    public func getOrderProductImage(orders: [Order], callback: @escaping ([Order]) -> Void) {
+        let orders = fileManager.getOrdersProductImage(orders: orders)
+        callback(orders)
+    }
+    
     
     private func success(products: [Product], callBack: @escaping ([Product]) -> Void) {
         callBack(products)

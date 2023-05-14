@@ -10,4 +10,5 @@ import Foundation
 public protocol GetProductImageFileContract {
     
     func getProductImageFile(products: [Product], callback: @escaping([Product]) -> Void)
+    func getOrderProductImage(orders: [Order], callback: @escaping ([Order]) -> Void)
 }

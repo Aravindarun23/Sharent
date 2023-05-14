@@ -17,13 +17,13 @@ public struct Order {
         case completed = "completed"
     }
     
-    var id: Int
-    var buyer: User
-    var product: Product
-    var orderedDate: String
-    var fromDate: String
-    var returnDate: String
-    var status: Status
+    public var id: Int
+    public var buyer: User
+    public var product: Product
+    public var orderedDate: String
+    public var fromDate: String
+    public var returnDate: String
+    public var status: Status
     
    public init(id: Int, buyer: User, product: Product, orderedDate: String, fromDate: String, returnDate: String, status: Status) {
         self.id = id

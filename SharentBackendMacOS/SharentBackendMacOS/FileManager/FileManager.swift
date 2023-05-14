@@ -29,6 +29,19 @@ public class File {
         return productList
     }
     
+    public func getOrdersProductImage(orders: [Order]) -> [Order]{
+        var product: Product
+        var orderList: [Order] = []
+        for data in orders {
+            product = data.product
+            getFileUrlImage(productId: product.id) { fileUrl in
+                product.image = fileUrl
+            }
+            orderList.append(Order(id: data.id, buyer: data.buyer, product: product, orderedDate: data.orderedDate, fromDate: data.fromDate, returnDate: data.returnDate, status: data.status))
+        }
+        return orderList
+    }
+    
     private func getFileUrlImage(productId: Int, callback: @escaping ([String]?) -> Void) {
         
         let fileManager = FileManager.default

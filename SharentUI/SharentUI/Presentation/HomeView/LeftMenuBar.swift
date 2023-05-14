@@ -121,7 +121,6 @@ class LeftMenuBar: NSView {
         case Module.order.rawValue:
             moduleChangeDelegate?.getOrdersView()
             moduleChangeDelegate?.toolBar.rightSidebar.isHidden = true
-//            moduleChangeDelegate?.filterView.isHidden = true
         default:
             return
         }

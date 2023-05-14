@@ -287,11 +287,11 @@ extension Assembler {
 
 extension Assembler {
     
-    public static func getOrderListAssembler(router: Router) -> OrderListView {
+    public static func getOrderListAssembler(router: Router, user: User) -> OrderListView {
         let getOrderListUseCase = getOrderListUseCase()
         let getOrderListPresenter = GetOrderListPresenter(getOrderList: getOrderListUseCase)
         getOrderListPresenter.router = router
-        let getOrderListView = OrderListView(getOrderListPresenter: getOrderListPresenter)
+        let getOrderListView = OrderListView(getOrderListPresenter: getOrderListPresenter, user: user)
         getOrderListPresenter.getOrderListView = getOrderListView
         return getOrderListView
         
@@ -300,7 +300,8 @@ extension Assembler {
     private static func getOrderListUseCase() -> GetOrderList {
         
         let getOrderListDataBaseService = GetOrderListDataBaseService()
-        let getOrderListDataManager = GetOrderListDataManager(getOrderListDataBase: getOrderListDataBaseService)
+        let getProductImageFileService = GetProductImageFileService()
+        let getOrderListDataManager = GetOrderListDataManager(getOrderListDataBase: getOrderListDataBaseService, getProductImageFile: getProductImageFileService)
         let getOrderListUseCase = GetOrderList(getOrderListDataManager: getOrderListDataManager)
         return getOrderListUseCase
     }

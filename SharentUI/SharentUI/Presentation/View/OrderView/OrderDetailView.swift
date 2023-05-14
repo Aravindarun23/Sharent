@@ -7,19 +7,27 @@
 
 import Foundation
 import AppKit
+import SharentBackendMacOS
 
-class DetailView: NSView {
+class OrderDetailView: NSView {
     
     let productImage = NSImageView()
+    let order: Order
     let productImageStack = NSStackView()
     let detailStackView = NSStackView()
+    let cancelOrderPresenter: CancelOrderPresenterContract?
     
-    
-    override init(frame frameRect: NSRect) {
-        super.init(frame: frameRect)
+    init(cancelOrderPresenter: CancelOrderPresenterContract? = nil, order: Order) {
+        self.order = order
+        self.cancelOrderPresenter = cancelOrderPresenter
+        super.init(frame: NSRect())
     }
+    
     override func viewDidMoveToSuperview() {
-        configureDetailView()
+        if superview != nil {
+            configureDetailView()
+        }
+  
     }
     
     required init?(coder: NSCoder) {
@@ -28,13 +36,14 @@ class DetailView: NSView {
     
     func configureDetailView() {
         addProductImage()
-        addProductStackView()
-        addDetailView()
+        addProductImageStackView()
+        addOrderDetailView()
     }
     
+   
     func addProductImage() {
         addSubview(productImage)
-        productImage.image = NSImage(named: "loginImage")
+        productImage.image = NSImage(contentsOf: URL(filePath: order.product.image![0]))
         productImage.isEditable = true
         productImage.imageScaling = .scaleProportionallyUpOrDown
         productImage.wantsLayer = true
@@ -49,13 +58,13 @@ class DetailView: NSView {
         ])
     }
     
-    func addProductStackView() {
+    func addProductImageStackView() {
         
         let productScroll = NSScrollView()
-        for i in 0...10 {
-            configureButton(image: "loginImage")
+        for index in 0..<(order.product.image?.count)!{
+            configureButton(image: order.product.image![index], tag: index)
         }
-        
+        productImageStack.views[0].layer?.backgroundColor = NSColor.systemOrange.cgColor
         productImageStack.orientation = .horizontal
         productScroll.verticalScrollElasticity = .none
         productScroll.backgroundColor =  #colorLiteral(red: 0.2857447863, green: 0.2659823596, blue: 0.2490336299, alpha: 1)
@@ -74,40 +83,7 @@ class DetailView: NSView {
         
     }
     
-    @objc func selectImage(_ sender: NSButton) {
-        for button in productImageStack.views {
-            button.layer?.backgroundColor = .clear
-        }
-        sender.layer?.backgroundColor = NSColor.systemOrange.cgColor
-        
-    }
-    
-    func configureButton(image: String) {
-        let button = NSButton()
-        button.wantsLayer = true
-        button.target = self
-        button.action = #selector(selectImage(_:))
-        let imageView = NSImageView()
-        button.addSubview(imageView)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-         button.widthAnchor.constraint(equalToConstant: 70),
-            button.heightAnchor.constraint(equalToConstant: 70),
-        ])
-        var image = NSImage(named: image)
-        imageView.image = image
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.widthAnchor.constraint(equalToConstant: 60).isActive = true
-        imageView.heightAnchor.constraint(equalToConstant: 60).isActive = true
-        imageView.leadingAnchor.constraint(equalTo: button.leadingAnchor, constant: 5).isActive = true
-        imageView.topAnchor.constraint(equalTo: button.topAnchor, constant: 5).isActive = true
-        button.wantsLayer = true
-        button.isBordered = false
-        button.title = ""
-        productImageStack.addArrangedSubview(button)
-     }
-    
-    func addDetailView() {
+    func addOrderDetailView() {
         addSubview(detailStackView)
         detailStackView.orientation = .vertical
         detailStackView.alignment = .leading
@@ -122,12 +98,12 @@ class DetailView: NSView {
             detailStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
         
         ])
-        let orderDate = getLabelString(text: "Orderdate : 12/01/2002", size: 13)
-        let status = getLabelString(text: "Status : confirmed", size: 13)
+        let orderDate = getLabelString(text: "Orderdate : \(order.orderedDate)", size: 13)
+        let status = getLabelString(text: "Status : \(order.status)", size: 13)
         let sellerLabel = getLabelString(text: "Seller", size: 18)
         sellerLabel.textColor = .systemOrange
-        let sellerName = getLabelString(text: "Name :  Aravind", size: 13)
-        let address = getLabelString(text: "Address :  140/d pallivassal Street, Pattukkottai", size: 13)
+        let sellerName = getLabelString(text: "Name :  \(order.product.seller.name)", size: 13)
+        let address = getLabelString(text: "Address :  \(order.product.seller.address)", size: 13)
         detailStackView.spacing = 10
         detailStackView.edgeInsets = NSEdgeInsets.init(top: 10, left: 10, bottom: 10, right: 10)
         let mobileNumber = getLabelString(text: "Mobile :  XXXXXXXXXX", size: 13)
@@ -135,19 +111,19 @@ class DetailView: NSView {
         let productDetailLabel = getLabelString(text: "Product Detail", size: 18)
         productDetailLabel.textColor = .systemOrange
         
-        let detailView = getLabelString(text: "Then, constraints are added to set the size of the text field to match the size of the childView. These constraints use the leadingAnchor, trailingAnchor, topAnchor, and bottomAnchor properties of the text field and childView to align the edges of the text field with the edges of the childView. Note that since the childView is centered within the parentView, the text field will also be centered within the childView.Then, constraints are added to set the size of the text field to match the size of the childView. These constraints use the leadingAnchor, trailingAnchor, topAnchor, and bottomAnchor properties of the text field and childView to align the edges of the text field with the edges of the childView.", size: 13)
+        let detailView = getLabelString(text: order.product.detail!, size: 13)
         
-        let bookedDatesLabel = getLabelString(text: "Booked Dates  (2)", size: 18)
+        let bookedDatesLabel = getLabelString(text: "Booked Dates ", size: 18)
         bookedDatesLabel.textColor = .systemOrange
         
         let bookedDates = getLabelString(text: "23/01/2002 , 27/04/2004", size: 13)
         
-        let totalPrizeLabel = getLabelString(text: "Total Prize : (3120)", size: 18)
+        let totalPrizeLabel = getLabelString(text: "Total Prize : ₹ \(order.product.price)", size: 18)
         totalPrizeLabel.textColor = .systemOrange
-        let prize = getLabelString(text: "prize : ₹ 1500  ", size: 13)
+        let prize = getLabelString(text: "prize : ₹ \(order.product.price)  ", size: 13)
         let totaldays = getLabelString(text: "totalDays : 2", size: 13)
         let gst = getLabelString(text: "GST :  12%  (120)", size: 13)
-        let totalPrize = getLabelString(text: "Total Prize : ₹ 3120 /-", size: 13)
+        let totalPrize = getLabelString(text: "Total Prize : ₹ \(order.product.price) /-", size: 13)
         let cancelButton = NSButton()
         cancelButton.title = "Cancel Order"
         cancelButton.wantsLayer = true
@@ -179,21 +155,62 @@ class DetailView: NSView {
         detailStackView.addArrangedSubview(totaldays)
         detailStackView.addArrangedSubview(gst)
         detailStackView.addArrangedSubview(totalPrize)
-        detailStackView.addArrangedSubview(cancelButton)
+        if order.status == .confirmed || order.status == .requested {
+            detailStackView.addArrangedSubview(cancelButton)
+            cancelButton.translatesAutoresizingMaskIntoConstraints = false
+            cancelButton.topAnchor.constraint(equalTo: totalPrize.bottomAnchor, constant: 20).isActive = true
+        }
         
         address.translatesAutoresizingMaskIntoConstraints = false
         productDetailLabel.translatesAutoresizingMaskIntoConstraints = false
         detailStackView.translatesAutoresizingMaskIntoConstraints = false
-        cancelButton.translatesAutoresizingMaskIntoConstraints = false
+
         NSLayoutConstraint.activate([
             address.leadingAnchor.constraint(equalTo: detailStackView.leadingAnchor, constant: 10),
             address.widthAnchor.constraint(equalToConstant: 352),
             detailView.leadingAnchor.constraint(equalTo: detailStackView.leadingAnchor, constant: 10),
             detailView.widthAnchor.constraint(equalToConstant: 352),
             productDetailLabel.topAnchor.constraint(equalTo: mobileNumber.bottomAnchor, constant: 20),
-            cancelButton.topAnchor.constraint(equalTo: totalPrize.bottomAnchor, constant: 20)
         ])
     }
+    
+    
+    func configureButton(image: String, tag: Int) {
+        let button = NSButton()
+        button.tag = tag
+        button.wantsLayer = true
+        button.target = self
+        button.action = #selector(selectImage(_:))
+        let imageView = NSImageView()
+        button.addSubview(imageView)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+         button.widthAnchor.constraint(equalToConstant: 70),
+            button.heightAnchor.constraint(equalToConstant: 70),
+        ])
+        let image = NSImage(contentsOf: URL(filePath: image))
+        imageView.image = image
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.widthAnchor.constraint(equalToConstant: 60).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        imageView.leadingAnchor.constraint(equalTo: button.leadingAnchor, constant: 5).isActive = true
+        imageView.topAnchor.constraint(equalTo: button.topAnchor, constant: 5).isActive = true
+        button.wantsLayer = true
+        button.isBordered = false
+        button.title = ""
+        productImageStack.addArrangedSubview(button)
+     }
+    
+    
+    @objc func selectImage(_ sender: NSButton) {
+        for button in productImageStack.views {
+            button.layer?.backgroundColor = .clear
+        }
+        productImage.image = NSImage(contentsOf:  URL(filePath: order.product.image![sender.tag]))
+        sender.layer?.backgroundColor = NSColor.systemOrange.cgColor
+        
+    }
+    
     
     func getLabelString(text: String, size: Int) -> NSTextField {
         

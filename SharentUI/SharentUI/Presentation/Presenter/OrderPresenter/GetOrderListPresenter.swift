@@ -23,7 +23,7 @@ class GetOrderListPresenter {
 extension GetOrderListPresenter: GetOrderListPresenterContract {
     
     func viewDidLoad(userId: Int) {
-        let request = GetOrderListRequest(buyerId: 2)
+        let request = GetOrderListRequest(buyerId: userId)
         getOrderList.execute(request: request) {
             response in
             self.getOrderListView?.load(orders: response.orders)

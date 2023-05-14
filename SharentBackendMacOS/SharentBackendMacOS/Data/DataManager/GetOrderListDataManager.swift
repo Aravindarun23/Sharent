@@ -10,18 +10,26 @@ import Foundation
 public class GetOrderListDataManager: GetOrderListDataContract {
     
     let getOrderListDataBase: GetOrderListDataBaseContract
+    let getProductImageFile: GetProductImageFileContract
     
-    public init(getOrderListDataBase: GetOrderListDataBaseContract) {
+    public init(getOrderListDataBase: GetOrderListDataBaseContract, getProductImageFile: GetProductImageFileContract) {
         self.getOrderListDataBase = getOrderListDataBase
+        self.getProductImageFile = getProductImageFile
     }
     
     public func getOrderList(buyerId: Int?, sellerId: Int?, success: @escaping ([Order]) -> Void, failure: @escaping (Error) -> Void) {
         getOrderListDataBase.getOrderList(buyerId: buyerId, sellerId: sellerId) { [weak self]
             orders in
-            self?.success(callback: success, orders: orders)
+            self?.getProductImage(orders: orders, callback: success)
         } failure: { [weak self] error in
             self?.failure(callback: failure, error: error)
             
+        }
+    }
+    private func getProductImage(orders: [Order], callback: @escaping([Order]) -> Void) {
+        self.getProductImageFile.getOrderProductImage(orders: orders) { [weak self]
+            orders in
+            self?.success(callback: callback, orders: orders)
         }
     }
     

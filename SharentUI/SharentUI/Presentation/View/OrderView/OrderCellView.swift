@@ -14,9 +14,9 @@ class OrderCellView: NSTableCellView {
     
     var productImage = NSImageView()
     var productName = NSTextField(labelWithString: "")
-    var sellerName = NSTextField(labelWithString: "seller: Aravind")
-    var orderDate =  NSTextField(labelWithString: "orderdate : 23/01/2002")
-    var status = NSTextField(labelWithString: "status: Booked")
+    var sellerName = NSTextField(labelWithString: "")
+    var orderDate =  NSTextField(labelWithString: "")
+    var status = NSTextField(labelWithString: "")
     
    
     override init(frame frameRect: NSRect) {

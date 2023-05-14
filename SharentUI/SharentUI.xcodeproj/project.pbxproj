@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		980B72552A0E4B70005F755A /* OrderCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B72542A0E4B70005F755A /* OrderCellView.swift */; };
 		980B72572A0E4F43005F755A /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B72562A0E4F43005F755A /* OrderDetailView.swift */; };
+		980B72592A10BBE1005F755A /* ProductDetailVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B72582A10BBE1005F755A /* ProductDetailVIew.swift */; };
+		980B725B2A10BF09005F755A /* ProductBookedDatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B725A2A10BF09005F755A /* ProductBookedDatesView.swift */; };
 		98168ADD29AFC91400331A13 /* EditProductDetailPrersenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168ADC29AFC91400331A13 /* EditProductDetailPrersenter.swift */; };
 		98168ADF29AFC93600331A13 /* EditProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168ADE29AFC93600331A13 /* EditProductDetailView.swift */; };
 		98168AED29B07DFF00331A13 /* DeleteProductPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168AEC29B07DFF00331A13 /* DeleteProductPresenter.swift */; };
@@ -66,7 +68,6 @@
 		98D4847B2A00E2D300080A25 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D4847A2A00E2D300080A25 /* HomeViewController.swift */; };
 		98D4847E2A00E42C00080A25 /* ToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D4847D2A00E42C00080A25 /* ToolBar.swift */; };
 		98D484802A00E44500080A25 /* LeftMenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D4847F2A00E44500080A25 /* LeftMenuBar.swift */; };
-		98D484822A00E5B800080A25 /* RightFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D484812A00E5B800080A25 /* RightFilterView.swift */; };
 		98D484842A00E5F300080A25 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D484832A00E5F300080A25 /* Utilities.swift */; };
 		98D484882A02497D00080A25 /* ProductCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D484872A02497D00080A25 /* ProductCellView.swift */; };
 /* End PBXBuildFile section */
@@ -89,6 +90,8 @@
 		3DCF23AE925007BFA339E39B /* Pods_SharentUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharentUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		980B72542A0E4B70005F755A /* OrderCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCellView.swift; sourceTree = "<group>"; };
 		980B72562A0E4F43005F755A /* OrderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailView.swift; sourceTree = "<group>"; };
+		980B72582A10BBE1005F755A /* ProductDetailVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVIew.swift; sourceTree = "<group>"; };
+		980B725A2A10BF09005F755A /* ProductBookedDatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductBookedDatesView.swift; sourceTree = "<group>"; };
 		98168ADC29AFC91400331A13 /* EditProductDetailPrersenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProductDetailPrersenter.swift; sourceTree = "<group>"; };
 		98168ADE29AFC93600331A13 /* EditProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProductDetailView.swift; sourceTree = "<group>"; };
 		98168AEC29B07DFF00331A13 /* DeleteProductPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProductPresenter.swift; sourceTree = "<group>"; };
@@ -147,7 +150,6 @@
 		98D4847A2A00E2D300080A25 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		98D4847D2A00E42C00080A25 /* ToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBar.swift; sourceTree = "<group>"; };
 		98D4847F2A00E44500080A25 /* LeftMenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuBar.swift; sourceTree = "<group>"; };
-		98D484812A00E5B800080A25 /* RightFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightFilterView.swift; sourceTree = "<group>"; };
 		98D484832A00E5F300080A25 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		98D484872A02497D00080A25 /* ProductCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellView.swift; sourceTree = "<group>"; };
 		A6B41A1BDEF413EB325A4C94 /* Pods-SharentUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharentUI.release.xcconfig"; path = "Target Support Files/Pods-SharentUI/Pods-SharentUI.release.xcconfig"; sourceTree = "<group>"; };
@@ -263,12 +265,12 @@
 		986D392D29ADCA920057F92C /* ProductView */ = {
 			isa = PBXGroup;
 			children = (
+				98D4848D2A03BC5000080A25 /* ProductCollectionView */,
 				98AB7CD929B9CD2F00227BE0 /* GetProductListView.swift */,
 				98168ADE29AFC93600331A13 /* EditProductDetailView.swift */,
 				98168AEE29B0813400331A13 /* DeleteProductView.swift */,
 				986D392E29ADCAAD0057F92C /* AddNewProductView.swift */,
 				98AB7D0329BB544800227BE0 /* GetProductBookedDateView.swift */,
-				98D4848D2A03BC5000080A25 /* ProductCollectionView */,
 			);
 			path = ProductView;
 			sourceTree = "<group>";
@@ -301,10 +303,10 @@
 		9872EE3B299E387E009442BA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				986D392D29ADCA920057F92C /* ProductView */,
 				98AB7CAC29B740E600227BE0 /* OrderView */,
 				98168B3429B4622000331A13 /* AdminView */,
 				98168B0E29B0E0B700331A13 /* CategoryView */,
-				986D392D29ADCA920057F92C /* ProductView */,
 				986CCC7529A255FE00378EB4 /* UserView */,
 			);
 			path = View;
@@ -361,12 +363,12 @@
 		98AB7CAC29B740E600227BE0 /* OrderView */ = {
 			isa = PBXGroup;
 			children = (
-				98AB7CAD29B740FF00227BE0 /* PlaceOrderView.swift */,
 				98AB7CBB29B77D4B00227BE0 /* OrderListView.swift */,
+				980B72562A0E4F43005F755A /* OrderDetailView.swift */,
+				980B72542A0E4B70005F755A /* OrderCellView.swift */,
+				98AB7CAD29B740FF00227BE0 /* PlaceOrderView.swift */,
 				98AB7CD329B84AF000227BE0 /* CancelOrderView.swift */,
 				98AB7CF529BA295800227BE0 /* ApproveOrderView.swift */,
-				980B72542A0E4B70005F755A /* OrderCellView.swift */,
-				980B72562A0E4F43005F755A /* OrderDetailView.swift */,
 			);
 			path = OrderView;
 			sourceTree = "<group>";
@@ -385,7 +387,6 @@
 			children = (
 				98D4847D2A00E42C00080A25 /* ToolBar.swift */,
 				98D4847F2A00E44500080A25 /* LeftMenuBar.swift */,
-				98D484812A00E5B800080A25 /* RightFilterView.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -395,6 +396,8 @@
 			children = (
 				98AB7C9829B6F6A700227BE0 /* SearchProductView.swift */,
 				98D484872A02497D00080A25 /* ProductCellView.swift */,
+				980B72582A10BBE1005F755A /* ProductDetailVIew.swift */,
+				980B725A2A10BF09005F755A /* ProductBookedDatesView.swift */,
 			);
 			path = ProductCollectionView;
 			sourceTree = "<group>";
@@ -538,6 +541,7 @@
 				98D484842A00E5F300080A25 /* Utilities.swift in Sources */,
 				98168B2229B1BFF800331A13 /* DeleteCategoryView.swift in Sources */,
 				98D4847729FF8DE000080A25 /* LoginViewController.swift in Sources */,
+				980B725B2A10BF09005F755A /* ProductBookedDatesView.swift in Sources */,
 				98168AFB29B0C9E400331A13 /* DeleteUserPresenter.swift in Sources */,
 				980B72552A0E4B70005F755A /* OrderCellView.swift in Sources */,
 				98D4847929FF9E3100080A25 /* main.swift in Sources */,
@@ -574,10 +578,10 @@
 				986D392C29ACD1160057F92C /* UserLoginPagePresenter.swift in Sources */,
 				980B72572A0E4F43005F755A /* OrderDetailView.swift in Sources */,
 				98AB7CF429BA284800227BE0 /* ApproveOrderPresenter.swift in Sources */,
+				980B72592A10BBE1005F755A /* ProductDetailVIew.swift in Sources */,
 				98AB7D0229BB520200227BE0 /* GetProductBookedDatePresenter.swift in Sources */,
 				986D393329ADD56A0057F92C /* CategoryListView.swift in Sources */,
 				98AB7D2429BCB27600227BE0 /* VerifyPincodePresenter.swift in Sources */,
-				98D484822A00E5B800080A25 /* RightFilterView.swift in Sources */,
 				98AB7CE829BA045D00227BE0 /* EditUserDetailView.swift in Sources */,
 				981E4E52299E14F70068A880 /* AppDelegate.swift in Sources */,
 			);

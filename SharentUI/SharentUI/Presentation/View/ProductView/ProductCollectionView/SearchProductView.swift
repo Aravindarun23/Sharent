@@ -18,6 +18,10 @@ class SearchProductView: NSView {
     var layout: NSCollectionViewFlowLayout
     var productNotFound: NSImageView
     var products: [Product] = []
+    var rightFilterView = NSView()
+    var productDetailView: ProductDetailView!
+    var lastSearch = ""
+    var rightFilterViewWidth: NSLayoutConstraint
     
     let searchProductPresenter: SearchProductPresenterContract
     
@@ -27,7 +31,9 @@ class SearchProductView: NSView {
         productScrollView = NSScrollView()
         layout = NSCollectionViewFlowLayout()
         productNotFound = NSImageView()
+        rightFilterViewWidth = rightFilterView.widthAnchor.constraint(equalToConstant: 240)
         super.init(frame: NSRect())
+        configureFilterView()
         configureCollectionView()
     }
     
@@ -35,7 +41,7 @@ class SearchProductView: NSView {
     override func viewDidMoveToSuperview() {
         
         if superview != nil {
-            searchProductPresenter.viewDidLoad(productName: "", pincode: "614602", filter: nil, range: nil)
+            searchProductPresenter.viewDidLoad(productName: lastSearch, pincode: "614602", filter: nil, range: nil)
         }
        
     }
@@ -52,14 +58,15 @@ class SearchProductView: NSView {
         productCollectionView.isSelectable = true
         productCollectionView.dataSource = self
         productCollectionView.delegate = self
+        productCollectionView.allowsMultipleSelection = true
         collectionView.layer?.backgroundColor = .init(red: 0.219607383, green: 0.2196081877, blue: 0.2367719412, alpha: 0.15)
         addSubview(collectionView)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: topAnchor, constant: 20),
-            collectionView.bottomAnchor.constraint(equalTo: bottomAnchor,constant: -20),
-            collectionView.leftAnchor.constraint(equalTo: leftAnchor, constant: 20),
-            collectionView.rightAnchor.constraint(equalTo: rightAnchor, constant: -12)
+            collectionView.topAnchor.constraint(equalTo: topAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            collectionView.trailingAnchor.constraint(equalTo: rightFilterView.leadingAnchor, constant: -12)
         
         ])
         
@@ -82,6 +89,23 @@ class SearchProductView: NSView {
         productCollectionView.register(CellView.self, forItemWithIdentifier: NSUserInterfaceItemIdentifier(CellView.identifier))
         productNotFound.image = NSImage(named: "productNotFoundError")
         productNotFound.image?.size = NSSize(width: 300, height: 150)
+    }
+    
+    func configureFilterView() {
+        rightFilterView.wantsLayer = true
+        rightFilterView.layer?.cornerRadius = 10
+        addSubview(rightFilterView)
+        rightFilterView.layer?.backgroundColor = .init(red: 0.2, green: 0.2, blue: 1, alpha: 0.15)
+        rightFilterView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+                rightFilterViewWidth,
+                rightFilterView.topAnchor.constraint(equalTo: topAnchor),
+                rightFilterView.bottomAnchor.constraint(equalTo: bottomAnchor),
+                rightFilterView.trailingAnchor.constraint(equalTo: trailingAnchor),
+               
+        ])
+        
     }
 }
 
@@ -120,13 +144,27 @@ extension  SearchProductView: NSCollectionViewDelegateFlowLayout, NSCollectionVi
             return NSSize(width: 250, height: 300)
     }
     
+    func collectionView(_ collectionView: NSCollectionView, didSelectItemsAt indexPaths: Set<IndexPath>) {
+        productDetailView = ProductDetailView()
+        self.collectionView.isHidden = true
+        rightFilterView.isHidden = true
+        addSubview(productDetailView)
+        productDetailView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            productDetailView.topAnchor.constraint(equalTo: topAnchor),
+            productDetailView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            productDetailView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            productDetailView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12)
+        ])
+    }
+
+    
 }
 
 
 extension SearchProductView: SearchProductViewContract {
     
     func load(products: [Product]) {
-        print("load")
         productCollectionView.backgroundView = nil
         self.products = products
         productCollectionView.reloadData()
