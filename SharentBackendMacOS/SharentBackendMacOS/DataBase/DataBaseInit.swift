@@ -34,7 +34,6 @@ public class DataBase {
             path.append(path: "RentalApp.sqlite")
             
             filePath  = path.absoluteString
-            print(filePath)
         } catch {
             print("Error creating directory!")
         }

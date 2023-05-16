@@ -15,13 +15,12 @@ public class CancelOrderDataBaseService: CancelOrderDataBaseContract {
     }
     
     public func cancelOrder(orderId: Int, success: @escaping (String) -> Void, failure: @escaping (Error) -> Void) {
-        
         let tableName = "orders"
+        let updateValue = "status = \'\(Order.Status.cancelled.rawValue)\'"
         let condition = "id = \(orderId)"
-        DeleteQuerry.deleteQuerry(tableName: tableName, condition: condition) { [weak self]
+        UpdateQuerry.updateQuerry(tableName: tableName, updateQuerry: updateValue, condition: condition) { [weak self]
             responseMsg in
             self?.success(callback: success, message: "Order Cancelled Successfully")
-            
         } error: { error in
             
         }

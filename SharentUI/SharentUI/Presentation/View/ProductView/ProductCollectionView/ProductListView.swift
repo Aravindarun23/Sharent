@@ -10,13 +10,14 @@ import AppKit
 import SharentBackendMacOS
 
 
-class SearchProductView: NSView {
+class ProductListView: NSView {
     
     var collectionView: NSView!
     var productCollectionView: NSCollectionView
     var productScrollView: NSScrollView
     var layout: NSCollectionViewFlowLayout
     var productNotFound: NSImageView
+    var user: User
     var products: [Product] = []
     var rightFilterView = NSView()
     var productDetailView: ProductDetailView!
@@ -25,8 +26,9 @@ class SearchProductView: NSView {
     
     let searchProductPresenter: SearchProductPresenterContract
     
-    init(searchProductPresenter: SearchProductPresenterContract) {
+    init(searchProductPresenter: SearchProductPresenterContract, user: User) {
         self.searchProductPresenter = searchProductPresenter
+        self.user = user
         productCollectionView = NSCollectionView()
         productScrollView = NSScrollView()
         layout = NSCollectionViewFlowLayout()
@@ -110,7 +112,7 @@ class SearchProductView: NSView {
 }
 
 
-extension SearchProductView: NSCollectionViewDataSource {
+extension ProductListView: NSCollectionViewDataSource {
 
     func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
             return products.count
@@ -138,14 +140,14 @@ extension SearchProductView: NSCollectionViewDataSource {
     }
 }
 
-extension  SearchProductView: NSCollectionViewDelegateFlowLayout, NSCollectionViewDelegate {
+extension  ProductListView: NSCollectionViewDelegateFlowLayout, NSCollectionViewDelegate {
     
     func collectionView(_ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> NSSize {
             return NSSize(width: 250, height: 300)
     }
     
     func collectionView(_ collectionView: NSCollectionView, didSelectItemsAt indexPaths: Set<IndexPath>) {
-        productDetailView = ProductDetailView()
+        productDetailView = Assembler.ProductDetailViewAssembler(product: products[indexPaths.first![1]], user: user)
         self.collectionView.isHidden = true
         rightFilterView.isHidden = true
         addSubview(productDetailView)
@@ -157,12 +159,16 @@ extension  SearchProductView: NSCollectionViewDelegateFlowLayout, NSCollectionVi
             productDetailView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12)
         ])
     }
-
     
+    func closeButtonClicked() {
+        productDetailView.removeFromSuperview()
+        collectionView.isHidden = false
+        rightFilterView.isHidden = false
+    }
 }
 
 
-extension SearchProductView: SearchProductViewContract {
+extension ProductListView: ProductListViewContract {
     
     func load(products: [Product]) {
         productCollectionView.backgroundView = nil

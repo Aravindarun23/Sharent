@@ -107,9 +107,10 @@ class LeftMenuBar: NSView {
     
     @objc func buttonClicked(_ sender: NSButton) {
         
-        for case let button as NSButton in stackView.arrangedSubviews {
-            button.layer?.backgroundColor = .clear
-            button.image = button.image?.tint(color: .white)
+        for views in stackView.views {
+            let button = views as? NSButton
+            button?.layer?.backgroundColor = .clear
+            button?.image = button?.image?.tint(color: .white)
         }
         sender.layer?.backgroundColor = NSColor.systemOrange.cgColor
         sender.image = sender.image?.tint(color: .black)
@@ -117,10 +118,8 @@ class LeftMenuBar: NSView {
         switch sender.tag {
         case Module.product.rawValue:
             moduleChangeDelegate?.getproductsView()
-            moduleChangeDelegate?.toolBar.rightSidebar.isHidden = false
         case Module.order.rawValue:
             moduleChangeDelegate?.getOrdersView()
-            moduleChangeDelegate?.toolBar.rightSidebar.isHidden = true
         default:
             return
         }

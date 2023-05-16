@@ -16,7 +16,7 @@ public class GetProductBookedDateDataManager: GetProductBookedDateDataContract {
         self.getProductBookedDateDataBase = getProductBookedDateDataBase
     }
     
-    public func getProductBookedDate(productId: Int, success: @escaping ([[String: Any]]) -> Void, failure: @escaping (Error) -> Void) {
+    public func getProductBookedDate(productId: Int, success: @escaping ([String]) -> Void, failure: @escaping (Error) -> Void) {
         
         getProductBookedDateDataBase.getProductBookedDate(productId: productId) { [weak self]
             dateList in
@@ -27,7 +27,7 @@ public class GetProductBookedDateDataManager: GetProductBookedDateDataContract {
         }
     }
     
-    private func success(callback: @escaping([[String: Any]]) -> Void, dateList: [[String: Any]]) {
+    private func success(callback: @escaping([String]) -> Void, dateList: [String]) {
         callback(dateList)
     }
     

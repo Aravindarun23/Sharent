@@ -241,7 +241,6 @@ extension UserLoginView: UserLoginViewContract {
     }
     
     func faiure(error: SharentBackendMacOS.UserLoginError) {
-        print(error.status)
         loginStack.views[5].isHidden = false
         let textField1 = loginStack.views[5] as? NSTextField
         textField1?.stringValue = "Invalid Credentials"

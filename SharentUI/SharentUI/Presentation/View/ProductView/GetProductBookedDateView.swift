@@ -28,7 +28,7 @@ class GetProductBookedDateView: NSView {
 
 extension GetProductBookedDateView: GetProductBookedDateViewContract {
     
-    func load(dateList: [[String : Any]]) {
+    func load(dateList: [String]) {
         print(dateList)
     }
 }

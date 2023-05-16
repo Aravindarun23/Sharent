@@ -19,14 +19,14 @@ class HomeViewController: NSViewController {
     var currentView = NSView()
     var contentView: NSView
     var currentModule: Module
-    var productView: SearchProductView
+    var productView: ProductListView
     var orderView: OrderListView
     
     init(user: User, router: Router) {
         self.user = user
         self.router = router
         contentView = NSView()
-        productView = Assembler.searchProductAssembler(router: router)
+        productView = Assembler.getProductListAssembler(router: router, user: user)
         orderView = Assembler.getOrderListAssembler(router: router, user: user)
         currentModule = .Product
         super.init(nibName: nil, bundle: nil)
@@ -115,6 +115,7 @@ class HomeViewController: NSViewController {
     }
     
     func getproductsView() {
+        toolBar.rightSidebar.isHidden = false
         currentView.removeFromSuperview()
         productView.wantsLayer = true
         contentView.addSubview(productView)
@@ -131,6 +132,7 @@ class HomeViewController: NSViewController {
     
     func getOrdersView() {
         currentView.removeFromSuperview()
+        toolBar.rightSidebar.isHidden = true
         contentView.addSubview(orderView)
         orderView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([

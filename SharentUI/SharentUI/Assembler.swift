@@ -241,12 +241,12 @@ extension Assembler {
 
 extension Assembler {
     
-    public static func searchProductAssembler(router: Router) -> SearchProductView {
+    public static func getProductListAssembler(router: Router, user: User) -> ProductListView {
         
         let searchProductUseCase = searchProductUseCase()
         let searchProductPresenter = SearchProductPresenter(searchProduct: searchProductUseCase)
         searchProductPresenter.router = router
-        let searchProductView = SearchProductView(searchProductPresenter: searchProductPresenter)
+        let searchProductView = ProductListView(searchProductPresenter: searchProductPresenter, user: user)
         searchProductPresenter.searchProductView = searchProductView
         return searchProductView
     }
@@ -264,12 +264,11 @@ extension Assembler {
 
 extension Assembler {
     
-    public static func placeOrderAssembler(router: Router) -> PlaceOrderView {
+    public static func ProductDetailViewAssembler(product: Product, user: User) -> ProductDetailView {
         
         let placeOrderUseCase = placeOrderUseCase()
         let placeOrderPresenter = PlaceOrderPresenter(placeOrder: placeOrderUseCase)
-        placeOrderPresenter.router = router
-        let placeOrderView = PlaceOrderView(placeOrderPresenter: placeOrderPresenter)
+        let placeOrderView = ProductDetailView(product: product, placeOrderPresenter: placeOrderPresenter, user: user)
         placeOrderPresenter.placeOrderView = placeOrderView
         return placeOrderView
         
@@ -309,14 +308,13 @@ extension Assembler {
 
 extension Assembler {
     
-    public static func cancelOrderAssembler(router: Router) -> CancelOrderView{
+    public static func getOrderDetailView(order: Order) -> OrderDetailView {
         
         let cancelOrderUseCase = cancelOrderUseCase()
         let cancelOrderPresenter = CancelOrderPresenter(cancelOrder: cancelOrderUseCase)
-        cancelOrderPresenter.router = router
-        let cancelOrderView = CancelOrderView(cancelOrderPresenter: cancelOrderPresenter)
-        cancelOrderPresenter.cancelOrderView = cancelOrderView
-        return cancelOrderView
+        let orderDetailView = OrderDetailView(cancelOrderPresenter: cancelOrderPresenter, order: order)
+        cancelOrderPresenter.cancelOrderView = orderDetailView
+        return orderDetailView
     }
     
     private static func cancelOrderUseCase() -> CancelOrder {
@@ -399,12 +397,11 @@ extension Assembler {
 extension Assembler {
     
     
-    public static func getProductBookedDateView(router: Router) -> GetProductBookedDateView {
+    public static func getProductBookedDateView(product: Product) -> ProductBookedDatesView {
         
         let getProductBookedDate = getProductBookedDateUseCase()
         let getProductBookedDatePresenter = GetProductBookedDatePresenter(getProductBoookedDate: getProductBookedDate)
-        getProductBookedDatePresenter.router = router
-        let getProductBookedDateView = GetProductBookedDateView(getProductBookedDatePresenter: getProductBookedDatePresenter)
+        let getProductBookedDateView =  ProductBookedDatesView(getProductBookedDatePresenter: getProductBookedDatePresenter, product: product)
         getProductBookedDatePresenter.getProductBookedDateView = getProductBookedDateView
         return getProductBookedDateView
     }

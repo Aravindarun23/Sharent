@@ -62,22 +62,6 @@ class Router {
         self.window.contentView = Assembler.adminLoginAssembler(router: self)
     }
     
-    func searchProductView() {
-        self.window.contentView = Assembler.searchProductAssembler(router: self)
-    }
-    
-    func placeOrderView() {
-        self.window.contentView = Assembler.placeOrderAssembler(router: self)
-    }
-    
-//    func getOrderListView() {
-//        self.window.contentView = Assembler.getOrderListAssembler(router: self)
-//    }
-    
-    func cancelOrderView() {
-        self.window.contentView = Assembler.cancelOrderAssembler(router: self)
-    }
-    
     func getProductListView() {
         self.window.contentView = Assembler.getProductListView(router: self)
     }
@@ -88,10 +72,6 @@ class Router {
     
     func approveOrderView() {
         self.window.contentView = Assembler.approveOrderView(router: self)
-    }
-    
-    func getProductBookedDateView() {
-        self.window.contentView = Assembler.getProductBookedDateView(router: self)
     }
     
     func updatePasswordView() {

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		980B72552A0E4B70005F755A /* OrderCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B72542A0E4B70005F755A /* OrderCellView.swift */; };
 		980B72572A0E4F43005F755A /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B72562A0E4F43005F755A /* OrderDetailView.swift */; };
-		980B72592A10BBE1005F755A /* ProductDetailVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B72582A10BBE1005F755A /* ProductDetailVIew.swift */; };
+		980B72592A10BBE1005F755A /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B72582A10BBE1005F755A /* ProductDetailView.swift */; };
 		980B725B2A10BF09005F755A /* ProductBookedDatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B725A2A10BF09005F755A /* ProductBookedDatesView.swift */; };
 		98168ADD29AFC91400331A13 /* EditProductDetailPrersenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168ADC29AFC91400331A13 /* EditProductDetailPrersenter.swift */; };
 		98168ADF29AFC93600331A13 /* EditProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98168ADE29AFC93600331A13 /* EditProductDetailView.swift */; };
@@ -43,14 +43,12 @@
 		9872EE45299E3945009442BA /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9872EE44299E3945009442BA /* Assembler.swift */; };
 		9872EE4A299F4F41009442BA /* UserContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9872EE49299F4F41009442BA /* UserContract.swift */; };
 		98AB7C9729B6F55E00227BE0 /* SearchProductPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7C9629B6F55E00227BE0 /* SearchProductPresenter.swift */; };
-		98AB7C9929B6F6A700227BE0 /* SearchProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7C9829B6F6A700227BE0 /* SearchProductView.swift */; };
+		98AB7C9929B6F6A700227BE0 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7C9829B6F6A700227BE0 /* ProductListView.swift */; };
 		98AB7CA829B73BF400227BE0 /* OrderContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CA729B73BF400227BE0 /* OrderContract.swift */; };
 		98AB7CAB29B73F7100227BE0 /* PlaceOrderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CAA29B73F7100227BE0 /* PlaceOrderPresenter.swift */; };
-		98AB7CAE29B740FF00227BE0 /* PlaceOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CAD29B740FF00227BE0 /* PlaceOrderView.swift */; };
 		98AB7CBA29B779B800227BE0 /* GetOrderListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CB929B779B800227BE0 /* GetOrderListPresenter.swift */; };
 		98AB7CBC29B77D4B00227BE0 /* OrderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CBB29B77D4B00227BE0 /* OrderListView.swift */; };
 		98AB7CD229B8478600227BE0 /* CancelOrderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CD129B8478600227BE0 /* CancelOrderPresenter.swift */; };
-		98AB7CD429B84AF000227BE0 /* CancelOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CD329B84AF000227BE0 /* CancelOrderView.swift */; };
 		98AB7CD829B9CB2D00227BE0 /* GetProductListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CD729B9CB2D00227BE0 /* GetProductListPresenter.swift */; };
 		98AB7CDA29B9CD2F00227BE0 /* GetProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CD929B9CD2F00227BE0 /* GetProductListView.swift */; };
 		98AB7CE629BA006600227BE0 /* EditUserDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CE529BA006600227BE0 /* EditUserDetailPresenter.swift */; };
@@ -58,7 +56,6 @@
 		98AB7CF429BA284800227BE0 /* ApproveOrderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CF329BA284800227BE0 /* ApproveOrderPresenter.swift */; };
 		98AB7CF629BA295800227BE0 /* ApproveOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7CF529BA295800227BE0 /* ApproveOrderView.swift */; };
 		98AB7D0229BB520200227BE0 /* GetProductBookedDatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D0129BB520200227BE0 /* GetProductBookedDatePresenter.swift */; };
-		98AB7D0429BB544800227BE0 /* GetProductBookedDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D0329BB544800227BE0 /* GetProductBookedDateView.swift */; };
 		98AB7D1029BB775200227BE0 /* UpdatePasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D0F29BB775200227BE0 /* UpdatePasswordPresenter.swift */; };
 		98AB7D1229BB798100227BE0 /* UpdatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D1129BB798100227BE0 /* UpdatePasswordView.swift */; };
 		98AB7D2429BCB27600227BE0 /* VerifyPincodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AB7D2329BCB27600227BE0 /* VerifyPincodePresenter.swift */; };
@@ -90,7 +87,7 @@
 		3DCF23AE925007BFA339E39B /* Pods_SharentUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharentUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		980B72542A0E4B70005F755A /* OrderCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCellView.swift; sourceTree = "<group>"; };
 		980B72562A0E4F43005F755A /* OrderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailView.swift; sourceTree = "<group>"; };
-		980B72582A10BBE1005F755A /* ProductDetailVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVIew.swift; sourceTree = "<group>"; };
+		980B72582A10BBE1005F755A /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 		980B725A2A10BF09005F755A /* ProductBookedDatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductBookedDatesView.swift; sourceTree = "<group>"; };
 		98168ADC29AFC91400331A13 /* EditProductDetailPrersenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProductDetailPrersenter.swift; sourceTree = "<group>"; };
 		98168ADE29AFC93600331A13 /* EditProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProductDetailView.swift; sourceTree = "<group>"; };
@@ -125,14 +122,12 @@
 		9872EE44299E3945009442BA /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
 		9872EE49299F4F41009442BA /* UserContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserContract.swift; sourceTree = "<group>"; };
 		98AB7C9629B6F55E00227BE0 /* SearchProductPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProductPresenter.swift; sourceTree = "<group>"; };
-		98AB7C9829B6F6A700227BE0 /* SearchProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProductView.swift; sourceTree = "<group>"; };
+		98AB7C9829B6F6A700227BE0 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
 		98AB7CA729B73BF400227BE0 /* OrderContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderContract.swift; sourceTree = "<group>"; };
 		98AB7CAA29B73F7100227BE0 /* PlaceOrderPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrderPresenter.swift; sourceTree = "<group>"; };
-		98AB7CAD29B740FF00227BE0 /* PlaceOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrderView.swift; sourceTree = "<group>"; };
 		98AB7CB929B779B800227BE0 /* GetOrderListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOrderListPresenter.swift; sourceTree = "<group>"; };
 		98AB7CBB29B77D4B00227BE0 /* OrderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListView.swift; sourceTree = "<group>"; };
 		98AB7CD129B8478600227BE0 /* CancelOrderPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelOrderPresenter.swift; sourceTree = "<group>"; };
-		98AB7CD329B84AF000227BE0 /* CancelOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelOrderView.swift; sourceTree = "<group>"; };
 		98AB7CD729B9CB2D00227BE0 /* GetProductListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductListPresenter.swift; sourceTree = "<group>"; };
 		98AB7CD929B9CD2F00227BE0 /* GetProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductListView.swift; sourceTree = "<group>"; };
 		98AB7CE529BA006600227BE0 /* EditUserDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserDetailPresenter.swift; sourceTree = "<group>"; };
@@ -140,7 +135,6 @@
 		98AB7CF329BA284800227BE0 /* ApproveOrderPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproveOrderPresenter.swift; sourceTree = "<group>"; };
 		98AB7CF529BA295800227BE0 /* ApproveOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproveOrderView.swift; sourceTree = "<group>"; };
 		98AB7D0129BB520200227BE0 /* GetProductBookedDatePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductBookedDatePresenter.swift; sourceTree = "<group>"; };
-		98AB7D0329BB544800227BE0 /* GetProductBookedDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductBookedDateView.swift; sourceTree = "<group>"; };
 		98AB7D0F29BB775200227BE0 /* UpdatePasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordPresenter.swift; sourceTree = "<group>"; };
 		98AB7D1129BB798100227BE0 /* UpdatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordView.swift; sourceTree = "<group>"; };
 		98AB7D2329BCB27600227BE0 /* VerifyPincodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPincodePresenter.swift; sourceTree = "<group>"; };
@@ -270,7 +264,6 @@
 				98168ADE29AFC93600331A13 /* EditProductDetailView.swift */,
 				98168AEE29B0813400331A13 /* DeleteProductView.swift */,
 				986D392E29ADCAAD0057F92C /* AddNewProductView.swift */,
-				98AB7D0329BB544800227BE0 /* GetProductBookedDateView.swift */,
 			);
 			path = ProductView;
 			sourceTree = "<group>";
@@ -366,8 +359,6 @@
 				98AB7CBB29B77D4B00227BE0 /* OrderListView.swift */,
 				980B72562A0E4F43005F755A /* OrderDetailView.swift */,
 				980B72542A0E4B70005F755A /* OrderCellView.swift */,
-				98AB7CAD29B740FF00227BE0 /* PlaceOrderView.swift */,
-				98AB7CD329B84AF000227BE0 /* CancelOrderView.swift */,
 				98AB7CF529BA295800227BE0 /* ApproveOrderView.swift */,
 			);
 			path = OrderView;
@@ -394,10 +385,10 @@
 		98D4848D2A03BC5000080A25 /* ProductCollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				98AB7C9829B6F6A700227BE0 /* SearchProductView.swift */,
-				98D484872A02497D00080A25 /* ProductCellView.swift */,
-				980B72582A10BBE1005F755A /* ProductDetailVIew.swift */,
+				98AB7C9829B6F6A700227BE0 /* ProductListView.swift */,
+				980B72582A10BBE1005F755A /* ProductDetailView.swift */,
 				980B725A2A10BF09005F755A /* ProductBookedDatesView.swift */,
+				98D484872A02497D00080A25 /* ProductCellView.swift */,
 			);
 			path = ProductCollectionView;
 			sourceTree = "<group>";
@@ -558,8 +549,6 @@
 				98D484882A02497D00080A25 /* ProductCellView.swift in Sources */,
 				9872EE3F299E38CD009442BA /* AddNewUserPresnter.swift in Sources */,
 				98AB7CD229B8478600227BE0 /* CancelOrderPresenter.swift in Sources */,
-				98AB7CAE29B740FF00227BE0 /* PlaceOrderView.swift in Sources */,
-				98AB7D0429BB544800227BE0 /* GetProductBookedDateView.swift in Sources */,
 				986D392F29ADCAAD0057F92C /* AddNewProductView.swift in Sources */,
 				986D393829ADD5AE0057F92C /* CategoryListPresenter.swift in Sources */,
 				98AB7CDA29B9CD2F00227BE0 /* GetProductListView.swift in Sources */,
@@ -567,18 +556,17 @@
 				98AB7D2629BCB3E800227BE0 /* VerifyPincodeView.swift in Sources */,
 				98D484802A00E44500080A25 /* LeftMenuBar.swift in Sources */,
 				9872EE41299E38F8009442BA /* AddNewUserView.swift in Sources */,
-				98AB7CD429B84AF000227BE0 /* CancelOrderView.swift in Sources */,
 				98AB7CD829B9CB2D00227BE0 /* GetProductListPresenter.swift in Sources */,
 				98AB7D1229BB798100227BE0 /* UpdatePasswordView.swift in Sources */,
 				98168B3329B4607B00331A13 /* AdminLoginPresenter.swift in Sources */,
 				98AB7D1029BB775200227BE0 /* UpdatePasswordPresenter.swift in Sources */,
 				981DAB4029AF18D60036FBE1 /* AddNewProductPresenter.swift in Sources */,
 				9872EE4A299F4F41009442BA /* UserContract.swift in Sources */,
-				98AB7C9929B6F6A700227BE0 /* SearchProductView.swift in Sources */,
+				98AB7C9929B6F6A700227BE0 /* ProductListView.swift in Sources */,
 				986D392C29ACD1160057F92C /* UserLoginPagePresenter.swift in Sources */,
 				980B72572A0E4F43005F755A /* OrderDetailView.swift in Sources */,
 				98AB7CF429BA284800227BE0 /* ApproveOrderPresenter.swift in Sources */,
-				980B72592A10BBE1005F755A /* ProductDetailVIew.swift in Sources */,
+				980B72592A10BBE1005F755A /* ProductDetailView.swift in Sources */,
 				98AB7D0229BB520200227BE0 /* GetProductBookedDatePresenter.swift in Sources */,
 				986D393329ADD56A0057F92C /* CategoryListView.swift in Sources */,
 				98AB7D2429BCB27600227BE0 /* VerifyPincodePresenter.swift in Sources */,
@@ -720,6 +708,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = SharentUI/SharentUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -745,6 +734,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = SharentUI/SharentUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;

@@ -9,5 +9,5 @@ import Foundation
 
 public protocol GetProductBookedDateDataContract {
     
-    func getProductBookedDate(productId: Int,success: @escaping ([[String:Any]]) -> Void, failure: @escaping (Error) -> Void)
+    func getProductBookedDate(productId: Int,success: @escaping ([String]) -> Void, failure: @escaping (Error) -> Void)
 }

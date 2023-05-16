@@ -20,8 +20,8 @@ public final class GetProductBookedDateRequest: ZRequest {
 
 public final class GetProductBookedDateResponse: ZResponse {
     
-    public var dateList: [[String: Any]]
-    init(dateList: [[String : Any]]) {
+    public var dateList: [String]
+    init(dateList: [String]) {
         self.dateList = dateList
     }
 }
@@ -47,7 +47,7 @@ public final class GetProductBookedDate: ZUsecase<GetProductBookedDateRequest, G
         }
     }
     
-    private func success(callback: @escaping(GetProductBookedDateResponse) -> Void, dateList: [[String: Any]]) {
+    private func success(callback: @escaping(GetProductBookedDateResponse) -> Void, dateList: [String]) {
         let response = GetProductBookedDateResponse(dateList: dateList)
         invokeSuccess(callback: callback, response: response)
     }

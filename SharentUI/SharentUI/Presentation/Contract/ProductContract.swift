@@ -35,7 +35,7 @@ protocol DeleteProductViewContract: AnyObject {
 protocol SearchProductPresenterContract: AnyObject {
     func viewDidLoad(productName: String, pincode: String, filter: SearchProductRequest.Filter?, range: Int?)
 }
-protocol SearchProductViewContract: AnyObject {
+protocol ProductListViewContract: AnyObject {
     func load(products: [Product])
     func failure(error: Error)
 }
@@ -50,7 +50,7 @@ protocol GetProductListPresenterContract: AnyObject {
 }
 
 protocol GetProductBookedDateViewContract: AnyObject {
-    func load(dateList: [[String:Any]])
+    func load(dateList: [String])
 }
 
 protocol GetProductBookedDatePresenterContract: AnyObject {

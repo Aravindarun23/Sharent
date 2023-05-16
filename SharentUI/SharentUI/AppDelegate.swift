@@ -20,24 +20,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.titlebarSeparatorStyle = .none
         window.titlebarAppearsTransparent = true
         window.delegate = self
-//        router.getProductBookedDateView()
+        //        router.getProductBookedDateView()
         router.navigateHomePage(user: User(id: 1, name: "sdn", emailId: "dn", password: "djbj", mobileNumber: "jdb", address: "djgh", pincode: "bwjdj"), router: router)
-//        router.launchLoginPage()
-//        router.getProductBookedDateView()
+        //        router.launchLoginPage()
+        //        router.getProductBookedDateView()
         window.makeKeyAndOrderFront(nil)
     }
-
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
-    }
-    
-    func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool {
-        return true
-    }
-
-//    func applicationShouldTerminate(_ sender: NSApplication) -> NSApplication.TerminateReply {
-//        return .terminateCancel
-//    }
     
 }
 

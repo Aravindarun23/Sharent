@@ -15,9 +15,11 @@ class OrderDetailView: NSView {
     let order: Order
     let productImageStack = NSStackView()
     let detailStackView = NSStackView()
-    let cancelOrderPresenter: CancelOrderPresenterContract?
+    let alert = NSAlert()
+    var cancelOrderPresenter: CancelOrderPresenterContract?
+    var numberOfDays = 0
     
-    init(cancelOrderPresenter: CancelOrderPresenterContract? = nil, order: Order) {
+    init(cancelOrderPresenter: CancelOrderPresenterContract, order: Order) {
         self.order = order
         self.cancelOrderPresenter = cancelOrderPresenter
         super.init(frame: NSRect())
@@ -27,7 +29,6 @@ class OrderDetailView: NSView {
         if superview != nil {
             configureDetailView()
         }
-  
     }
     
     required init?(coder: NSCoder) {
@@ -43,7 +44,9 @@ class OrderDetailView: NSView {
    
     func addProductImage() {
         addSubview(productImage)
-        productImage.image = NSImage(contentsOf: URL(filePath: order.product.image![0]))
+        if let image = order.product.image {
+            productImage.image = NSImage(contentsOf: URL(filePath: image[0]))
+        }
         productImage.isEditable = true
         productImage.imageScaling = .scaleProportionallyUpOrDown
         productImage.wantsLayer = true
@@ -61,9 +64,12 @@ class OrderDetailView: NSView {
     func addProductImageStackView() {
         
         let productScroll = NSScrollView()
-        for index in 0..<(order.product.image?.count)!{
-            configureButton(image: order.product.image![index], tag: index)
+        if let image = order.product.image {
+            for index in 0..<image.count{
+                configureButton(image: order.product.image![index], tag: index)
+            }
         }
+        
         productImageStack.views[0].layer?.backgroundColor = NSColor.systemOrange.cgColor
         productImageStack.orientation = .horizontal
         productScroll.verticalScrollElasticity = .none
@@ -116,14 +122,13 @@ class OrderDetailView: NSView {
         let bookedDatesLabel = getLabelString(text: "Booked Dates ", size: 18)
         bookedDatesLabel.textColor = .systemOrange
         
-        let bookedDates = getLabelString(text: "23/01/2002 , 27/04/2004", size: 13)
+        let bookedDates = getLabelString(text: getDates(fromDate: order.fromDate, toDate: order.returnDate), size: 13)
         
-        let totalPrizeLabel = getLabelString(text: "Total Prize : ₹ \(order.product.price)", size: 18)
+        let totalPrizeLabel = getLabelString(text: "Total Prize", size: 18)
         totalPrizeLabel.textColor = .systemOrange
         let prize = getLabelString(text: "prize : ₹ \(order.product.price)  ", size: 13)
-        let totaldays = getLabelString(text: "totalDays : 2", size: 13)
-        let gst = getLabelString(text: "GST :  12%  (120)", size: 13)
-        let totalPrize = getLabelString(text: "Total Prize : ₹ \(order.product.price) /-", size: 13)
+        let totaldays = getLabelString(text: "totalDays : \(numberOfDays)", size: 13)
+        let totalPrize = getLabelString(text: "Total Prize : ₹ \(order.product.price*numberOfDays) /-", size: 13)
         let cancelButton = NSButton()
         cancelButton.title = "Cancel Order"
         cancelButton.wantsLayer = true
@@ -153,7 +158,6 @@ class OrderDetailView: NSView {
         detailStackView.addArrangedSubview(totalPrizeLabel)
         detailStackView.addArrangedSubview(prize)
         detailStackView.addArrangedSubview(totaldays)
-        detailStackView.addArrangedSubview(gst)
         detailStackView.addArrangedSubview(totalPrize)
         if order.status == .confirmed || order.status == .requested {
             detailStackView.addArrangedSubview(cancelButton)
@@ -161,19 +165,63 @@ class OrderDetailView: NSView {
             cancelButton.topAnchor.constraint(equalTo: totalPrize.bottomAnchor, constant: 20).isActive = true
         }
         
+        alert.messageText = order.product.name
+        alert.informativeText = "Press \"OK\" To Cancel Order"
+        alert.alertStyle = .informational
+        if let productImage = order.product.image {
+            alert.icon = NSImage(contentsOf: URL(filePath: productImage[0]))
+        }
+        cancelButton.target = self
+        cancelButton.action = #selector(cancelOrderAlert)
+        alert.addButton(withTitle: "OK")
+        alert.addButton(withTitle: "Cancel")
+        
         address.translatesAutoresizingMaskIntoConstraints = false
         productDetailLabel.translatesAutoresizingMaskIntoConstraints = false
         detailStackView.translatesAutoresizingMaskIntoConstraints = false
+        bookedDates.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
             address.leadingAnchor.constraint(equalTo: detailStackView.leadingAnchor, constant: 10),
             address.widthAnchor.constraint(equalToConstant: 352),
             detailView.leadingAnchor.constraint(equalTo: detailStackView.leadingAnchor, constant: 10),
             detailView.widthAnchor.constraint(equalToConstant: 352),
+            bookedDates.leadingAnchor.constraint(equalTo: detailView.leadingAnchor, constant: 10),
+            bookedDates.widthAnchor.constraint(equalToConstant: 352),
             productDetailLabel.topAnchor.constraint(equalTo: mobileNumber.bottomAnchor, constant: 20),
         ])
     }
     
+    private func getDates(fromDate: String, toDate: String) -> String {
+        var dates = ""
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+
+        let startDate = dateFormatter.date(from: fromDate)!
+        let endDate = dateFormatter.date(from: toDate)!
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.day], from: startDate, to: endDate)
+        numberOfDays = components.day!+1
+
+        if numberOfDays > 0 {
+            var currentDate = startDate
+           
+            while currentDate <= endDate {
+                dates += "\(dateFormatter.string(from: currentDate)),   "
+                currentDate = calendar.date(byAdding: .day, value: 1, to: currentDate)!
+            }
+        }
+        return dates
+    }
+
+    
+    @objc func cancelOrderAlert() {
+        let modalResult = alert.runModal()
+            if modalResult == .alertFirstButtonReturn {
+                print("yes")
+                cancelOrderPresenter?.viewDidLoad(orderId: order.id)
+            }
+    }
     
     func configureButton(image: String, tag: Int) {
         let button = NSButton()
@@ -225,4 +273,11 @@ class OrderDetailView: NSView {
         return textField
     }
     
+}
+
+
+extension OrderDetailView: CancelOrderViewContract {
+    func load(message: String) {
+        (superview as! OrderListView).viewDidMoveToSuperview()
+    }
 }

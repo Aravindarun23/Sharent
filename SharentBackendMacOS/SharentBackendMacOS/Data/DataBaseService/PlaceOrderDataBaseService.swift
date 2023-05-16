@@ -18,7 +18,12 @@ public class PlaceOrderDataBaseService: PlaceOrderDataBaseContract {
         let tableName = "orders"
         let status = Order.Status.requested.rawValue
         let columnName = "productId,buyerId,orderDate,pickUpDate,returnDate,totalPrice,status"
-        let insertValue = "\(productId),\(userId),'2023-01-23','\(fromDate)','\(toDate)',\(2000),'\(status)'"
+        let days = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let formattedDate = formatter.string(from: days)
+        
+        let insertValue = "\(productId),\(userId),'\(formattedDate)','\(fromDate)','\(toDate)',\(2000),'\(status)'"
         
         InsertQuerry.insertQuerry(tableName: tableName, columnName: columnName, insertData: insertValue ) { [weak self]
             responseMsg in

@@ -13,9 +13,9 @@ public class GetProductBookedDataBaseService: GetProductBookedDateDataBaseContra
     public init() {
         
     }
+    var BookedDays: [String] = []
     
-    
-    public func getProductBookedDate(productId: Int, success: @escaping ([[String : Any]]) -> Void, failure: @escaping (Error) -> Void) {
+    public func getProductBookedDate(productId: Int, success: @escaping ([String]) -> Void, failure: @escaping (Error) -> Void) {
         
         let status = Order.Status.confirmed.rawValue
         let selectQuerry = "pickUpDate,returnDate"
@@ -25,10 +25,35 @@ public class GetProductBookedDataBaseService: GetProductBookedDateDataBaseContra
         let result = SelectQuerry.select(tableName: tableName, whereClause: whereQuerry, args: args, selectColumn: selectQuerry)
         
         if let dateList = result {
-            success(dateList)
+            for list in dateList {
+                findDates(fromDate: list["pickUpDate"] as! String, toDate: list["returnDate"] as! String)
+            }
+            success(BookedDays)
         }
         else {
-            failure(ZErrorType.dataNotFound)
+            success(BookedDays)
         }
     }
+    
+    
+    private func findDates(fromDate: String, toDate: String) {
+ 
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let startDate = dateFormatter.date(from: fromDate)!
+        let endDate = dateFormatter.date(from: toDate)!
+
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.day], from: startDate, to: endDate)
+        let numberOfDays = components.day!
+        if numberOfDays >= 0 {
+            var currentDate = startDate
+           
+            while currentDate <= endDate {
+                BookedDays.append(dateFormatter.string(from: currentDate))
+                currentDate = calendar.date(byAdding: .day, value: 1, to: currentDate)!
+            }
+        }
+    }
+
 }

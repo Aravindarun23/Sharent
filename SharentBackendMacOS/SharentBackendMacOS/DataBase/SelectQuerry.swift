@@ -17,7 +17,6 @@ class SelectQuerry {
         
         if let prepare = DataBase.shared.prepareStatement(query: query) {
             if let args = args {
-                // Bind the parameters to the statement
                 for i in 0..<args.count {
                     if let value = args[i] as? String {
                         sqlite3_bind_text(prepare, Int32(i + 1), (value as NSString).utf8String, -1, nil)
@@ -28,7 +27,6 @@ class SelectQuerry {
                     } else if args[i] is NSNull {
                         sqlite3_bind_null(prepare, Int32(i + 1))
                     } else {
-                        // Unsupported type
                         sqlite3_finalize(prepare)
                         return nil
                     }
