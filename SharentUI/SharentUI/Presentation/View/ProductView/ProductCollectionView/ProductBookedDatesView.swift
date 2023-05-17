@@ -21,6 +21,7 @@ class ProductBookedDatesView: NSView {
     var section2Header = ""
     var totalDates = [String]()
     var bookedDates = [String]()
+    var selectedDates = [String]()
     weak var detailViewDelegate: ProductDetailView?
     
     init(getProductBookedDatePresenter: GetProductBookedDatePresenterContract, product: Product) {
@@ -134,6 +135,13 @@ extension ProductBookedDatesView: NSCollectionViewDataSource {
                     cell.view.layer?.backgroundColor = .init(red: 1, green: 0, blue: 0, alpha: 0.3)
                     return cell
                 }
+                else if selectedDates.contains(date) {
+                    cell.date.stringValue = "\(Int(date.suffix(2))!)"
+                    cell.date.textColor = .white
+                    cell.view.layer?.backgroundColor = .init(red: 0, green: 0, blue: 1, alpha: 0.25)
+                    return cell
+                }
+                
                 cell.date.stringValue = "\(Int(date.suffix(2))!)"
                 cell.date.textColor = .white
                 cell.view.layer?.backgroundColor = .init(red: 0, green: 1, blue: 0, alpha: 0.3)
@@ -151,6 +159,13 @@ extension ProductBookedDatesView: NSCollectionViewDataSource {
                     cell.view.layer?.backgroundColor = .init(red: 1, green: 0, blue: 0, alpha: 0.3)
                     return cell
                 }
+                else if selectedDates.contains(date) {
+                    cell.date.stringValue = "\(Int(date.suffix(2))!)"
+                    cell.date.textColor = .white
+                    cell.view.layer?.backgroundColor = .init(red: 0, green: 0, blue: 1, alpha: 0.25)
+                    return cell
+                }
+                
                 cell.date.stringValue = "\(Int(date.suffix(2))!)"
                 cell.date.textColor = .white
                 cell.view.layer?.backgroundColor = .init(red: 0, green: 1, blue: 0, alpha: 0.3)
@@ -234,7 +249,8 @@ extension ProductBookedDatesView: GetProductBookedDateViewContract {
     
     func load(dateList: [String]) {
         bookedDates = dateList
-        collectionView.reloadData()
         detailViewDelegate?.configurePopUpDates()
+        selectedDates = [(detailViewDelegate?.fromDateButton.title)! as String]
+        collectionView.reloadData()
     }
 }

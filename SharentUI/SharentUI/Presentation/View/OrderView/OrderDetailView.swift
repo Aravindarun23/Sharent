@@ -105,11 +105,11 @@ class OrderDetailView: NSView {
         
         ])
         let orderDate = getLabelString(text: "Orderdate : \(order.orderedDate)", size: 13)
-        let status = getLabelString(text: "Status : \(order.status)", size: 13)
+        let status = getLabelString(text: "Status : \(order.status)".capitalized, size: 13)
         let sellerLabel = getLabelString(text: "Seller", size: 18)
         sellerLabel.textColor = .systemOrange
-        let sellerName = getLabelString(text: "Name :  \(order.product.seller.name)", size: 13)
-        let address = getLabelString(text: "Address :  \(order.product.seller.address)", size: 13)
+        let sellerName = getLabelString(text: "Name :  \(order.product.seller.name)".capitalized, size: 13)
+        let address = getLabelString(text: "Address :  \(order.product.seller.address)".capitalized, size: 13)
         detailStackView.spacing = 10
         detailStackView.edgeInsets = NSEdgeInsets.init(top: 10, left: 10, bottom: 10, right: 10)
         let mobileNumber = getLabelString(text: "Mobile :  XXXXXXXXXX", size: 13)
@@ -117,7 +117,7 @@ class OrderDetailView: NSView {
         let productDetailLabel = getLabelString(text: "Product Detail", size: 18)
         productDetailLabel.textColor = .systemOrange
         
-        let detailView = getLabelString(text: order.product.detail!, size: 13)
+        let detailView = getLabelString(text: order.product.detail  ?? "None".capitalized, size: 13)
         
         let bookedDatesLabel = getLabelString(text: "Booked Dates ", size: 18)
         bookedDatesLabel.textColor = .systemOrange
@@ -126,8 +126,8 @@ class OrderDetailView: NSView {
         
         let totalPrizeLabel = getLabelString(text: "Total Prize", size: 18)
         totalPrizeLabel.textColor = .systemOrange
-        let prize = getLabelString(text: "prize : ₹ \(order.product.price)  ", size: 13)
-        let totaldays = getLabelString(text: "totalDays : \(numberOfDays)", size: 13)
+        let prize = getLabelString(text: "Prize : ₹ \(order.product.price)  ", size: 13)
+        let totaldays = getLabelString(text: "Total Days : \(numberOfDays)", size: 13)
         let totalPrize = getLabelString(text: "Total Prize : ₹ \(order.product.price*numberOfDays) /-", size: 13)
         let cancelButton = NSButton()
         cancelButton.title = "Cancel Order"
@@ -136,7 +136,7 @@ class OrderDetailView: NSView {
         cancelButton.alignment = .center
         cancelButton.controlSize = .large
         cancelButton.contentTintColor = .black
-        cancelButton.font = .systemFont(ofSize: 15)
+        cancelButton.font = .systemFont(ofSize: 16)
         cancelButton.layer?.backgroundColor = NSColor.systemOrange.cgColor
         cancelButton.layer?.cornerRadius = 10
         cancelButton.translatesAutoresizingMaskIntoConstraints = false
@@ -178,15 +178,11 @@ class OrderDetailView: NSView {
         
         address.translatesAutoresizingMaskIntoConstraints = false
         productDetailLabel.translatesAutoresizingMaskIntoConstraints = false
-        detailStackView.translatesAutoresizingMaskIntoConstraints = false
         bookedDates.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            address.leadingAnchor.constraint(equalTo: detailStackView.leadingAnchor, constant: 10),
             address.widthAnchor.constraint(equalToConstant: 352),
-            detailView.leadingAnchor.constraint(equalTo: detailStackView.leadingAnchor, constant: 10),
             detailView.widthAnchor.constraint(equalToConstant: 352),
-            bookedDates.leadingAnchor.constraint(equalTo: detailView.leadingAnchor, constant: 10),
             bookedDates.widthAnchor.constraint(equalToConstant: 352),
             productDetailLabel.topAnchor.constraint(equalTo: mobileNumber.bottomAnchor, constant: 20),
         ])
@@ -207,7 +203,7 @@ class OrderDetailView: NSView {
             var currentDate = startDate
            
             while currentDate <= endDate {
-                dates += "\(dateFormatter.string(from: currentDate)),   "
+                dates += "\(dateFormatter.string(from: currentDate)),  "
                 currentDate = calendar.date(byAdding: .day, value: 1, to: currentDate)!
             }
         }

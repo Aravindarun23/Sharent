@@ -195,9 +195,9 @@ class ProductDetailView: NSView {
             sellerLabel.topAnchor.constraint(equalTo: productDetail.bottomAnchor, constant: 15)
         ])
 
-        let sellerName = getLabelString(text: "Name :  \(product.seller.name)", size: 13)
+        let sellerName = getLabelString(text: "Name :  \(product.seller.name)".capitalized, size: 13)
         addSubview(sellerName)
-        let address = getLabelString(text: "Address :  \(product.seller.address)", size: 13)
+        let address = getLabelString(text: "Address :  \(product.seller.address)".capitalized, size: 13)
         addSubview(address)
         sellerName.translatesAutoresizingMaskIntoConstraints = false
         address.translatesAutoresizingMaskIntoConstraints = false
@@ -330,7 +330,7 @@ class ProductDetailView: NSView {
             numberOfDates.leadingAnchor.constraint(equalTo: calenderView.trailingAnchor, constant: 20)
         ])
         
-        totalPrize = getLabelString(text: " Total Prize  : ₹ \(product.price)", size: 12)
+        totalPrize = getLabelString(text: "Total Prize  : ₹ \(product.price)", size: 12)
         addSubview(totalPrize)
         totalPrize.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -345,15 +345,15 @@ class ProductDetailView: NSView {
         bookButton.alignment = .center
         bookButton.controlSize = .large
         bookButton.contentTintColor = .black
-        bookButton.font = .systemFont(ofSize: 12)
+        bookButton.font = .systemFont(ofSize: 16)
         bookButton.layer?.backgroundColor = NSColor.systemOrange.cgColor
         bookButton.layer?.cornerRadius = 10
         addSubview(bookButton)
         bookButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             bookButton.heightAnchor.constraint(equalToConstant: 30),
-            bookButton.widthAnchor.constraint(equalToConstant: 100),
-            bookButton.leadingAnchor.constraint(equalTo: fromDateLabel.trailingAnchor),
+            bookButton.widthAnchor.constraint(equalToConstant: 130),
+            bookButton.leadingAnchor.constraint(equalTo: toDateLabel.leadingAnchor),
             bookButton.topAnchor.constraint(equalTo: totalPrize.bottomAnchor, constant: 30)
         ])
         
@@ -403,8 +403,8 @@ class ProductDetailView: NSView {
         numberOfDates.stringValue = "Number Of Dates  :  \(numberOfDays+1)"
         let totalPrize = (numberOfDays+1)*product.price
         self.totalPrize.stringValue = "Total Prize  : ₹ \(totalPrize)"
-        
-        
+        availableDateView.selectedDates = getSelectedDates(fromDate: fromDateButton.title, toDate: toDateButton.title)
+        availableDateView.collectionView.reloadData()
     }
     
     @objc func setToDate(_ sender: NSButton) {
@@ -416,10 +416,13 @@ class ProductDetailView: NSView {
                 toDateButton.addItem(withTitle: availableDateView.totalDates[date])
             }
             else  {
+                availableDateView.selectedDates = [sender.title]
+                availableDateView.collectionView.reloadData()
                 return
             }
         }
-        numberOfDates.stringValue = "Number Of Dates  :  1"
+        availableDateView.selectedDates = [sender.title]
+        availableDateView.collectionView.reloadData()
     }
     
     
@@ -456,6 +459,28 @@ class ProductDetailView: NSView {
             symbolText = NSTextField(labelWithAttributedString: attributedString)
         }
         return symbolText
+    }
+    
+    private func getSelectedDates(fromDate: String, toDate: String) -> [String] {
+        
+        var selectedDates = [String]()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let startDate = dateFormatter.date(from: fromDate)!
+        let endDate = dateFormatter.date(from: toDate)!
+        
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.day], from: startDate, to: endDate)
+        let numberOfDays = components.day!
+        if numberOfDays >= 0 {
+            var currentDate = startDate
+            
+            while currentDate <= endDate {
+                selectedDates.append(dateFormatter.string(from: currentDate))
+                currentDate = calendar.date(byAdding: .day, value: 1, to: currentDate)!
+            }
+        }
+        return selectedDates
     }
 }
 

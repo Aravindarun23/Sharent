@@ -12,8 +12,8 @@ import SharentBackendMacOS
 class HomeViewController: NSViewController {
     
     let toolBar = ToolBar()
-    var router: Router
-    var user: User
+//    var router: Router
+//    var user: User
     let menuBar = LeftMenuBar()
     let bottomBorder = CALayer()
     var currentView = NSView()
@@ -23,8 +23,8 @@ class HomeViewController: NSViewController {
     var orderView: OrderListView
     
     init(user: User, router: Router) {
-        self.user = user
-        self.router = router
+//        self.user = user
+//        self.router = router
         contentView = NSView()
         productView = Assembler.getProductListAssembler(router: router, user: user)
         orderView = Assembler.getOrderListAssembler(router: router, user: user)

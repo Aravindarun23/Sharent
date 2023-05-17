@@ -20,7 +20,7 @@ public class SearchProductDataManager: SearchProductDataContract {
         self.getProductImageFile = getProductImageFile
     }
     
-    public func SearchProduct(pincode: String, product: String, filter: SearchProductRequest.Filter?, range: Int?, success: @escaping ([Product]) -> Void, failure: @escaping (Error) -> Void) {
+    public func searchProduct(pincode: String, product: String, filter: SearchProductRequest.Filter?, range: Int?, success: @escaping ([Product]) -> Void, failure: @escaping (Error) -> Void) {
         
         if let range = range {
             getPincodeListNetwork.getPincodeList(pincode: pincode, range: range) { [weak self]  pincodeList in

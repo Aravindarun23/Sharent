@@ -21,7 +21,7 @@ class Router {
     }
     
     func navigateHomePage(user: User, router: Router) {
-        self.window.contentViewController = HomeViewController(user: user, router: router)
+        self.window.contentViewController = HomeViewController(user: user, router: self)
     }
     
     func addNewUserView() {

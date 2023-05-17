@@ -20,7 +20,7 @@ class OrderCellView: NSTableCellView {
     
    
     override init(frame frameRect: NSRect) {
-        
+
         super.init(frame: frameRect)
         addSubview(productImage)
         addSubview(productName)
@@ -29,21 +29,20 @@ class OrderCellView: NSTableCellView {
         addSubview(orderDate)
 
         productImage.wantsLayer = true
-        productImage.animates = true
         productName.isEditable = false
         productName.alignment = .left
         productName.lineBreakMode = .byTruncatingTail
-        productName.font = .boldSystemFont(ofSize: 13)
+        productName.font = .systemFont(ofSize: 15, weight: .medium)
         sellerName.isEditable = false
         sellerName.alignment = .left
         sellerName.lineBreakMode = .byTruncatingTail
-        sellerName.font = .boldSystemFont(ofSize: 10)
+        sellerName.font = .systemFont(ofSize: 12, weight: .medium)
         status.isEditable = false
         status.alignment = .left
-        status.font = .boldSystemFont(ofSize: 10)
+        status.font = .systemFont(ofSize: 13, weight: .medium)
         orderDate.isEditable = false
         orderDate.alignment = .left
-        orderDate.font = .boldSystemFont(ofSize: 10)
+        orderDate.font = .systemFont(ofSize: 13, weight: .medium)
         
         productImage.translatesAutoresizingMaskIntoConstraints = false
         productName.translatesAutoresizingMaskIntoConstraints = false
@@ -52,33 +51,31 @@ class OrderCellView: NSTableCellView {
         orderDate.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            productImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
-            productImage.widthAnchor.constraint(equalToConstant: 60),
-            productImage.heightAnchor.constraint(equalToConstant: 60),
-            productImage.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
+            productImage.widthAnchor.constraint(equalToConstant: 40),
+            productImage.heightAnchor.constraint(equalToConstant: 40),
+            productImage.centerYAnchor.constraint(equalTo: centerYAnchor),
+            productImage.leadingAnchor.constraint(equalTo: leadingAnchor)
         ])
         
         NSLayoutConstraint.activate([
-            productName.leadingAnchor.constraint(equalTo: productImage.trailingAnchor, constant: 10),
-            productName.centerYAnchor.constraint(equalTo: centerYAnchor),
-            productName.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30)
+            productName.leadingAnchor.constraint(equalTo: productImage.trailingAnchor, constant: 20),
+            productName.topAnchor.constraint(equalTo: productImage.topAnchor)
         ])
         
         NSLayoutConstraint.activate([
             sellerName.leadingAnchor.constraint(equalTo: productImage.trailingAnchor, constant: 20),
-            sellerName.topAnchor.constraint(equalTo: productName.bottomAnchor, constant: 20),
+            sellerName.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
         ])
     
         NSLayoutConstraint.activate([
-            status.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -2),
+            status.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -4),
             status.leadingAnchor.constraint(greaterThanOrEqualTo: sellerName.trailingAnchor),
-            status.topAnchor.constraint(equalTo: productName.bottomAnchor, constant: 20)
+            status.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
         ])
 
         NSLayoutConstraint.activate([
-//            orderDate.leadingAnchor.constraint(greaterThanOrEqualTo: centerXAnchor),
-            orderDate.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -2),
-            orderDate.topAnchor.constraint(equalTo: topAnchor, constant: 1),
+            orderDate.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -4),
+            orderDate.topAnchor.constraint(equalTo: topAnchor, constant: 10),
         ])
     }
     

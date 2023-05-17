@@ -162,6 +162,7 @@ extension  ProductListView: NSCollectionViewDelegateFlowLayout, NSCollectionView
     
     func closeButtonClicked() {
         productDetailView.removeFromSuperview()
+        productCollectionView.reloadData()
         collectionView.isHidden = false
         rightFilterView.isHidden = false
     }

@@ -67,7 +67,7 @@ public final class SearchProduct: ZUsecase<SearchProductRequest, SearchProductRe
     }
     
     override public func run(request: SearchProductRequest, success: @escaping (SearchProductResponse) -> Void, failure: @escaping (SearchProductError) -> Void) {
-        searchProductDataManger.SearchProduct(pincode: request.pincode, product: request.productName, filter: request.filter, range: request.range) { [weak self]
+        searchProductDataManger.searchProduct(pincode: request.pincode, product: request.productName, filter: request.filter, range: request.range) { [weak self]
             products in
             self?.success(callback: success, products: products)
             
